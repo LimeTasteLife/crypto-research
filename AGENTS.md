@@ -11,6 +11,7 @@ This document is the schema. Read it fully at the start of every session before 
 3. **`sources/<id>.md`** — one metadata page per source. Each references either a `raw/` artifact or a `mirror/<snapshot>/pages/<slug>.md`. Contains TL;DR + extracted claims with file-back targets.
 4. **Wiki pages** — `entities/`, `concepts/`, `parameters/`. LLM-owned.
 5. **Indices** — `index.md` (catalog), `log.md` (chronological), `open-questions.md` (unresolved disputes & verification queue).
+6. **`audit/<YYYY-MM-DD>-<topic>.md`** — schema/ontology audits. Meta-layer: assessments of the wiki/schema itself, not part of the content graph. **Append-only**: one file per audit pass; never edit prior audits. New audit on the same topic gets a new dated filename. Used to track ontology evolution decisions and to record predictions that ingest runs validate.
 
 ## Entity model — three tiers
 

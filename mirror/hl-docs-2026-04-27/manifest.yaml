@@ -1,0 +1,202 @@
+snapshot_id: hl-docs-2026-04-27
+root_url: https://hyperliquid.gitbook.io/hyperliquid-docs
+host: hyperliquid.gitbook.io
+path_prefix: /hyperliquid-docs/
+crawled_at: 2026-04-27T17:20:00Z
+crawler: exa
+page_count: 20
+status: paused
+supersedes: null
+superseded_by: null
+allow: []
+deny: []
+max_pages: 20
+pages:
+  - slug: hyperliquid-docs
+    url: https://hyperliquid.gitbook.io/hyperliquid-docs
+    fetched_at: 2026-04-27T17:20:30Z
+    status: ok
+    crawler: exa
+    bytes: 1428
+    title: About Hyperliquid
+  - slug: about-hyperliquid
+    url: https://hyperliquid.gitbook.io/hyperliquid-docs/about-hyperliquid
+    fetched_at: 2026-04-27T17:21:30Z
+    status: ok
+    crawler: exa
+    bytes: 1446
+    title: About Hyperliquid
+  - slug: onboarding-how-to-start-trading
+    url: https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-start-trading
+    fetched_at: 2026-04-27T17:21:30Z
+    status: ok
+    crawler: exa
+    bytes: 4899
+    title: How to start trading
+  - slug: hypercore-overview
+    url: https://hyperliquid.gitbook.io/hyperliquid-docs/hypercore/overview
+    fetched_at: 2026-04-27T17:22:45Z
+    status: ok
+    crawler: exa
+    bytes: 1502
+    title: Overview
+  - slug: hypercore-bridge
+    url: https://hyperliquid.gitbook.io/hyperliquid-docs/hypercore/bridge
+    fetched_at: 2026-04-27T17:22:45Z
+    status: ok
+    crawler: exa
+    bytes: 1390
+    title: Bridge
+  - slug: hypercore-clearinghouse
+    url: https://hyperliquid.gitbook.io/hyperliquid-docs/hypercore/clearinghouse
+    fetched_at: 2026-04-27T17:22:45Z
+    status: ok
+    crawler: exa
+    bytes: 685
+    title: Clearinghouse
+  - slug: hypercore-oracle
+    url: https://hyperliquid.gitbook.io/hyperliquid-docs/hypercore/oracle
+    fetched_at: 2026-04-27T17:22:45Z
+    status: ok
+    crawler: exa
+    bytes: 1051
+    title: Oracle
+  - slug: hypercore-order-book
+    url: https://hyperliquid.gitbook.io/hyperliquid-docs/hypercore/order-book
+    fetched_at: 2026-04-27T17:22:45Z
+    status: ok
+    crawler: exa
+    bytes: 1207
+    title: Order book
+  - slug: hypercore-staking
+    url: https://hyperliquid.gitbook.io/hyperliquid-docs/hypercore/staking
+    fetched_at: 2026-04-27T17:24:00Z
+    status: ok
+    crawler: exa
+    bytes: 4522
+    title: Staking
+  - slug: hyperevm
+    url: https://hyperliquid.gitbook.io/hyperliquid-docs/hyperevm
+    fetched_at: 2026-04-27T17:24:00Z
+    status: ok
+    crawler: exa
+    bytes: 3591
+    title: HyperEVM
+  - slug: for-developers-api
+    url: https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api
+    fetched_at: 2026-04-27T17:21:30Z
+    status: ok
+    crawler: exa
+    bytes: 1028
+    title: API
+  - slug: trading-fees
+    url: https://hyperliquid.gitbook.io/hyperliquid-docs/trading/fees
+    fetched_at: 2026-04-27T17:24:00Z
+    status: ok
+    crawler: exa
+    bytes: 8003
+    title: Fees
+  - slug: trading-contract-specifications
+    url: https://hyperliquid.gitbook.io/hyperliquid-docs/trading/contract-specifications
+    fetched_at: 2026-04-27T17:25:30Z
+    status: ok
+    crawler: exa
+    bytes: 1986
+    title: Contract specifications
+  - slug: trading-margining
+    url: https://hyperliquid.gitbook.io/hyperliquid-docs/trading/margining
+    fetched_at: 2026-04-27T17:25:30Z
+    status: ok
+    crawler: exa
+    bytes: 3483
+    title: Margining
+  - slug: trading-liquidations
+    url: https://hyperliquid.gitbook.io/hyperliquid-docs/trading/liquidations
+    fetched_at: 2026-04-27T17:25:30Z
+    status: ok
+    crawler: exa
+    bytes: 5121
+    title: Liquidations
+  - slug: trading-funding
+    url: https://hyperliquid.gitbook.io/hyperliquid-docs/trading/funding
+    fetched_at: 2026-04-27T17:25:30Z
+    status: ok
+    crawler: exa
+    bytes: 4431
+    title: Funding
+  - slug: trading-auto-deleveraging
+    url: https://hyperliquid.gitbook.io/hyperliquid-docs/trading/auto-deleveraging
+    fetched_at: 2026-04-27T17:25:30Z
+    status: ok
+    crawler: exa
+    bytes: 917
+    title: Auto-deleveraging
+  - slug: trading-robust-price-indices
+    url: https://hyperliquid.gitbook.io/hyperliquid-docs/trading/robust-price-indices
+    fetched_at: 2026-04-27T17:28:00Z
+    status: ok
+    crawler: exa
+    bytes: 1589
+    title: Robust price indices
+  - slug: trading-order-types
+    url: https://hyperliquid.gitbook.io/hyperliquid-docs/trading/order-types
+    fetched_at: 2026-04-27T17:28:00Z
+    status: ok
+    crawler: exa
+    bytes: 2920
+    title: Order types
+  - slug: for-developers-api-info-endpoint
+    url: https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint
+    fetched_at: 2026-04-27T17:28:00Z
+    status: ok
+    crawler: exa
+    bytes: 35712
+    title: Info endpoint
+queue_remainder:
+  - https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/exchange-endpoint
+  - https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/websocket
+  - https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/notation
+  - https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/asset-ids
+  - https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/tick-and-lot-size
+  - https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/nonces-and-api-wallets
+  - https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/signing
+  - https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/rate-limits-and-user-limits
+  - https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/optimizing-latency
+  - https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/bridge2
+  - https://hyperliquid.gitbook.io/hyperliquid-docs/hypercore/vaults
+  - https://hyperliquid.gitbook.io/hyperliquid-docs/hypercore/protocol-vaults
+  - https://hyperliquid.gitbook.io/hyperliquid-docs/hypercore/multi-sig
+  - https://hyperliquid.gitbook.io/hyperliquid-docs/hypercore/permissionless-spot-quote-assets
+  - https://hyperliquid.gitbook.io/hyperliquid-docs/hypercore/aligned-quote-assets
+  - https://hyperliquid.gitbook.io/hyperliquid-docs/hyperevm/dual-block-architecture
+  - https://hyperliquid.gitbook.io/hyperliquid-docs/hyperevm/raw-hyperevm-block-data
+  - https://hyperliquid.gitbook.io/hyperliquid-docs/hyperevm/interacting-with-hypercore
+  - https://hyperliquid.gitbook.io/hyperliquid-docs/hyperevm/hypercore-hyperevm-transfers
+  - https://hyperliquid.gitbook.io/hyperliquid-docs/hyperevm/wrapped-hype
+  - https://hyperliquid.gitbook.io/hyperliquid-docs/hyperevm/json-rpc
+  - https://hyperliquid.gitbook.io/hyperliquid-docs/hips/hip-1-native-token-standard
+  - https://hyperliquid.gitbook.io/hyperliquid-docs/hips/hip-2-hyperliquidity
+  - https://hyperliquid.gitbook.io/hyperliquid-docs/hips/hip-3-builder-deployed-perpetuals
+  - https://hyperliquid.gitbook.io/hyperliquid-docs/trading/sub-accounts
+  - https://hyperliquid.gitbook.io/hyperliquid-docs/trading/builder-codes
+  - https://hyperliquid.gitbook.io/hyperliquid-docs/trading/account-abstraction-modes
+  - https://hyperliquid.gitbook.io/hyperliquid-docs/trading/portfolio-margin-alpha-mode
+  - https://hyperliquid.gitbook.io/hyperliquid-docs/trading/margin-tiers
+  - https://hyperliquid.gitbook.io/hyperliquid-docs/trading/take-profit-and-stop-loss-orders
+  - https://hyperliquid.gitbook.io/hyperliquid-docs/trading/entry-price-and-pnl
+  - https://hyperliquid.gitbook.io/hyperliquid-docs/trading/self-trade-prevention
+  - https://hyperliquid.gitbook.io/hyperliquid-docs/trading/hyperps
+  - https://hyperliquid.gitbook.io/hyperliquid-docs/trading/delisting
+  - https://hyperliquid.gitbook.io/hyperliquid-docs/trading/market-making
+  - https://hyperliquid.gitbook.io/hyperliquid-docs/validators/running-a-validator
+  - https://hyperliquid.gitbook.io/hyperliquid-docs/validators/delegation-program
+  - https://hyperliquid.gitbook.io/hyperliquid-docs/historical-data
+  - https://hyperliquid.gitbook.io/hyperliquid-docs/risks/bug-bounty-program
+  - https://hyperliquid.gitbook.io/hyperliquid-docs/risks/audits
+notes:
+  - Seed page fetched successfully via exa; outbound link extraction was sparse because GitBook renders nav client-side, so the BFS queue was seeded from llms.txt at /hyperliquid-docs/llms.txt (canonical doc index).
+  - URL slug pattern is kebab-case derived from page title with section prefix; verified by probe fetches before bulk crawl.
+  - One 404 encountered during URL discovery (`/trading/perpetual-assets/contract-specifications`); GitBook returned an explicit redirect hint to `/trading/contract-specifications`. No retries counted against pages saved.
+  - One exa CRAWL_LIVECRAWL_TIMEOUT for `/trading/margining` on first attempt; succeeded on second exa attempt (no WebFetch fallback fired).
+  - All 20 successful pages used the `exa` crawler. WebFetch was used once for nav probing (not counted as a page fetch).
+  - Queue remainder is non-exhaustive — derived from llms.txt entries not yet crawled. Slugs are best-effort guesses based on the pattern `<section>/<kebab-title>`; some may 404 and require resolution via GitBook's `sitemap.md` or `?ask=` interface during the next crawl phase.
