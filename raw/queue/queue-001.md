@@ -1,0 +1,16 @@
+https://hyperliquid.gitbook.io/hyperliquid-docs
+https://hyperliquid.gitbook.io/hyperliquid-docs/builder-tools
+https://hyperliquid.gitbook.io/hyperliquid-docs/support
+https://docs.asterdex.com/
+https://orderly.network/docs/introduction/getting-started/what-is-orderly
+https://orderly.network/docs/build-on-omnichain/building-on-omnichain
+https://orderly.network/docs/sdks/overview
+https://orderly.network/docs/introduction/orderly-omniVault/overview
+https://docs.drift.trade/protocol
+https://docs.drift.trade/developers
+https://docs.lighter.xyz/
+https://docs.dydx.exchange/
+https://docs.dydx.community/dydx-chain-technical-docs
+https://developers.uniswap.org/docs
+https://developers.uniswap.org/docs/protocols/v4/overview
+https://developers.uniswap.org/docs/sdks/v4/overview
