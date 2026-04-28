@@ -23,11 +23,14 @@ Real-world identifiable actors/systems. Stable identity across time.
 | subtype | examples |
 |---|---|
 | `perpdex` | Hyperliquid, dYdX v4, Vertex, Drift, Aevo, Paradex |
+| `dex` | Uniswap (v2/v3/v4), Curve, Balancer, PancakeSwap — non-perp DEX protocols providing AMM/pool primitives. Perpdex hooks (3rd-party) may build on these as a substrate. |
 | `network` | Arbitrum, Base, Solana, Hyperliquid L1 |
 | `token` | USDC, ETH, HYPE, dYdX |
 | `actor` | Hyperliquid Foundation, GMX DAO, dYdX Trading Inc, key individuals (founders, leads) |
 | `mm-firm` | Wintermute, Amber Group, GSR, Flow Traders, Auros, Selini Capital, Jane Street, Cumberland — first-class because they have their own agreements, history, and metrics across venues |
 | `programme` | named, time-bounded campaigns (HL points S2, dYdX MM rewards epoch 47, Aevo Surge, Blast Big Bang) |
+
+**Dominant-function rule (venue spanning multiple subtypes):** A venue that primarily operates as a perpdex but offers secondary surfaces (e.g., Drift's 5x spot, Aster's spot pairs) is filed under `perpdex` — its dominant trader-facing identity. Same logic in reverse: a primarily-spot DEX hosting a permissionless perp hook is filed under `dex` — the perp hook becomes a separate `perpdex` entity that `runs_on` the underlying `dex`. Secondary surfaces of an entity are captured in that entity's mechanism prose, not by creating duplicate entities.
 
 ### Concepts — `concepts/<domain>/<slug>.md`
 Domain abstractions. The definition does not change; only its variants in the wild change.

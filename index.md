@@ -10,6 +10,9 @@ Format: `- [[path]] — one-line summary (sources: N, last_reviewed: YYYY-MM-DD)
 - [[entities/perpdex/hyperliquid]] — fully on-chain CLOB perp+spot exchange on its own L1 (sources: 20, last_reviewed: 2026-04-28)
 - [[entities/perpdex/lighter]] — ZK-rollup verifiable-execution perp DEX, two-track Standard/Premium account model, LIT-staking-gated discounts, LLP-backed liquidations (sources: 31, last_reviewed: 2026-04-28)
 
+### dex
+_(none yet — Uniswap v4 ingest pending; queue at `raw/queue/uniswap-v4-2026-04-28.md`)_
+
 ### network
 - [[entities/network/hyperliquid-l1]] — purpose-built PoS L1 with HyperBFT consensus; hosts HyperCore + HyperEVM (sources: 5, last_reviewed: 2026-04-28)
 - [[entities/network/arbitrum]] — referenced as USDC deposit corridor for Hyperliquid (sources: 1, last_reviewed: 2026-04-28)
