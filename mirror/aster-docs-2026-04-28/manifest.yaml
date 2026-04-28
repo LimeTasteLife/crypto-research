@@ -1,0 +1,173 @@
+snapshot_id: aster-docs-2026-04-28
+root_url: https://docs.asterdex.com/
+host: docs.asterdex.com
+path_prefix: /
+crawled_at: 2026-04-28T01:05:00Z
+crawler: exa
+page_count: 20
+status: paused
+supersedes: null
+superseded_by: null
+allow: []
+deny: []
+max_pages: 20
+pages:
+  - slug: overview-what-is-aster
+    url: https://docs.asterdex.com/overview/what-is-aster
+    fetched_at: 2026-04-28T01:00:30Z
+    status: ok
+    crawler: exa
+    bytes: 2016
+    title: What is Aster?
+  - slug: overview-smart-contracts
+    url: https://docs.asterdex.com/overview/smart-contracts
+    fetched_at: 2026-04-28T01:00:30Z
+    status: ok
+    crawler: exa
+    bytes: 1324
+    title: Smart Contracts
+  - slug: overview-audit-reports
+    url: https://docs.asterdex.com/overview/audit-reports
+    fetched_at: 2026-04-28T01:00:30Z
+    status: ok
+    crawler: exa
+    bytes: 2076
+    title: Audit Reports
+  - slug: usdaster-tokenomics
+    url: https://docs.asterdex.com/usdaster-token/tokenomics
+    fetched_at: 2026-04-28T01:00:30Z
+    status: ok
+    crawler: exa
+    bytes: 3827
+    title: Tokenomics
+  - slug: aster-chain-staking-how-staking-works
+    url: https://docs.asterdex.com/aster-chain/staking/how-staking-works
+    fetched_at: 2026-04-28T01:00:30Z
+    status: ok
+    crawler: exa
+    bytes: 3181
+    title: How Staking Works
+  - slug: trading-perpetuals
+    url: https://docs.asterdex.com/trading/perpetuals
+    fetched_at: 2026-04-28T01:00:30Z
+    status: ok
+    crawler: exa
+    bytes: 821
+    title: Perpetuals
+  - slug: trading-perpetuals-fees
+    url: https://docs.asterdex.com/trading/perpetuals/fees-and-specs/fees
+    fetched_at: 2026-04-28T01:00:30Z
+    status: ok
+    crawler: exa
+    bytes: 2071
+    title: Fees
+  - slug: trading-perpetuals-funding-rate
+    url: https://docs.asterdex.com/trading/perpetuals/fees-and-specs/funding-rate
+    fetched_at: 2026-04-28T01:00:30Z
+    status: ok
+    crawler: exa
+    bytes: 5151
+    title: Funding Rate
+  - slug: trading-perpetuals-mark-price
+    url: https://docs.asterdex.com/trading/perpetuals/fees-and-specs/mark-price
+    fetched_at: 2026-04-28T01:00:30Z
+    status: ok
+    crawler: exa
+    bytes: 4382
+    title: Mark Price
+  - slug: trading-perpetuals-liquidations
+    url: https://docs.asterdex.com/trading/perpetuals/fees-and-specs/liquidations-1
+    fetched_at: 2026-04-28T01:00:30Z
+    status: ok
+    crawler: exa
+    bytes: 6996
+    title: Liquidations
+  - slug: trading-perpetuals-adl
+    url: https://docs.asterdex.com/trading/perpetuals/fees-and-specs/auto-deleveraging-adl
+    fetched_at: 2026-04-28T01:04:00Z
+    status: ok
+    crawler: exa
+    bytes: 2462
+    title: Auto-Deleveraging (ADL)
+  - slug: trading-perpetuals-margin
+    url: https://docs.asterdex.com/trading/perpetuals/margin
+    fetched_at: 2026-04-28T01:04:00Z
+    status: ok
+    crawler: exa
+    bytes: 1937
+    title: Margin
+  - slug: trading-perpetuals-order-types
+    url: https://docs.asterdex.com/trading/perpetuals/order-types
+    fetched_at: 2026-04-28T01:04:00Z
+    status: ok
+    crawler: exa
+    bytes: 5110
+    title: Order Types
+  - slug: trading-perpetuals-market-maker-program
+    url: https://docs.asterdex.com/trading/perpetuals/market-maker-program
+    fetched_at: 2026-04-28T01:04:00Z
+    status: ok
+    crawler: exa
+    bytes: 5279
+    title: Market Maker program
+  - slug: trading-perpetuals-pre-launch-contracts
+    url: https://docs.asterdex.com/trading/perpetuals/pre-launch-contracts
+    fetched_at: 2026-04-28T01:04:00Z
+    status: ok
+    crawler: exa
+    bytes: 1892
+    title: Pre-Launch Contracts
+  - slug: earn-aster-alp
+    url: https://docs.asterdex.com/earn/overview/aster-alp
+    fetched_at: 2026-04-28T01:04:00Z
+    status: ok
+    crawler: exa
+    bytes: 1264
+    title: Aster ALP
+  - slug: earn-aster-alp-fees
+    url: https://docs.asterdex.com/earn/overview/aster-alp/alp-fees
+    fetched_at: 2026-04-28T01:04:00Z
+    status: ok
+    crawler: exa
+    bytes: 2789
+    title: ALP Fees
+  - slug: program-referral
+    url: https://docs.asterdex.com/program-and-rewards/referral-program
+    fetched_at: 2026-04-28T01:04:00Z
+    status: ok
+    crawler: exa
+    bytes: 1909
+    title: Referral Program
+  - slug: program-trade-and-earn
+    url: https://docs.asterdex.com/program-and-rewards/trade-and-earn
+    fetched_at: 2026-04-28T01:04:00Z
+    status: ok
+    crawler: exa
+    bytes: 2863
+    title: Trade & Earn
+  - slug: usdf-maintaining-the-peg
+    url: https://docs.asterdex.com/usdf-stablecoin/overview/maintaining-the-peg
+    fetched_at: 2026-04-28T01:04:00Z
+    status: ok
+    crawler: exa
+    bytes: 2792
+    title: Maintaining the Peg
+queue_remainder:
+  - https://docs.asterdex.com/trading/spot/overview
+  - https://docs.asterdex.com/trading/spot/fees
+  - https://docs.asterdex.com/trading/1001x/overview
+  - https://docs.asterdex.com/trading/1001x/how-it-works
+  - https://docs.asterdex.com/trading/shield-mode/overview
+  - https://docs.asterdex.com/api-documentation/perpetuals
+  - https://docs.asterdex.com/api-documentation/spot
+  - https://docs.asterdex.com/aster-chain/architecture
+  - https://docs.asterdex.com/usdf-stablecoin/overview/what-is-usdf
+  - https://docs.asterdex.com/program-and-rewards/aster-spectra
+notes:
+  - "llms.txt at /llms.txt provided 109-entry canonical index; BFS not needed."
+  - "All 20 pages fetched successfully via exa on first attempt; no WebFetch fallbacks fired and no .md suffix retries needed."
+  - "Pre-launch-contracts page references stale /product/asterex-pro/* URLs which are 404s outside this snapshot's scope (preserved verbatim as page content)."
+  - "Liquidations URL uses suffix '-1' (liquidations-1); the bare /liquidations slug is a higher-level section page."
+  - "Each page from exa included 'Agent Instructions' boilerplate describing the ?ask= mechanism; this was stripped per crawler convention since it is meta-navigation."
+  - "Market-maker-program page contains a 250+ row pair table; the snapshot preserves a representative excerpt with a note about full size — full table available via re-fetch if needed."
+  - "Queue remainder is non-exhaustive — derived from llms.txt-style scope hints (spot, 1001x, shield mode, dev API, aster-chain architecture, USDF intro, Aster Spectra). Out of ~109 indexed pages, 20 crawled this run."
