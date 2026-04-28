@@ -23,11 +23,11 @@ Documents Hyperliquid's order-type catalog: Market, Limit, Stop Market, Stop Lim
 
 | id | claim | filed_to | frame_tag |
 |----|-------|----------|-----------|
-| #c1 | Hyperliquid supports Market, Limit, Stop Market, Stop Limit, Take Market, Take Limit, Scale, and TWAP order types. | [[entities/perpdex/hyperliquid]] | - |
+| #c1 | Hyperliquid supports Market, Limit, Stop Market, Stop Limit, Take Market, Take Limit, Scale, and TWAP order types. | [[entities/perpdex/hyperliquid]] | A1-PI |
 | #c2 | TWAP splits a large order into sub-orders executed every 30 seconds. | [[entities/perpdex/hyperliquid]] | A4-PI |
 | #c3 | TWAP sub-orders have a maximum slippage of 3% per sub-order. | [[entities/perpdex/hyperliquid]] | A4-PIII |
 | #c4 | When TWAP sub-orders fall behind their execution target, later sub-orders are larger but capped at 3× the normal sub-order size. | [[entities/perpdex/hyperliquid]] | A4-PI |
 | #c5 | TWAP sub-orders (like normal market orders) do not fill during the post-only period of a network upgrade. | [[entities/perpdex/hyperliquid]] | A8-PII |
-| #c6 | Order options include Reduce Only, GTC, Post Only (ALO), IOC, Take Profit, and Stop Loss. | [[entities/perpdex/hyperliquid]] | - |
+| #c6 | Order options include Reduce Only, GTC, Post Only (ALO), IOC, Take Profit, and Stop Loss. | [[entities/perpdex/hyperliquid]] | A1-PI |
 | #c7 | TP and SL orders are automatically market orders; users can configure a limit price and partial-position size. | [[entities/perpdex/hyperliquid]] | A6-PI |
 | #c8 | Stop-market triggers require trigger > mid for longs and trigger < mid for shorts; Take-market triggers are the inverse. | [[entities/perpdex/hyperliquid]] | A4-PIII |
