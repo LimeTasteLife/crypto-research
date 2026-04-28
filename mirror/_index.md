@@ -12,6 +12,9 @@ To answer "when was X last refreshed?": find the row with `status: active` for t
 |---|---|---|---|---|---|
 | hl-docs-2026-04-27 | https://hyperliquid.gitbook.io/hyperliquid-docs | /hyperliquid-docs/ | 2026-04-27T17:20:00Z | 20 | exa |
 | lighter-docs-2026-04-28 | https://docs.lighter.xyz/ | / | 2026-04-28T00:58:21Z | 31 | exa |
+| drift-docs-2026-04-28 | https://docs.drift.trade/ | / | 2026-04-28T17:00:00Z | 80 | exa |
+| drift-developers-2026-04-28 | https://docs.drift.trade/developers | /developers/ | 2026-04-28T17:30:00Z | 45 | exa |
+| drift-sdk-2026-04-28 | https://mintlify.com/drift-labs/protocol-v2/ | /drift-labs/protocol-v2/ | 2026-04-28T18:00:00Z | 62 | exa |
 
 ## Superseded
 
