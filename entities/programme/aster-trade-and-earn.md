@@ -26,8 +26,7 @@ disputed: false
 Trade & Earn removes the conventional opportunity cost between yield-earning and trading-margin uses of capital: USDF (1:1 USDT-redeemable, fully backed) and asBNB held in the Aster trading account both retain their underlying yield while simultaneously serving as Multi-Asset-Mode collateral on perps. USDF holders > 1 USDF accrue Deposit Rewards from an hourly holdings snapshot, distributed proportionally. Volume-gated traders (≥ 50k USD/week, ≥ 2 days/week) additionally receive Trading Rewards capped at 100,000 USDF per account. Reward weeks run Thursday → following Wednesday with payouts in USDF directly to the Futures account within 7 business days. Wash trading, market manipulation, and bulk-account creation trigger disqualification — the volume-gate + reward-cap structure creates measurable wash-trading exposure that the exclusion clauses acknowledge[^aster-docs-2026-04-28-program-trade-and-earn].
 
 ## Relations
-- [[entities/programme/aster-trade-and-earn]] **operated_by** [[entities/perpdex/aster]][^aster-docs-2026-04-28-program-trade-and-earn]
-- [[entities/programme/aster-trade-and-earn]] **subsidizes** [[concepts/incentives/referral-design]] (cross-asset incentive surface)[^aster-docs-2026-04-28-program-trade-and-earn]
+- [[entities/perpdex/aster]] **operates** [[entities/programme/aster-trade-and-earn]][^aster-docs-2026-04-28-program-trade-and-earn]
 - [[entities/programme/aster-trade-and-earn]] **applies_to** [[entities/token/usdf]] (eligible collateral)[^aster-docs-2026-04-28-program-trade-and-earn]
 
 ## Parameters

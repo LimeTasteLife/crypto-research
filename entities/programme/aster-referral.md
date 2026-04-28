@@ -25,7 +25,7 @@ disputed: false
 The referral relationship is established when a new user signs up via a referrer's link or custom code. From that point, a configurable share (default 10%) of the referee's eligible trading fees accrues to the referrer in real time and credits to the referrer's Aster account by the next day. Liquidation fees, self-trade volume, and zero-fee trade volume are excluded from the commission base. Self-referral via multiple accounts triggers revocation of all rewards. Aster reserves unilateral right to modify rates, rules, or cancel the programme[^aster-docs-2026-04-28-program-referral].
 
 ## Relations
-- [[entities/programme/aster-referral]] **operated_by** [[entities/perpdex/aster]][^aster-docs-2026-04-28-program-referral]
+- [[entities/perpdex/aster]] **operates** [[entities/programme/aster-referral]][^aster-docs-2026-04-28-program-referral]
 - [[entities/programme/aster-referral]] **applies_to** [[concepts/incentives/referral-design]][^aster-docs-2026-04-28-program-referral]
 
 ## Parameters
