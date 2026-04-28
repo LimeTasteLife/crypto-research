@@ -1,0 +1,239 @@
+snapshot_id: lighter-docs-2026-04-28
+root_url: https://docs.lighter.xyz/
+host: docs.lighter.xyz
+path_prefix: /
+crawled_at: 2026-04-28T00:58:21Z
+crawler: exa
+page_count: 31
+status: active
+supersedes: null
+superseded_by: null
+allow: []
+deny: []
+max_pages: 31
+pages:
+  - slug: lighter-docs-index
+    url: https://docs.lighter.xyz/
+    fetched_at: 2026-04-28T00:58:21Z
+    status: ok
+    crawler: exa
+    bytes: 1197
+    title: Introduction
+  - slug: about-lighter-technical-architecture-lighter-core
+    url: https://docs.lighter.xyz/about-lighter/technical-architecture-lighter-core
+    fetched_at: 2026-04-28T00:58:21Z
+    status: ok
+    crawler: exa
+    bytes: 5493
+    title: "Technical Architecture: Lighter Core"
+  - slug: about-lighter-lit-utility
+    url: https://docs.lighter.xyz/about-lighter/lit-utility
+    fetched_at: 2026-04-28T00:58:21Z
+    status: ok
+    crawler: exa
+    bytes: 1654
+    title: LIT Utility
+  - slug: trading-trading-fees
+    url: https://docs.lighter.xyz/trading/trading-fees
+    fetched_at: 2026-04-28T00:58:21Z
+    status: ok
+    crawler: exa
+    bytes: 2397
+    title: Trading Fees
+  - slug: trading-trading-fees-lit-fee-credits
+    url: https://docs.lighter.xyz/trading/trading-fees/lit-fee-credits
+    fetched_at: 2026-04-28T00:58:21Z
+    status: ok
+    crawler: exa
+    bytes: 1104
+    title: LIT Fee Credits
+  - slug: trading-unified-trading-accounts
+    url: https://docs.lighter.xyz/trading/unified-trading-accounts
+    fetched_at: 2026-04-28T00:58:21Z
+    status: ok
+    crawler: exa
+    bytes: 660
+    title: Unified Trading Accounts
+  - slug: trading-order-types-and-matching
+    url: https://docs.lighter.xyz/trading/order-types-and-matching
+    fetched_at: 2026-04-28T00:58:21Z
+    status: ok
+    crawler: exa
+    bytes: 8803
+    title: Order Types & Matching
+  - slug: trading-real-world-assets-rwas
+    url: https://docs.lighter.xyz/trading/real-world-assets-rwas
+    fetched_at: 2026-04-28T00:58:21Z
+    status: ok
+    crawler: exa
+    bytes: 948
+    title: Real World Assets (RWAs)
+  - slug: trading-real-world-assets-rwas-rwa-pricing-mechanism
+    url: https://docs.lighter.xyz/trading/real-world-assets-rwas/rwa-pricing-mechanism
+    fetched_at: 2026-04-28T00:58:21Z
+    status: ok
+    crawler: exa
+    bytes: 2805
+    title: RWA Pricing Mechanism
+  - slug: trading-real-world-assets-rwas-futures-contract-price-rolling-mechanism
+    url: https://docs.lighter.xyz/trading/real-world-assets-rwas/futures-contract-price-rolling-mechanism
+    fetched_at: 2026-04-28T00:58:21Z
+    status: ok
+    crawler: exa
+    bytes: 1609
+    title: Futures Contract Price Rolling Mechanism
+  - slug: trading-real-world-assets-rwas-market-specifications
+    url: https://docs.lighter.xyz/trading/real-world-assets-rwas/market-specifications
+    fetched_at: 2026-04-28T00:58:21Z
+    status: ok
+    crawler: exa
+    bytes: 337
+    title: Market Specifications
+  - slug: trading-public-pools
+    url: https://docs.lighter.xyz/trading/public-pools
+    fetched_at: 2026-04-28T00:58:21Z
+    status: ok
+    crawler: exa
+    bytes: 1349
+    title: Public Pools
+  - slug: trading-contract-specifications
+    url: https://docs.lighter.xyz/trading/contract-specifications
+    fetched_at: 2026-04-28T00:58:21Z
+    status: ok
+    crawler: exa
+    bytes: 5592
+    title: Contract Specifications
+  - slug: trading-prelaunch-markets
+    url: https://docs.lighter.xyz/trading/prelaunch-markets
+    fetched_at: 2026-04-28T00:58:21Z
+    status: ok
+    crawler: exa
+    bytes: 1768
+    title: Prelaunch Markets
+  - slug: trading-liquidations-and-llp-insurance-fund
+    url: https://docs.lighter.xyz/trading/liquidations-and-llp-insurance-fund
+    fetched_at: 2026-04-28T00:58:21Z
+    status: ok
+    crawler: exa
+    bytes: 5986
+    title: Liquidations & LLP (Insurance Fund)
+  - slug: trading-liquidations-and-llp-insurance-fund-llp-strategies
+    url: https://docs.lighter.xyz/trading/liquidations-and-llp-insurance-fund/llp-strategies
+    fetched_at: 2026-04-28T00:58:21Z
+    status: ok
+    crawler: exa
+    bytes: 1648
+    title: LLP Strategies
+  - slug: trading-multi-asset-margin
+    url: https://docs.lighter.xyz/trading/multi-asset-margin
+    fetched_at: 2026-04-28T00:58:21Z
+    status: ok
+    crawler: exa
+    bytes: 6424
+    title: Multi-Asset Margin
+  - slug: trading-multi-asset-margin-collateral-supply-limits
+    url: https://docs.lighter.xyz/trading/multi-asset-margin/collateral-supply-limits
+    fetched_at: 2026-04-28T00:58:21Z
+    status: ok
+    crawler: webfetch
+    bytes: 576
+    title: Collateral Supply Limits
+  - slug: trading-funding
+    url: https://docs.lighter.xyz/trading/funding
+    fetched_at: 2026-04-28T00:58:21Z
+    status: ok
+    crawler: exa
+    bytes: 3019
+    title: Funding
+  - slug: trading-funding-funding-rate-rebates
+    url: https://docs.lighter.xyz/trading/funding/funding-rate-rebates
+    fetched_at: 2026-04-28T00:58:21Z
+    status: ok
+    crawler: exa
+    bytes: 2100
+    title: Funding Rate Rebates
+  - slug: trading-pnl-and-total-account-value
+    url: https://docs.lighter.xyz/trading/pnl-and-total-account-value
+    fetched_at: 2026-04-28T00:58:21Z
+    status: ok
+    crawler: exa
+    bytes: 1841
+    title: PnL And Total Account Value
+  - slug: trading-fair-price-marking
+    url: https://docs.lighter.xyz/trading/fair-price-marking
+    fetched_at: 2026-04-28T00:58:21Z
+    status: ok
+    crawler: exa
+    bytes: 2356
+    title: Fair Price Marking
+  - slug: trading-self-trade-prevention
+    url: https://docs.lighter.xyz/trading/self-trade-prevention
+    fetched_at: 2026-04-28T00:58:21Z
+    status: ok
+    crawler: exa
+    bytes: 391
+    title: Self-Trade Prevention
+  - slug: trading-api
+    url: https://docs.lighter.xyz/trading/api
+    fetched_at: 2026-04-28T00:58:21Z
+    status: ok
+    crawler: exa
+    bytes: 1069
+    title: API
+  - slug: liquidity-partner-program
+    url: https://docs.lighter.xyz/liquidity-partner-program
+    fetched_at: 2026-04-28T00:58:21Z
+    status: ok
+    crawler: exa
+    bytes: 3356
+    title: Liquidity Partner Program
+  - slug: points-program
+    url: https://docs.lighter.xyz/points-program
+    fetched_at: 2026-04-28T00:58:21Z
+    status: ok
+    crawler: exa
+    bytes: 445
+    title: Points Program
+  - slug: points-program-market-makers
+    url: https://docs.lighter.xyz/points-program/market-makers
+    fetched_at: 2026-04-28T00:58:21Z
+    status: ok
+    crawler: exa
+    bytes: 5758
+    title: Market Makers
+  - slug: points-program-retail
+    url: https://docs.lighter.xyz/points-program/retail
+    fetched_at: 2026-04-28T00:58:21Z
+    status: ok
+    crawler: exa
+    bytes: 1974
+    title: Retail
+  - slug: integrations-partner-attribution
+    url: https://docs.lighter.xyz/integrations/partner-attribution
+    fetched_at: 2026-04-28T00:58:21Z
+    status: ok
+    crawler: exa
+    bytes: 1283
+    title: Partner Attribution
+  - slug: security-bug-bounty-program
+    url: https://docs.lighter.xyz/security/bug-bounty-program
+    fetched_at: 2026-04-28T00:58:21Z
+    status: ok
+    crawler: exa
+    bytes: 131
+    title: Bug Bounty Program
+  - slug: security-security-audits
+    url: https://docs.lighter.xyz/security/security-audits
+    fetched_at: 2026-04-28T00:58:21Z
+    status: ok
+    crawler: exa
+    bytes: 2059
+    title: Security Audits
+queue_remainder: []
+notes:
+  - "Sitemap was authoritative; no BFS link discovery performed."
+  - "exa returned CRAWL_LIVECRAWL_TIMEOUT for /trading/multi-asset-margin/collateral-supply-limits on first attempt; succeeded on WebFetch fallback (crawler recorded as webfetch for that page)."
+  - "Page /trading/real-world-assets-rwas/market-specifications returned thin content (337 bytes after cleaning) — the live page itself is mostly an intro line with the actual table likely embedded as a non-text widget; flagged for potential re-crawl in a later phase."
+  - "Page /security/bug-bounty-program returned thin content (131 bytes) — content is genuinely just 'Coming soon' on the live page."
+  - "Page /trading/self-trade-prevention returned thin content (391 bytes) — page is a single-paragraph stub on the live site, content appears complete."
+  - "Crawler distribution: exa=30, webfetch=1, fetch_failed=0."
