@@ -23,9 +23,9 @@ HyperCore is the part of the Hyperliquid state machine that holds margin and mat
 
 | id | claim | filed_to | frame_tag |
 |----|-------|----------|-----------|
-| #c1 | HyperBFT is a HotStuff-variant proof-of-stake consensus where validator block production is weighted by native-token stake. | [[entities/network/hyperliquid-l1]], [[concepts/operations/sequencer]] |  |
+| #c1 | HyperBFT is a HotStuff-variant proof-of-stake consensus where validator block production is weighted by native-token stake. | [[entities/network/hyperliquid-l1]], [[concepts/operations/sequencer]] | - |
 | #c2 | HyperCore holds margin and matching-engine state on-chain (no off-chain order book). | [[entities/perpdex/hyperliquid]], [[concepts/market-structure/clob]] | A4-PI |
 | #c3 | Single consistent transaction order is produced by HyperBFT consensus (no parallel/off-chain matching). | [[entities/perpdex/hyperliquid]], [[concepts/operations/matching-engine]] | A8-PI |
 | #c4 | End-to-end latency from a co-located client: median 0.2s, p99 0.9s. | [[entities/perpdex/hyperliquid]], [[concepts/metrics/mm-uptime]] | A4-PI |
 | #c5 | Mainnet throughput approximately 200k orders/sec; current bottleneck is execution. | [[entities/perpdex/hyperliquid]], [[concepts/metrics/volume]] | A4-PI |
-| #c6 | Consensus + networking stack is designed to scale to millions of orders per second once execution catches up. | [[entities/perpdex/hyperliquid]] |  |
+| #c6 | Consensus + networking stack is designed to scale to millions of orders per second once execution catches up. | [[entities/perpdex/hyperliquid]] | A4-PI |

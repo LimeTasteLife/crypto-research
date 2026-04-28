@@ -23,8 +23,8 @@ Defines the perps and spot clearinghouses as components of HyperCore execution s
 
 | id | claim | filed_to | frame_tag |
 |----|-------|----------|-----------|
-| #c1 | The perps clearinghouse manages per-address margin state including balance and positions. | [[entities/perpdex/hyperliquid]], [[concepts/operations/settlement]] |  |
-| #c2 | Deposits are credited by default to cross-margin balance. | [[entities/perpdex/hyperliquid]] |  |
-| #c3 | Positions default to cross-margin mode. | [[concepts/risk/margin-tier]] |  |
+| #c1 | The perps clearinghouse manages per-address margin state including balance and positions. | [[entities/perpdex/hyperliquid]], [[concepts/operations/settlement]] | A6-PIV |
+| #c2 | Deposits are credited by default to cross-margin balance. | [[entities/perpdex/hyperliquid]] | A6-PII |
+| #c3 | Positions default to cross-margin mode. | [[concepts/risk/margin-tier]] | A6-PI |
 | #c4 | Isolated margin is supported and disassociates a position's liquidation risk from all other positions. | [[concepts/risk/margin-tier]] | A6-PII |
-| #c5 | Spot clearinghouse manages per-address spot user state including token balances and holds. | [[entities/perpdex/hyperliquid]] |  |
+| #c5 | Spot clearinghouse manages per-address spot user state including token balances and holds. | [[entities/perpdex/hyperliquid]] | A6-PIV |

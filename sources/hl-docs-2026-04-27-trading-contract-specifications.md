@@ -23,15 +23,15 @@ Hyperliquid perps are linear, no-expiry contracts using funding to keep mark-to-
 
 | id | claim | filed_to | frame_tag |
 |----|-------|----------|-----------|
-| #c1 | Hyperliquid perps are linear contracts with no expiration date; convergence to spot is enforced by funding payments. | [[concepts/market-microstructure/contract-size]] |  |
+| #c1 | Hyperliquid perps are linear contracts with no expiration date; convergence to spot is enforced by funding payments. | [[concepts/market-microstructure/contract-size]] | - |
 | #c2 | Default margining is USDC-collateralized, USDT-denominated linear (technically quanto contracts since no USDC/USDT conversion is applied). | [[parameters/hyperliquid/listed-markets-roster]] | A1-PI |
 | #c3 | PURR-USD and HYPE-USD are the only USDC-denominated perp contracts because their primary spot liquidity is on Hyperliquid. | [[parameters/hyperliquid/listed-markets-roster]] | A1-PI |
-| #c4 | Each contract represents 1 unit of the underlying spot asset. | [[concepts/market-microstructure/contract-size]] |  |
-| #c5 | Initial margin fraction = 1 / (user-set leverage). | [[concepts/risk/margin-tier]] |  |
-| #c6 | Maintenance margin fraction = half of the maximum initial margin fraction. | [[concepts/risk/margin-tier]] |  |
+| #c4 | Each contract represents 1 unit of the underlying spot asset. | [[concepts/market-microstructure/contract-size]] | - |
+| #c5 | Initial margin fraction = 1 / (user-set leverage). | [[concepts/risk/margin-tier]] | A6-PI |
+| #c6 | Maintenance margin fraction = half of the maximum initial margin fraction. | [[concepts/risk/margin-tier]] | A6-PI |
 | #c7 | Funding payments occur every hour. | [[parameters/hyperliquid/listed-markets-roster]], [[concepts/fee-model/funding-rate]] | A6-PI |
 | #c8 | No global position limit per user. | [[parameters/hyperliquid/listed-markets-roster]] | A6-PI |
-| #c9 | Account types: per-wallet cross or isolated margin. | [[concepts/risk/margin-tier]] |  |
+| #c9 | Account types: per-wallet cross or isolated margin. | [[concepts/risk/margin-tier]] | A6-PI |
 | #c10 | Funding impact notional is 20,000 USDC for BTC and ETH; 6,000 USDC for all other assets. | [[parameters/hyperliquid/listed-markets-roster]] | A6-PI |
 | #c11 | Maximum market order value is $30M for max-leverage ≥25x assets. | [[parameters/hyperliquid/listed-markets-roster]] | A6-PI |
 | #c12 | Maximum market order value is $5M for max-leverage in [20, 25) assets. | [[parameters/hyperliquid/listed-markets-roster]] | A6-PI |
