@@ -1,0 +1,8 @@
+# Agent harness scratch directories — never commit
+.claude/
+.outline/
+
+# OS / editor noise
+.DS_Store
+*.swp
+*~
