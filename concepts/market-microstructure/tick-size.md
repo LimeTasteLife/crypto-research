@@ -20,6 +20,7 @@ Orders must have price as an integer multiple of tick size and size as an intege
 | venue | enforced? | grid scope |
 |---|---|---|
 | [[entities/perpdex/hyperliquid]] | yes[^hl-docs-2026-04-27-hypercore-order-book] | per-asset[^hl-docs-2026-04-27-hypercore-order-book] |
+| [[entities/perpdex/aster]] | not surfaced (primary docs) | not surfaced (primary docs) — pair-specific MM spread caps documented separately at [[parameters/aster/mm-rebate-tiers]] |
 
 (Other perpdex venues to be added in subsequent ingest passes.)
 

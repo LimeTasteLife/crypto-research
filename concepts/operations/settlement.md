@@ -28,6 +28,7 @@ Settlement is the finality stage at which a trade, transfer, or bridging event b
 | venue | trade finality | bridge model | dispute window |
 |---|---|---|---|
 | [[entities/perpdex/hyperliquid]] | one-block BFT[^hl-docs-2026-04-27-hyperliquid-docs] | validator-multisig (≥2/3 stake-weighted)[^hl-docs-2026-04-27-hypercore-bridge] | yes; cold-wallet 2/3 lock[^hl-docs-2026-04-27-hypercore-bridge] |
+| [[entities/perpdex/aster]] | Aster Chain L1 with 50ms block latency target; explicit block-finality semantics not surfaced (primary docs)[^aster-docs-2026-04-28-overview-what-is-aster] | multi-chain Treasury contracts on BNB Chain / Ethereum / Solana / Arbitrum; ALP mintable on BNB Chain and Arbitrum; bridge architecture (signer set, threshold, dispute model) not surfaced (primary docs); audit page lists no L1 / matching-engine / bridge audit — only Vault/Earn/asBNB/asUSDF/USDF/asCAKE contracts dated 2024[^aster-docs-2026-04-28-overview-smart-contracts][^aster-docs-2026-04-28-overview-audit-reports] | not surfaced (primary docs) — no documented withdrawal dispute window or emergency-pause authority across the four-network Treasury surface[^aster-docs-2026-04-28-overview-smart-contracts] |
 
 (Other perpdex venues to be added in subsequent ingest passes.)
 
@@ -44,3 +45,6 @@ None at first ingest.
 [^hl-docs-2026-04-27-hyperliquid-docs]: [[sources/hl-docs-2026-04-27-hyperliquid-docs]]
 [^hl-docs-2026-04-27-hypercore-clearinghouse]: [[sources/hl-docs-2026-04-27-hypercore-clearinghouse]]
 [^hl-docs-2026-04-27-hypercore-bridge]: [[sources/hl-docs-2026-04-27-hypercore-bridge]]
+[^aster-docs-2026-04-28-overview-what-is-aster]: [[sources/aster-docs-2026-04-28-overview-what-is-aster]]
+[^aster-docs-2026-04-28-overview-smart-contracts]: [[sources/aster-docs-2026-04-28-overview-smart-contracts]]
+[^aster-docs-2026-04-28-overview-audit-reports]: [[sources/aster-docs-2026-04-28-overview-audit-reports]]

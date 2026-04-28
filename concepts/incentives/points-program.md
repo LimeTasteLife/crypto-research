@@ -19,8 +19,7 @@ A **points program** is a venue-issued, off-chain (or pre-token) credit ledger t
 | [[entities/perpdex/hyperliquid]] | HL Points (S1, S2) | retail (MM treated separately via HLP economics) | TBD on next ingest | TBD on next ingest | TBD on next ingest | TBD on next ingest | TBD on next ingest |
 | dYdX (v3 retro / v4 launch) | dYdX retro airdrop + ongoing rewards | retail | TBD on next ingest | TBD on next ingest | TBD on next ingest | TBD on next ingest | TBD on next ingest |
 | Aevo | Aevo Surge | retail | TBD on next ingest | TBD on next ingest | TBD on next ingest | TBD on next ingest | TBD on next ingest |
-
-(HL/dYdX/Aevo rows: TBD on next ingest — these venues have not yet been crawled at points-program-page granularity. Will be enriched once their respective Phase-1 source set lands.)
+| [[entities/perpdex/aster]] | not-applicable (no points program; closest analogs are [[entities/programme/aster-trade-and-earn]] reward weeks and ve-style staking Trading Volume Boost on [[parameters/aster/staking-rewards]])[^aster-docs-2026-04-28-program-trade-and-earn][^aster-docs-2026-04-28-aster-chain-staking-how-staking-works] | not-applicable | not-applicable | not-applicable | not-applicable (Trade & Earn pays USDF on volume; staking pays $ASTER tiered by trading volume — neither uses a points-rubric pool)[^aster-docs-2026-04-28-program-trade-and-earn][^aster-docs-2026-04-28-aster-chain-staking-how-staking-works] | wash trading, market manipulation, bulk-account farming disqualify under Trade & Earn; self-referrals fully revoked under Referral programme[^aster-docs-2026-04-28-program-trade-and-earn][^aster-docs-2026-04-28-program-referral] | not-applicable |
 
 ## Edge cases
 
@@ -43,3 +42,6 @@ The 250,000 weekly-cap arithmetic for the Lighter Points Program — whether "20
 [^lighter-docs-2026-04-28-points-program]: [[sources/lighter-docs-2026-04-28-points-program]]
 [^lighter-docs-2026-04-28-points-program-retail]: [[sources/lighter-docs-2026-04-28-points-program-retail]]
 [^lighter-docs-2026-04-28-points-program-market-makers]: [[sources/lighter-docs-2026-04-28-points-program-market-makers]]
+[^aster-docs-2026-04-28-program-trade-and-earn]: [[sources/aster-docs-2026-04-28-program-trade-and-earn]]
+[^aster-docs-2026-04-28-program-referral]: [[sources/aster-docs-2026-04-28-program-referral]]
+[^aster-docs-2026-04-28-aster-chain-staking-how-staking-works]: [[sources/aster-docs-2026-04-28-aster-chain-staking-how-staking-works]]

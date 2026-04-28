@@ -20,6 +20,7 @@ Rev share is a recurring, formula-defined transfer of venue revenue (typically a
 | venue | source | recipient | denominator |
 |---|---|---|---|
 | [[entities/perpdex/hyperliquid]] | backstop-liquidation PnL[^hl-docs-2026-04-27-trading-liquidations] | HLP depositors (community)[^hl-docs-2026-04-27-trading-liquidations] | net of MM buffer (maintenance margin retained)[^hl-docs-2026-04-27-trading-liquidations] |
+| [[entities/perpdex/aster]] | five auto-NAV streams to ALP — Simple Mode MM P&L, perp trading fees, funding fees, liquidation captures, platform-level fee collection — plus a portion of protocol revenue routed to $ASTER buybacks and governance rewards via the Aster Foundation[^aster-docs-2026-04-28-earn-aster-alp][^aster-docs-2026-04-28-usdaster-tokenomics] (per-stream basis-points disputed; see [[entities/perpdex/aster#dispute-alp-tax-basis-points]]) | [[parameters/aster/alp]] depositors (NAV accrual) + $ASTER buyback recipients (Foundation route) + governance-rewards beneficiaries[^aster-docs-2026-04-28-earn-aster-alp][^aster-docs-2026-04-28-usdaster-tokenomics] | Perpetuals fee rates contested across primary docs; see [[entities/perpdex/aster#dispute-fee-rates]] for documented variants. Split percentages between ALP / Foundation buyback / governance rewards not surfaced (primary docs); funding take is 0% (peer-to-peer between longs and shorts)[^aster-docs-2026-04-28-trading-perpetuals-funding-rate] |
 
 (Other perpdex venues to be added in subsequent ingest passes.)
 
@@ -28,3 +29,6 @@ Rev share is a recurring, formula-defined transfer of venue revenue (typically a
 
 ## Sources
 [^hl-docs-2026-04-27-trading-liquidations]: [[sources/hl-docs-2026-04-27-trading-liquidations]]
+[^aster-docs-2026-04-28-earn-aster-alp]: [[sources/aster-docs-2026-04-28-earn-aster-alp]]
+[^aster-docs-2026-04-28-usdaster-tokenomics]: [[sources/aster-docs-2026-04-28-usdaster-tokenomics]]
+[^aster-docs-2026-04-28-trading-perpetuals-funding-rate]: [[sources/aster-docs-2026-04-28-trading-perpetuals-funding-rate]]

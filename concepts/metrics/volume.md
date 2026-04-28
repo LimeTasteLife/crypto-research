@@ -22,6 +22,7 @@ Volume is the notional value of trades executed on the venue over a time window.
 | venue | reported throughput | tier window | spot weighting |
 |---|---|---|---|
 | [[entities/perpdex/hyperliquid]] | ~200k orders/sec mainnet[^hl-docs-2026-04-27-hypercore-overview] | 14-day rolling[^hl-docs-2026-04-27-trading-fees] | spot counts 2× toward perps tier[^hl-docs-2026-04-27-trading-fees] |
+| [[entities/perpdex/aster]] | Aster Chain L1 target ≥100,000 TPS / 50ms block latency (matching-engine throughput in trades/sec not surfaced)[^aster-docs-2026-04-28-overview-what-is-aster] | 14-day rolling for MM tier qualification (MM1 ≥$150M, MM2 ≥$300M, MM3 ≥$600M, or 0.25%/0.5%/1% maker share)[^aster-docs-2026-04-28-trading-perpetuals-market-maker-program] | not surfaced (primary docs) — Aster runs an order-book Spot product but no documented spot-volume → perp-tier weighting[^aster-docs-2026-04-28-overview-what-is-aster] |
 
 (Other perpdex venues to be added in subsequent ingest passes.)
 
@@ -35,3 +36,5 @@ None.
 [^hl-docs-2026-04-27-hypercore-overview]: [[sources/hl-docs-2026-04-27-hypercore-overview]]
 [^hl-docs-2026-04-27-hyperliquid-docs]: [[sources/hl-docs-2026-04-27-hyperliquid-docs]]
 [^hl-docs-2026-04-27-trading-fees]: [[sources/hl-docs-2026-04-27-trading-fees]]
+[^aster-docs-2026-04-28-overview-what-is-aster]: [[sources/aster-docs-2026-04-28-overview-what-is-aster]]
+[^aster-docs-2026-04-28-trading-perpetuals-market-maker-program]: [[sources/aster-docs-2026-04-28-trading-perpetuals-market-maker-program]]

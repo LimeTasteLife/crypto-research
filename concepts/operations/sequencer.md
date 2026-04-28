@@ -22,6 +22,7 @@ The L1 mempool/consensus is **semantically aware** of HyperCore order-book actio
 | venue | sequencing model | failure mode | MEV / front-run posture |
 |---|---|---|---|
 | [[entities/perpdex/hyperliquid]] | BFT consensus across validators (no single sequencer)[^hl-docs-2026-04-27-hypercore-overview] | validator jailing on inadequate latency[^hl-docs-2026-04-27-hypercore-staking] | consensus-aware in-block ordering (cancels before GTC)[^hl-docs-2026-04-27-hypercore-order-book] |
+| [[entities/perpdex/aster]] | own L1 (Aster Chain) targeting 100k+ TPS / 50ms block latency, designed for private perps trading; consensus model not surfaced beyond TPS/latency targets (primary docs)[^aster-docs-2026-04-28-overview-what-is-aster] | not surfaced (primary docs) — validator jailing / slashing / misbehavior policy not specified[^aster-docs-2026-04-28-overview-what-is-aster] | 1001x product: encrypted order flow framed as MEV-resistant on-chain perps[^aster-docs-2026-04-28-overview-what-is-aster]. Standard Perpetuals + Shield Mode: not surfaced (primary docs) |
 
 (Other perpdex venues to be added in subsequent ingest passes.)
 
@@ -36,3 +37,4 @@ None at first ingest.
 [^hl-docs-2026-04-27-hyperliquid-docs]: [[sources/hl-docs-2026-04-27-hyperliquid-docs]]
 [^hl-docs-2026-04-27-hypercore-order-book]: [[sources/hl-docs-2026-04-27-hypercore-order-book]]
 [^hl-docs-2026-04-27-hypercore-staking]: [[sources/hl-docs-2026-04-27-hypercore-staking]]
+[^aster-docs-2026-04-28-overview-what-is-aster]: [[sources/aster-docs-2026-04-28-overview-what-is-aster]]

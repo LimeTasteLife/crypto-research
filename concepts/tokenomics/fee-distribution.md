@@ -20,6 +20,7 @@ Fee distribution is the venue's published policy for where trading fees flow onc
 | venue | team take | LP take | token-holder benefit | deployer take |
 |---|---|---|---|---|
 | [[entities/perpdex/hyperliquid]] | 0%[^hl-docs-2026-04-27-trading-fees] | yes (HLP)[^hl-docs-2026-04-27-trading-fees] | indirect via burn[^hl-docs-2026-04-27-trading-fees] | up to 50% (HIP-3 / spot deployers)[^hl-docs-2026-04-27-trading-fees] |
+| [[entities/perpdex/aster]] | 0% direct (Treasury 7% allocation fully locked at TGE and gated on governance approval; specific protocol-revenue → team take not surfaced in primary docs)[^aster-docs-2026-04-28-usdaster-tokenomics] (disputed; see [[entities/perpdex/aster#dispute-fee-rates]]) | yes — ALP NAV accrues a share of platform-level fee collection plus trading fees, funding fees, liquidation captures, and Simple Mode MM P&L[^aster-docs-2026-04-28-earn-aster-alp] (disputed; see [[entities/perpdex/aster#dispute-alp-tax-basis-points]]) | direct: 5% flat fee discount when $ASTER is deposited into the perp wallet; indirect: portion of protocol revenue redirected to $ASTER buybacks via the Aster Foundation and to governance rewards[^aster-docs-2026-04-28-trading-perpetuals-fees][^aster-docs-2026-04-28-usdaster-tokenomics] (disputed; see [[entities/perpdex/aster#dispute-fee-rates]]) | not surfaced (primary docs) — no documented HIP-3-style asset-deployer fee share on Aster[^aster-docs-2026-04-28-usdaster-tokenomics] |
 
 (Other perpdex venues to be added in subsequent ingest passes.)
 
@@ -28,3 +29,6 @@ Fee distribution is the venue's published policy for where trading fees flow onc
 
 ## Sources
 [^hl-docs-2026-04-27-trading-fees]: [[sources/hl-docs-2026-04-27-trading-fees]]
+[^aster-docs-2026-04-28-trading-perpetuals-fees]: [[sources/aster-docs-2026-04-28-trading-perpetuals-fees]]
+[^aster-docs-2026-04-28-usdaster-tokenomics]: [[sources/aster-docs-2026-04-28-usdaster-tokenomics]]
+[^aster-docs-2026-04-28-earn-aster-alp]: [[sources/aster-docs-2026-04-28-earn-aster-alp]]
