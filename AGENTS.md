@@ -51,7 +51,7 @@ Domain abstractions. The definition does not change; only its variants in the wi
 Numeric/rule facts that change over time. Two keying schemes:
 
 - **Venue-wide**: `parameters/<entity>/<slug>.md` — keyed by `(entity, parameter-name)`.
-  Examples: `fee-schedule`, `rebate-programme`, `margin-tiers`, `liquidation-params`, `listed-markets-roster`, `oracle-config`, `insurance-fund-balance`, `revenue-distribution`, `mm-rebate-tiers`, `points-program-rules`.
+  Examples: `fee-schedule`, `rebate-programme`, `margin-tiers`, `liquidation-params`, `listed-markets-roster`, `oracle-config`, `insurance-fund-balance`, `revenue-distribution`, `mm-rebate-tiers`, `points-program-rules`, `funding-config`, `validator-requirements`, `staking-rewards`, `tokenomics`, `audits`, `contract-addresses`, `usdf-peg`, `listing-policy`, `<pool-id>` (for venue-owned LP vaults — see HLP, ALP, GLP, JLP).
 
 - **Per-market**: `parameters/<entity>/markets/<symbol>.md` — keyed by `(entity, market-symbol)`. Each listed market gets its own page tracking contract-spec time-series and lifecycle. Frontmatter:
   ```yaml
@@ -71,6 +71,19 @@ Numeric/rule facts that change over time. Two keying schemes:
   Body sections: `## Current contract specs` · `## Time series` (columns: effective | tick_size | lot_size | max_leverage | oi_cap | mark_price_formula | initial_margin | maint_margin | source) · `## Lifecycle events` (listed/paused/delisted with reasons + source) · `## Disputed values` · `## Sources`.
 
 **Filing rule:** per-market changes (OI cap raise on ETH-PERP, BTC-PERP listing, SOL-PERP delisting) → market-specific page. Venue-wide changes (fee schedule update, MM tier overhaul, oracle migration) → venue-wide parameter page.
+
+- **Per-programme**: `parameters/programmes/<slug>.md` — keyed by `(programme-slug, "outcomes")`. For named, time-bounded campaigns (HL points S2, dYdX MM rewards epoch 47, Aevo Surge, Aster Trade & Earn). The programme entity at `entities/programme/<slug>.md` carries the programme's identity and rules; the parameters page carries longitudinal KPI data. Frontmatter:
+  ```yaml
+  ---
+  type: parameter
+  programme: [[<slug>]]
+  parameter: outcomes
+  last_change: YYYY-MM-DD
+  last_reviewed: YYYY-MM-DD
+  disputed: false
+  ---
+  ```
+  Body sections: `## KPI time series` (snapshot | volume_delta_pct | unique_traders | est_cost_usd | est_roi | source) · `## Anti-abuse incidents` · `## Cohort retention` · `## Sources`. The programme entity page links to it.
 
 **Rule:** if a fact has an effective date or is expected to change, it is a parameter, not body text on an entity page.
 
@@ -100,8 +113,18 @@ Canonical verb set:
 | `distributes_to` | entity → token/actor | Hyperliquid distributes_to HYPE buyback (revenue flow) |
 | `subsidizes` | programme → concept/market | mm-rewards subsidizes maker-volume on ETH-PERP |
 | `seeds_liquidity_for` | entity/programme → market | HLP seeds_liquidity_for ETH-PERP-USD |
+| `is_collateral_for` | token → entity/market | USDF is_collateral_for Aster Perps via Multi-Asset Mode |
 
-Do not invent verbs. If a relation does not fit, propose a new one in `open-questions.md` and continue with the closest existing verb.
+**Do not invent verbs.** If a relation does not fit, propose a new one in `open-questions.md` and continue with the closest existing verb. Common substitutions when tempted to invent:
+
+| Tempting invented verb | Use instead |
+|---|---|
+| `provides_liquidity_for` | `seeds_liquidity_for` |
+| `discounts_fees` | `applies_to` (token → fee-schedule) |
+| `bears_pnl_for` / `bears` | not a relation — describe in body prose, not in Relations |
+| `backstops` | `seeds_liquidity_for` (with body note clarifying backstop role) |
+
+Verb invention is a Phase 2 schema violation that lint will flag. If you reach for a verb not in the table, stop and either substitute from the table or open a schema-extension question; do not commit.
 
 ## Citation rule — per-claim inline
 
@@ -677,6 +700,25 @@ After all Phase 1 agents complete:
 7. Append every conflict to `open-questions.md`.
 8. Print structured summary: per-snapshot crawl result (new/reused/refreshed), per-page touch list, all newly raised open questions.
 
+#### Phase 2 mandatory completeness rule [LOAD-BEARING]
+
+**Phase 2 is atomic.** A Phase 2 run that creates an entity page WITHOUT (a) integrating that entity's claims into existing concept pages' `## Variants in the wild` tables and (b) creating the parameter pages the entity body references is **incomplete** and breaks the wiki's cross-venue comparison affordance.
+
+Specific obligations every Phase 2 run MUST satisfy before declaring done:
+
+1. **Concept-page Variants integration.** For every claim with type `definition` / `mechanism` filed to a `concepts/<domain>/<slug>` page that **already exists**, append a row to that concept page's `## Variants in the wild` table representing the new venue. Do NOT skip on the basis of "concepts already populated by another venue" — that is precisely the case where the row is needed.
+2. **Parameter-page creation.** Every wikilink of the form `[[parameters/<entity>/<slug>]]` written into the new entity page's `## Parameters` section MUST resolve to an existing file by end of Phase 2. Either create the parameter page (preferred) or remove the wikilink (acceptable if the parameter is unsourced from this snapshot).
+3. **Index update.** `index.md` lists every page created or modified in this run.
+4. **Schema verb discipline.** Every relation written in `**verb**` form MUST appear in §"Relations" canonical verb table. If a needed relation does not fit, add it to `open-questions.md` and use the closest existing verb — DO NOT invent verbs inline.
+5. **Schema slot discipline.** Every parameter slot key (the `parameter:` field in parameter-page frontmatter) MUST be either a documented example in §"Parameters" or a justified extension recorded in this Phase 2's log entry. Do NOT silently adopt audit-predicted slots without schema patch.
+
+**Forbidden shortcuts.** No "lightweight Phase 2", no "concepts deferred", no "parameters TBD as forward refs". An entity ingest that defers concept-table integration is a merge-debt generator: future Phase 2 runs across other venues will silently overwrite the gap rather than reconcile it. If time pressure forces deferral, **defer the entity page itself** — file claims on existing concept pages as a one-row-per-claim addition, and create the entity later when there is time to do it correctly.
+
+**Verification before commit.** Before the Phase 2 commit, run:
+- Grep every `[[<dir>/<...>]]` wikilink in newly-touched pages; confirm target file exists OR is in this commit.
+- Grep every `**<verb>**` pattern; confirm the verb is in the §"Relations" table.
+- Diff `concepts/**/*.md` for added Variants rows; confirm at least one row was added per concept page the new entity touches.
+
 ### Failure handling
 
 - A single Phase 0.5 or Phase 1 agent failure does NOT abort the batch. Survivors proceed.
@@ -696,7 +738,9 @@ Checks:
 - Orphan concepts (no implementing entity points to it).
 - Parameters with `last_change > 90 days` — flag "still current?"
 - Unfootnoted claims (any sentence asserting a fact without `[^...]`).
-- Broken wikilinks.
+- **Broken wikilinks** — every fully-qualified `[[<dir>/<...>]]` must resolve to an existing file. Group separately by tier (entity / concept / parameter / source / audit).
+- **Invented relation verbs** — every `**<verb>**` pattern in body prose must match a verb in §"Relations" canonical table. Flag any non-matching verb as `verb: invented` with the page and verb. Common offenders are listed in the substitutions table; treat each as a Phase 2 schema violation, not a stylistic note.
+- **Phase 2 incompleteness markers** — when an entity page exists for a perpdex but its claims are absent from existing concept pages' `## Variants in the wild` tables, flag as `phase2: deferred` with the entity name and the list of concept pages missing a row.
 - Sources cited nowhere (file-back failed).
 - **Mirror age report**: list active snapshots with their `crawled_at` age in days. **Do NOT suggest refresh** — refresh is user-initiated only. Just report ages so the user can decide.
 - **Superseded mirrors not yet reconciled**: snapshots with `status: superseded` whose newer counterpart's claims have not been cross-checked → propose contradictions to verify.
