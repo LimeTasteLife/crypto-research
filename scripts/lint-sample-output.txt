@@ -1,0 +1,149 @@
+=== AGENTS.md schema lint — 2026-04-28T08:17:10Z — HEAD 4658187 ===
+
+## 1. Disputed pages stale (>30 days) [PASS]
+  (none)
+
+## 2. Orphan parameters (no parent entity page) [2 issue(s)]
+  [IMPORTANT] parameters/programmes/aster-referral.md — parent entity 'programmes' not found in entities/
+  [IMPORTANT] parameters/programmes/aster-trade-and-earn.md — parent entity 'programmes' not found in entities/
+
+## 3. Orphan concepts (not referenced by any perpdex entity) [15 issue(s)]
+  [INFO] concepts/incentives/anti-abuse.md — not referenced by any entities/perpdex/*.md
+  [INFO] concepts/incentives/points-program.md — not referenced by any entities/perpdex/*.md
+  [INFO] concepts/incentives/referral-design.md — not referenced by any entities/perpdex/*.md
+  [INFO] concepts/listing/listing-playbook.md — not referenced by any entities/perpdex/*.md
+  [INFO] concepts/market-microstructure/contract-size.md — not referenced by any entities/perpdex/*.md
+  [INFO] concepts/market-microstructure/lot-size.md — not referenced by any entities/perpdex/*.md
+  [INFO] concepts/market-microstructure/tick-size.md — not referenced by any entities/perpdex/*.md
+  [INFO] concepts/metrics/mm-uptime.md — not referenced by any entities/perpdex/*.md
+  [INFO] concepts/metrics/volume.md — not referenced by any entities/perpdex/*.md
+  [INFO] concepts/operations/matching-engine.md — not referenced by any entities/perpdex/*.md
+  [INFO] concepts/operations/settlement.md — not referenced by any entities/perpdex/*.md
+  [INFO] concepts/risk/insurance-fund-sizing.md — not referenced by any entities/perpdex/*.md
+  [INFO] concepts/risk/leverage-cap.md — not referenced by any entities/perpdex/*.md
+  [INFO] concepts/tokenomics/emission-schedule.md — not referenced by any entities/perpdex/*.md
+  [INFO] concepts/tokenomics/rev-share.md — not referenced by any entities/perpdex/*.md
+
+## 4. Stale parameters (last_change >90 days) [PASS]
+  (none)
+
+## 5. Unfootnoted claims (heuristic — false positives expected) [157 issue(s)]
+  # NOTE: heuristic scan — verify findings manually before acting
+  [INFO] entities/network/arbitrum.md:14: > Ethereum L2 (optimistic rollup). Referenced here only as a USDC deposit source…
+  [INFO] entities/network/aster-chain.md:14: > A purpose-built L1 for privacy-focused perpetuals trading, advertising 100,000…
+  [INFO] entities/network/aster-chain.md:46: - What is the consensus algorithm name — HotStuff variant, Tendermint, custom BF…
+  [INFO] entities/network/aster-chain.md:48: - Is the validator set permissioned (Aster Foundation / approved partners) or pe…
+  [INFO] entities/network/aster-chain.md:50: - Is the Aster Chain L1 or perp matching engine audited? The published audit pag…
+  [INFO] entities/network/bnb-chain.md:14: > EVM-compatible L1 (formerly Binance Smart Chain). Referenced here as the prima…
+  [INFO] entities/network/hyperliquid-l1.md:14: > A purpose-built proof-of-stake L1 secured by HyperBFT consensus, hosting both …
+  [INFO] entities/network/lighter-core.md:14: > A custom ZK-rollup whose state machine is an exchange (orderbook, positions, p…
+  [INFO] entities/perpdex/aster.md:15: > A privacy-focused decentralized perpetual exchange spanning crypto, equity, an…
+  [INFO] entities/perpdex/aster.md:130: Coverage summary: filled 27 / not-applicable 5 / gap 13 = 45.…
+  [INFO] entities/perpdex/aster.md:135: - What does the MM program's "Type" column (H / N / Not-Applicable) mean? The va…
+  [INFO] entities/perpdex/aster.md:140: - **#dispute-fee-rates**: The Perpetuals overview page advertises 0.01% maker / …
+  [INFO] entities/perpdex/aster.md:141: - **#dispute-alp-tax-basis-points**: ALP Fees page lists TaxBasisPoints (USDT) a…
+  [INFO] entities/perpdex/hyperliquid.md:15: > A purpose-built layer-one blockchain whose state machine is a fully on-chain C…
+  [INFO] entities/perpdex/hyperliquid.md:105: Coverage summary: filled 17 / not-applicable 11 / gap 17 = 45.…
+  [INFO] entities/perpdex/lighter.md:15: > A ZK-rollup verifiable-execution perp DEX with a two-track Standard/Premium ac…
+  [INFO] entities/perpdex/lighter.md:31: **Five cells re-rated to `gap` after red-team review.** Initial coverage 26 / 8 …
+  [INFO] entities/perpdex/lighter.md:137: Coverage summary: filled 21 / not-applicable 8 / gap 16 = 45.…
+  [INFO] entities/perpdex/lighter.md:163:   Suggested verification: (1) on-chain analysis — query trading-fee-funded LIT b…
+  [INFO] entities/perpdex/lighter.md:175:   Suggested verification: (1) check app.lighter.xyz collateral-deposit flow for …
+  … and 137 more (suppressed — check 5 is heuristic)
+
+## 6. Broken wikilinks [35 issue(s)]
+  [IMPORTANT] entities/perpdex/lighter.md → [[parameters/lighter/markets/BTC]] — file not found
+  [IMPORTANT] entities/perpdex/lighter.md → [[parameters/lighter/markets/ETH]] — file not found
+  [IMPORTANT] entities/perpdex/lighter.md → [[parameters/lighter/markets/SOL]] — file not found
+  [IMPORTANT] entities/perpdex/lighter.md → [[parameters/lighter/markets/XAU]] — file not found
+  [IMPORTANT] entities/perpdex/lighter.md → [[parameters/lighter/markets/XAG]] — file not found
+  [IMPORTANT] entities/perpdex/lighter.md → [[parameters/lighter/markets/WTI]] — file not found
+  [IMPORTANT] entities/perpdex/lighter.md → [[parameters/lighter/markets/NATGAS]] — file not found
+  [IMPORTANT] entities/perpdex/lighter.md → [[parameters/lighter/markets/BRENTOIL]] — file not found
+  [IMPORTANT] parameters/lighter/listed-markets-roster.md → [[parameters/lighter/markets/BTC]] — file not found
+  [IMPORTANT] parameters/lighter/listed-markets-roster.md → [[parameters/lighter/markets/ETH]] — file not found
+  [IMPORTANT] parameters/lighter/listed-markets-roster.md → [[parameters/lighter/markets/SOL]] — file not found
+  [IMPORTANT] parameters/lighter/listed-markets-roster.md → [[parameters/lighter/markets/XAU]] — file not found
+  [IMPORTANT] parameters/lighter/listed-markets-roster.md → [[parameters/lighter/markets/XAG]] — file not found
+  [IMPORTANT] sources/aster-docs-2026-04-28-trading-perpetuals-funding-rate.md → [[parameters/aster/markets/BNBUSDT]] — file not found
+  [IMPORTANT] sources/aster-docs-2026-04-28-trading-perpetuals-funding-rate.md → [[parameters/aster/markets/ASTERUSDT]] — file not found
+  [IMPORTANT] sources/aster-docs-2026-04-28-trading-perpetuals-market-maker-program.md → [[parameters/aster/markets/BTCUSDT]] — file not found
+  [IMPORTANT] sources/aster-docs-2026-04-28-trading-perpetuals-market-maker-program.md → [[parameters/aster/markets/ETHUSDT]] — file not found
+  [IMPORTANT] sources/aster-docs-2026-04-28-trading-perpetuals-market-maker-program.md → [[parameters/aster/markets/SOLUSDT]] — file not found
+  [IMPORTANT] sources/aster-docs-2026-04-28-trading-perpetuals-market-maker-program.md → [[parameters/aster/markets/ASTERUSDT]] — file not found
+  [IMPORTANT] sources/aster-docs-2026-04-28-trading-perpetuals-market-maker-program.md → [[parameters/aster/markets/HYPEUSDT]] — file not found
+  [IMPORTANT] sources/aster-docs-2026-04-28-usdf-maintaining-the-peg.md → [[concepts/risk/peg-defense]] — file not found
+  [IMPORTANT] sources/aster-docs-2026-04-28-usdf-maintaining-the-peg.md → [[concepts/risk/peg-defense]] — file not found
+  [IMPORTANT] sources/lighter-docs-2026-04-28-trading-contract-specifications.md → [[parameters/lighter/markets/BTC]] — file not found
+  [IMPORTANT] sources/lighter-docs-2026-04-28-trading-contract-specifications.md → [[parameters/lighter/markets/ETH]] — file not found
+  [IMPORTANT] sources/lighter-docs-2026-04-28-trading-contract-specifications.md → [[parameters/lighter/markets/SOL]] — file not found
+  [IMPORTANT] sources/lighter-docs-2026-04-28-trading-contract-specifications.md → [[parameters/lighter/markets/XAG]] — file not found
+  [IMPORTANT] sources/lighter-docs-2026-04-28-trading-contract-specifications.md → [[parameters/lighter/markets/XAU]] — file not found
+  [IMPORTANT] sources/lighter-docs-2026-04-28-trading-real-world-assets-rwas-futures-contract-price-rolling-mechanism.md → [[parameters/lighter/markets/WTI]] — file not found
+  [IMPORTANT] sources/lighter-docs-2026-04-28-trading-real-world-assets-rwas-futures-contract-price-rolling-mechanism.md → [[parameters/lighter/markets/NATGAS]] — file not found
+  [IMPORTANT] sources/lighter-docs-2026-04-28-trading-real-world-assets-rwas-futures-contract-price-rolling-mechanism.md → [[parameters/lighter/markets/BRENTOIL]] — file not found
+  [IMPORTANT] sources/lighter-docs-2026-04-28-trading-real-world-assets-rwas-futures-contract-price-rolling-mechanism.md → [[parameters/lighter/markets/WTI]] — file not found
+  [IMPORTANT] sources/lighter-docs-2026-04-28-trading-real-world-assets-rwas-futures-contract-price-rolling-mechanism.md → [[parameters/lighter/markets/NATGAS]] — file not found
+  [IMPORTANT] sources/lighter-docs-2026-04-28-trading-real-world-assets-rwas-futures-contract-price-rolling-mechanism.md → [[parameters/lighter/markets/BRENTOIL]] — file not found
+  [IMPORTANT] sources/lighter-docs-2026-04-28-trading-real-world-assets-rwas-rwa-pricing-mechanism.md → [[parameters/lighter/markets/XAU]] — file not found
+  [IMPORTANT] sources/lighter-docs-2026-04-28-trading-real-world-assets-rwas.md → [[parameters/lighter/markets/XAU]] — file not found
+
+## 7. Invented relation verbs [5 issue(s)]
+  [IMPORTANT] entities/perpdex/hyperliquid.md:49: verb 'backstops' not in canonical set
+  [IMPORTANT] concepts/lp/vault.md:12: verb 'vault' not in canonical set
+  [IMPORTANT] concepts/lp/vault.md:28: verb 'not' not in canonical set
+  [IMPORTANT] concepts/risk/liquidation.md:60: verb 'only' not in canonical set
+
+## 8. Phase 2 incompleteness markers [21 issue(s)]
+  [IMPORTANT] entities/perpdex/aster.md → concepts/lp/venue-owned-lp.md missing 'Aster' row in Variants in the wild
+  [IMPORTANT] entities/perpdex/aster.md → concepts/market-microstructure/mark-price-formula.md missing 'Aster' row in Variants in the wild
+  [IMPORTANT] entities/perpdex/aster.md → concepts/market-structure/clob.md missing 'Aster' row in Variants in the wild
+  [IMPORTANT] entities/perpdex/aster.md → concepts/risk/adl-waterfall.md missing 'Aster' row in Variants in the wild
+  [IMPORTANT] entities/perpdex/aster.md → concepts/risk/liquidation.md missing 'Aster' row in Variants in the wild
+  [IMPORTANT] entities/perpdex/aster.md → concepts/risk/margin-tier.md missing 'Aster' row in Variants in the wild
+  [IMPORTANT] entities/perpdex/hyperliquid.md → concepts/market-structure/clob.md missing 'Hyperliquid' row in Variants in the wild
+  [IMPORTANT] entities/perpdex/hyperliquid.md → concepts/risk/liquidation.md missing 'Hyperliquid' row in Variants in the wild
+  [IMPORTANT] entities/perpdex/lighter.md → concepts/fee-model/funding-rate.md missing 'Lighter' row in Variants in the wild
+  [IMPORTANT] entities/perpdex/lighter.md → concepts/incentives/sybil-resistance.md missing 'Lighter' row in Variants in the wild
+  [IMPORTANT] entities/perpdex/lighter.md → concepts/listing/pre-launch-perp.md missing 'Lighter' row in Variants in the wild
+  [IMPORTANT] entities/perpdex/lighter.md → concepts/lp/vault.md missing 'Lighter' row in Variants in the wild
+  [IMPORTANT] entities/perpdex/lighter.md → concepts/market-microstructure/mark-price-formula.md missing 'Lighter' row in Variants in the wild
+  [IMPORTANT] entities/perpdex/lighter.md → concepts/market-microstructure/oracle-spec.md missing 'Lighter' row in Variants in the wild
+  [IMPORTANT] entities/perpdex/lighter.md → concepts/market-structure/clob.md missing 'Lighter' row in Variants in the wild
+  [IMPORTANT] entities/perpdex/lighter.md → concepts/operations/sequencer.md missing 'Lighter' row in Variants in the wild
+  [IMPORTANT] entities/perpdex/lighter.md → concepts/risk/adl-waterfall.md missing 'Lighter' row in Variants in the wild
+  [IMPORTANT] entities/perpdex/lighter.md → concepts/risk/liquidation.md missing 'Lighter' row in Variants in the wild
+  [IMPORTANT] entities/perpdex/lighter.md → concepts/risk/margin-tier.md missing 'Lighter' row in Variants in the wild
+  [IMPORTANT] entities/perpdex/lighter.md → concepts/tokenomics/buyback.md missing 'Lighter' row in Variants in the wild
+  [IMPORTANT] entities/perpdex/lighter.md → concepts/tokenomics/fee-distribution.md missing 'Lighter' row in Variants in the wild
+
+## 9. Orphan sources (cited nowhere) [PASS]
+  (none)
+
+## 10. Dangling footnotes (no source file) [PASS]
+  (none)
+
+## 11. Mirror age report (INFO only — no refresh suggested) [2 issue(s)]
+  [INFO] Mirror snapshot 'hl-docs-2026-04-27' crawled 2026-04-27 (1 day(s) ago)
+  [INFO] Mirror snapshot 'lighter-docs-2026-04-28' crawled 2026-04-28 (0 day(s) ago)
+
+## 12. Superseded mirrors not yet reconciled [PASS]
+  (none)
+
+## 13. Paused crawls (hit max_pages) [2 issue(s)]
+  [INFO] Paused crawl: 'aster-docs-2026-04-28' — hit max_pages; user must decide whether to resume
+  [INFO] Paused crawl: 'hl-docs-2026-04-27' — hit max_pages; user must decide whether to resume
+
+## 14. Frame coverage report (perpdex 1-hop) [3 issue(s)]
+  [INFO] aster                 filled=27 / NA=5 / gap=13 = 45 (expected 45)
+  [INFO] aster                 source in-scope claims=38  untagged=0(0%)  dash=20(52%)  malformed=0
+  [INFO] hyperliquid           filled=17 / NA=8 / gap=17 = 42 (expected 45)
+  [INFO] hyperliquid           source in-scope claims=8  untagged=4(50%)  dash=0(0%)  malformed=0
+  [INFO] lighter               filled=21 / NA=5 / gap=19 = 45 (expected 45)
+  [INFO] lighter               source in-scope claims=109  untagged=0(0%)  dash=0(0%)  malformed=0
+  [INFO] entities/perpdex/aster.md — definition-heavy source set: dash-tagged rate 52% (>30%; expected for primary docs)
+  [IMPORTANT] entities/perpdex/hyperliquid.md — frame coverage total=42 (expected 45); check for missing or duplicate entries
+  [IMPORTANT] entities/perpdex/hyperliquid.md — untagged rate 50% exceeds 10% threshold; Phase 1 agent prompt may need tightening
+
+---
+Total: PASS=5 | INFO=46 | IMPORTANT=64 | CRITICAL=0
