@@ -140,14 +140,16 @@ A7's high concentration on Aster (40/41 ≈ 98%) is a single-source artefact (as
 
 The Lighter cluster is documented in `audit/2026-04-28-lighter-redteam-postmortem.md` and includes the TAV/TALT zero-price-formula and ADL trigger granularity disputes. Each disputed claim should map to a row in `open-questions.md` with a verification-suggestion path.
 
-### MEDIUM — F7. Verb invention (2 occurrences)
+### MEDIUM — F7. Verb invention — **erratum: false positive on controller post-verification**
 
-| verb | location | status |
+Schema-evolution-pressure agent claimed two invented verbs. Controller verified by direct grep (`bridges_to|\*\*bridges`) **after** the audit was first written:
+
+| verb | location | actual status |
 |---|---|---|
-| `**backstops**` | `entities/perpdex/hyperliquid.md:49` | **Schema-pending** — already filed in `open-questions.md` as a verb-set proposal per the Lighter red-team postmortem. Treat as schema-extension candidate, not new defect. |
-| `**bridges_to**` | `entities/network/arbitrum.md:23` | **New finding** — cross-chain relation not covered by canonical verb set. No proposal yet filed. |
+| `**backstops**` | originally `entities/perpdex/hyperliquid.md` | **Already resolved** in commit `7488394` (test-branch schema patch) and the Lighter pre-merge cleanup (`b93ca2e`) — the verb has been removed from entity Relations and body-prose-substituted. The substitution rule lives in `AGENTS.md:139` (`backstops` → `seeds_liquidity_for` + body note). The corresponding `open-questions.md` entry is in §Resolved (line 47–48). Agent was reading stale state. |
+| `**bridges_to**` | claimed `entities/network/arbitrum.md:23` | **Not present.** Direct grep of the repo finds `bridges_to` only in `AGENTS.md:140` (already in substitution table — "not a relation — describe in body prose"), `scripts/lint.sh:111` (the lint check), and a prior log line. `entities/network/arbitrum.md:22–23` already follows the schema: `_(no canonical relation verb fits a bridge corridor; corridor mechanics are documented in body prose above)_`. Agent appears to have hallucinated the location. |
 
-**Recommendation:** Bundle both into a single schema-patch decision. `backstops` either (a) accepted into canonical table, (b) replaced by `seeds_liquidity_for` + body prose per AGENTS.md substitution table. `bridges_to` likely (c) accepted as new canonical verb (no clean substitute).
+**No remediation required.** Schema-evolution-pressure agent's grep target — `\*\*[a-z_]+\*\*` against entity body prose — should reliably catch real invented verbs but did not in this case. Kept here as a record that two of the agent's three pressure findings were false-positive on verification; only **Pressure 1** (A7/A8 split readiness) and **Pressure 2** (parameter slot drift) are real.
 
 ### MEDIUM — F8. Operational backlog signals
 
@@ -157,9 +159,9 @@ The Lighter cluster is documented in `audit/2026-04-28-lighter-redteam-postmorte
 
 ### LOW — F9. `concepts/fee-model/maker-fee.md` referenced in schema, missing on disk
 
-**Claim:** AGENTS.md examples cite `concepts/fee-model/maker-fee` as a slug; no such file exists. Currently no entity links to it (no broken wikilink), but creates fragility if comparison work needs it.
+**Claim:** AGENTS.md examples cite `concepts/fee-model/maker-fee` as a slug; no such file exists. Currently no entity links to it (no broken wikilink — controller verified by repo-wide grep of `concepts/fee-model/maker-fee` and `concepts/fee-model/taker-fee`, zero hits outside this audit file).
 
-**Recommendation:** Either create a stub or remove the example from AGENTS.md. Low priority — current fee-model coverage is by parameter pages.
+**Recommendation:** Defer. No pre-emptive stub. The schema example is illustrative; the only cost of the missing file is a future ingest creating it. Low priority — current fee-model coverage is by parameter pages and the existing `funding-rate.md` concept page.
 
 ---
 
