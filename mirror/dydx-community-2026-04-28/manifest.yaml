@@ -1,0 +1,180 @@
+snapshot_id: dydx-community-2026-04-28
+root_url: https://docs.dydx.community/dydx
+host: docs.dydx.community
+path_prefix: /dydx/
+crawled_at: 2026-04-28T02:50:00Z
+crawler: exa
+page_count: 21
+status: paused
+supersedes: null
+superseded_by: null
+allow: []
+deny: []
+max_pages: 21
+pages:
+  - slug: introduction
+    url: https://docs.dydx.community/dydx
+    fetched_at: 2026-04-28T02:35:00Z
+    status: ok
+    crawler: exa
+    bytes: 852
+    title: Introduction
+  - slug: start-here-dydx-token
+    url: https://docs.dydx.community/dydx/start-here/dydx-token
+    fetched_at: 2026-04-28T02:35:00Z
+    status: ok
+    crawler: exa
+    bytes: 1306
+    title: DYDX Token
+  - slug: start-here-dydx-token-allocation
+    url: https://docs.dydx.community/dydx/start-here/dydx-token-allocation
+    fetched_at: 2026-04-28T02:35:00Z
+    status: ok
+    crawler: exa
+    bytes: 3237
+    title: DYDX Token Allocation
+  - slug: start-here-dydx-fees
+    url: https://docs.dydx.community/dydx/start-here/dydx-fees
+    fetched_at: 2026-04-28T02:35:00Z
+    status: ok
+    crawler: exa
+    bytes: 227
+    title: dYdX Fees
+  - slug: modules-staking
+    url: https://docs.dydx.community/dydx/modules/staking
+    fetched_at: 2026-04-28T02:35:00Z
+    status: ok
+    crawler: exa
+    bytes: 3754
+    title: Staking
+  - slug: modules-distribution
+    url: https://docs.dydx.community/dydx/modules/distribution
+    fetched_at: 2026-04-28T02:35:00Z
+    status: ok
+    crawler: exa
+    bytes: 3531
+    title: Distribution
+  - slug: modules-distribution-protocol-revenue-sharing
+    url: https://docs.dydx.community/dydx/modules/distribution/protocol-revenue-sharing
+    fetched_at: 2026-04-28T02:42:00Z
+    status: ok
+    crawler: exa
+    bytes: 823
+    title: Protocol Revenue Sharing
+  - slug: modules-governance
+    url: https://docs.dydx.community/dydx/modules/governance
+    fetched_at: 2026-04-28T02:35:00Z
+    status: ok
+    crawler: exa
+    bytes: 6839
+    title: Governance
+  - slug: modules-governance-proposal-lifecycle
+    url: https://docs.dydx.community/dydx/modules/governance/proposal-lifecycle
+    fetched_at: 2026-04-28T02:42:00Z
+    status: ok
+    crawler: exa
+    bytes: 5007
+    title: Proposal Lifecycle
+  - slug: modules-governance-adjustable-parameters
+    url: https://docs.dydx.community/dydx/modules/governance/governance-adjustable-parameters
+    fetched_at: 2026-04-28T02:42:00Z
+    status: ok
+    crawler: exa
+    bytes: 1283
+    title: Governance Adjustable Parameters
+  - slug: modules-governance-fee-tiers
+    url: https://docs.dydx.community/dydx/modules/governance/governance-adjustable-parameters/fee-tiers
+    fetched_at: 2026-04-28T02:42:00Z
+    status: ok
+    crawler: exa
+    bytes: 707
+    title: Fee Tiers
+  - slug: modules-governance-markets
+    url: https://docs.dydx.community/dydx/modules/governance/governance-adjustable-parameters/markets
+    fetched_at: 2026-04-28T02:42:00Z
+    status: ok
+    crawler: exa
+    bytes: 3545
+    title: Markets (Governance Adjustable Parameters)
+  - slug: modules-governance-clob
+    url: https://docs.dydx.community/dydx/modules/governance/governance-adjustable-parameters/clob
+    fetched_at: 2026-04-28T02:42:00Z
+    status: ok
+    crawler: exa
+    bytes: 414
+    title: CLOB (Governance Adjustable Parameters)
+  - slug: modules-governance-perpetual
+    url: https://docs.dydx.community/dydx/modules/governance/governance-adjustable-parameters/perpetual
+    fetched_at: 2026-04-28T02:42:00Z
+    status: ok
+    crawler: exa
+    bytes: 1884
+    title: Perpetual (Governance Adjustable Parameters)
+  - slug: modules-governance-order-router-rev-share
+    url: https://docs.dydx.community/dydx/modules/governance/governance-adjustable-parameters/order-router-rev-share
+    fetched_at: 2026-04-28T02:42:00Z
+    status: ok
+    crawler: exa
+    bytes: 1195
+    title: Order Router Rev Share (Governance)
+  - slug: modules-community-treasury
+    url: https://docs.dydx.community/dydx/modules/community-treasury
+    fetched_at: 2026-04-28T02:35:00Z
+    status: ok
+    crawler: exa
+    bytes: 3282
+    title: Community Treasury
+  - slug: modules-trading-rewards
+    url: https://docs.dydx.community/dydx/modules/trading-rewards
+    fetched_at: 2026-04-28T02:35:00Z
+    status: ok
+    crawler: exa
+    bytes: 327
+    title: Trading Rewards
+  - slug: modules-slashing
+    url: https://docs.dydx.community/dydx/modules/slashing
+    fetched_at: 2026-04-28T02:42:00Z
+    status: ok
+    crawler: exa
+    bytes: 4275
+    title: Slashing
+  - slug: dydx-features-instant-market-listings
+    url: https://docs.dydx.community/dydx/dydx-features/instant-market-listings
+    fetched_at: 2026-04-28T02:42:00Z
+    status: ok
+    crawler: exa
+    bytes: 3496
+    title: Instant Market Listings
+  - slug: dydx-features-megavault
+    url: https://docs.dydx.community/dydx/dydx-features/megavault
+    fetched_at: 2026-04-28T02:42:00Z
+    status: ok
+    crawler: exa
+    bytes: 4649
+    title: MegaVault (Community Docs)
+  - slug: dydx-features-affiliate-program
+    url: https://docs.dydx.community/dydx/dydx-features/affiliate-program
+    fetched_at: 2026-04-28T02:35:00Z
+    status: ok
+    crawler: exa
+    bytes: 2554
+    title: Affiliate Program
+queue_remainder:
+  - https://docs.dydx.community/dydx/start-here/legal-disclaimer
+  - https://docs.dydx.community/dydx/modules/governance/governance-adjustable-parameters/trading-stats
+  - https://docs.dydx.community/dydx/modules/governance/governance-adjustable-parameters/trading-core
+  - https://docs.dydx.community/dydx/modules/governance/governance-adjustable-parameters/safety
+  - https://docs.dydx.community/dydx/modules/governance/governance-adjustable-parameters/updating-live-market
+  - https://docs.dydx.community/dydx/modules/governance/governance-adjustable-parameters/instant-market-listings-deposit
+  - https://docs.dydx.community/dydx/relevant-links-and-data-sources
+  - https://docs.dydx.community/dydx/relevant-links-and-data-sources/relevant-links
+  - https://docs.dydx.community/dydx/relevant-links-and-data-sources/relevant-data-sources-and-dashboards
+  - https://docs.dydx.community/dydx/dydx-operations-subdao
+  - https://docs.dydx.community/dydx/dydx-treasury-subdao
+  - https://docs.dydx.community/dydx/dydx-grants
+notes:
+  - "GitBook host with JS-rendered nav. /llms.txt available but title-only (no URL paths). /sitemap.md also title-only — used 404 'Suggested Pages' hints to discover real URL nesting (most params live under /modules/governance/governance-adjustable-parameters/)."
+  - "All 21 pages fetched successfully via exa on first attempt; no WebFetch fallbacks fired."
+  - "Multiple seeds returned 404s with redirect-style suggestions: /dydx/modules/fee-tiers → /dydx/modules/governance/governance-adjustable-parameters/fee-tiers. 404s NOT recorded as fetch_failed because the redirected page was successfully fetched."
+  - "A3 Affiliate Program reached at dydx-features/affiliate-program — covers VIP tier (≤50% taker fee, $10k/30d cap), Standard tier (≤15% taker fee, $3k/30d cap), $10k volume gate, CryptoLearningClub operator role."
+  - "Status set to paused at 21 pages (slightly above HL/Aster 20-page precedent because the cluster of related pages around governance-adjustable-parameters needed to be captured atomically). Queue_remainder includes ~12 in-scope pages not crawled (legal disclaimer, sub-DAO/grants pages, additional parameters pages, relevant-links registry)."

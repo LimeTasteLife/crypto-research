@@ -1,0 +1,246 @@
+snapshot_id: dydx-docs-2026-04-28
+root_url: https://docs.dydx.xyz/
+host: docs.dydx.xyz
+path_prefix: /
+crawled_at: 2026-04-28T02:30:00Z
+crawler: exa
+page_count: 26
+status: paused
+supersedes: null
+superseded_by: null
+allow: []
+deny: []
+max_pages: 26
+pages:
+  - slug: dydx-xyz-index
+    url: https://docs.dydx.xyz/
+    fetched_at: 2026-04-28T02:25:00Z
+    status: ok
+    crawler: exa
+    bytes: 1106
+    title: dYdX Integration Documentation (Index)
+  - slug: concepts-architecture-overview
+    url: https://docs.dydx.xyz/concepts/architecture/overview
+    fetched_at: 2026-04-28T02:25:00Z
+    status: ok
+    crawler: exa
+    bytes: 4678
+    title: Intro to dYdX Chain Architecture
+  - slug: concepts-architecture-indexer
+    url: https://docs.dydx.xyz/concepts/architecture/indexer
+    fetched_at: 2026-04-28T02:25:00Z
+    status: ok
+    crawler: exa
+    bytes: 3586
+    title: Indexer Deep Dive
+  - slug: concepts-architecture-oegs
+    url: https://docs.dydx.xyz/concepts/architecture/oegs
+    fetched_at: 2026-04-28T02:25:00Z
+    status: ok
+    crawler: exa
+    bytes: 4771
+    title: OEGS (Order Entry Gateway Service)
+  - slug: concepts-trading-accounts
+    url: https://docs.dydx.xyz/concepts/trading/accounts
+    fetched_at: 2026-04-28T02:25:00Z
+    status: ok
+    crawler: exa
+    bytes: 1237
+    title: Accounts and Subaccounts
+  - slug: concepts-trading-assets
+    url: https://docs.dydx.xyz/concepts/trading/assets
+    fetched_at: 2026-04-28T02:25:00Z
+    status: ok
+    crawler: exa
+    bytes: 1286
+    title: Perpetuals and Assets
+  - slug: concepts-trading-contract-loss-mechanism
+    url: https://docs.dydx.xyz/concepts/trading/contract-loss-mechanism
+    fetched_at: 2026-04-28T02:25:00Z
+    status: ok
+    crawler: exa
+    bytes: 3136
+    title: Contract Loss Mechanisms
+  - slug: concepts-trading-funding
+    url: https://docs.dydx.xyz/concepts/trading/funding
+    fetched_at: 2026-04-28T02:25:00Z
+    status: ok
+    crawler: exa
+    bytes: 4670
+    title: Funding
+  - slug: concepts-trading-governance
+    url: https://docs.dydx.xyz/concepts/trading/governance
+    fetched_at: 2026-04-28T02:25:00Z
+    status: ok
+    crawler: exa
+    bytes: 6201
+    title: Governance Functionalities
+  - slug: concepts-trading-isolated-markets
+    url: https://docs.dydx.xyz/concepts/trading/isolated-markets
+    fetched_at: 2026-04-28T02:25:00Z
+    status: ok
+    crawler: exa
+    bytes: 2769
+    title: Isolated Markets
+  - slug: concepts-trading-limit-orderbook
+    url: https://docs.dydx.xyz/concepts/trading/limit-orderbook
+    fetched_at: 2026-04-28T02:25:00Z
+    status: ok
+    crawler: exa
+    bytes: 3875
+    title: Limit Order Book and Matching
+  - slug: concepts-trading-liquidations
+    url: https://docs.dydx.xyz/concepts/trading/liquidations
+    fetched_at: 2026-04-28T02:27:00Z
+    status: ok
+    crawler: exa
+    bytes: 3869
+    title: Liquidations
+  - slug: concepts-trading-margin
+    url: https://docs.dydx.xyz/concepts/trading/margin
+    fetched_at: 2026-04-28T02:27:00Z
+    status: ok
+    crawler: exa
+    bytes: 3364
+    title: Margining
+  - slug: concepts-trading-megavault
+    url: https://docs.dydx.xyz/concepts/trading/megavault
+    fetched_at: 2026-04-28T02:27:00Z
+    status: ok
+    crawler: exa
+    bytes: 2505
+    title: MegaVault
+  - slug: concepts-trading-oracle
+    url: https://docs.dydx.xyz/concepts/trading/oracle
+    fetched_at: 2026-04-28T02:27:00Z
+    status: ok
+    crawler: exa
+    bytes: 1068
+    title: Oracle Prices
+  - slug: concepts-trading-orders
+    url: https://docs.dydx.xyz/concepts/trading/orders
+    fetched_at: 2026-04-28T02:27:00Z
+    status: ok
+    crawler: exa
+    bytes: 5540
+    title: Orders
+  - slug: concepts-trading-rewards
+    url: https://docs.dydx.xyz/concepts/trading/rewards
+    fetched_at: 2026-04-28T02:27:00Z
+    status: ok
+    crawler: exa
+    bytes: 4531
+    title: Rewards, Fees and Parameters
+  - slug: concepts-trading-rewards-staking-rewards
+    url: https://docs.dydx.xyz/concepts/trading/rewards/staking-rewards
+    fetched_at: 2026-04-28T02:27:00Z
+    status: ok
+    crawler: exa
+    bytes: 1662
+    title: Staking Rewards
+  - slug: concepts-trading-rewards-trading-rewards
+    url: https://docs.dydx.xyz/concepts/trading/rewards/trading-rewards
+    fetched_at: 2026-04-28T02:27:00Z
+    status: ok
+    crawler: exa
+    bytes: 4038
+    title: Trading Rewards
+  - slug: concepts-trading-limits-rate-limits
+    url: https://docs.dydx.xyz/concepts/trading/limits/rate-limits
+    fetched_at: 2026-04-28T02:27:00Z
+    status: ok
+    crawler: exa
+    bytes: 2035
+    title: Rate Limits
+  - slug: concepts-trading-limits-withdrawal-limits
+    url: https://docs.dydx.xyz/concepts/trading/limits/withdrawal-limits
+    fetched_at: 2026-04-28T02:27:00Z
+    status: ok
+    crawler: exa
+    bytes: 802
+    title: Withdrawal Limits
+  - slug: concepts-onboarding-faqs
+    url: https://docs.dydx.xyz/concepts/onboarding-faqs
+    fetched_at: 2026-04-28T02:28:00Z
+    status: ok
+    crawler: exa
+    bytes: 4879
+    title: Onboarding FAQs
+  - slug: interaction-integration-revshare
+    url: https://docs.dydx.xyz/interaction/integration/integration-revshare
+    fetched_at: 2026-04-28T02:28:00Z
+    status: ok
+    crawler: exa
+    bytes: 4076
+    title: Revenue Share (Order Router Rev Share)
+  - slug: interaction-integration-builder-codes
+    url: https://docs.dydx.xyz/interaction/integration/integration-builder-codes
+    fetched_at: 2026-04-28T02:28:00Z
+    status: ok
+    crawler: exa
+    bytes: 2588
+    title: Builder Codes
+  - slug: interaction-integration-compliance
+    url: https://docs.dydx.xyz/interaction/integration/integration-compliance
+    fetched_at: 2026-04-28T02:28:00Z
+    status: ok
+    crawler: exa
+    bytes: 2321
+    title: Compliance
+  - slug: policies-security
+    url: https://docs.dydx.xyz/policies/security
+    fetched_at: 2026-04-28T02:28:00Z
+    status: ok
+    crawler: exa
+    bytes: 465
+    title: Security
+queue_remainder:
+  - https://docs.dydx.xyz/interaction/integration/integration-onboarding
+  - https://docs.dydx.xyz/interaction/integration/integration-trade
+  - https://docs.dydx.xyz/interaction/integration/integration-data
+  - https://docs.dydx.xyz/interaction/integration/integration-markets
+  - https://docs.dydx.xyz/interaction/integration/integration-portfolio
+  - https://docs.dydx.xyz/interaction/integration/integration
+  - https://docs.dydx.xyz/interaction/permissioned-keys
+  - https://docs.dydx.xyz/interaction/trading
+  - https://docs.dydx.xyz/interaction/wallet-setup
+  - https://docs.dydx.xyz/interaction/endpoints
+  - https://docs.dydx.xyz/interaction/data/feeds
+  - https://docs.dydx.xyz/interaction/data/market
+  - https://docs.dydx.xyz/interaction/data/watch-orderbook
+  - https://docs.dydx.xyz/interaction/deposits-withdrawals/overview
+  - https://docs.dydx.xyz/interaction/deposits-withdrawals/skipgo
+  - https://docs.dydx.xyz/interaction/deposits-withdrawals/skipgofast
+  - https://docs.dydx.xyz/interaction/deposits-withdrawals/withdrawal
+  - https://docs.dydx.xyz/concepts/trading/authenticators
+  - https://docs.dydx.xyz/concepts/trading/quantums
+  - https://docs.dydx.xyz/nodes/network-constants
+  - https://docs.dydx.xyz/nodes/full-node-streaming
+  - https://docs.dydx.xyz/nodes/running-node/setup
+  - https://docs.dydx.xyz/nodes/running-node/hardware-requirement
+  - https://docs.dydx.xyz/nodes/running-node/optimize
+  - https://docs.dydx.xyz/nodes/running-node/required-node-configs
+  - https://docs.dydx.xyz/nodes/running-node/running-a-validator
+  - https://docs.dydx.xyz/nodes/running-node/snapshots
+  - https://docs.dydx.xyz/nodes/running-node/voting
+  - https://docs.dydx.xyz/nodes/upgrades/cosmovisor
+  - https://docs.dydx.xyz/nodes/upgrades/performing-upgrades
+  - https://docs.dydx.xyz/nodes/upgrades/types-of-upgrades
+  - https://docs.dydx.xyz/policies/terms
+  - https://docs.dydx.xyz/repositories
+  - https://docs.dydx.xyz/third-party-integrations
+  - https://docs.dydx.xyz/indexer-client/http
+  - https://docs.dydx.xyz/indexer-client/websockets
+  - https://docs.dydx.xyz/node-client
+  - https://docs.dydx.xyz/node-client/private
+  - https://docs.dydx.xyz/node-client/public
+  - https://docs.dydx.xyz/node-client/authenticators
+  - https://docs.dydx.xyz/faucet-client/intro
+  - https://docs.dydx.xyz/noble-client/intro
+notes:
+  - "llms.txt at /llms.txt provided a comprehensive 250+ entry canonical index; BFS not needed."
+  - "All 26 pages fetched successfully via exa on first attempt; no WebFetch fallbacks fired."
+  - "docs.dydx.exchange is an alias of docs.dydx.xyz (identical HTML as of 2026-04-28); NOT crawled separately to avoid duplicate snapshots — see queue file for confirmation."
+  - "Both A3 mechanisms reached: (1) Order Router Rev Share at /interaction/integration/integration-revshare; (2) Affiliate Program is in the docs.dydx.community/dydx snapshot (not duplicated here)."
+  - "Page count exceeded the 20-page max_pages soft cap (26) because higher-priority concepts/integration pages were prioritized; capped here. Remaining BFS-discovered URLs in queue_remainder."
+  - "Status set to paused since BFS queue contains many in-scope URLs not crawled (interaction guides, node operations, types reference, deposits/withdrawals)."
