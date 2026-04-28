@@ -2,7 +2,6 @@
 type: entity
 subtype: programme
 name: Aster Referral
-operated_by: [[entities/perpdex/aster]]
 status: active
 launched: unknown
 sources_count: 1
@@ -35,3 +34,12 @@ The referral relationship is established when a new user signs up via a referrer
 - What fraction of total trading volume is currently subject to referral commission?
 - How many approved affiliates exist and what is their cumulative payout?
 - Is there a public dashboard for referrer leaderboard / cumulative rebate?
+
+## Disputed claims
+None at first ingest.
+
+## Related
+[[entities/perpdex/aster]], [[parameters/programmes/aster-referral]], [[concepts/incentives/referral-design]]
+
+## Sources
+[^aster-docs-2026-04-28-program-referral]: [[sources/aster-docs-2026-04-28-program-referral]]

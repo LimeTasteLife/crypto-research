@@ -2,7 +2,6 @@
 type: entity
 subtype: programme
 name: Aster Trade & Earn
-operated_by: [[entities/perpdex/aster]]
 status: active
 launched: unknown
 sources_count: 1
@@ -36,3 +35,12 @@ Trade & Earn removes the conventional opportunity cost between yield-earning and
 - What is the realized weekly USDF reward distribution (cumulative, by cohort)?
 - What is the wash-trading detection methodology and observed clawback rate?
 - Is the 100,000 USDF cap per-account or per-wallet (sybil consideration)?
+
+## Disputed claims
+None at first ingest.
+
+## Related
+[[entities/perpdex/aster]], [[entities/token/usdf]], [[parameters/programmes/aster-trade-and-earn]]
+
+## Sources
+[^aster-docs-2026-04-28-program-trade-and-earn]: [[sources/aster-docs-2026-04-28-program-trade-and-earn]]

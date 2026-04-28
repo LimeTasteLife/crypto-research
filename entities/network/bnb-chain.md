@@ -30,3 +30,13 @@ _(none yet — BNB Chain–side parameters out of current ingest scope)_
 
 ## Open questions
 - Are Aster's perp matching engine and Aster Chain L1 deployed on BNB Chain, or is BNB Chain only the Earn-product / Treasury surface?
+
+## Disputed claims
+None at first ingest.
+
+## Related
+[[entities/perpdex/aster]], [[entities/token/usdf]]
+
+## Sources
+[^aster-docs-2026-04-28-overview-smart-contracts]: [[sources/aster-docs-2026-04-28-overview-smart-contracts]]
+[^aster-docs-2026-04-28-earn-aster-alp]: [[sources/aster-docs-2026-04-28-earn-aster-alp]]
