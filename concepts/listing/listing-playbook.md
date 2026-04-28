@@ -9,7 +9,7 @@ disputed: false
 # Listing playbook
 
 ## Definition
-A listing playbook is the venue's documented procedure for getting a new asset live on the order book — covering listing modality (auction / governance / depth-gated / deposit-gated / pre-launch tier), risk-param calibration at launch, oracle composition during the listing window, and the corresponding delisting/sunset procedure (the [[concepts/listing/delisting-policy|offboarding]] half).
+A listing playbook is the venue's documented procedure for getting a new asset live on the order book — covering listing modality (auction / governance / depth-gated / deposit-gated / pre-launch tier), risk-param calibration at launch, oracle composition during the listing window, and the corresponding delisting/sunset procedure (the offboarding half — `concepts/listing/delisting-policy` page TBD).
 
 ## Mechanism on Hyperliquid
 
@@ -26,6 +26,9 @@ A listing playbook is the venue's documented procedure for getting a new asset l
 | [[entities/perpdex/hyperliquid]] | permissionless auction (HIP-1)[^hl-docs-2026-04-27-hyperevm] | permissionless deployer (HIP-3)[^hl-docs-2026-04-27-trading-fees] | not surfaced |
 
 (Other perpdex venues to be added in subsequent ingest passes.)
+
+## Disputed claims
+None at first ingest.
 
 ## Related
 [[parameters/hyperliquid/listed-markets-roster]] · [[concepts/market-microstructure/oracle-spec]] · [[concepts/risk/leverage-cap]]

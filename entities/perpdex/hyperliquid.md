@@ -102,7 +102,7 @@ Hyperliquid is a layer-one blockchain optimized from first principles for an on-
 - A9/PIV: gap — frontend sovereignty (canonical vs builder-forkable) policy implicit but not documented
 - A9/PV: filled — "no insiders" principle stated; testnet outcome tokens fee policy[^hl-docs-2026-04-27-hyperevm][^hl-docs-2026-04-27-trading-fees]
 
-Coverage summary: filled 19 / not-applicable 9 / gap 17 = 45.
+Coverage summary: filled 17 / not-applicable 11 / gap 17 = 45.
 
 ## Open questions
 - Does Hyperliquid publish a delisting policy and FDV sanity bound for HIP-3 perps?

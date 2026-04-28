@@ -33,7 +33,7 @@ A referral design is the venue's policy for paying out rewards to referrers and 
 None.
 
 ## Related
-[[parameters/hyperliquid/fee-schedule]] · [[concepts/incentives/anti-abuse]] (TBD)
+[[parameters/hyperliquid/fee-schedule]] · `concepts/incentives/anti-abuse` (TBD — page not yet created)
 
 ## Sources
 [^hl-docs-2026-04-27-trading-fees]: [[sources/hl-docs-2026-04-27-trading-fees]]
