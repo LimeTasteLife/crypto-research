@@ -8,13 +8,16 @@ Format: `- [[path]] — one-line summary (sources: N, last_reviewed: YYYY-MM-DD)
 
 ### perpdex
 - [[entities/perpdex/hyperliquid]] — fully on-chain CLOB perp+spot exchange on its own L1 (sources: 20, last_reviewed: 2026-04-28)
+- [[entities/perpdex/lighter]] — ZK-rollup verifiable-execution perp DEX, two-track Standard/Premium account model, LIT-staking-gated discounts, LLP-backed liquidations (sources: 31, last_reviewed: 2026-04-28)
 
 ### network
 - [[entities/network/hyperliquid-l1]] — purpose-built PoS L1 with HyperBFT consensus; hosts HyperCore + HyperEVM (sources: 5, last_reviewed: 2026-04-28)
 - [[entities/network/arbitrum]] — referenced as USDC deposit corridor for Hyperliquid (sources: 1, last_reviewed: 2026-04-28)
+- [[entities/network/lighter-core]] — Lighter's custom ZK rollup with Ethereum-anchored DA + settlement and on-chain Escape Hatch (sources: 4, last_reviewed: 2026-04-28)
 
 ### token
 - [[entities/token/hype]] — Hyperliquid native token; staking, fee discount, AF burn endpoint (sources: 2, last_reviewed: 2026-04-28)
+- [[entities/token/lit]] — Lighter native token; gates Premium fee discounts, LLP access, funding-rebate scaling; daily 24h TWAP buyback (sources: 4, last_reviewed: 2026-04-28)
 
 ### actor
 _(none yet)_
@@ -23,7 +26,7 @@ _(none yet)_
 _(none yet)_
 
 ### programme
-_(none yet)_
+- [[entities/programme/lighter-points-program]] — Two-track (retail + MM) discretionary weekly points; Season 2 active; implied 250k weekly pool (sources: 4, last_reviewed: 2026-04-28)
 
 ## Concepts
 
@@ -86,8 +89,30 @@ _(none yet)_
 - [[parameters/hyperliquid/staking-rewards]] — sqrt-stake formula, daily distribution (sources: 1, last_reviewed: 2026-04-28)
 - [[parameters/hyperliquid/hlp]] — pool-spec slot for the protocol vault (sources: 2, last_reviewed: 2026-04-28)
 
+Lighter (planned, Phase 2.2 will populate):
+- [[parameters/lighter/fee-schedule]] — Standard zero-fee + Premium 8-tier LIT-staking ladder; LIT Fee Credits paid shortcut; integrator fee caps
+- [[parameters/lighter/funding-config]] — hourly funding period; 0.01% IRC; ±0.05% small clamp; ±4% big clamp; per-minute random sampling
+- [[parameters/lighter/funding-rate-rebates]] — 6% automatic Premium + 9% LIT-stake-scaled (capped at 50k LIT); 10% annualized cap
+- [[parameters/lighter/oracle-config]] — Chainlink + Stork + Pyth index; mark = median(ImpactPrice, price1, price2); 8-min EMA; ±0.5% premium clamp
+- [[parameters/lighter/margin-tiers]] — leverage tiers 50x / 25x / 20x / 15x / 10x / 8x / 5x / 3x with MMR ≈ 0.6·IMR, CMR ≈ 0.4·IMR
+- [[parameters/lighter/listed-markets-roster]] — crypto + FX + RWA + prelaunch perps roster
+- [[parameters/lighter/llp]] — single LLP account, multi-strategy collateral isolation; LIT-staking-gated deposits
+- [[parameters/lighter/insurance-fund]] — LLP doubles as insurance fund; ADL fires on strategy depletion
+- [[parameters/lighter/multi-asset-collateral]] — ETH-first roll-out; per-asset LTV / LT / LF; UTA-gated
+- [[parameters/lighter/liquidation-params]] — partial-liquidation IoC at zero price; 1% max liquidation fee to LLP; prelaunch carve-out
+- [[parameters/lighter/audit-history]] — Nethermind / Block / internal audit publication ledger
+- [[parameters/lighter/bug-bounty]] — publicly signaled, page "Coming soon" as of 2026-04-28
+- [[parameters/lighter/points-rules]] — Season 2: 200k retail/wk + 50k MM/wk; quality-favoring multipliers
+- [[parameters/lighter/lp-program-tiers]] — weekly Google-sheet-published tiers; Premium-only eligibility; 50/50 bid/ask split
+
 ### Per-market (`parameters/<entity>/markets/<symbol>.md`)
-_(none yet — primary docs provide aggregate spec only; per-symbol detail TBD)_
+
+Hyperliquid: _(none yet — primary docs provide aggregate spec only; per-symbol detail TBD)_
+
+Lighter (planned, Phase 2.2 will populate):
+- [[parameters/lighter/markets/BTC]] · [[parameters/lighter/markets/ETH]] · [[parameters/lighter/markets/SOL]] — flagship 50x / 25x crypto perps
+- [[parameters/lighter/markets/XAU]] · [[parameters/lighter/markets/XAG]] — precious-metal RWA perps (15x / 10x)
+- [[parameters/lighter/markets/WTI]] · [[parameters/lighter/markets/NATGAS]] · [[parameters/lighter/markets/BRENTOIL]] — energy RWA perps (5-day futures roll)
 
 ## Sources
 
@@ -112,3 +137,6 @@ _(none yet — primary docs provide aggregate spec only; per-symbol detail TBD)_
 - [[sources/hl-docs-2026-04-27-trading-order-types]]
 - [[sources/hl-docs-2026-04-27-for-developers-api]]
 - [[sources/hl-docs-2026-04-27-for-developers-api-info-endpoint]]
+
+### lighter-docs-2026-04-28 snapshot (31)
+_(see sources/ — 31 lighter-docs-2026-04-28-* files)_

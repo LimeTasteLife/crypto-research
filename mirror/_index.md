@@ -11,6 +11,7 @@ To answer "when was X last refreshed?": find the row with `status: active` for t
 | snapshot_id | root_url | path_prefix | crawled_at | pages | crawler |
 |---|---|---|---|---|---|
 | hl-docs-2026-04-27 | https://hyperliquid.gitbook.io/hyperliquid-docs | /hyperliquid-docs/ | 2026-04-27T17:20:00Z | 20 | exa |
+| lighter-docs-2026-04-28 | https://docs.lighter.xyz/ | / | 2026-04-28T00:58:21Z | 31 | exa |
 
 ## Superseded
 
