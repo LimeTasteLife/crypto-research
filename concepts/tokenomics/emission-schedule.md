@@ -1,0 +1,34 @@
+---
+type: concept
+domain: tokenomics
+name: Emission schedule
+last_reviewed: 2026-04-28
+disputed: false
+---
+
+# Emission schedule
+
+## Definition
+The emission schedule is the rule by which a venue's native token is minted (or unlocked from a reserve) over time, typically governing staking rewards, programme incentives, and validator pay.
+
+## Mechanism on Hyperliquid
+
+**Reward formula.** Staking reward rate is **inversely proportional to sqrt(total HYPE staked)** — Ethereum-inspired[^hl-docs-2026-04-27-hypercore-staking]. At 400M total HYPE staked, the yearly reward rate is approximately 2.37%[^hl-docs-2026-04-27-hypercore-staking].
+
+**Source.** Staking rewards come from the **future emissions reserve** (a pre-allocated unlock pool, not new mint at the moment of payment)[^hl-docs-2026-04-27-hypercore-staking].
+
+(Full unlock schedule, total cap, and per-cohort vesting curves are not surfaced in primary docs at this snapshot.)
+
+## Variants in the wild
+
+| venue | reward formula | source | yield @ benchmark stake |
+|---|---|---|---|
+| [[entities/perpdex/hyperliquid]] | sqrt(stake) inverse, ETH-style[^hl-docs-2026-04-27-hypercore-staking] | future emissions reserve[^hl-docs-2026-04-27-hypercore-staking] | ~2.37%/yr at 400M staked[^hl-docs-2026-04-27-hypercore-staking] |
+
+(Other perpdex venues to be added in subsequent ingest passes.)
+
+## Related
+[[entities/token/hype]] · [[parameters/hyperliquid/staking-rewards]] · [[concepts/tokenomics/buyback]]
+
+## Sources
+[^hl-docs-2026-04-27-hypercore-staking]: [[sources/hl-docs-2026-04-27-hypercore-staking]]

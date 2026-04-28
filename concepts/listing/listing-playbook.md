@@ -1,0 +1,36 @@
+---
+type: concept
+domain: listing
+name: Listing playbook
+last_reviewed: 2026-04-28
+disputed: false
+---
+
+# Listing playbook
+
+## Definition
+A listing playbook is the venue's documented procedure for getting a new asset live on the order book — covering listing modality (auction / governance / depth-gated / deposit-gated / pre-launch tier), risk-param calibration at launch, oracle composition during the listing window, and the corresponding delisting/sunset procedure (the [[concepts/listing/delisting-policy|offboarding]] half).
+
+## Mechanism on Hyperliquid
+
+**Permissionless spot via auction.** An ERC-20 on HyperEVM can be linked to a HyperCore spot asset deployed permissionlessly via spot auction[^hl-docs-2026-04-27-hyperevm]. This is the canonical Hyperliquid spot listing path (HIP-1).
+
+**Permissionless perp via HIP-3.** HIP-3 deployers configure the perp's fee share, growth-mode flag, and (for funding) the funding-rate multiplier and interest rate[^hl-docs-2026-04-27-trading-fees][^hl-docs-2026-04-27-trading-funding]. Protocol fees scale with deployer share if share > 100%[^hl-docs-2026-04-27-trading-fees].
+
+(Full launch-time risk-param calibration policy, FDV sanity bound, and the symmetric delisting playbook are not surfaced in primary docs at this snapshot — flagged as A1/PII gap on Hyperliquid's Frame coverage.)
+
+## Variants in the wild
+
+| venue | spot listing | perp listing | delisting symmetry |
+|---|---|---|---|
+| [[entities/perpdex/hyperliquid]] | permissionless auction (HIP-1)[^hl-docs-2026-04-27-hyperevm] | permissionless deployer (HIP-3)[^hl-docs-2026-04-27-trading-fees] | not surfaced |
+
+(Other perpdex venues to be added in subsequent ingest passes.)
+
+## Related
+[[parameters/hyperliquid/listed-markets-roster]] · [[concepts/market-microstructure/oracle-spec]] · [[concepts/risk/leverage-cap]]
+
+## Sources
+[^hl-docs-2026-04-27-hyperevm]: [[sources/hl-docs-2026-04-27-hyperevm]]
+[^hl-docs-2026-04-27-trading-fees]: [[sources/hl-docs-2026-04-27-trading-fees]]
+[^hl-docs-2026-04-27-trading-funding]: [[sources/hl-docs-2026-04-27-trading-funding]]
