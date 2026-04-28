@@ -23,6 +23,6 @@ Index page for developer SDKs and API endpoints. Lists official Python SDK and c
 
 | id | claim | filed_to | frame_tag |
 |----|-------|----------|-----------|
-| #c1 | Hyperliquid maintains an official Python SDK at github.com/hyperliquid-dex/hyperliquid-python-sdk. | [[entities/perpdex/hyperliquid]] |  |
-| #c2 | Mainnet API base URL is https://api.hyperliquid.xyz; testnet is https://api.hyperliquid-testnet.xyz. | [[entities/perpdex/hyperliquid]] |  |
-| #c3 | Community-maintained SDKs exist for Rust (Infinite Field), TypeScript (multiple), and CCXT. | [[entities/perpdex/hyperliquid]] |  |
+| #c1 | Hyperliquid maintains an official Python SDK at github.com/hyperliquid-dex/hyperliquid-python-sdk. | [[entities/perpdex/hyperliquid]] | - |
+| #c2 | Mainnet API base URL is https://api.hyperliquid.xyz; testnet is https://api.hyperliquid-testnet.xyz. | [[entities/perpdex/hyperliquid]] | - |
+| #c3 | Community-maintained SDKs exist for Rust (Infinite Field), TypeScript (multiple), and CCXT. | [[entities/perpdex/hyperliquid]] | - |

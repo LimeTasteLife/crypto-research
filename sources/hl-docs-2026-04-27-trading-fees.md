@@ -50,12 +50,12 @@ Hyperliquid's fee schedule is volume-tiered (rolling 14-day) with separate perps
 | #c25 | HIP-3 deployers can configure additional fee share between 0–300% (0–100% in growth mode); above 100% the protocol fee scales up to match. | [[parameters/hyperliquid/fee-schedule]] | A2-PI |
 | #c26 | All trading fees are directed to the community: HLP, the Assistance Fund, and deployers — the team takes nothing. | [[parameters/hyperliquid/revenue-distribution]], [[concepts/tokenomics/fee-distribution]] | A2-PI |
 | #c27 | Spot and HIP-3 perp deployers may keep up to 50% of trading fees on their deployed assets. | [[parameters/hyperliquid/revenue-distribution]] | A2-PI |
-| #c28 | The Assistance Fund uses on-chain system address 0xfefefefefefefefefefefefefefefefefefefefe. | [[entities/perpdex/hyperliquid]] |  |
+| #c28 | The Assistance Fund uses on-chain system address 0xfefefefefefefefefefefefefefefefefefefefe. | [[entities/perpdex/hyperliquid]] | - |
 | #c29 | The Assistance Fund automatically converts trading fees into HYPE as part of L1 execution. | [[entities/token/hype]], [[concepts/tokenomics/buyback]] | A2-PI |
 | #c30 | HYPE accumulated in the Assistance Fund is burned, permanently removing tokens from circulating and total supply. | [[entities/token/hype]], [[concepts/tokenomics/buyback]] | A2-PI |
-| #c31 | A staking user can be permanently linked to a trading user so the staked HYPE attributes to the trading user's fee discount. | [[parameters/hyperliquid/fee-schedule]] |  |
+| #c31 | A staking user can be permanently linked to a trading user so the staked HYPE attributes to the trading user's fee discount. | [[parameters/hyperliquid/fee-schedule]] | A2-PIV |
 | #c32 | Staking-trading link is permanent and cannot be undone; the staking user gains unilateral control of the trading account funds. | [[parameters/hyperliquid/fee-schedule]] | A8-PII |
-| #c33 | Linking requires the trading user to send the action first, finalized by the staking user. | [[parameters/hyperliquid/fee-schedule]] |  |
-| #c34 | Outcome tokens (testnet only) charge fees only on close/settle, not on opening positions. | [[entities/perpdex/hyperliquid]] |  |
+| #c33 | Linking requires the trading user to send the action first, finalized by the staking user. | [[parameters/hyperliquid/fee-schedule]] | A2-PII |
+| #c34 | Outcome tokens (testnet only) charge fees only on close/settle, not on opening positions. | [[entities/perpdex/hyperliquid]] | A2-PI |
 | #c35 | Stable-pair scaling factor is 0.2 (i.e. 80% reduction) applied to maker rate, taker rate, and volume contribution. | [[parameters/hyperliquid/fee-schedule]] | A2-PI |
 | #c36 | Aligned-quote-token taker scale = (1 - deployerShare) * 0.8 + deployerShare; rebate scale = (1 - deployerShare) * 1.5 + deployerShare. | [[parameters/hyperliquid/fee-schedule]] | A2-PI |

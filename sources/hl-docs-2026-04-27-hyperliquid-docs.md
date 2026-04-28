@@ -23,9 +23,9 @@ Hyperliquid is positioned as a layer-one blockchain purpose-built for an onchain
 
 | id | claim | filed_to | frame_tag |
 |----|-------|----------|-----------|
-| #c1 | Hyperliquid is a layer-one blockchain optimized from first principles. | [[entities/perpdex/hyperliquid]], [[entities/network/hyperliquid-l1]] |  |
-| #c2 | Hyperliquid uses a custom consensus algorithm called HyperBFT, inspired by HotStuff and its successors. | [[entities/network/hyperliquid-l1]], [[concepts/operations/sequencer]] |  |
-| #c3 | Hyperliquid execution is split into two components: HyperCore (perp/spot order books) and HyperEVM (general smart contracts). | [[entities/perpdex/hyperliquid]] |  |
+| #c1 | Hyperliquid is a layer-one blockchain optimized from first principles. | [[entities/perpdex/hyperliquid]], [[entities/network/hyperliquid-l1]] | - |
+| #c2 | Hyperliquid uses a custom consensus algorithm called HyperBFT, inspired by HotStuff and its successors. | [[entities/network/hyperliquid-l1]], [[concepts/operations/sequencer]] | - |
+| #c3 | Hyperliquid execution is split into two components: HyperCore (perp/spot order books) and HyperEVM (general smart contracts). | [[entities/perpdex/hyperliquid]] | - |
 | #c4 | HyperCore order/cancel/trade/liquidation events have one-block finality inherited from HyperBFT. | [[concepts/operations/settlement]], [[entities/perpdex/hyperliquid]] | A8-PI |
 | #c5 | HyperCore currently supports ~200k orders per second on mainnet. | [[entities/perpdex/hyperliquid]], [[concepts/metrics/volume]] | A4-PI |
-| #c6 | HyperEVM exposes HyperCore liquidity as a permissionless building block for applications. | [[entities/perpdex/hyperliquid]] |  |
+| #c6 | HyperEVM exposes HyperCore liquidity as a permissionless building block for applications. | [[entities/perpdex/hyperliquid]] | A5-PI |

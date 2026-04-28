@@ -23,8 +23,8 @@ Duplicate of the docs landing page content (Hyperliquid as L1 blockchain with Hy
 
 | id | claim | filed_to | frame_tag |
 |----|-------|----------|-----------|
-| #c1 | Hyperliquid is a layer-one blockchain optimized from first principles (duplicate of root docs page). | [[entities/perpdex/hyperliquid]], [[entities/network/hyperliquid-l1]] |  |
-| #c2 | Custom HyperBFT consensus inspired by HotStuff and successors (duplicate). | [[entities/network/hyperliquid-l1]] |  |
+| #c1 | Hyperliquid is a layer-one blockchain optimized from first principles (duplicate of root docs page). | [[entities/perpdex/hyperliquid]], [[entities/network/hyperliquid-l1]] | - |
+| #c2 | Custom HyperBFT consensus inspired by HotStuff and successors (duplicate). | [[entities/network/hyperliquid-l1]] | - |
 | #c3 | HyperCore + HyperEVM execution split with one-block finality on HyperCore (duplicate). | [[entities/perpdex/hyperliquid]] | A8-PI |
 | #c4 | HyperCore mainnet throughput ~200k orders/sec (duplicate). | [[entities/perpdex/hyperliquid]], [[concepts/metrics/volume]] | A4-PI |
 

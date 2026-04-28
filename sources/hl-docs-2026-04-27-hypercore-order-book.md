@@ -24,9 +24,9 @@ HyperCore maintains a CLOB per asset with price-time priority. Orders must be on
 | id | claim | filed_to | frame_tag |
 |----|-------|----------|-----------|
 | #c1 | HyperCore maintains a separate CLOB per asset, with orders matched in price-time priority. | [[concepts/market-structure/clob]], [[entities/perpdex/hyperliquid]] | A1-PI |
-| #c2 | Orders must have price as an integer multiple of tick-size and size as an integer multiple of lot-size. | [[concepts/market-microstructure/tick-size]], [[concepts/market-microstructure/lot-size]] |  |
-| #c3 | Margin checks happen on opening of new orders and on matching of each resting order. | [[concepts/operations/matching-engine]], [[concepts/risk/margin-tier]] |  |
+| #c2 | Orders must have price as an integer multiple of tick-size and size as an integer multiple of lot-size. | [[concepts/market-microstructure/tick-size]], [[concepts/market-microstructure/lot-size]] | A1-PI |
+| #c3 | Margin checks happen on opening of new orders and on matching of each resting order. | [[concepts/operations/matching-engine]], [[concepts/risk/margin-tier]] | A6-PI |
 | #c4 | The L1 mempool/consensus logic is semantically aware of HyperCore order-book transactions. | [[entities/perpdex/hyperliquid]], [[concepts/operations/matching-engine]] | A4-PIII |
 | #c5 | Within a block, actions are ordered: (1) non-GTC/non-IOC actions, (2) cancels, (3) actions sending ≥1 GTC/IOC. | [[concepts/operations/matching-engine]] | A4-PIII |
 | #c6 | Within each ordering category, actions are sorted in proposer order. | [[concepts/operations/matching-engine]] | A4-PIII |
-| #c7 | Modify actions are categorized according to the new order they place (placement category drives ordering). | [[concepts/operations/matching-engine]] |  |
+| #c7 | Modify actions are categorized according to the new order they place (placement category drives ordering). | [[concepts/operations/matching-engine]] | A4-PIII |

@@ -26,7 +26,7 @@ Liquidations begin when account equity drops below maintenance margin (1.25% to 
 | #c1 | A liquidation is triggered when account equity drops below maintenance margin, where maintenance margin = half of initial margin at max leverage. | [[concepts/risk/liquidation]] | A6-PI |
 | #c2 | Maintenance margin ranges from 1.25% (40x max-leverage assets) to 16.7% (3x max-leverage assets). | [[concepts/risk/liquidation]] | A6-PI |
 | #c3 | First-step liquidation: full-size market order is sent to the order book; full or partial closure is possible. | [[concepts/risk/liquidation]] | A6-PI |
-| #c4 | If first-step closure brings equity ≥ maintenance margin, residual collateral remains with the trader. | [[concepts/risk/liquidation]] |  |
+| #c4 | If first-step closure brings equity ≥ maintenance margin, residual collateral remains with the trader. | [[concepts/risk/liquidation]] | A6-PIV |
 | #c5 | If equity drops below 2/3 of maintenance margin without book-liquidation success, backstop liquidation occurs via the Liquidator Vault. | [[concepts/risk/liquidation]], [[parameters/hyperliquid/hlp]] | A4-PI, A6-PI |
 | #c6 | Cross-position backstop transfers all of the trader's cross positions and cross margin to the liquidator. | [[concepts/risk/liquidation]] | A6-PI |
 | #c7 | Isolated-position backstop transfers only the isolated position and its isolated margin to the liquidator. | [[concepts/risk/liquidation]] | A6-PI |
@@ -41,5 +41,5 @@ Liquidations begin when account equity drops below maintenance margin (1.25% to 
 | #c16 | For cross margin: margin_available = account_value - maintenance_margin_required. | [[concepts/risk/liquidation]] | A6-PI |
 | #c17 | For isolated margin: margin_available = isolated_margin - maintenance_margin_required. | [[concepts/risk/liquidation]] | A6-PI |
 | #c18 | For assets with margin tiers, maintenance leverage depends on the unique tier corresponding to the position value at the liquidation price. | [[concepts/risk/margin-tier]] | A6-PI |
-| #c19 | For cross-margin positions, actual liquidation price is independent of the leverage set by the user (lower leverage simply consumes more collateral). | [[concepts/risk/liquidation]] |  |
-| #c20 | For isolated-margin positions, liquidation price depends on user-set leverage (which determines isolated margin). | [[concepts/risk/liquidation]] |  |
+| #c19 | For cross-margin positions, actual liquidation price is independent of the leverage set by the user (lower leverage simply consumes more collateral). | [[concepts/risk/liquidation]] | A6-PI |
+| #c20 | For isolated-margin positions, liquidation price depends on user-set leverage (which determines isolated margin). | [[concepts/risk/liquidation]] | A6-PI |
