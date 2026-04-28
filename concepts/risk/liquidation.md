@@ -40,6 +40,31 @@ margin_available (isolated) = isolated_margin - maintenance_margin_required
 
 For cross positions, the actual liquidation price is independent of user-set leverage (lower leverage simply consumes more collateral)[^hl-docs-2026-04-27-trading-liquidations]. For isolated positions, the liquidation price depends on user-set leverage because isolated margin is set by the leverage choice[^hl-docs-2026-04-27-trading-liquidations].
 
+## Mechanism on Lighter
+
+**Trigger schedule.** Each Lighter market specifies three margin levels per position with the strict ordering `C_i < M_i < I_i` (Close-Out < Maintenance < Initial)[^lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund]. Five health states gate behavior[^lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund]: **Healthy** (TAV ≥ all reqs); **Pre-Liquidation** (TAV < IMR but ≥ MMR — only operations that do not decrease the TAV/MMR ratio and do not increase any position size are allowed); **Partial Liquidation** (TAV < MMR but ≥ CMR — open orders cancelled, IoC limit orders sent at zero price for the full position one by one until TAV ≥ MMR); **Full Liquidation** (TAV < CMR — LLP takes over positions in ascending unrealized-PnL order, only when LLP stays above its own IMR); and **ADL** (LLP undercapitalized — see [[concepts/risk/adl-waterfall]]).
+
+**Step 1 — book liquidation (Partial).** All open orders are cancelled, then for each position the engine sends an IoC limit order for the full amount at the **zero price** — the price that preserves the TAV/MMR ratio[^lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund]. Most liquidations are absorbed at this stage by the order book[^lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund]. Liquidation halts as soon as TAV recovers above MMR[^lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund]. **Liquidation fee:** if a partial-liquidation IoC fills at a better price than the zero price, up to a **1% liquidation fee** on the overshoot above maintenance margin is taken and routed to LLP[^lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund].
+
+**Zero-price formula.**
+
+```
+zero_price (long)  = markPrice · (1 − M_i · TAV / MMR)
+zero_price (short) = markPrice · (1 + M_i · TAV / MMR)
+```
+
+[^lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund]
+
+A trade at the zero price preserves the TAV/MMR ratio (i.e. it is a health-preserving fill — neither user nor counterparty changes margin status)[^lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund].
+
+**Step 2 — backstop (Full Liquidation via LLP).** When TAV falls below CMR, the [[parameters/lighter/llp]] takes over positions in ascending order of unrealized PnL — but **only** if LLP's own TAV stays above LLP's IMR after the takeover[^lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund]. Positions that would push LLP below its IMR are skipped and routed directly to ADL[^lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund]. LLP is the single counterparty account for all backstop trading and ADL[^lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund-llp-strategies].
+
+**Cross vs Simple-account isolation.** Lighter exposes two account abstractions: Simple Trading Accounts (spot and perp balances strictly separated, no shared collateral) and Unified Trading Accounts (UTA) with cross-margin across spot and perp USDC balances; isolated positions in either flavor use a separate AllocatedMargin scoped to the single position and follow the same waterfall but evaluated on AllocatedMargin instead of cross collateral[^lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund].
+
+**Margin-tier ladder.** The per-position `(I_i, M_i, C_i)` triple is set by the market's [[parameters/lighter/margin-tiers]]; max leverage on Lighter ranges from 50x (BTC) down to 3x for the most volatile RWAs, with `M_i ≈ 0.6·I_i` and `C_i ≈ 0.4·I_i` typical[^lighter-docs-2026-04-28-trading-contract-specifications].
+
+**Verifiable liquidations.** Lighter's matching engine emits SNARK-aggregated proofs that liquidation transitions are valid executions of the published rules — every state transition is verifiable on Ethereum, so a liquidation cannot be issued maliciously by the operator[^lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund][^lighter-docs-2026-04-28-trading-order-types-and-matching][^lighter-docs-2026-04-28-about-lighter-technical-architecture-lighter-core].
+
 ## Variants in the wild
 
 | venue | trigger | book step? | backstop pool | partial-liq threshold | clearance fee | residual handling |
@@ -64,3 +89,9 @@ None at first ingest.
 [^hl-docs-2026-04-27-trading-liquidations]: [[sources/hl-docs-2026-04-27-trading-liquidations]]
 [^hl-docs-2026-04-27-trading-margining]: [[sources/hl-docs-2026-04-27-trading-margining]]
 [^aster-docs-2026-04-28-trading-perpetuals-liquidations]: [[sources/aster-docs-2026-04-28-trading-perpetuals-liquidations]]
+[^lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund]: [[sources/lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund]]
+[^lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund-llp-strategies]: [[sources/lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund-llp-strategies]]
+[^lighter-docs-2026-04-28-trading-prelaunch-markets]: [[sources/lighter-docs-2026-04-28-trading-prelaunch-markets]]
+[^lighter-docs-2026-04-28-trading-order-types-and-matching]: [[sources/lighter-docs-2026-04-28-trading-order-types-and-matching]]
+[^lighter-docs-2026-04-28-about-lighter-technical-architecture-lighter-core]: [[sources/lighter-docs-2026-04-28-about-lighter-technical-architecture-lighter-core]]
+[^lighter-docs-2026-04-28-trading-contract-specifications]: [[sources/lighter-docs-2026-04-28-trading-contract-specifications]]

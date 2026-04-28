@@ -5,7 +5,7 @@ name: Lighter
 network: [[entities/network/lighter-core]]
 status: live
 launched: unknown
-sources_count: 31
+sources_count: 30
 last_reviewed: 2026-04-28
 disputed: true
 ---
@@ -21,6 +21,14 @@ disputed: true
 - Network: [[entities/network/lighter-core]] (custom ZK-rollup; Ethereum as DA + settlement; SNARK-aggregated proofs)[^lighter-docs-2026-04-28-about-lighter-technical-architecture-lighter-core]
 - Settlement bridge: Ethereum L1 contracts hold deposits and the canonical state root; Escape Hatch fallback enables permissionless withdrawal[^lighter-docs-2026-04-28-about-lighter-technical-architecture-lighter-core]
 - App entry points: app.lighter.xyz and lighter.exchange[^lighter-docs-2026-04-28-lighter-docs-index]
+
+## Risks
+
+**High regulatory surface, no published per-product legal opinion.** Lighter simultaneously lists crypto perps, FX (USDCHF, USDCAD, USDJPY, EURUSD, GBPUSD), commodities (WTI, NATGAS, BRENTOIL, XAU, XAG), Korean equities (USDC-settled, KRW-priced), and prelaunch markets[^lighter-docs-2026-04-28-trading-contract-specifications][^lighter-docs-2026-04-28-trading-real-world-assets-rwas-rwa-pricing-mechanism][^lighter-docs-2026-04-28-trading-prelaunch-markets]. Primary docs do not publish: blocked-jurisdictions list, OFAC / sanctions screen coverage, per-jurisdiction KYC tiers, or per-product legal opinion (commodity / equity / RWA / KRW-perp). MiCA / SFC / MAS classification is not surfaced. Frame cells A9/PI, A9/PII, A9/PV remain `gap`; this section flags the cluster as operationally material for institutional onboarding decisions.
+
+**ZK-rollup operational scaffolding partially documented.** Sequencer-failure recovery, prover-stall fallback, batch-proof cadence under stress, and DA-fallback failure modes are not described in primary docs[^lighter-docs-2026-04-28-about-lighter-technical-architecture-lighter-core]. Escape Hatch is referenced as a self-withdrawal mechanism but its trigger deadline (how long the sequencer can be uncooperative before priority-queue activation) is not documented.
+
+**Five cells re-rated to `gap` after red-team review.** Initial coverage 26 / 8 / 11 was tightened to 21 / 8 / 16 after challenging the `filled` rationale on A1/PIV, A2/PII, A3/PV, A4/PIII, and A8/PV. See `## Frame coverage` for revised verdicts and rationales.
 
 ## Mechanism
 
@@ -71,7 +79,7 @@ disputed: true
 - [[parameters/lighter/funding-config]] — hourly funding period; 0.01% IRC; ±0.05% small clamp; ±4% big clamp; per-minute random sampling; /8 spread to 8h CEX convention
 - [[parameters/lighter/funding-rate-rebates]] — 6% automatic Premium + 9% LIT-stake-scaled (capped at 50k LIT); 10% annualized cap; daily 00:00 UTC L2 transfer; $1 minimum
 - [[parameters/lighter/oracle-config]] — Chainlink + Stork + Pyth index; mark = median(ImpactPrice, price1, price2); 8-min EMA; ±0.5% premium clamp; Impact Notional 500 USDC / IMF
-- [[parameters/lighter/margin-tiers]] — leverage tiers 50x / 25x / 20x / 15x / 10x / 8x / 5x / 3x with MMR ≈ 0.6·IMR, CMR ≈ 0.4·IMR
+- [[parameters/lighter/margin-tiers]] — leverage tiers 50x / 25x / 20x / 15x / 10x / 8x / 5x / 3x with MMR ≈ 0.6·IMR, CMR ≈ 0.4·IMR[^lighter-docs-2026-04-28-trading-contract-specifications]
 - [[parameters/lighter/listed-markets-roster]] — crypto perps + FX pairs (USDCHF, USDCAD, USDJPY, EURUSD, GBPUSD) + RWA perps (XAU, XAG, WTI, NATGAS, BRENTOIL, equities) + prelaunch perps
 - [[parameters/lighter/llp]] — single LLP account, multi-strategy collateral isolation (Crypto Perps / FX / Equities-RWAs), LIT-staking-gated deposits (1 LIT → 10 USDC capacity)
 - [[parameters/lighter/insurance-fund]] — LLP doubles as insurance fund; ADL fires only when an LLP strategy is depleted
@@ -87,10 +95,10 @@ disputed: true
 - A1/PI: filled — verifiable matching, on-chain settlement, account-creation flow, market-listing surface (crypto + FX + RWA + prelaunch)[^lighter-docs-2026-04-28-trading-order-types-and-matching][^lighter-docs-2026-04-28-trading-contract-specifications][^lighter-docs-2026-04-28-trading-real-world-assets-rwas][^lighter-docs-2026-04-28-trading-prelaunch-markets][^lighter-docs-2026-04-28-trading-api]
 - A1/PII: filled — prelaunch isolated-only carve-out + custom liquidation flow committed alongside listing concept[^lighter-docs-2026-04-28-trading-prelaunch-markets]
 - A1/PIII: gap — pre-launch information-asymmetry controls (insider-trading guard, pre-launch oracle source documentation) not surfaced
-- A1/PIV: filled — partner-attribution stack composes with Lighter base fee within global caps (perp 10 bps, spot 1%)[^lighter-docs-2026-04-28-integrations-partner-attribution]
+- A1/PIV: gap — portfolio-cannibalization / new-listing × existing-listing stack accounting at launch not surfaced; integrator-fee stacking belongs at A2/PIV not A1/PIV
 - A1/PV: gap — listing playbook contract template (governance procedure, depth gates, listing criteria document) not surfaced
 - A2/PI: filled — full Standard zero-fee + Premium 8-tier ladder; LIT Fee Credits; LIT buyback funded by trading-fee revenue, daily 24h TWAP[^lighter-docs-2026-04-28-trading-trading-fees][^lighter-docs-2026-04-28-trading-trading-fees-lit-fee-credits][^lighter-docs-2026-04-28-about-lighter-lit-utility]
-- A2/PII: filled — RWA Premium fees scheduled to resume 2026-04-15 14:30 UTC (a documented fee-change announce window)[^lighter-docs-2026-04-28-liquidity-partner-program]
+- A2/PII: gap — fee-change announce-window protocol and sunset taper rules not documented; only an ad-hoc 2026-04-15 RWA Premium-fee resume timestamp observed
 - A2/PIII: filled — Premium has zero added latency on cancels and Post-Only placements; Standard latency 300 / 200 / 200 ms[^lighter-docs-2026-04-28-trading-trading-fees][^lighter-docs-2026-04-28-trading-order-types-and-matching]
 - A2/PIV: filled — staking discount × LIT Fee Credits × funding-rate rebate stack with explicit aggregation rule (L1 address + sub-accounts share tier)[^lighter-docs-2026-04-28-trading-trading-fees][^lighter-docs-2026-04-28-trading-funding-funding-rate-rebates][^lighter-docs-2026-04-28-trading-trading-fees-lit-fee-credits]
 - A2/PV: filled — partner attribution agreement structure (user signature, expiry, revocation, L1 vs L2 confirmation rules)[^lighter-docs-2026-04-28-integrations-partner-attribution]
@@ -98,10 +106,10 @@ disputed: true
 - A3/PII: filled — Season 1 ended 2025-09-30 (final Private Beta distribution); Season 2 cadence is documented onboarding/offboarding boundary[^lighter-docs-2026-04-28-points-program]
 - A3/PIII: filled — sybil-detection (mixed automated + semi-automated), 10-account limit, self-trading enforcement, intentional-loss exclusion[^lighter-docs-2026-04-28-points-program-retail]
 - A3/PIV: filled — points × premium-account stack accounting (PnL weight bonus for Premium; LLP-MM-share redistribution to other participants)[^lighter-docs-2026-04-28-points-program-retail][^lighter-docs-2026-04-28-points-program-market-makers]
-- A3/PV: filled — partner attribution program user-signature + revocation + expiry contracting model[^lighter-docs-2026-04-28-integrations-partner-attribution]
+- A3/PV: gap — no documented affiliate/referrer SLA template (clawback, attribution window, dispute-escalation); existing partner-attribution evidence is a per-user signed-fee-approval mechanic, not an integrator agreement template
 - A4/PI: filled — LLP protocol-as-MM model; LP program snapshot-based scoring; per-symbol/bps/size liquidity grid; 250k weekly points pool with 20% MM share[^lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund-llp-strategies][^lighter-docs-2026-04-28-liquidity-partner-program][^lighter-docs-2026-04-28-points-program-market-makers]
 - A4/PII: filled — XLP → LLP scope migration for RWAs (orderly takeover); Public Pools allow operator entry/exit without lockup[^lighter-docs-2026-04-28-trading-real-world-assets-rwas][^lighter-docs-2026-04-28-trading-public-pools]
-- A4/PIII: filled — STP cancel-resting variant; weekly LP snapshot model uses time-priority tiebreak; quality-favoring scaling[^lighter-docs-2026-04-28-trading-self-trade-prevention][^lighter-docs-2026-04-28-liquidity-partner-program][^lighter-docs-2026-04-28-points-program-retail]
+- A4/PIII: gap — no markout-window or toxicity-class segregation in maker rebates; STP cancel-resting and weekly LP snapshot tiebreak address different concerns; quality-favoring scaling is qualitative only
 - A4/PIV: filled — LLP-as-MM is excluded from points payout (redistributed); daily 8.33% liquidity-points floor; 50% daily cap on extreme-vol days; protocol-MM vs external-MM separation made explicit[^lighter-docs-2026-04-28-points-program-market-makers]
 - A4/PV: filled — Premium-only eligibility and whitelist gating for Public Pool operators is the codified counterparty model[^lighter-docs-2026-04-28-liquidity-partner-program][^lighter-docs-2026-04-28-trading-public-pools]
 - A5/PI through A5/PV: not-applicable — Lighter is perp-first; spot exists but the docs surface no AMM-LP / pair-fee-tier / IL / JIT-defense layer; Public Pools and LLP are vault/insurance constructs filed under A4
@@ -119,14 +127,14 @@ disputed: true
 - A8/PII: filled — Escape Hatch on-chain priority queue and self-withdrawal via state-blob proofs; user-always-can-exit stated principle[^lighter-docs-2026-04-28-about-lighter-technical-architecture-lighter-core]
 - A8/PIII: gap — oracle-attack history, adverse-selection-from-bad-oracle history not documented
 - A8/PIV: gap — outage refund / downtime fee credit policy not documented
-- A8/PV: filled — audit cadence + scope; bug-bounty page publicly signaled (content "Coming soon"); two distinct external firms; SNARK-proof correctness foundation[^lighter-docs-2026-04-28-security-security-audits][^lighter-docs-2026-04-28-security-bug-bounty-program][^lighter-docs-2026-04-28-about-lighter-technical-architecture-lighter-core]
+- A8/PV: gap — bug-bounty terms unpublished (page is "Coming soon" stub); audit reports exist (counted under A8/PI) but no externally signed disclosure-policy / safe-harbor template surfaced
 - A9/PI: gap — blocked-jurisdictions policy / OFAC / sanctions screen coverage not documented in primary docs
 - A9/PII: gap — KYC tier policy, withdrawal restrictions per jurisdiction not documented
 - A9/PIII: not-applicable — adverse-selection accounting in regulatory layer not a documented surface
 - A9/PIV: filled — frontend sovereignty: canonical app (app.lighter.xyz) coexists with builder-forkable Partner Attribution frontends within explicit fee-cap envelope[^lighter-docs-2026-04-28-lighter-docs-index][^lighter-docs-2026-04-28-integrations-partner-attribution]
 - A9/PV: gap — per-product legal opinion (RWA / equity perp / KRW perp / commodity perp) and MiCA/SFC/MAS classification not surfaced
 
-Coverage summary: filled 26 / not-applicable 8 / gap 11 = 45.
+Coverage summary: filled 21 / not-applicable 8 / gap 16 = 45.
 
 ## Open questions
 - A1/PIII: How is information-asymmetry controlled during the prelaunch listing window — is the prelaunch oracle composition documented anywhere besides the main fair-price page?
@@ -178,6 +186,30 @@ Coverage summary: filled 26 / not-applicable 8 / gap 11 = 45.
 → Open question: Is the total Points Program weekly cap exactly 250,000 (200k retail + 50k MM), or do the two tracks operate on different cadences such that the 50k MM share is not strictly weekly?
   Suggested verification: (1) check the next weekly Lighter team announcement for an explicit "this week's total pool = X" figure; (2) request the Lighter team to publish an unambiguous Points Program rules page with explicit weekly totals; (3) cross-reference week-over-week on-chain LIT-points distribution events.
 
+**Disputed claim #4 — zero-price formula base (TAV vs TALT)**
+
+**Claim A** · confidence: high · recency: 2026-04 · authority: high
+  `zeroPrice(short) = mark · (1 + M · TAV / MMR)`; base is Total Account Value [^lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund].
+
+**Claim B** · confidence: high · recency: 2026-04 · authority: high
+  `zeroPrice(short) = mark · (1 + M · TALT / MMR)`; base is Total Account Liquidation Threshold (TALT) [^lighter-docs-2026-04-28-trading-multi-asset-margin].
+  status: likely_superseded   # multi-asset-margin page asserts the TALT formula collapses to TAV when collateral is USDC-only
+
+→ Open question: Which formula is the canonical engine implementation? The TALT formulation generalizes the TAV one for non-USDC collateral; if both pages are correct simultaneously, the trading-liquidations page is incomplete (does not name the TALT generalization).
+  Suggested verification: on-chain query of Lighter Core engine constants; or user-initiated refresh of trading-liquidations after Lighter publishes the unified formula.
+
+**Disputed claim #5 — ADL trigger granularity (LLP-wide exhaustion vs per-strategy depletion)**
+
+**Claim A** · confidence: high · recency: 2026-04 · authority: high
+  ADL fires when an account has negative value AND the LLP as a whole lacks capital to cover the losses (LLP-wide exhaustion) [^lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund].
+
+**Claim B** · confidence: high · recency: 2026-04 · authority: high
+  ADL fires when a single strategy's allocated collateral is fully depleted, isolating ADL to that strategy alone (per-strategy depletion) [^lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund-llp-strategies].
+  status: active
+
+→ Open question: Which trigger is canonical post-2026-04-28? The per-strategy trigger fires earlier than the LLP-wide one, materially affecting ADL-probability estimates for operators forecasting risk.
+  Suggested verification: read Lighter Core engine code; on-chain analysis of historical ADL events to identify which boundary actually fires.
+
 ## Related
 [[entities/network/lighter-core]] · [[entities/token/lit]] · [[entities/programme/lighter-points-program]] · [[entities/programme/lighter-liquidity-partner-program]] · [[concepts/market-structure/clob]] · [[concepts/risk/liquidation]] · [[concepts/risk/adl-waterfall]] · [[concepts/risk/margin-tier]] · [[concepts/market-microstructure/mark-price-formula]] · [[concepts/market-microstructure/oracle-spec]] · [[concepts/listing/pre-launch-perp]] · [[concepts/lp/vault]] · [[concepts/operations/sequencer]] · [[concepts/incentives/sybil-resistance]] · [[concepts/tokenomics/buyback]] · [[concepts/tokenomics/fee-distribution]] · [[concepts/fee-model/funding-rate]] · [[parameters/lighter/fee-schedule]] · [[parameters/lighter/llp]] · [[parameters/lighter/multi-asset-collateral]]
 
@@ -192,7 +224,6 @@ Coverage summary: filled 26 / not-applicable 8 / gap 11 = 45.
 [^lighter-docs-2026-04-28-trading-real-world-assets-rwas]: [[sources/lighter-docs-2026-04-28-trading-real-world-assets-rwas]]
 [^lighter-docs-2026-04-28-trading-real-world-assets-rwas-rwa-pricing-mechanism]: [[sources/lighter-docs-2026-04-28-trading-real-world-assets-rwas-rwa-pricing-mechanism]]
 [^lighter-docs-2026-04-28-trading-real-world-assets-rwas-futures-contract-price-rolling-mechanism]: [[sources/lighter-docs-2026-04-28-trading-real-world-assets-rwas-futures-contract-price-rolling-mechanism]]
-[^lighter-docs-2026-04-28-trading-real-world-assets-rwas-market-specifications]: [[sources/lighter-docs-2026-04-28-trading-real-world-assets-rwas-market-specifications]]
 [^lighter-docs-2026-04-28-trading-public-pools]: [[sources/lighter-docs-2026-04-28-trading-public-pools]]
 [^lighter-docs-2026-04-28-trading-contract-specifications]: [[sources/lighter-docs-2026-04-28-trading-contract-specifications]]
 [^lighter-docs-2026-04-28-trading-prelaunch-markets]: [[sources/lighter-docs-2026-04-28-trading-prelaunch-markets]]

@@ -26,7 +26,7 @@ Lighter defines a 3-level margin schedule per market: IMR > MMR > CMR (initial >
 | #c1 | Each Lighter market has its own margin requirement configuration that defines maximum leverage per position. | [[concepts/risk/margin-tier]], [[parameters/lighter/margin-tiers]] | A6-PI |
 | #c2 | Lighter defines three margin requirement levels: Initial (I_i), Maintenance (M_i), Close-Out (C_i), with the strict ordering C_i < M_i < I_i. | [[concepts/risk/margin-tier]] | A6-PI |
 | #c3 | Account Value = Collateral + Σ_i (markPrice_i − avgEntryPrice_i) · position_i. | [[concepts/risk/liquidation]] | - |
-| #c4 | Initial Margin Requirement = Σ_i |pos_i| · mark_i · I_i; Maintenance Margin Requirement = Σ_i |pos_i| · mark_i · M_i; Close-Out Margin Requirement = Σ_i |pos_i| · mark_i · C_i. | [[concepts/risk/liquidation]] | A6-PI |
+| #c4 | Initial Margin Requirement = Σ_i abs(pos_i) · mark_i · I_i; Maintenance Margin Requirement = Σ_i abs(pos_i) · mark_i · M_i; Close-Out Margin Requirement = Σ_i abs(pos_i) · mark_i · C_i. | [[concepts/risk/liquidation]] | A6-PI |
 | #c5 | When a user changes leverage, the effective initial margin fraction is min(user-set fraction, minimum fraction allowed for the market). | [[concepts/risk/margin-tier]] | A6-PI |
 | #c6 | A Healthy account has Account Value greater than all margin requirements; it can execute any operation as long as the post-trade position remains healthy. | [[concepts/risk/liquidation]] | - |
 | #c7 | An account is in Pre-Liquidation when Account Value is below IMR but above MMR; only operations that do not decrease the account-value/MMR ratio and do not increase any position size are permitted. | [[concepts/risk/liquidation]] | A6-PI |

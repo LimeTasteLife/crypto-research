@@ -3,7 +3,7 @@ type: parameter
 entity: [[entities/perpdex/lighter]]
 parameter: fee-schedule
 unit: percent
-last_change: 2026-04-15
+last_change: 2026-04-28
 last_reviewed: 2026-04-28
 disputed: false
 ---

@@ -45,7 +45,7 @@ In addition to the trading-fee-funded buyback, LIT Fee Credits and the future be
 ## Relations
 - [[entities/token/lit]] **runs_on** Ethereum (staking is L1-address-keyed)[^lighter-docs-2026-04-28-trading-trading-fees]
 - [[entities/perpdex/lighter]] **distributes_to** [[entities/token/lit]] via daily 24h TWAP buyback funded by trading-fee revenue[^lighter-docs-2026-04-28-about-lighter-lit-utility]
-- [[entities/token/lit]] **gates** access to [[parameters/lighter/llp]] (1 LIT staked → up to 10 USDC LLP capacity)[^lighter-docs-2026-04-28-about-lighter-lit-utility]
+- [[entities/token/lit]] **applies_to** [[parameters/lighter/llp]] (LLP capacity is gated by LIT stake at a 1-LIT-per-10-USDC ratio)[^lighter-docs-2026-04-28-about-lighter-lit-utility]
 - [[entities/token/lit]] **applies_to** [[parameters/lighter/fee-schedule]] (Premium tier discount and latency ladder)[^lighter-docs-2026-04-28-trading-trading-fees]
 - [[entities/token/lit]] **applies_to** [[parameters/lighter/funding-rate-rebates]] (up to 9% LIT-stake-scaled funding rebate)[^lighter-docs-2026-04-28-trading-funding-funding-rate-rebates]
 

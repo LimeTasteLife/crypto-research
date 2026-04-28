@@ -75,7 +75,6 @@ None at this ingest. (See [[entities/perpdex/lighter]]#frame-coverage A6/PIII ga
 [^lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund-llp-strategies]: [[sources/lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund-llp-strategies]]
 [^lighter-docs-2026-04-28-trading-real-world-assets-rwas]: [[sources/lighter-docs-2026-04-28-trading-real-world-assets-rwas]]
 [^lighter-docs-2026-04-28-trading-prelaunch-markets]: [[sources/lighter-docs-2026-04-28-trading-prelaunch-markets]]
-[^lighter-docs-2026-04-28-trading-public-pools]: [[sources/lighter-docs-2026-04-28-trading-public-pools]]
 [^lighter-docs-2026-04-28-points-program-market-makers]: [[sources/lighter-docs-2026-04-28-points-program-market-makers]]
 [^lighter-docs-2026-04-28-about-lighter-lit-utility]: [[sources/lighter-docs-2026-04-28-about-lighter-lit-utility]]
 [^lighter-docs-2026-04-28-liquidity-partner-program]: [[sources/lighter-docs-2026-04-28-liquidity-partner-program]]

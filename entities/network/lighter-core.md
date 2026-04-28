@@ -39,7 +39,7 @@ disputed: false
 **Whitepaper.** The Lighter whitepaper is published at https://assets.lighter.xyz/whitepaper.pdf[^lighter-docs-2026-04-28-about-lighter-technical-architecture-lighter-core].
 
 ## Relations
-- [[entities/network/lighter-core]] **runs** [[entities/perpdex/lighter]] (the only application is the Lighter exchange)[^lighter-docs-2026-04-28-about-lighter-technical-architecture-lighter-core]
+- [[entities/perpdex/lighter]] **runs_on** [[entities/network/lighter-core]] (the only application running on Lighter Core is the Lighter exchange itself)[^lighter-docs-2026-04-28-about-lighter-technical-architecture-lighter-core]
 - [[entities/network/lighter-core]] **depends_on** Ethereum L1 for data availability and settlement[^lighter-docs-2026-04-28-about-lighter-technical-architecture-lighter-core]
 - [[entities/network/lighter-core]] **uses** [[concepts/operations/sequencer]] (FIFO ordering, soft finality)[^lighter-docs-2026-04-28-about-lighter-technical-architecture-lighter-core]
 - [[entities/network/lighter-core]] **implements** the Escape Hatch (Ethereum priority queue + state-proof self-withdrawal)[^lighter-docs-2026-04-28-about-lighter-technical-architecture-lighter-core]
