@@ -1,0 +1,289 @@
+snapshot_id: drift-developers-2026-04-28
+root_url: https://docs.drift.trade/developers
+host: docs.drift.trade
+path_prefix: /developers/
+crawled_at: 2026-04-28T17:30:00Z
+crawler: exa
+page_count: 45
+status: active
+supersedes: null
+superseded_by: null
+allow: []
+deny: []
+max_pages: 100
+pages:
+  - slug: developers
+    url: https://docs.drift.trade/developers
+    fetched_at: 2026-04-28T17:30:05Z
+    status: ok
+    crawler: exa
+    title: Drift for Developers
+  - slug: developers-concepts
+    url: https://docs.drift.trade/developers/concepts
+    fetched_at: 2026-04-28T17:30:10Z
+    status: ok
+    crawler: exa
+    title: Understanding Drift's Onchain Model
+  - slug: developers-concepts-program-structure
+    url: https://docs.drift.trade/developers/concepts/program-structure
+    fetched_at: 2026-04-28T17:30:15Z
+    status: ok
+    crawler: exa
+    title: Program Structure
+  - slug: developers-concepts-account-model
+    url: https://docs.drift.trade/developers/concepts/account-model
+    fetched_at: 2026-04-28T17:30:20Z
+    status: ok
+    crawler: exa
+    title: Account Model
+  - slug: developers-drift-sdk-setup
+    url: https://docs.drift.trade/developers/drift-sdk/setup
+    fetched_at: 2026-04-28T17:30:30Z
+    status: ok
+    crawler: exa
+    title: Setup
+  - slug: developers-drift-sdk-precision-and-types
+    url: https://docs.drift.trade/developers/drift-sdk/precision-and-types
+    fetched_at: 2026-04-28T17:30:35Z
+    status: ok
+    crawler: exa
+    title: Precision and Types
+  - slug: developers-drift-sdk-deposits-withdrawals
+    url: https://docs.drift.trade/developers/drift-sdk/deposits-withdrawals
+    fetched_at: 2026-04-28T17:30:40Z
+    status: ok
+    crawler: exa
+    title: Deposits & Withdrawals
+  - slug: developers-drift-sdk-transfers
+    url: https://docs.drift.trade/developers/drift-sdk/transfers
+    fetched_at: 2026-04-28T17:30:45Z
+    status: ok
+    crawler: exa
+    title: Transfers
+  - slug: developers-drift-sdk-users
+    url: https://docs.drift.trade/developers/drift-sdk/users
+    fetched_at: 2026-04-28T17:30:50Z
+    status: ok
+    crawler: exa
+    title: Users
+  - slug: developers-drift-sdk-markets
+    url: https://docs.drift.trade/developers/drift-sdk/markets
+    fetched_at: 2026-04-28T17:30:55Z
+    status: ok
+    crawler: exa
+    title: Markets, Oracles, and Positions
+  - slug: developers-drift-sdk-orders
+    url: https://docs.drift.trade/developers/drift-sdk/orders
+    fetched_at: 2026-04-28T17:31:00Z
+    status: ok
+    crawler: exa
+    title: Orders
+  - slug: developers-drift-sdk-pnl-risk
+    url: https://docs.drift.trade/developers/drift-sdk/pnl-risk
+    fetched_at: 2026-04-28T17:31:05Z
+    status: ok
+    crawler: exa
+    title: PnL & Risk
+  - slug: developers-drift-sdk-events
+    url: https://docs.drift.trade/developers/drift-sdk/events
+    fetched_at: 2026-04-28T17:31:10Z
+    status: ok
+    crawler: exa
+    title: Events
+  - slug: developers-drift-sdk-swaps
+    url: https://docs.drift.trade/developers/drift-sdk/swaps
+    fetched_at: 2026-04-28T17:31:15Z
+    status: ok
+    crawler: exa
+    title: Swaps (Jupiter)
+  - slug: developers-drift-sdk-swift
+    url: https://docs.drift.trade/developers/drift-sdk/swift
+    fetched_at: 2026-04-28T17:31:20Z
+    status: ok
+    crawler: exa
+    title: Swift (off-chain signed orders)
+  - slug: developers-drift-sdk-builder-codes
+    url: https://docs.drift.trade/developers/drift-sdk/builder-codes
+    fetched_at: 2026-04-28T17:31:25Z
+    status: ok
+    crawler: exa
+    title: Builder Codes (SDK)
+  - slug: developers-drift-sdk-sdk-internals
+    url: https://docs.drift.trade/developers/drift-sdk/sdk-internals
+    fetched_at: 2026-04-28T17:31:30Z
+    status: ok
+    crawler: exa
+    title: SDK Internals
+  - slug: developers-drift-sdk-dlob
+    url: https://docs.drift.trade/developers/drift-sdk/dlob
+    fetched_at: 2026-04-28T17:31:35Z
+    status: ok
+    crawler: exa
+    title: DLOB (Decentralized Limit Order Book)
+  - slug: developers-data-api
+    url: https://docs.drift.trade/developers/data-api
+    fetched_at: 2026-04-28T17:31:40Z
+    status: ok
+    crawler: exa
+    title: Data API Playground
+  - slug: developers-data-api-glossary
+    url: https://docs.drift.trade/developers/data-api/glossary
+    fetched_at: 2026-04-28T17:31:45Z
+    status: ok
+    crawler: exa
+    title: Data API Glossary
+  - slug: developers-market-makers
+    url: https://docs.drift.trade/developers/market-makers
+    fetched_at: 2026-04-28T17:31:50Z
+    status: ok
+    crawler: exa
+    title: Market Makers
+  - slug: developers-market-makers-quickstart
+    url: https://docs.drift.trade/developers/market-makers/quickstart
+    fetched_at: 2026-04-28T17:31:55Z
+    status: ok
+    crawler: exa
+    title: Market Maker Quickstart
+  - slug: developers-market-makers-dlob-mm
+    url: https://docs.drift.trade/developers/market-makers/dlob-mm
+    fetched_at: 2026-04-28T17:32:00Z
+    status: ok
+    crawler: exa
+    title: DLOB MM
+  - slug: developers-market-makers-jit-only
+    url: https://docs.drift.trade/developers/market-makers/jit-only
+    fetched_at: 2026-04-28T17:32:05Z
+    status: ok
+    crawler: exa
+    title: JIT-only MM
+  - slug: developers-market-makers-bot-architecture
+    url: https://docs.drift.trade/developers/market-makers/bot-architecture
+    fetched_at: 2026-04-28T17:32:10Z
+    status: ok
+    crawler: exa
+    title: Bot Architecture Patterns
+  - slug: developers-market-makers-orderbook-and-matching
+    url: https://docs.drift.trade/developers/market-makers/orderbook-and-matching
+    fetched_at: 2026-04-28T17:32:15Z
+    status: ok
+    crawler: exa
+    title: Orderbook & Matching
+  - slug: developers-market-makers-jit-auctions
+    url: https://docs.drift.trade/developers/market-makers/jit-auctions
+    fetched_at: 2026-04-28T17:32:20Z
+    status: ok
+    crawler: exa
+    title: JIT Auctions
+  - slug: developers-market-makers-swift-api
+    url: https://docs.drift.trade/developers/market-makers/swift-api
+    fetched_at: 2026-04-28T17:32:25Z
+    status: ok
+    crawler: exa
+    title: SWIFT API
+  - slug: developers-market-makers-indicative-quotes
+    url: https://docs.drift.trade/developers/market-makers/indicative-quotes
+    fetched_at: 2026-04-28T17:32:30Z
+    status: ok
+    crawler: exa
+    title: Indicative Quotes
+  - slug: developers-vault-managers
+    url: https://docs.drift.trade/developers/vault-managers
+    fetched_at: 2026-04-28T17:32:35Z
+    status: ok
+    crawler: exa
+    title: Vault Managers
+  - slug: developers-trading-automation
+    url: https://docs.drift.trade/developers/trading-automation
+    fetched_at: 2026-04-28T17:32:40Z
+    status: ok
+    crawler: exa
+    title: Trading Automation
+  - slug: developers-trading-automation-trading-workflows
+    url: https://docs.drift.trade/developers/trading-automation/trading-workflows
+    fetched_at: 2026-04-28T17:32:45Z
+    status: ok
+    crawler: exa
+    title: Trading Workflows
+  - slug: developers-trading-automation-keeper-bots
+    url: https://docs.drift.trade/developers/trading-automation/keeper-bots
+    fetched_at: 2026-04-28T17:32:50Z
+    status: ok
+    crawler: exa
+    title: Keeper Bots
+  - slug: developers-trading-automation-keeper-bots-order-matching-bot
+    url: https://docs.drift.trade/developers/trading-automation/keeper-bots/order-matching-bot
+    fetched_at: 2026-04-28T17:32:55Z
+    status: ok
+    crawler: exa
+    title: Tutorial Order Matching Bot
+  - slug: developers-trading-automation-keeper-bots-order-trigger-bot
+    url: https://docs.drift.trade/developers/trading-automation/keeper-bots/order-trigger-bot
+    fetched_at: 2026-04-28T17:33:00Z
+    status: ok
+    crawler: exa
+    title: Tutorial Order Trigger Bot
+  - slug: developers-trading-automation-keeper-bots-liquidation-bot
+    url: https://docs.drift.trade/developers/trading-automation/keeper-bots/liquidation-bot
+    fetched_at: 2026-04-28T17:33:05Z
+    status: ok
+    crawler: exa
+    title: Tutorial Liquidation Bot
+  - slug: developers-trading-automation-keeper-bots-jit-maker-bot
+    url: https://docs.drift.trade/developers/trading-automation/keeper-bots/jit-maker-bot
+    fetched_at: 2026-04-28T17:33:10Z
+    status: ok
+    crawler: exa
+    title: JIT Maker Bot
+  - slug: developers-trading-automation-rpc-providers
+    url: https://docs.drift.trade/developers/trading-automation/rpc-providers
+    fetched_at: 2026-04-28T17:33:15Z
+    status: ok
+    crawler: exa
+    title: RPC Providers
+  - slug: developers-trading-automation-troubleshooting
+    url: https://docs.drift.trade/developers/trading-automation/troubleshooting
+    fetched_at: 2026-04-28T17:33:20Z
+    status: ok
+    crawler: exa
+    title: Troubleshooting
+  - slug: developers-ecosystem-builders
+    url: https://docs.drift.trade/developers/ecosystem-builders
+    fetched_at: 2026-04-28T17:33:25Z
+    status: ok
+    crawler: exa
+    title: Ecosystem Builders
+  - slug: developers-ecosystem-builders-reading-data
+    url: https://docs.drift.trade/developers/ecosystem-builders/reading-data
+    fetched_at: 2026-04-28T17:33:30Z
+    status: ok
+    crawler: exa
+    title: Reading Data
+  - slug: developers-ecosystem-builders-orderbook-and-ws
+    url: https://docs.drift.trade/developers/ecosystem-builders/orderbook-and-ws
+    fetched_at: 2026-04-28T17:33:35Z
+    status: ok
+    crawler: exa
+    title: Orderbook + DLOB websocket
+  - slug: developers-ecosystem-builders-sending-actions
+    url: https://docs.drift.trade/developers/ecosystem-builders/sending-actions
+    fetched_at: 2026-04-28T17:33:40Z
+    status: ok
+    crawler: exa
+    title: Sending Actions
+  - slug: developers-builder-codes
+    url: https://docs.drift.trade/developers/builder-codes
+    fetched_at: 2026-04-28T17:33:45Z
+    status: ok
+    crawler: exa
+    title: Drift Builder Codes
+  - slug: developers-contributing-to-drift
+    url: https://docs.drift.trade/developers/contributing-to-drift
+    fetched_at: 2026-04-28T17:33:50Z
+    status: ok
+    crawler: exa
+    title: Contributing to Drift Protocol
+queue_remainder: []
+notes:
+  - "Same Fern renderer as drift-docs-2026-04-28; seeded BFS from sidebar nav extracted via WebFetch (sparse-link fallback fired since /llms.txt is not available)."
+  - "Path-prefix-bounded to /developers/* — non-developer docs.drift.trade pages NOT crawled here (they are in drift-docs-2026-04-28)."
+  - "Many SDK pages contain TypeScript API reference noise (function-signature dumps from the docs renderer). Captured the prose, code examples, and contracts; stripped the auto-generated reference dumps to keep pages readable."

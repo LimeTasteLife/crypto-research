@@ -1,0 +1,31 @@
+# How it works – Drift Protocol
+URL: https://docs.drift.trade/protocol/borrow-lend/amplify
+
+# How it works
+
+Amplify is a leveraging solution that enhances exposure to yield-generating assets through recursive borrowing.
+
+It operates with two asset types:
+
+- Collateral Asset: A yield-bearing asset users deposit to open an Amplify position e.g. dSOL, JLP, JitoSOL
+- Borrowing Asset: Borrowed against the Collateral Asset up to the user's chosen leverage ratio
+
+## Getting Started
+
+### Deposit collateral
+
+Deposit a Collateral Asset into Drift Earn's Borrow/Lend program (Isolated Pool) via Amplify
+
+### Borrow
+
+System automatically borrows a Borrowing Asset against it, adjusting up to the intended leverage ratio
+
+### Conversion & Increased exposure
+
+System automatically converts the Borrowing Asset into the Collateral Asset, increasing notional exposure and amplifying yield potential
+
+Amplify Fees
+
+Drift does not charge any commissions or fees for using Amplify. However, opening or closing an Amplify position requires swapping one asset to another, which is done via a third-party service that may apply a swap fee.
+
+Last updated on February 27, 2026

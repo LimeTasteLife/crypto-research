@@ -1,0 +1,28 @@
+# Bot Wallet Setup – Drift Protocol
+URL: https://docs.drift.trade/protocol/getting-started/wallet-setup/bot-wallet
+
+# Bot Wallet Setup
+
+Bots require a private key in order to sign transactions. The private key is stored in a wallet file and can either be in base58 format, or a numbers array format.
+
+## Generate a Fresh keypair
+
+### 1. Download and install the Solana CLI
+
+First download and install the Solana CLI following the official instructions.
+
+### 2. Generate a new keypair
+
+Create a new keypair file named `new_keypair.json`:
+
+```
+solana-keygen new -o new_keypair.json
+```
+
+This will contain a new keypair in JSON format.
+
+## Export Keypair from a browser wallet
+
+Alternatively you may export the private key from an existing browser wallet such as Phantom.
+
+Last updated on February 27, 2026

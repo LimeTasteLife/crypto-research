@@ -1,0 +1,59 @@
+# Deposits & Withdrawals – Drift Protocol
+URL: https://docs.drift.trade/developers/drift-sdk/deposits-withdrawals
+
+# Deposits & Withdrawals
+
+## How it works
+
+Drift uses a cross-margin system where all your deposits serve as collateral for all your positions across perp and spot markets. When you deposit tokens (like USDC, SOL, or other supported assets), they're added to your user account's spot balances. These deposits can be used to back perp positions, and you can borrow against them to increase leverage.
+
+Each deposit in a spot market earns interest from borrowers, while borrows accrue interest charges. Spot balances are tracked with precision (typically 1e6 for USDC, 1e9 for SOL) and can be positive (deposits) or negative (borrows). Your total collateral value is calculated by summing all deposits (weighted by asset weights) and subtracting borrows and unrealized perp losses.
+
+Withdrawals require sufficient free collateral, you can't withdraw funds that are backing open positions or would put your account below minimum margin requirements. The SDK handles token account derivation and precision conversion automatically.
+
+## SDK Usage
+
+### Converting amounts and deriving the token account
+
+```typescript
+// marketIndex 0 is commonly USDC
+const marketIndex = 0;
+const amount = driftClient.convertToSpotPrecision(marketIndex, 100); // 100 USDC
+
+// Get your wallet's associated token account
+const ata = await driftClient.getAssociatedTokenAccount(marketIndex);
+```
+
+### Deposit
+
+```typescript
+const marketIndex = 0;
+const amount = driftClient.convertToSpotPrecision(marketIndex, 100);
+const associatedTokenAccount = await driftClient.getAssociatedTokenAccount(marketIndex);
+
+await driftClient.deposit(amount, marketIndex, associatedTokenAccount);
+```
+
+### Withdraw
+
+```typescript
+const marketIndex = 0;
+const amount = driftClient.convertToSpotPrecision(marketIndex, 100);
+const associatedTokenAccount = await driftClient.getAssociatedTokenAccount(marketIndex);
+
+await driftClient.withdraw(amount, marketIndex, associatedTokenAccount);
+```
+
+### Spot rates (borrow / lend)
+
+```typescript
+import { SPOT_MARKET_RATE_PRECISION, calculateDepositRate, calculateBorrowRate, convertToNumber } from "@drift-labs/sdk";
+
+const spotMarket = driftClient.getSpotMarketAccount(0);
+const depositRate = calculateDepositRate(spotMarket);
+const borrowRate = calculateBorrowRate(spotMarket);
+console.log("Deposit rate:", convertToNumber(depositRate, SPOT_MARKET_RATE_PRECISION));
+console.log("Borrow rate:", convertToNumber(borrowRate, SPOT_MARKET_RATE_PRECISION));
+```
+
+Last updated on February 27, 2026
