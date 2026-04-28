@@ -20,7 +20,7 @@ disputed: false
 Stub. To deposit on Hyperliquid, USDC is bridged from Arbitrum into the Hyperliquid bridge contract; deposits become HyperCore margin once consensus confirms[^hl-docs-2026-04-27-onboarding-how-to-start-trading].
 
 ## Relations
-- [[entities/network/arbitrum]] **bridges_to** [[entities/perpdex/hyperliquid]] (USDC deposit corridor)[^hl-docs-2026-04-27-onboarding-how-to-start-trading]
+_(no canonical relation verb fits a bridge corridor; corridor mechanics are documented in body prose above)_
 
 ## Parameters
 _(none yet — Arbitrum-side parameters out of current ingest scope)_

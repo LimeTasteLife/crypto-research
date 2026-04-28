@@ -49,12 +49,23 @@ Domain abstractions. The definition does not change; only its variants in the wi
 | `mm-agreement` | quote-obligation, mm-tier, rebate-ladder, uptime-sla, exclusivity, spread-requirement, depth-commitment |
 | `metrics` | depth-1bp, depth-10bp, depth-100bp, volume, oi, fill-rate, slippage, mm-uptime, concentration-ratio, taker-flow, fdv |
 
+_Slugs in the `examples` column are illustrative; create concept pages as ingest demands — not every listed slug has a page on disk yet._
+
 ### Parameters — `parameters/<entity>/<slug>.md` or `parameters/<entity>/markets/<symbol>.md`
 
 Numeric/rule facts that change over time. Two keying schemes:
 
 - **Venue-wide**: `parameters/<entity>/<slug>.md` — keyed by `(entity, parameter-name)`.
-  Examples: `fee-schedule`, `rebate-programme`, `margin-tiers`, `liquidation-params`, `listed-markets-roster`, `oracle-config`, `insurance-fund-balance`, `revenue-distribution`, `mm-rebate-tiers`, `points-program-rules`, `funding-config`, `validator-requirements`, `staking-rewards`, `tokenomics`, `audits`, `contract-addresses`, `usdf-peg`, `listing-policy`, `<pool-id>` (for venue-owned LP vaults — see HLP, ALP, GLP, JLP).
+  Examples: `fee-schedule`, `rebate-programme`, `margin-tiers`, `liquidation-params`, `listed-markets-roster`, `oracle-config`, `insurance-fund-balance`, `revenue-distribution`, `mm-rebate-tiers`, `points-program-rules`, `funding-config`, `validator-requirements`, `staking-rewards`, `tokenomics`, `audits`, `contract-addresses`, `usdf-peg`, `listing-policy`, `audit-history` (longitudinal audit pass log, distinct from venue's audit registry/contract list), `bug-bounty` (bounty program scope, max payout, exclusions), `multi-asset-collateral` (non-USD collateral admission rules and haircuts), `lp-program-tiers` (tiered LP rewards/eligibility schedule), `funding-rate-rebates` (rebate component tied specifically to funding payments, distinct from fee-schedule), `<pool-id>` (for venue-owned LP vaults — see HLP, ALP, GLP, JLP).
+
+**Slot-key normalization deferred (next schema pass).** Several existing parameter pages use frontmatter slot keys that diverge from the exemplar list above or from their filenames. Renames are deferred — listed here so a future cleanup pass can normalize:
+
+- `parameters/aster/audits.md` — slot key `audit-registry`; filename says `audits`.
+- `parameters/aster/contract-addresses.md` — slot key `contract-registry`; filename says `contract-addresses`.
+- `parameters/aster/usdf-peg.md` — slot key `peg-config`; filename says `usdf-peg`.
+- `parameters/lighter/points-rules.md` — slot key `points-rules`; exemplar list uses `points-program-rules`.
+- `parameters/lighter/insurance-fund.md` — slot key `insurance-fund`; exemplar list uses `insurance-fund-balance`.
+- `parameters/aster/alp.md`, `parameters/hyperliquid/hlp.md` — slot key `pool-spec`; exemplar pattern is `<pool-id>` matching filename (e.g. slot key `alp`, `hlp`).
 
 - **Per-market**: `parameters/<entity>/markets/<symbol>.md` — keyed by `(entity, market-symbol)`. Each listed market gets its own page tracking contract-spec time-series and lifecycle. Frontmatter:
   ```yaml
@@ -126,6 +137,7 @@ Canonical verb set:
 | `discounts_fees` | `applies_to` (token → fee-schedule) |
 | `bears_pnl_for` / `bears` | not a relation — describe in body prose, not in Relations |
 | `backstops` | `seeds_liquidity_for` (with body note clarifying backstop role) |
+| `bridges_to` | not a relation — describe the bridge/corridor in body prose, not in Relations |
 
 Verb invention is a Phase 2 schema violation that lint will flag. If you reach for a verb not in the table, stop and either substitute from the table or open a schema-extension question; do not commit.
 
