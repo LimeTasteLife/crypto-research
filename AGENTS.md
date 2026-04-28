@@ -256,7 +256,7 @@ ingested: 2026-04-27 # when sources/<id>.md was created
 |----|-------|----------|-----------|
 | #c1 | ... | [[...]] | A4-PIII |
 
-`frame_tag` is empty for claims out of perpdex frame scope. For in-scope claims (see §"Per-platform investigation frame (perpdex)"), use `A<n>-P<X>` matching `^A[1-9]-P(I|II|III|IV|V)(, A[1-9]-P(I|II|III|IV|V))*$`.
+`frame_tag` is empty for claims out of perpdex frame scope. For in-scope claims (see §"Per-platform investigation frame (perpdex)"), use `A<n>-P<X>` matching `^A[1-9]-P(I|II|III|IV|V)(, A[1-9]-P(I|II|III|IV|V))*$`. Use `-` (single hyphen) for in-scope claims that are venue-agnostic definitions filed to generic `concepts/` pages — these legitimately have no (angle, pattern) mapping. Full regex including the hyphen escape: `^(A[1-9]-P(I|II|III|IV|V)(, A[1-9]-P(I|II|III|IV|V))*|-)$`.
 
 ## Conflicts raised
 - #c1 vs other-source#cN → see [[target-page]]#disputed
@@ -362,8 +362,8 @@ Lint treats `filled` / `not-applicable` / `gap` differently: NA cells are stable
 4. **Frame coverage update.** After all claims from a source are filed, update each touched perpdex entity's `## Frame coverage` section: any newly filled cell flips `gap`/`not-applicable`/missing → `filled`. New `gap`/`not-applicable` entries require their one-line rationale.
 
 5. **Lint enforcement** (executed on `lint` command):
-   - Source claim with non-empty `filed_to` reaching a perpdex within 1 hop AND empty `frame_tag` → `frame: untagged`.
-   - `frame_tag` not matching `^A[1-9]-P(I|II|III|IV|V)(, A[1-9]-P(I|II|III|IV|V))*$` → `frame: malformed`.
+   - Source claim with non-empty `filed_to` reaching a perpdex within 1 hop AND empty `frame_tag` → `frame: untagged`. **Exception:** claims with type `definition` whose `filed_to` resolves to a generic `concepts/<domain>/<slug>` page (definition is venue-agnostic — e.g. "what is a maker fee", "what is a clob") may have empty `frame_tag` without lint complaint. Mark such rows with `frame_tag: -` (single hyphen) to distinguish from genuinely-untagged claims. Lint counts `-` as legitimate-empty, blank as untagged. Threshold heuristic: if untagged rate exceeds 10% of in-scope claims, the Phase 1 agent prompt needs tightening; if `-`-marked rate exceeds 30%, the source set is definition-heavy (expected for primary docs) and not a defect.
+   - `frame_tag` not matching `^(A[1-9]-P(I|II|III|IV|V)(, A[1-9]-P(I|II|III|IV|V))*|-)$` → `frame: malformed`.
    - Coverage state with no rationale or rationale absent → `frame: unrationalized`.
    - Per-entity coverage report `<filled>/<NA>/<gap>` summed against 45.
 
@@ -482,6 +482,8 @@ pages:
     title: Trading Fees
   - slug: trading-liquidations
     ...
+queue_remainder: []                    # optional. URLs known to be in scope but NOT crawled in this run (e.g. status=paused at max_pages, or discovered via llms.txt but truncated). Documentation only; does NOT auto-resume — user must explicitly refresh or queue them.
+notes: []                              # optional. Free-form anomaly log for this crawl run. One-liners. Examples: "GitBook nav is JS-rendered; seeded BFS from /llms.txt"; "404 on /old-path → redirect hint to /new-path; followed (no retry charged)"; "exa CRAWL_LIVECRAWL_TIMEOUT on /x; succeeded on second exa attempt".
 ```
 
 ### Crawler selection
@@ -613,12 +615,14 @@ STEPS:
   2. Fetch seed_url using crawler-selection order (exa → webfetch fallback). Extract cleaned markdown → pages/<seed-slug>.md.
   3. If nochildren: skip to step 6.
   4. Find outbound links matching: same host AND path startswith path_prefix AND not in deny[] AND (allow[] empty OR matches allow[]).
+  4a. Sparse-link fallback. If step 4 yields fewer than 3 in-scope outbound links AND the host serves a canonical doc index (probe `<host>/llms.txt`, `<path_prefix>/llms.txt`, or `<host>/sitemap.xml`), seed the BFS queue from that index. Common cause: client-side-rendered nav (GitBook, Docusaurus, Mintlify) — the seed page's HTML lacks the sidebar links. Record the fallback in `manifest.notes`.
   5. BFS through matching links until queue exhausted or max_pages reached.
      - Each fetch: use crawler-selection order, extract markdown, save to pages/<slug>.md, record entry in manifest (including pages[].crawler used).
      - Skip non-HTML (PDF/img) but record with status: non_html_skipped.
-     - On both-crawler failure: status: fetch_failed.
-     - At max_pages: stop, manifest.status = paused.
-  6. Write manifest.yaml with full schema (root_url, host, path_prefix, crawled_at, page_count, all pages list).
+     - On 404 with explicit redirect hint in response body (e.g. GitBook's "page moved to /new-path"): follow the redirect once. Record in `manifest.notes`. Do not count the 404 against retry budget.
+     - On both-crawler failure (no redirect available): status: fetch_failed.
+     - At max_pages: stop, manifest.status = paused. Append unprocessed in-scope URLs to `manifest.queue_remainder`.
+  6. Write manifest.yaml with full schema (root_url, host, path_prefix, crawled_at, page_count, all pages list, queue_remainder, notes).
   7. Return snapshot_id, page_count, status.
 ```
 
