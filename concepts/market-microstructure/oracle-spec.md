@@ -1,0 +1,63 @@
+---
+type: concept
+domain: market-microstructure
+name: Oracle spec
+last_reviewed: 2026-04-28
+disputed: false
+---
+
+# Oracle spec
+
+## Definition
+An oracle spec is the venue's policy for constructing a robust external reference price feed for each listed perp[^hl-docs-2026-04-27-trading-robust-price-indices]. The oracle price is the input to funding-rate computation and is used as one component of the [[concepts/market-microstructure/mark-price-formula|mark price]][^hl-docs-2026-04-27-trading-robust-price-indices][^hl-docs-2026-04-27-hypercore-oracle].
+
+The oracle spec governs source selection (which CEXs/AMMs feed the price), aggregation method (median, weighted median, mean), update cadence (sample frequency), and validator / signer set (who can publish a valid update).
+
+## Mechanism on Hyperliquid
+
+**Validator-published feed.** Validators publish per-perp spot oracle prices every 3 seconds[^hl-docs-2026-04-27-hypercore-oracle][^hl-docs-2026-04-27-trading-robust-price-indices].
+
+**Aggregation across validators.** The clearinghouse uses the **stake-weighted median** of validator-submitted prices as the final oracle price[^hl-docs-2026-04-27-hypercore-oracle].
+
+**Source weights** (stored in [[parameters/hyperliquid/oracle-config]]):
+
+| source | weight |
+|---|---|
+| Binance | 3 |
+| OKX | 2 |
+| Bybit | 2 |
+| Kraken | 1 |
+| Kucoin | 1 |
+| Gate | 1 |
+| MEXC | 1 |
+| Hyperliquid spot | 1 |
+
+[^hl-docs-2026-04-27-hypercore-oracle]
+
+**Adaptive source exclusion.**
+- Assets whose primary spot liquidity is on Hyperliquid (e.g. HYPE) **exclude external CEX sources** until external liquidity reaches a threshold[^hl-docs-2026-04-27-hypercore-oracle].
+- Assets with primary spot liquidity off-Hyperliquid (e.g. BTC) **exclude Hyperliquid spot** from the oracle[^hl-docs-2026-04-27-hypercore-oracle].
+
+**Independence from on-chain market state.** Oracle price is independent of Hyperliquid market data (it is a CEX-spot-weighted figure) and is used to compute funding rates separately from mark price[^hl-docs-2026-04-27-trading-robust-price-indices].
+
+## Variants in the wild
+
+| venue | aggregation | source mix | cadence | adaptive exclusion |
+|---|---|---|---|---|
+| [[entities/perpdex/hyperliquid]] | stake-weighted median across validators; weighted median across CEX sources[^hl-docs-2026-04-27-hypercore-oracle] | 7 CEX + HL spot[^hl-docs-2026-04-27-hypercore-oracle] | 3s validator cadence[^hl-docs-2026-04-27-hypercore-oracle] | yes — venue-specific (HYPE excludes external; BTC excludes HL spot)[^hl-docs-2026-04-27-hypercore-oracle] |
+
+(Other perpdex venues to be added in subsequent ingest passes.)
+
+## Edge cases
+- Manipulation cost depends on which sources are weighted; high-weight CEXs (Binance) require deeper external liquidity to manipulate than low-weight ones.
+- For permissionlessly-listed spot markets (HIP-1) where the asset's CEX presence is thin, the adaptive exclusion rule can leave the oracle dominated by Hyperliquid's own spot — increasing self-referential manipulation risk until liquidity breadth grows.
+
+## Disputed claims
+None at first ingest.
+
+## Related
+[[concepts/market-microstructure/mark-price-formula]] · [[concepts/fee-model/funding-rate]] · [[parameters/hyperliquid/oracle-config]]
+
+## Sources
+[^hl-docs-2026-04-27-hypercore-oracle]: [[sources/hl-docs-2026-04-27-hypercore-oracle]]
+[^hl-docs-2026-04-27-trading-robust-price-indices]: [[sources/hl-docs-2026-04-27-trading-robust-price-indices]]
