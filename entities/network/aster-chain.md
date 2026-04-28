@@ -26,7 +26,7 @@ disputed: false
 
 **Encrypted-order pipeline.** The defining differentiator is that every order is encrypted before it reaches the chain and only decrypted at execution; order book entries do not expose position size, entry point, or liquidation level to on-chain observers[^aster-docs-2026-04-28-overview-what-is-aster]. The docs frame this as a direct response to position-hunting on transparent perpdexes. The cryptographic primitive (e.g., MPC, threshold decryption, FHE, TEE) is not specified in any of the surveyed pages.
 
-**Validator and staking model.** Aster Chain runs a validator-PoS model with weekly Epochs (Monday 00:00 UTC snapshot, Sunday 00:00 UTC settlement)[^aster-docs-2026-04-28-aster-chain-staking-how-staking-works]. Each validator's share of the Base APY pool is computed as Validator Transactions ÷ Total Network Transactions, and user Base Reward = Validator Reward × (User Stake ÷ Total Validator Stake) × (1 − Validator Commission)[^aster-docs-2026-04-28-aster-chain-staking-how-staking-works]. At launch, total emission is 450,000 $ASTER per Epoch (150K Base + 300K Loyalty), with the Loyalty pool weighted by veASTER × Trading Volume Boost — coupling validator security to platform usage[^aster-docs-2026-04-28-aster-chain-staking-how-staking-works]. See [[parameters/aster/staking-rewards]].
+**Validator and staking model.** Aster Chain runs a validator-PoS model in which validator and delegator stake is denominated in $ASTER, tying chain security to the native token via Base APY plus Loyalty Rewards[^aster-docs-2026-04-28-aster-chain-staking-how-staking-works]. Epochs are weekly (Monday 00:00 UTC snapshot, Sunday 00:00 UTC settlement)[^aster-docs-2026-04-28-aster-chain-staking-how-staking-works]. Each validator's share of the Base APY pool is computed as Validator Transactions ÷ Total Network Transactions, and user Base Reward = Validator Reward × (User Stake ÷ Total Validator Stake) × (1 − Validator Commission)[^aster-docs-2026-04-28-aster-chain-staking-how-staking-works]. At launch, total emission is 450,000 $ASTER per Epoch (150K Base + 300K Loyalty), with the Loyalty pool weighted by veASTER × Trading Volume Boost — coupling validator security to platform usage[^aster-docs-2026-04-28-aster-chain-staking-how-staking-works]. See [[parameters/aster/staking-rewards]].
 
 **Lifecycle delay.** New deposits, top-ups, lock extensions, and redeem requests all take effect in the *next* Epoch rather than immediately[^aster-docs-2026-04-28-aster-chain-staking-how-staking-works]. This batched-by-epoch design avoids intra-epoch validator-set churn but introduces a one-week lag for any staking action.
 
@@ -35,9 +35,8 @@ disputed: false
 **Audit coverage.** Aster's published audit registry contains seven 2024 reports covering the Vault, Earn, asBNB, asCAKE, asUSDF, and USDF token + minting contracts — but no audit on this page covers the Aster Chain L1 itself or the perp matching engine[^aster-docs-2026-04-28-overview-audit-reports]. All listed reports are dated within 2024 (Sept–Dec) and predate the 2025 product timeline implied by other docs.
 
 ## Relations
-- [[entities/network/aster-chain]] **runs** [[entities/perpdex/aster]][^aster-docs-2026-04-28-overview-what-is-aster]
-- [[entities/network/aster-chain]] **secures_with** [[entities/token/aster]] (validator stake + Loyalty Rewards)[^aster-docs-2026-04-28-aster-chain-staking-how-staking-works]
-- [[entities/network/aster-chain]] **emits** 450,000 $ASTER per weekly Epoch at launch (Base 150K + Loyalty 300K)[^aster-docs-2026-04-28-aster-chain-staking-how-staking-works]
+
+(No canonical relations originate from this entity; the inverse `runs_on` relation is filed on [[entities/perpdex/aster]]. Validator-stake security in $ASTER and the 450K $ASTER per Epoch emission are described in the Mechanism section as protocol-internal facts rather than entity-to-entity relations.)
 
 ## Parameters
 - [[parameters/aster/staking-rewards]] — emission, ve-style time weighting, Trading Volume Boost tiers, Epoch cadence

@@ -40,10 +40,9 @@ disputed: false
 **Audit coverage.** The USDF token has a PeckShield audit (PeckShield-Audit-Report-USDFEarn-v1.0); the USDF + asUSDF combined audit was performed by HALBORN (filed under "Astherus / SSC")[^aster-docs-2026-04-28-overview-audit-reports]. Both audits are dated within 2024[^aster-docs-2026-04-28-overview-audit-reports].
 
 ## Relations
-- [[entities/token/usdf]] **redeems_for** USDT at 1:1 rigid rate[^aster-docs-2026-04-28-usdf-maintaining-the-peg]
+- [[entities/token/usdf]] **runs_on** [[entities/network/bnb-chain]] (token + minting contract pair)[^aster-docs-2026-04-28-overview-smart-contracts]
 - [[entities/token/usdf]] **is_collateral_for** [[entities/perpdex/aster]] perps via Multi-Asset Mode at 99.99% ratio[^aster-docs-2026-04-28-program-trade-and-earn]
-- [[entities/token/usdf]] **boosted_by** [[parameters/programmes/aster-trade-and-earn]] (Deposit Rewards + Trading Rewards, 100K USDF cap)[^aster-docs-2026-04-28-program-trade-and-earn]
-- [[entities/token/usdf]] **deployed_on** BNB Chain (token + minting contract pair)[^aster-docs-2026-04-28-overview-smart-contracts]
+- [[parameters/programmes/aster-trade-and-earn]] **applies_to** [[entities/token/usdf]] (Deposit Rewards + Trading Rewards, 100K USDF cap)[^aster-docs-2026-04-28-program-trade-and-earn]
 
 ## Parameters
 - [[parameters/aster/usdf-peg]] — three-mechanism peg defense (redemption + arbitrage + delta-neutral); SLA gaps

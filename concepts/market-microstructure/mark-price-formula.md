@@ -45,6 +45,7 @@ sample = current observation
 | venue | components | aggregation | use sites |
 |---|---|---|---|
 | [[entities/perpdex/hyperliquid]] | oracle+EMA, HL book median, external perp median[^hl-docs-2026-04-27-trading-robust-price-indices] | median (with fallback EMA when one missing)[^hl-docs-2026-04-27-trading-robust-price-indices] | margining, liquidations, TP/SL trigger, unrealized PnL[^hl-docs-2026-04-27-trading-robust-price-indices] |
+| [[entities/perpdex/aster]] | Price1 = Index×(1 + Funding × time-to-next/8); Price2 = Index + 5min MA of (Bid1+Ask1)/2 − Index; Contract price[^aster-docs-2026-04-28-trading-perpetuals-mark-price] | median(Price1, Price2, Contract)[^aster-docs-2026-04-28-trading-perpetuals-mark-price] | margining, liquidations, unrealized PnL[^aster-docs-2026-04-28-trading-perpetuals-mark-price] |
 
 (Other perpdex venues to be added in subsequent ingest passes.)
 
@@ -61,3 +62,4 @@ None at first ingest.
 ## Sources
 [^hl-docs-2026-04-27-trading-robust-price-indices]: [[sources/hl-docs-2026-04-27-trading-robust-price-indices]]
 [^hl-docs-2026-04-27-trading-liquidations]: [[sources/hl-docs-2026-04-27-trading-liquidations]]
+[^aster-docs-2026-04-28-trading-perpetuals-mark-price]: [[sources/aster-docs-2026-04-28-trading-perpetuals-mark-price]]

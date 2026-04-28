@@ -24,6 +24,7 @@ A buyback is a programmatic conversion of venue revenue (typically trading fees)
 | venue | cadence | sink | denominator | onchain-verifiable? |
 |---|---|---|---|---|
 | [[entities/perpdex/hyperliquid]] | continuous (L1 execution)[^hl-docs-2026-04-27-trading-fees] | burn (permanent supply reduction)[^hl-docs-2026-04-27-trading-fees] | gross trading fees flowing to AF | yes (system address `0xfefe…fefe`)[^hl-docs-2026-04-27-trading-fees] |
+| [[entities/perpdex/aster]] | not specified[^aster-docs-2026-04-28-usdaster-tokenomics] | $ASTER buybacks + governance rewards (Aster Foundation discretionary)[^aster-docs-2026-04-28-usdaster-tokenomics] | not specified (gross-vs-net unstated)[^aster-docs-2026-04-28-usdaster-tokenomics] | not surfaced |
 
 (Other perpdex venues to be added in subsequent ingest passes.)
 
@@ -35,3 +36,4 @@ None.
 
 ## Sources
 [^hl-docs-2026-04-27-trading-fees]: [[sources/hl-docs-2026-04-27-trading-fees]]
+[^aster-docs-2026-04-28-usdaster-tokenomics]: [[sources/aster-docs-2026-04-28-usdaster-tokenomics]]

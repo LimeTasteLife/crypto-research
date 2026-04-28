@@ -46,9 +46,8 @@ disputed: false
 
 ## Relations
 - [[entities/token/aster]] **runs_on** [[entities/network/aster-chain]] (validator-PoS native token)[^aster-docs-2026-04-28-aster-chain-staking-how-staking-works]
-- [[entities/token/aster]] **discounts_fees** at flat 5% for [[entities/perpdex/aster]] perp trades when deposited into perp wallet[^aster-docs-2026-04-28-trading-perpetuals-fees]
+- [[entities/token/aster]] **applies_to** [[parameters/aster/fee-schedule]] as a flat 5% trading-fee discount when deposited into the perp wallet[^aster-docs-2026-04-28-trading-perpetuals-fees]
 - [[entities/perpdex/aster]] **distributes_to** [[entities/token/aster]] via protocol-revenue buybacks routed through the Aster Foundation[^aster-docs-2026-04-28-usdaster-tokenomics]
-- [[entities/token/aster]] **staked_for** Aster Chain Base APY + Loyalty Rewards (450K/Epoch emission at launch)[^aster-docs-2026-04-28-aster-chain-staking-how-staking-works]
 
 ## Parameters
 - [[parameters/aster/tokenomics]] — 8B supply, 53.5/30/7/5/4.5 split, vesting schedules, governance regime change Jan 2026

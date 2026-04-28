@@ -20,6 +20,7 @@ A venue-owned LP is a liquidity vault deployed and operated by the venue itself 
 | venue | vault | sub-strategies | beneficiaries |
 |---|---|---|---|
 | [[entities/perpdex/hyperliquid]] | HLP[^hl-docs-2026-04-27-trading-liquidations] | market-making + liquidator vault[^hl-docs-2026-04-27-trading-liquidations] | community depositors[^hl-docs-2026-04-27-trading-liquidations] |
+| [[entities/perpdex/aster]] | ALP (BNB Chain + Arbitrum)[^aster-docs-2026-04-28-earn-aster-alp] | market-making PnL (Simple Mode), trading fees, funding fees, liquidation captures, platform fees; mint/burn dynamic toward target[^aster-docs-2026-04-28-earn-aster-alp][^aster-docs-2026-04-28-earn-aster-alp-fees] | ALP depositors[^aster-docs-2026-04-28-earn-aster-alp] |
 
 (Other perpdex venues to be added in subsequent ingest passes.)
 
@@ -31,3 +32,5 @@ A venue-owned LP is a liquidity vault deployed and operated by the venue itself 
 
 ## Sources
 [^hl-docs-2026-04-27-trading-liquidations]: [[sources/hl-docs-2026-04-27-trading-liquidations]]
+[^aster-docs-2026-04-28-earn-aster-alp]: [[sources/aster-docs-2026-04-28-earn-aster-alp]]
+[^aster-docs-2026-04-28-earn-aster-alp-fees]: [[sources/aster-docs-2026-04-28-earn-aster-alp-fees]]

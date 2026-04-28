@@ -45,6 +45,7 @@ The oracle spec governs source selection (which CEXs/AMMs feed the price), aggre
 | venue | aggregation | source mix | cadence | adaptive exclusion |
 |---|---|---|---|---|
 | [[entities/perpdex/hyperliquid]] | stake-weighted median across validators; weighted median across CEX sources[^hl-docs-2026-04-27-hypercore-oracle] | 7 CEX + HL spot[^hl-docs-2026-04-27-hypercore-oracle] | 3s validator cadence[^hl-docs-2026-04-27-hypercore-oracle] | yes — venue-specific (HYPE excludes external; BTC excludes HL spot)[^hl-docs-2026-04-27-hypercore-oracle] |
+| [[entities/perpdex/aster]] | VWAP across CEX spot sources; ≥5% deviation → weight 0; multi-deviation → median replaces VWAP[^aster-docs-2026-04-28-trading-perpetuals-mark-price] | Binance / HTX / Kraken / Huobi spot[^aster-docs-2026-04-28-trading-perpetuals-mark-price] | not surfaced; ≥3s lag → source excluded[^aster-docs-2026-04-28-trading-perpetuals-mark-price] | deviation/lag based exclusion + 5s/5% guard on contract-vs-mark[^aster-docs-2026-04-28-trading-perpetuals-mark-price] |
 
 (Other perpdex venues to be added in subsequent ingest passes.)
 
@@ -61,3 +62,4 @@ None at first ingest.
 ## Sources
 [^hl-docs-2026-04-27-hypercore-oracle]: [[sources/hl-docs-2026-04-27-hypercore-oracle]]
 [^hl-docs-2026-04-27-trading-robust-price-indices]: [[sources/hl-docs-2026-04-27-trading-robust-price-indices]]
+[^aster-docs-2026-04-28-trading-perpetuals-mark-price]: [[sources/aster-docs-2026-04-28-trading-perpetuals-mark-price]]

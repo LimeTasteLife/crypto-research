@@ -45,6 +45,7 @@ For cross positions, the actual liquidation price is independent of user-set lev
 | venue | trigger | book step? | backstop pool | partial-liq threshold | clearance fee | residual handling |
 |---|---|---|---|---|---|---|
 | [[entities/perpdex/hyperliquid]] | account_value < MM × notional[^hl-docs-2026-04-27-trading-margining] | yes (full size) | [[parameters/hyperliquid/hlp]] vault | 100k USDC (10k testnet) | none[^hl-docs-2026-04-27-trading-liquidations] | book closure: residual to trader. backstop: MM forfeited[^hl-docs-2026-04-27-trading-liquidations] |
+| [[entities/perpdex/aster]] | maintenance margin breach (tier-based)[^aster-docs-2026-04-28-trading-perpetuals-liquidations] | yes (1 large IOC partial close)[^aster-docs-2026-04-28-trading-perpetuals-liquidations] | Insurance Fund[^aster-docs-2026-04-28-trading-perpetuals-liquidations] | not surfaced | not surfaced | 5-step waterfall: cancel orders → IOC → recheck → IF transfer at bankruptcy price → ADL fall-through; negative-balance ≤5,000 USDT auto-IF-cover (USDT-perp accounts only, no open positions, no offsetting transfers)[^aster-docs-2026-04-28-trading-perpetuals-liquidations] |
 
 (Other perpdex venues to be added in subsequent ingest passes.)
 
@@ -62,3 +63,4 @@ None at first ingest.
 ## Sources
 [^hl-docs-2026-04-27-trading-liquidations]: [[sources/hl-docs-2026-04-27-trading-liquidations]]
 [^hl-docs-2026-04-27-trading-margining]: [[sources/hl-docs-2026-04-27-trading-margining]]
+[^aster-docs-2026-04-28-trading-perpetuals-liquidations]: [[sources/aster-docs-2026-04-28-trading-perpetuals-liquidations]]

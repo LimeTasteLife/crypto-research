@@ -36,6 +36,7 @@ Higher score → earlier in the ADL queue. The product term penalizes both deepl
 | venue | rank formula | closure price | spot/staking touched? |
 |---|---|---|---|
 | [[entities/perpdex/hyperliquid]] | `(mark/entry) × (notional/equity)`[^hl-docs-2026-04-27-trading-auto-deleveraging] | previous mark[^hl-docs-2026-04-27-trading-auto-deleveraging] | no — invariant: zero-position users untouchable[^hl-docs-2026-04-27-trading-auto-deleveraging] |
+| [[entities/perpdex/aster]] | Leverage PnL Quantile = PnL% × Margin Ratio; PnL% = max(0, Unrealized profit) / max(1, Wallet balance); reduces most profitable + most leveraged opposing first; no warning before reduction[^aster-docs-2026-04-28-trading-perpetuals-adl] | not surfaced | not surfaced |
 
 (Other perpdex venues to be added in subsequent ingest passes.)
 
@@ -51,3 +52,4 @@ None at first ingest.
 
 ## Sources
 [^hl-docs-2026-04-27-trading-auto-deleveraging]: [[sources/hl-docs-2026-04-27-trading-auto-deleveraging]]
+[^aster-docs-2026-04-28-trading-perpetuals-adl]: [[sources/aster-docs-2026-04-28-trading-perpetuals-adl]]

@@ -24,6 +24,7 @@ A listing playbook is the venue's documented procedure for getting a new asset l
 | venue | spot listing | perp listing | delisting symmetry |
 |---|---|---|---|
 | [[entities/perpdex/hyperliquid]] | permissionless auction (HIP-1)[^hl-docs-2026-04-27-hyperevm] | permissionless deployer (HIP-3)[^hl-docs-2026-04-27-trading-fees] | not surfaced |
+| [[entities/perpdex/aster]] | not surfaced | pre-launch expiry futures auto-converting to perp + standard listing for crypto and equity perps (AAPL/TSLA/NVDA/AMZN/META/GOOG/MSFT)[^aster-docs-2026-04-28-trading-perpetuals-pre-launch-contracts][^aster-docs-2026-04-28-trading-perpetuals-market-maker-program] | not surfaced |
 
 (Other perpdex venues to be added in subsequent ingest passes.)
 
@@ -37,3 +38,5 @@ None at first ingest.
 [^hl-docs-2026-04-27-hyperevm]: [[sources/hl-docs-2026-04-27-hyperevm]]
 [^hl-docs-2026-04-27-trading-fees]: [[sources/hl-docs-2026-04-27-trading-fees]]
 [^hl-docs-2026-04-27-trading-funding]: [[sources/hl-docs-2026-04-27-trading-funding]]
+[^aster-docs-2026-04-28-trading-perpetuals-pre-launch-contracts]: [[sources/aster-docs-2026-04-28-trading-perpetuals-pre-launch-contracts]]
+[^aster-docs-2026-04-28-trading-perpetuals-market-maker-program]: [[sources/aster-docs-2026-04-28-trading-perpetuals-market-maker-program]]

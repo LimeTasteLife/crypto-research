@@ -37,6 +37,7 @@ A margin tier is a per-asset rule that maps a position's notional size to an `(i
 | venue | tier scheme | max leverage range | check timing | cross-DEX cross? |
 |---|---|---|---|---|
 | [[entities/perpdex/hyperliquid]] | per-asset, position-value-keyed[^hl-docs-2026-04-27-trading-liquidations] | 3x – 40x[^hl-docs-2026-04-27-trading-liquidations] | open-only[^hl-docs-2026-04-27-trading-margining] | yes under unified/portfolio-margin abstraction; no under standard[^hl-docs-2026-04-27-trading-margining] |
+| [[entities/perpdex/aster]] | tier-based on total position size[^aster-docs-2026-04-28-trading-perpetuals-margin] | not surfaced | not surfaced | modes: Cross (default) + Isolated (opt-in, locked once position/order submitted)[^aster-docs-2026-04-28-trading-perpetuals-margin] |
 
 (Other perpdex venues to be added in subsequent ingest passes.)
 
@@ -53,3 +54,4 @@ None at first ingest.
 ## Sources
 [^hl-docs-2026-04-27-trading-margining]: [[sources/hl-docs-2026-04-27-trading-margining]]
 [^hl-docs-2026-04-27-trading-liquidations]: [[sources/hl-docs-2026-04-27-trading-liquidations]]
+[^aster-docs-2026-04-28-trading-perpetuals-margin]: [[sources/aster-docs-2026-04-28-trading-perpetuals-margin]]

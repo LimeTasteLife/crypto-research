@@ -26,6 +26,7 @@ A referral design is the venue's policy for paying out rewards to referrers and 
 | venue | reward cap | discount cap | depth | clawback policy |
 |---|---|---|---|---|
 | [[entities/perpdex/hyperliquid]] | $1B referred volume[^hl-docs-2026-04-27-trading-fees] | $25M referred volume[^hl-docs-2026-04-27-trading-fees] | not surfaced | not surfaced |
+| [[entities/perpdex/aster]] | 10% default; 20% (VIP1) / 10% (VIP2+) via application[^aster-docs-2026-04-28-program-referral] | configurable split with referee[^aster-docs-2026-04-28-program-referral] | 1L (no permissionless multi-level)[^aster-docs-2026-04-28-program-referral] | liquidation-fee / self-trade / zero-fee excluded; self-referral revoked[^aster-docs-2026-04-28-program-referral] |
 
 (Other perpdex venues to be added in subsequent ingest passes.)
 
@@ -37,3 +38,4 @@ None.
 
 ## Sources
 [^hl-docs-2026-04-27-trading-fees]: [[sources/hl-docs-2026-04-27-trading-fees]]
+[^aster-docs-2026-04-28-program-referral]: [[sources/aster-docs-2026-04-28-program-referral]]

@@ -30,6 +30,7 @@ Within each category, actions are sorted in proposer order[^hl-docs-2026-04-27-h
 | venue | match location | priority | toxic-flow ordering rule |
 |---|---|---|---|
 | [[entities/perpdex/hyperliquid]] | on-chain (HyperCore)[^hl-docs-2026-04-27-hypercore-order-book] | price-time[^hl-docs-2026-04-27-hypercore-order-book] | per-block: non-GTC > cancels > GTC/IOC; proposer order within[^hl-docs-2026-04-27-hypercore-order-book] |
+| [[entities/perpdex/aster]] | on-chain (Aster Chain L1) via encrypted-order pipeline; cryptographic primitive unspecified (MPC/threshold/FHE/TEE candidates); audit gap — engine NOT in published audit set[^aster-docs-2026-04-28-overview-what-is-aster][^aster-docs-2026-04-28-overview-audit-reports] | not surfaced | not surfaced |
 
 (Other perpdex venues to be added in subsequent ingest passes.)
 
@@ -45,3 +46,5 @@ None at first ingest.
 ## Sources
 [^hl-docs-2026-04-27-hypercore-order-book]: [[sources/hl-docs-2026-04-27-hypercore-order-book]]
 [^hl-docs-2026-04-27-hypercore-overview]: [[sources/hl-docs-2026-04-27-hypercore-overview]]
+[^aster-docs-2026-04-28-overview-what-is-aster]: [[sources/aster-docs-2026-04-28-overview-what-is-aster]]
+[^aster-docs-2026-04-28-overview-audit-reports]: [[sources/aster-docs-2026-04-28-overview-audit-reports]]

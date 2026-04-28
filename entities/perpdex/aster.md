@@ -56,12 +56,12 @@ disputed: true
 
 ## Relations
 - [[aster]] **runs_on** [[entities/network/aster-chain]][^aster-docs-2026-04-28-overview-what-is-aster]
-- [[aster]] **implements** [[concepts/market-microstructure/clob]] for Perps and Spot, alongside an AMM Shield Mode and on-chain-liquidity 1001x[^aster-docs-2026-04-28-overview-what-is-aster]
+- [[aster]] **implements** [[concepts/market-structure/clob]] for Perps and Spot, alongside an AMM Shield Mode and on-chain-liquidity 1001x[^aster-docs-2026-04-28-overview-what-is-aster]
 - [[aster]] **lists** equity perps (AAPL/TSLA/NVDA/AMZN/META/GOOG/MSFT) and pre-launch contracts that auto-convert[^aster-docs-2026-04-28-trading-perpetuals-market-maker-program][^aster-docs-2026-04-28-trading-perpetuals-pre-launch-contracts]
 - [[aster]] **distributes_to** [[entities/token/aster]] via protocol-revenue buybacks routed through the Aster Foundation[^aster-docs-2026-04-28-usdaster-tokenomics]
-- [[parameters/aster/alp]] **provides_liquidity_for** Aster perp markets and **bears** trader-flow PnL via NAV[^aster-docs-2026-04-28-earn-aster-alp]
+- [[parameters/aster/alp]] **seeds_liquidity_for** Aster perp markets[^aster-docs-2026-04-28-earn-aster-alp]
 - [[entities/token/usdf]] **is_collateral_for** Aster Perps via Multi-Asset Mode at 99.99% ratio[^aster-docs-2026-04-28-program-trade-and-earn]
-- [[entities/token/aster]] **discounts_fees** at flat 5% when deposited into the perp wallet[^aster-docs-2026-04-28-trading-perpetuals-fees]
+- [[entities/token/aster]] **applies_to** [[parameters/aster/fee-schedule]] as a 5% flat discount when $ASTER is deposited into the perp wallet[^aster-docs-2026-04-28-trading-perpetuals-fees]
 
 ## Parameters
 - [[parameters/aster/fee-schedule]] — USDT-perp 0% / 0.04%, USD1-perp 0% / 0.005%, $ASTER 5% discount; nominal-value calculation
