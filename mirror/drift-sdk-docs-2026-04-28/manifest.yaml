@@ -1,0 +1,205 @@
+snapshot_id: drift-sdk-docs-2026-04-28
+root_url: https://mintlify.com/drift-labs/protocol-v2/
+host: mintlify.com
+path_prefix: /drift-labs/protocol-v2/
+crawled_at: 2026-04-28T03:00:00Z
+crawler: exa
+page_count: 20
+status: paused
+supersedes: null
+superseded_by: null
+allow: []
+deny: []
+max_pages: 20
+pages:
+  - slug: index
+    url: https://mintlify.com/drift-labs/protocol-v2/
+    fetched_at: 2026-04-28T02:55:00Z
+    status: ok
+    crawler: exa
+    bytes: 4229
+    title: Drift Protocol v2 (root)
+  - slug: introduction
+    url: https://mintlify.com/drift-labs/protocol-v2/introduction
+    fetched_at: 2026-04-28T02:55:00Z
+    status: ok
+    crawler: exa
+    bytes: 4241
+    title: Introduction
+  - slug: installation
+    url: https://mintlify.com/drift-labs/protocol-v2/installation
+    fetched_at: 2026-04-28T02:58:00Z
+    status: ok
+    crawler: exa
+    bytes: 5607
+    title: Installation
+  - slug: quickstart
+    url: https://mintlify.com/drift-labs/protocol-v2/quickstart
+    fetched_at: 2026-04-28T02:55:00Z
+    status: ok
+    crawler: exa
+    bytes: 15079
+    title: Quick Start
+  - slug: concepts-overview
+    url: https://mintlify.com/drift-labs/protocol-v2/concepts/overview
+    fetched_at: 2026-04-28T02:50:00Z
+    status: ok
+    crawler: exa
+    bytes: 6433
+    title: Protocol Overview
+  - slug: concepts-markets
+    url: https://mintlify.com/drift-labs/protocol-v2/concepts/markets
+    fetched_at: 2026-04-28T02:55:00Z
+    status: ok
+    crawler: exa
+    bytes: 8497
+    title: Markets
+  - slug: concepts-oracles
+    url: https://mintlify.com/drift-labs/protocol-v2/concepts/oracles
+    fetched_at: 2026-04-28T02:50:00Z
+    status: ok
+    crawler: exa
+    bytes: 6185
+    title: Oracles
+  - slug: concepts-orders
+    url: https://mintlify.com/drift-labs/protocol-v2/concepts/orders
+    fetched_at: 2026-04-28T02:50:00Z
+    status: ok
+    crawler: exa
+    bytes: 6516
+    title: Orders
+  - slug: concepts-positions
+    url: https://mintlify.com/drift-labs/protocol-v2/concepts/positions
+    fetched_at: 2026-04-28T02:55:00Z
+    status: ok
+    crawler: exa
+    bytes: 8585
+    title: Positions
+  - slug: concepts-margin
+    url: https://mintlify.com/drift-labs/protocol-v2/concepts/margin
+    fetched_at: 2026-04-28T02:55:00Z
+    status: ok
+    crawler: exa
+    bytes: 9926
+    title: Margin System
+  - slug: concepts-liquidations
+    url: https://mintlify.com/drift-labs/protocol-v2/concepts/liquidations
+    fetched_at: 2026-04-28T02:55:00Z
+    status: ok
+    crawler: exa
+    bytes: 11004
+    title: Liquidations
+  - slug: math-amm
+    url: https://mintlify.com/drift-labs/protocol-v2/math/amm
+    fetched_at: 2026-04-28T02:58:00Z
+    status: ok
+    crawler: exa
+    bytes: 11912
+    title: AMM Calculations
+  - slug: math-funding-rates
+    url: https://mintlify.com/drift-labs/protocol-v2/math/funding-rates
+    fetched_at: 2026-04-28T02:58:00Z
+    status: ok
+    crawler: exa
+    bytes: 13851
+    title: Funding Rate Calculations
+  - slug: math-margin-calculations
+    url: https://mintlify.com/drift-labs/protocol-v2/math/margin-calculations
+    fetched_at: 2026-04-28T02:58:00Z
+    status: ok
+    crawler: exa
+    bytes: 13186
+    title: Margin Calculations
+  - slug: math-pnl
+    url: https://mintlify.com/drift-labs/protocol-v2/math/pnl
+    fetched_at: 2026-04-28T02:58:00Z
+    status: ok
+    crawler: exa
+    bytes: 13422
+    title: PnL Calculations
+  - slug: program-architecture
+    url: https://mintlify.com/drift-labs/protocol-v2/program/architecture
+    fetched_at: 2026-04-28T02:58:00Z
+    status: ok
+    crawler: webfetch
+    bytes: 2199
+    title: Program Architecture
+  - slug: program-security
+    url: https://mintlify.com/drift-labs/protocol-v2/program/security
+    fetched_at: 2026-04-28T02:55:00Z
+    status: ok
+    crawler: exa
+    bytes: 2259
+    title: Security
+  - slug: program-state-state-account
+    url: https://mintlify.com/drift-labs/protocol-v2/program/state/state-account
+    fetched_at: 2026-04-28T02:55:00Z
+    status: ok
+    crawler: exa
+    bytes: 1455
+    title: State Account
+  - slug: program-state-market-accounts
+    url: https://mintlify.com/drift-labs/protocol-v2/program/state/market-accounts
+    fetched_at: 2026-04-28T02:58:00Z
+    status: ok
+    crawler: exa
+    bytes: 1196
+    title: Market Accounts
+  - slug: program-state-user-account
+    url: https://mintlify.com/drift-labs/protocol-v2/program/state/user-account
+    fetched_at: 2026-04-28T02:58:00Z
+    status: ok
+    crawler: exa
+    bytes: 937
+    title: User Account
+queue_remainder:
+  - https://mintlify.com/drift-labs/protocol-v2/api/account-subscribers/grpc
+  - https://mintlify.com/drift-labs/protocol-v2/api/account-subscribers/overview
+  - https://mintlify.com/drift-labs/protocol-v2/api/account-subscribers/polling
+  - https://mintlify.com/drift-labs/protocol-v2/api/account-subscribers/websocket
+  - https://mintlify.com/drift-labs/protocol-v2/api/admin-client
+  - https://mintlify.com/drift-labs/protocol-v2/api/drift-client
+  - https://mintlify.com/drift-labs/protocol-v2/api/markets/oracles
+  - https://mintlify.com/drift-labs/protocol-v2/api/markets/perp-markets
+  - https://mintlify.com/drift-labs/protocol-v2/api/markets/spot-markets
+  - https://mintlify.com/drift-labs/protocol-v2/api/math/conversion
+  - https://mintlify.com/drift-labs/protocol-v2/api/math/liquidation
+  - https://mintlify.com/drift-labs/protocol-v2/api/math/margin
+  - https://mintlify.com/drift-labs/protocol-v2/api/math/position
+  - https://mintlify.com/drift-labs/protocol-v2/api/trading/dlob
+  - https://mintlify.com/drift-labs/protocol-v2/api/trading/order-params
+  - https://mintlify.com/drift-labs/protocol-v2/api/trading/position-management
+  - https://mintlify.com/drift-labs/protocol-v2/api/types/accounts
+  - https://mintlify.com/drift-labs/protocol-v2/api/types/enums
+  - https://mintlify.com/drift-labs/protocol-v2/api/types/orders
+  - https://mintlify.com/drift-labs/protocol-v2/api/types/positions
+  - https://mintlify.com/drift-labs/protocol-v2/api/user
+  - https://mintlify.com/drift-labs/protocol-v2/examples/arbitrage
+  - https://mintlify.com/drift-labs/protocol-v2/examples/cancel-order
+  - https://mintlify.com/drift-labs/protocol-v2/examples/connect-and-deposit
+  - https://mintlify.com/drift-labs/protocol-v2/examples/event-listening
+  - https://mintlify.com/drift-labs/protocol-v2/examples/liquidation-bot
+  - https://mintlify.com/drift-labs/protocol-v2/examples/market-making
+  - https://mintlify.com/drift-labs/protocol-v2/examples/modify-order
+  - https://mintlify.com/drift-labs/protocol-v2/examples/place-limit-order
+  - https://mintlify.com/drift-labs/protocol-v2/examples/place-market-order
+  - https://mintlify.com/drift-labs/protocol-v2/guides/account-management
+  - https://mintlify.com/drift-labs/protocol-v2/guides/account-subscriptions
+  - https://mintlify.com/drift-labs/protocol-v2/guides/advanced-features
+  - https://mintlify.com/drift-labs/protocol-v2/guides/initialization
+  - https://mintlify.com/drift-labs/protocol-v2/guides/managing-positions
+  - https://mintlify.com/drift-labs/protocol-v2/guides/oracle-integration
+  - https://mintlify.com/drift-labs/protocol-v2/guides/placing-orders
+  - https://mintlify.com/drift-labs/protocol-v2/program/instructions/admin
+  - https://mintlify.com/drift-labs/protocol-v2/program/instructions/keeper
+  - https://mintlify.com/drift-labs/protocol-v2/program/instructions/trading
+  - https://mintlify.com/drift-labs/protocol-v2/program/instructions/user
+notes:
+  - "Per queue file, this is the third Drift root: mintlify.com/drift-labs/protocol-v2/ — auto-generated TypeScript SDK reference for Drift Protocol v2. Distinct host (mintlify.com) and content (onchain account structs, SDK method signatures) from the docs.drift.trade snapshots."
+  - "BFS seed strategy: /llms.txt at https://mintlify.com/drift-labs/protocol-v2/llms.txt is canonical (queue file confirmed it; first probe timed out, second succeeded — yielded 56 entries). All in-scope URLs in the manifest were drawn from llms.txt; pages prioritised by perpdex frame coverage."
+  - "Note: the .com URLs (mintlify.com/drift-labs/protocol-v2/<path>) and the .wiki URLs (mintlify.wiki/drift-labs/protocol-v2/<path>.md) serve identical content — verified by cross-fetch of /concepts/overview during validation. The .com URL was kept as canonical per queue file's stated root URL, but a future refresh could equivalently use .wiki/...md if .com proves unstable."
+  - "Crawler distribution: exa=19, webfetch=1, fetch_failed=0. WebFetch fallback fired once for /program/architecture after exa returned CRAWL_LIVECRAWL_TIMEOUT. WebFetch returned a summarized rendition (~2.2KB) shorter than what exa would have produced (other pages of similar architecture-level depth were 8-15KB). The /program/architecture page is flagged in pages[] entry as crawler: webfetch — recommend re-crawl via exa or headless browser if full content is needed for Phase 1 claim extraction."
+  - "Two additional successful exa fetches (api/markets/perp-markets and api/trading/dlob, ~3.7KB and ~9.1KB) were dropped from this snapshot to keep page_count at 20 per HL/Aster pause precedent. Their content overlaps concepts/markets and concepts/orders respectively. URLs preserved in queue_remainder."
+  - "Mintlify pages all carry a 'Documentation Index' banner block at the top pointing to /llms.txt; this banner was stripped during cleaning since it is meta-navigation, not page content."
+  - "Pages prioritized by perpdex frame coverage: A1/A4/A6 onchain mechanism (concepts/overview, concepts/markets, concepts/oracles, concepts/orders, concepts/positions, concepts/margin, concepts/liquidations, math/amm, math/funding-rates, math/margin-calculations, math/pnl, program/state/* — 14 pages), A8 program/security, A4 indirect (program/architecture), plus orientation pages (index, introduction, quickstart, installation). API method signatures, examples, and guides deferred to queue_remainder."
+  - "Sister snapshots: drift-docs-2026-04-28 (canonical user docs, /developers excluded) and drift-developers-docs-2026-04-28 (developer docs subtree). All three combined cover the three doc roots specified in raw/queue/drift-2026-04-28.md."

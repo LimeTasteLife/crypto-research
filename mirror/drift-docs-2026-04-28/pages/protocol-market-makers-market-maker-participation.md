@@ -1,0 +1,49 @@
+# Market Maker Participation
+
+Source: https://docs.drift.trade/protocol/market-makers/market-maker-participation
+
+For more information on incentive programs for Market Makers, see Maker Rebate Fees
+
+## Introduction
+
+Any user can participate as a Market Maker on the platform. Market Makers can provide liquidity through either:
+
+### Just-in-Time (JIT)
+
+Just-in-Time Liquidity (see Matching Engine)
+
+### Post-Only Orders
+
+Post-Only Orders on the decentralised orderbook (see Keepers & Decentralised Orderbook)
+
+## Just-in-Time Liquidity
+
+Makers can participate in the JIT auction and provide just-in-time liquidity as Taker flow comes in.
+
+This will provide Makers with an opportunity to see retail flow five seconds before it hits the market.
+
+Market Makers can participate in the JIT system by running a JIT Maker Bot. For more information, check out Tutorial: JIT Maker Bot
+
+For more information on JIT, check out JIT Maker FAQ.
+
+## Decentralised Orderbook
+
+Makers can also provide liquidity to Drift's decentralised orderbook by quoting via the UI or programmatically through the SDK Documentation
+
+### Providing liquidity via the UI
+
+Placing 'Post-Only' limit orders via Drift's UI qualifies the order as a maker order.
+
+This order won't be executed against the AMM or go through the JIT. It will sit in the decentralised orderbook until a taker for that price comes along.
+
+### Programmatic market making with a floating maker bot
+
+Drift has an open-sourced bot that programmatically quotes bids and asks around the oracle price. These quotes are automatically updated as the oracle price moves.
+
+In practice, the floating maker bot will quote above and below the oracle to provide liquidity around the oracle price. Makers that run the bot will be able to collect the spread as the price moves.
+
+Drift currently runs this bot, along with some additional risk parameters, on the platform for-profit. We've open-sourced the build here for any user to run something similar.
+
+Floating Maker Bot - Github Link: https://github.com/drift-labs/keeper-bots-v2/blob/master/src/bots/floatingMaker.ts
+
+Last updated on February 27, 2026

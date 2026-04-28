@@ -1,0 +1,189 @@
+snapshot_id: drift-developers-docs-2026-04-28
+root_url: https://docs.drift.trade/developers
+host: docs.drift.trade
+path_prefix: /developers/
+crawled_at: 2026-04-28T02:45:00Z
+crawler: exa
+page_count: 20
+status: paused
+supersedes: null
+superseded_by: null
+allow: []
+deny: []
+max_pages: 20
+pages:
+  - slug: developers
+    url: https://docs.drift.trade/developers
+    fetched_at: 2026-04-28T02:35:00Z
+    status: ok
+    crawler: exa
+    bytes: 2081
+    title: Drift for Developers
+  - slug: developers-concepts
+    url: https://docs.drift.trade/developers/concepts
+    fetched_at: 2026-04-28T02:35:00Z
+    status: ok
+    crawler: exa
+    bytes: 1169
+    title: Concepts
+  - slug: developers-concepts-program-structure
+    url: https://docs.drift.trade/developers/concepts/program-structure
+    fetched_at: 2026-04-28T02:35:00Z
+    status: ok
+    crawler: exa
+    bytes: 8114
+    title: Program Structure
+  - slug: developers-concepts-account-model
+    url: https://docs.drift.trade/developers/concepts/account-model
+    fetched_at: 2026-04-28T02:35:00Z
+    status: ok
+    crawler: exa
+    bytes: 10130
+    title: Account Model
+  - slug: developers-market-makers
+    url: https://docs.drift.trade/developers/market-makers
+    fetched_at: 2026-04-28T02:35:00Z
+    status: ok
+    crawler: exa
+    bytes: 4884
+    title: Market Makers
+  - slug: developers-market-makers-quickstart
+    url: https://docs.drift.trade/developers/market-makers/quickstart
+    fetched_at: 2026-04-28T02:35:00Z
+    status: ok
+    crawler: exa
+    bytes: 74254
+    title: Market Maker Quickstart
+  - slug: developers-market-makers-dlob-mm
+    url: https://docs.drift.trade/developers/market-makers/dlob-mm
+    fetched_at: 2026-04-28T02:35:00Z
+    status: ok
+    crawler: exa
+    bytes: 12997
+    title: DLOB Market Maker
+  - slug: developers-market-makers-jit-only
+    url: https://docs.drift.trade/developers/market-makers/jit-only
+    fetched_at: 2026-04-28T02:35:00Z
+    status: ok
+    crawler: exa
+    bytes: 14778
+    title: JIT-Only Market Maker
+  - slug: developers-market-makers-jit-auctions
+    url: https://docs.drift.trade/developers/market-makers/jit-auctions
+    fetched_at: 2026-04-28T02:35:00Z
+    status: ok
+    crawler: exa
+    bytes: 12122
+    title: JIT Auctions
+  - slug: developers-market-makers-swift-api
+    url: https://docs.drift.trade/developers/market-makers/swift-api
+    fetched_at: 2026-04-28T02:35:00Z
+    status: ok
+    crawler: exa
+    bytes: 18499
+    title: SWIFT API
+  - slug: developers-market-makers-bot-architecture
+    url: https://docs.drift.trade/developers/market-makers/bot-architecture
+    fetched_at: 2026-04-28T02:42:00Z
+    status: ok
+    crawler: exa
+    bytes: 11876
+    title: Bot Architecture Patterns
+  - slug: developers-market-makers-orderbook-and-matching
+    url: https://docs.drift.trade/developers/market-makers/orderbook-and-matching
+    fetched_at: 2026-04-28T02:42:00Z
+    status: ok
+    crawler: exa
+    bytes: 13616
+    title: Orderbook and Matching
+  - slug: developers-market-makers-indicative-quotes
+    url: https://docs.drift.trade/developers/market-makers/indicative-quotes
+    fetched_at: 2026-04-28T02:42:00Z
+    status: ok
+    crawler: exa
+    bytes: 7528
+    title: Indicative Quotes
+  - slug: developers-drift-sdk-setup
+    url: https://docs.drift.trade/developers/drift-sdk/setup
+    fetched_at: 2026-04-28T02:42:00Z
+    status: ok
+    crawler: exa
+    bytes: 11930
+    title: SDK Setup
+  - slug: developers-drift-sdk-orders
+    url: https://docs.drift.trade/developers/drift-sdk/orders
+    fetched_at: 2026-04-28T02:42:00Z
+    status: ok
+    crawler: exa
+    bytes: 22812
+    title: SDK Orders
+  - slug: developers-drift-sdk-markets
+    url: https://docs.drift.trade/developers/drift-sdk/markets
+    fetched_at: 2026-04-28T02:42:00Z
+    status: ok
+    crawler: exa
+    bytes: 6060
+    title: SDK Markets
+  - slug: developers-drift-sdk-dlob
+    url: https://docs.drift.trade/developers/drift-sdk/dlob
+    fetched_at: 2026-04-28T02:42:00Z
+    status: ok
+    crawler: exa
+    bytes: 21554
+    title: SDK DLOB
+  - slug: developers-drift-sdk-swift
+    url: https://docs.drift.trade/developers/drift-sdk/swift
+    fetched_at: 2026-04-28T02:42:00Z
+    status: ok
+    crawler: exa
+    bytes: 9223
+    title: SDK SWIFT
+  - slug: developers-drift-sdk-builder-codes
+    url: https://docs.drift.trade/developers/drift-sdk/builder-codes
+    fetched_at: 2026-04-28T02:42:00Z
+    status: ok
+    crawler: exa
+    bytes: 5542
+    title: SDK Builder Codes
+  - slug: developers-data-api
+    url: https://docs.drift.trade/developers/data-api
+    fetched_at: 2026-04-28T02:42:00Z
+    status: ok
+    crawler: exa
+    bytes: 620
+    title: Data API
+queue_remainder:
+  - https://docs.drift.trade/developers/builder-codes
+  - https://docs.drift.trade/developers/contributing-to-drift
+  - https://docs.drift.trade/developers/data-api/glossary
+  - https://docs.drift.trade/developers/drift-sdk/autogen
+  - https://docs.drift.trade/developers/drift-sdk/deposits-withdrawals
+  - https://docs.drift.trade/developers/drift-sdk/events
+  - https://docs.drift.trade/developers/drift-sdk/pnl-risk
+  - https://docs.drift.trade/developers/drift-sdk/precision-and-types
+  - https://docs.drift.trade/developers/drift-sdk/sdk-internals
+  - https://docs.drift.trade/developers/drift-sdk/swaps
+  - https://docs.drift.trade/developers/drift-sdk/transfers
+  - https://docs.drift.trade/developers/drift-sdk/users
+  - https://docs.drift.trade/developers/ecosystem-builders
+  - https://docs.drift.trade/developers/ecosystem-builders/orderbook-and-ws
+  - https://docs.drift.trade/developers/ecosystem-builders/reading-data
+  - https://docs.drift.trade/developers/ecosystem-builders/sending-actions
+  - https://docs.drift.trade/developers/trading-automation
+  - https://docs.drift.trade/developers/trading-automation/keeper-bots
+  - https://docs.drift.trade/developers/trading-automation/keeper-bots/jit-maker-bot
+  - https://docs.drift.trade/developers/trading-automation/keeper-bots/liquidation-bot
+  - https://docs.drift.trade/developers/trading-automation/keeper-bots/order-matching-bot
+  - https://docs.drift.trade/developers/trading-automation/keeper-bots/order-trigger-bot
+  - https://docs.drift.trade/developers/trading-automation/rpc-providers
+  - https://docs.drift.trade/developers/trading-automation/trading-workflows
+  - https://docs.drift.trade/developers/trading-automation/troubleshooting
+  - https://docs.drift.trade/developers/vault-managers
+notes:
+  - "Separate snapshot from drift-docs-2026-04-28 per queue file's path-prefix containment instructions: docs.drift.trade/ deny-listed /developers/* so this subtree is captured independently for cleaner versioning of the developer surface."
+  - "BFS seed strategy: same authoritative sitemap (docs.drift.trade/sitemap-0.xml) discovered during snapshot 1 setup. Sitemap lists 47 URLs under /developers/*; 20 fetched this run, 26 in queue_remainder."
+  - "Pages prioritized by perpdex frame coverage relevance: A4 (developers/market-makers/* — 8 pages — JIT auctions, SWIFT API, DLOB MM, JIT-only MM, bot architecture, orderbook-matching, indicative-quotes, quickstart), A1/A4 onchain account model + program structure (concepts/*), A4 SDK MM-relevant (orders, markets, dlob, swift, builder-codes, setup), A6 data-api root. Trading-automation/keeper-bots, vault-managers, and ecosystem-builders deferred to queue_remainder."
+  - "All 20 successful pages used exa on first attempt; no WebFetch fallbacks fired."
+  - "Page /developers/data-api returned thin content (614 bytes after cleaning) — page itself is largely a section landing pointing to /data-api/glossary and external auto-gen docs."
+  - "Page /developers/market-makers/quickstart is unusually large (~74KB) — genuinely a long single-page tutorial covering setup, RPC selection, account creation, signal logic, retry policy, runbook, and reference bot pointers. Preserved verbatim."
+  - "Sister snapshot: drift-docs-2026-04-28 (root /, /developers excluded). Combined the two snapshots cover ~40 of the 130 sitemap URLs; both paused at max_pages=20 per HL/Aster precedent."
