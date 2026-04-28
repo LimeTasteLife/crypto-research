@@ -1,0 +1,50 @@
+---
+type: concept
+domain: lp
+name: Vault
+last_reviewed: 2026-04-28
+disputed: false
+---
+
+# Vault
+
+## Definition
+A **vault** in the perp-DEX context is a venue-owned or venue-operated pool of capital — depositor funds aggregated into a single account that the venue (or a designated operator) trades or backstops with on the depositors' behalf, with profit/loss accruing pro-rata to depositors[^lighter-docs-2026-04-28-trading-public-pools][^lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund-llp-strategies]. Vaults serve three functional roles depending on the venue: **market-making** (the vault quotes both sides of the book to bootstrap liquidity), **insurance / backstop** (the vault is the residual counterparty when ordinary liquidation fails — absorbing positions before [[concepts/risk/adl-waterfall|ADL]] is invoked), and **strategy-as-a-service** (a whitelisted operator runs a strategy on pooled depositor capital). The same vault may combine roles — Lighter's LLP is simultaneously protocol-MM and insurance fund[^lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund-llp-strategies][^lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund]; HL's HLP is protocol-MM plus liquidator backstop.
+
+## Variants in the wild
+
+| venue | vault | role(s) | counterparty model | eligibility | lockup | strategy isolation | loss-socialization |
+|---|---|---|---|---|---|---|---|
+| [[entities/perpdex/hyperliquid]] | [[parameters/hyperliquid/hlp]] | protocol-MM + liquidator backstop | HLP is the single takeover account when book step fails | open to depositors (no stake gate) | no documented lockup at first ingest (TBD on HL refresh) | single account; not strategy-segregated | depositors absorb backstop losses pro-rata to share[^hl-docs-2026-04-27-trading-liquidations] |
+| [[entities/perpdex/lighter]] | [[parameters/lighter/llp]] (Lighter Liquidity Pool) | protocol-MM + insurance fund + ADL backstop | LLP is the single counterparty account for all LLP trading and liquidations[^lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund-llp-strategies] | LIT-staking-gated: 1 LIT staked → 10 USDC LLP capacity[^lighter-docs-2026-04-28-about-lighter-lit-utility] | unstaking LIT requires 3-day lockup (gates LLP capacity)[^lighter-docs-2026-04-28-about-lighter-lit-utility] | **multi-strategy**: collateral allocated across distinct buckets (Crypto Perps / FX / Equities-RWAs); each market maps to one strategy; risk and losses isolated per strategy[^lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund-llp-strategies] | LPs absorb residual ADL backstop risk; if a strategy depletes, only that strategy enters ADL[^lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund-llp-strategies] |
+| [[entities/perpdex/lighter]] | XLP (Experimental Liquidity Provider) | LP for prelaunch markets only | separate from LLP; LLP has no exposure to prelaunch[^lighter-docs-2026-04-28-trading-prelaunch-markets] | TBD — prelaunch-specific eligibility not surfaced in primary docs | TBD on next ingest | dedicated to prelaunch scope; previously also covered RWAs but superseded there by LLP[^lighter-docs-2026-04-28-trading-real-world-assets-rwas] | XLP absorbs prelaunch tail (LLP zero-exposure)[^lighter-docs-2026-04-28-trading-prelaunch-markets] |
+| [[entities/perpdex/lighter]] | Public Pools | strategy-as-a-service (whitelisted operator runs a strategy on pooled deposits)[^lighter-docs-2026-04-28-trading-public-pools] | trading occurs through an operator-controlled sub-account inside the operator's account[^lighter-docs-2026-04-28-trading-public-pools] | depositors free; operators are protocol-whitelisted[^lighter-docs-2026-04-28-trading-public-pools] | **no lockup** — funds withdrawable at any time (depositor receives pool shares redeemed at withdrawal)[^lighter-docs-2026-04-28-trading-public-pools] | one pool per operator strategy; pools do not support isolated positions[^lighter-docs-2026-04-28-trading-public-pools] | depositors absorb operator-strategy PnL pro-rata to pool shares; operator fee = % of profits at participant withdrawal[^lighter-docs-2026-04-28-trading-public-pools] |
+
+(HLP row to be enriched on next HL refresh; rows for dYdX MegaVault, Vertex BAL, Aevo MM-vault, Drift insurance vault TBD on next ingest.)
+
+## Edge cases
+
+- **Multi-strategy collateral isolation (Lighter LLP).** LLP holds collateral in three named strategy buckets — Crypto Perps, FX, and Equities/RWAs[^lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund-llp-strategies]. Each market is assigned to exactly one strategy[^lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund-llp-strategies]. Strategies are not separate accounts but behave like segregated collateral shards: if a strategy with $1M allocated takes a $1M loss, only that strategy enters ADL — other strategies continue normally with their own collateral intact[^lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund-llp-strategies]. Exact market-to-strategy mappings are communicated separately and are not in the public docs page[^lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund-llp-strategies].
+- **MM-share redistribution (Lighter LLP).** When LLP qualifies for market-maker points under the [[entities/programme/lighter-points-program|Lighter Points Program]], the points it would earn are **not** allocated to LLP itself — instead they are scaled out and redistributed to other (external-MM) participants so the total weekly MM pool stays at 50,000 points[^lighter-docs-2026-04-28-points-program-market-makers]. This avoids a protocol-owned MM cannibalizing third-party MM rewards while keeping the snapshot scoring rule symmetric.
+- **Premium-only eligibility at the LP layer.** Earning [[entities/programme/lighter-liquidity-partner-program|LP Program]] rewards on Lighter requires a Premium account; vault deposits (LLP capacity, Public Pool deposits) do not require Premium, but the *MM-rebate* track is gated to Premium quoters[^lighter-docs-2026-04-28-liquidity-partner-program][^lighter-docs-2026-04-28-points-program-market-makers].
+- **Lockup vs no-lockup divergence.** Lighter LLP capacity is gated by LIT staking which carries a 3-day unstaking lockup[^lighter-docs-2026-04-28-about-lighter-lit-utility] — i.e. there is an indirect liquidity penalty on LLP exit. Public Pools impose **no lockup**[^lighter-docs-2026-04-28-trading-public-pools] — a deliberate design choice contrasting with most DeFi vaults. The two coexist on the same venue with opposite exit-friction profiles.
+- **Loss-socialization: shard-isolated vs single-pool.** A single-pool vault (HLP) socializes losses across all depositors regardless of which markets blew up; a shard-isolated vault (Lighter LLP) socializes losses only within the strategy that depleted, capping cross-asset contagion at the strategy boundary[^lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund-llp-strategies].
+- **Operator-share alignment (Public Pools).** A pool's Minimum Operator Share keeps the operator skin-in-the-game: with 10% min share and 10,000 USDC operator deposit, participant deposits are capped at 90,000 USDC — operator can never dilute below the floor without proportionally raising their own stake[^lighter-docs-2026-04-28-trading-public-pools]. Operator Fee is realized only at participant withdrawal, not on intermediate marks — aligning incentive with realized rather than mark-to-market PnL[^lighter-docs-2026-04-28-trading-public-pools].
+- **Counterparty role at liquidation.** When LLP (the protocol vault) absorbs Full-Liquidation positions, it **only** does so if it stays above its own IMR after takeover[^lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund]. Below that floor, the position skips LLP and routes directly to ADL — i.e. the vault has its own solvency invariant that, when violated, falls through to depositor-counterparty matching.
+
+## Disputed claims
+None at first ingest.
+
+## Related
+[[concepts/risk/liquidation]] · [[concepts/risk/adl-waterfall]] · [[concepts/risk/insurance-fund-sizing]] · [[parameters/lighter/llp]] · [[parameters/lighter/insurance-fund]] · [[parameters/hyperliquid/hlp]] · [[entities/perpdex/lighter]] · [[entities/perpdex/hyperliquid]] · [[entities/programme/lighter-liquidity-partner-program]]
+
+## Sources
+[^lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund]: [[sources/lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund]]
+[^lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund-llp-strategies]: [[sources/lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund-llp-strategies]]
+[^lighter-docs-2026-04-28-trading-public-pools]: [[sources/lighter-docs-2026-04-28-trading-public-pools]]
+[^lighter-docs-2026-04-28-trading-prelaunch-markets]: [[sources/lighter-docs-2026-04-28-trading-prelaunch-markets]]
+[^lighter-docs-2026-04-28-trading-real-world-assets-rwas]: [[sources/lighter-docs-2026-04-28-trading-real-world-assets-rwas]]
+[^lighter-docs-2026-04-28-about-lighter-lit-utility]: [[sources/lighter-docs-2026-04-28-about-lighter-lit-utility]]
+[^lighter-docs-2026-04-28-points-program-market-makers]: [[sources/lighter-docs-2026-04-28-points-program-market-makers]]
+[^lighter-docs-2026-04-28-liquidity-partner-program]: [[sources/lighter-docs-2026-04-28-liquidity-partner-program]]
+[^hl-docs-2026-04-27-trading-liquidations]: [[sources/hl-docs-2026-04-27-trading-liquidations]]

@@ -55,19 +55,21 @@ _(none yet)_
 - [[concepts/operations/settlement]] — finality stage for trades, transfers, bridging (sources: 3, last_reviewed: 2026-04-28)
 
 ### risk
-- [[concepts/risk/liquidation]] — forced position closure when equity < maintenance margin (sources: 2, last_reviewed: 2026-04-28)
+- [[concepts/risk/liquidation]] — Forced-closure mechanism on under-margined positions; HL (book → HLP backstop → ADL) + Lighter (Healthy/Pre-Liq/Partial/Full/ADL waterfall, zero-price IoC, 1% overshoot fee, prelaunch carve-out, strategy-isolated ADL) (sources: 6, last_reviewed: 2026-04-28)
 - [[concepts/risk/margin-tier]] — per-asset rule mapping notional to (IM, MM) (sources: 2, last_reviewed: 2026-04-28)
 - [[concepts/risk/leverage-cap]] — per-asset upper bound on user-set leverage (sources: 2, last_reviewed: 2026-04-28)
 - [[concepts/risk/adl-waterfall]] — final solvency safeguard via opposite-side counterparty closure (sources: 1, last_reviewed: 2026-04-28)
 
 ### lp
 - [[concepts/lp/venue-owned-lp]] — venue-deployed liquidity vault (sources: 1, last_reviewed: 2026-04-28)
+- [[concepts/lp/vault]] — Venue-owned/operated capital pools (protocol-MM, insurance, strategy-as-a-service); HL HLP, Lighter LLP (multi-strategy), Lighter XLP (prelaunch), Lighter Public Pools (no-lockup operator-strategy) (sources: 8, last_reviewed: 2026-04-28) — NOTE: semantic overlap with `venue-owned-lp` above; consolidate via filename rename in follow-up commit
 
 ### listing
 - [[concepts/listing/listing-playbook]] — venue procedure for getting a new asset live (sources: 3, last_reviewed: 2026-04-28)
 
 ### incentives
 - [[concepts/incentives/referral-design]] — venue policy for referrer rewards and referred-user discounts (sources: 1, last_reviewed: 2026-04-28)
+- [[concepts/incentives/points-program]] — Venue-issued credit ledgers tied to future-claim allocation; Lighter retail+MM two-track (200k+50k weekly), with HL/dYdX/Aevo placeholders TBD on next ingest (sources: 3, last_reviewed: 2026-04-28)
 
 ### mm-agreement
 _(none yet)_
@@ -89,14 +91,16 @@ _(none yet)_
 - [[parameters/hyperliquid/staking-rewards]] — sqrt-stake formula, daily distribution (sources: 1, last_reviewed: 2026-04-28)
 - [[parameters/hyperliquid/hlp]] — pool-spec slot for the protocol vault (sources: 2, last_reviewed: 2026-04-28)
 
-Lighter (planned, Phase 2.2 will populate):
-- [[parameters/lighter/fee-schedule]] — Standard zero-fee + Premium 8-tier LIT-staking ladder; LIT Fee Credits paid shortcut; integrator fee caps
+Lighter:
+- [[parameters/lighter/fee-schedule]] — Standard zero-fee (300/200/200ms) + Premium 8-tier LIT-staking ladder (0→500k LIT, 0.0040%→0.0028% maker / 0.0280%→0.0196% taker / 200→140ms); LIT Fee Credits paid tier-elevator; integrator fee caps (10 bps perp / 1% spot); RWA Premium fees resumed 2026-04-15 14:30 UTC (sources: 7, last_reviewed: 2026-04-28)
+- [[parameters/lighter/llp]] — single LLP account; multi-strategy collateral shards (Crypto Perps / FX / Equities-RWAs); RWAs migrated from XLP to LLP; LIT-staking-gated deposits (1 LIT → 10 USDC); LLP-as-MM points redistributed to external MMs (sources: 8, last_reviewed: 2026-04-28)
+
+Lighter (planned, future passes will populate):
 - [[parameters/lighter/funding-config]] — hourly funding period; 0.01% IRC; ±0.05% small clamp; ±4% big clamp; per-minute random sampling
 - [[parameters/lighter/funding-rate-rebates]] — 6% automatic Premium + 9% LIT-stake-scaled (capped at 50k LIT); 10% annualized cap
 - [[parameters/lighter/oracle-config]] — Chainlink + Stork + Pyth index; mark = median(ImpactPrice, price1, price2); 8-min EMA; ±0.5% premium clamp
 - [[parameters/lighter/margin-tiers]] — leverage tiers 50x / 25x / 20x / 15x / 10x / 8x / 5x / 3x with MMR ≈ 0.6·IMR, CMR ≈ 0.4·IMR
 - [[parameters/lighter/listed-markets-roster]] — crypto + FX + RWA + prelaunch perps roster
-- [[parameters/lighter/llp]] — single LLP account, multi-strategy collateral isolation; LIT-staking-gated deposits
 - [[parameters/lighter/insurance-fund]] — LLP doubles as insurance fund; ADL fires on strategy depletion
 - [[parameters/lighter/multi-asset-collateral]] — ETH-first roll-out; per-asset LTV / LT / LF; UTA-gated
 - [[parameters/lighter/liquidation-params]] — partial-liquidation IoC at zero price; 1% max liquidation fee to LLP; prelaunch carve-out
