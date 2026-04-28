@@ -70,7 +70,7 @@ disputed: true
 - [[entities/perpdex/lighter]] **distributes_to** [[entities/token/lit]] via daily 24h TWAP buyback funded by trading-fee revenue[^lighter-docs-2026-04-28-about-lighter-lit-utility]
 - [[entities/perpdex/lighter]] **subsidizes** [[entities/programme/lighter-points-program]] (organic-trading rewards distributed weekly)[^lighter-docs-2026-04-28-points-program][^lighter-docs-2026-04-28-points-program-retail][^lighter-docs-2026-04-28-points-program-market-makers]
 - [[entities/perpdex/lighter]] **subsidizes** [[entities/programme/lighter-liquidity-partner-program]] (weekly maker-rebate pool by tier)[^lighter-docs-2026-04-28-liquidity-partner-program]
-- [[parameters/lighter/llp]] **seeds_liquidity_for** Lighter crypto, FX, and RWA markets and **backstops** liquidations[^lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund-llp-strategies][^lighter-docs-2026-04-28-trading-real-world-assets-rwas]
+- [[parameters/lighter/llp]] **seeds_liquidity_for** Lighter crypto, FX, and RWA markets[^lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund-llp-strategies][^lighter-docs-2026-04-28-trading-real-world-assets-rwas] (LLP also serves as the liquidation-flow backstop — see Mechanism)
 - [[entities/perpdex/lighter]] **partners_with** third-party integrators via Partner Attribution Program (perp cap 10 bps, spot cap 1%)[^lighter-docs-2026-04-28-integrations-partner-attribution]
 - [[entities/perpdex/lighter]] **depends_on** Chainlink, Stork, and Pyth oracles for index price aggregation[^lighter-docs-2026-04-28-trading-fair-price-marking]
 

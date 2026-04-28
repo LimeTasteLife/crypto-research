@@ -27,6 +27,7 @@ _(none yet)_
 
 ### programme
 - [[entities/programme/lighter-points-program]] — Two-track (retail + MM) discretionary weekly points; Season 2 active; implied 250k weekly pool (sources: 4, last_reviewed: 2026-04-28)
+- [[entities/programme/lighter-liquidity-partner-program]] — Premium-only weekly maker-rebate pool; randomized ~1-min snapshots; per-symbol/bps/size cumulative-grid scoring; tiers/weights/pool published Mondays 17:00 UTC (sources: 1, last_reviewed: 2026-04-28)
 
 ## Concepts
 
@@ -94,10 +95,11 @@ _(none yet)_
 Lighter:
 - [[parameters/lighter/fee-schedule]] — Standard zero-fee (300/200/200ms) + Premium 8-tier LIT-staking ladder (0→500k LIT, 0.0040%→0.0028% maker / 0.0280%→0.0196% taker / 200→140ms); LIT Fee Credits paid tier-elevator; integrator fee caps (10 bps perp / 1% spot); RWA Premium fees resumed 2026-04-15 14:30 UTC (sources: 7, last_reviewed: 2026-04-28)
 - [[parameters/lighter/llp]] — single LLP account; multi-strategy collateral shards (Crypto Perps / FX / Equities-RWAs); RWAs migrated from XLP to LLP; LIT-staking-gated deposits (1 LIT → 10 USDC); LLP-as-MM points redistributed to external MMs (sources: 8, last_reviewed: 2026-04-28)
+- [[parameters/lighter/points-rules]] — Season 2: 200k retail/wk + implied 50k MM/wk (250k total Disputed); MM volume formula `score = volume + max(0, (volume−2.5B)·0.25)`; ~6–10 bps×size liquidity metrics per market; daily 8.33% floor + 50% extreme-vol cap (sources: 4, last_reviewed: 2026-04-28)
+- [[parameters/lighter/funding-rate-rebates]] — 6% automatic Premium + up to 9% LIT-stake-scaled (linear, capped at 50k LIT); 15% combined cap; 10% annualized cap; daily 00:00 UTC L2 transfers from `0xc4535…2772`; $1 minimum (sources: 1, last_reviewed: 2026-04-28)
 
 Lighter (planned, future passes will populate):
 - [[parameters/lighter/funding-config]] — hourly funding period; 0.01% IRC; ±0.05% small clamp; ±4% big clamp; per-minute random sampling
-- [[parameters/lighter/funding-rate-rebates]] — 6% automatic Premium + 9% LIT-stake-scaled (capped at 50k LIT); 10% annualized cap
 - [[parameters/lighter/oracle-config]] — Chainlink + Stork + Pyth index; mark = median(ImpactPrice, price1, price2); 8-min EMA; ±0.5% premium clamp
 - [[parameters/lighter/margin-tiers]] — leverage tiers 50x / 25x / 20x / 15x / 10x / 8x / 5x / 3x with MMR ≈ 0.6·IMR, CMR ≈ 0.4·IMR
 - [[parameters/lighter/listed-markets-roster]] — crypto + FX + RWA + prelaunch perps roster
@@ -106,7 +108,6 @@ Lighter (planned, future passes will populate):
 - [[parameters/lighter/liquidation-params]] — partial-liquidation IoC at zero price; 1% max liquidation fee to LLP; prelaunch carve-out
 - [[parameters/lighter/audit-history]] — Nethermind / Block / internal audit publication ledger
 - [[parameters/lighter/bug-bounty]] — publicly signaled, page "Coming soon" as of 2026-04-28
-- [[parameters/lighter/points-rules]] — Season 2: 200k retail/wk + 50k MM/wk; quality-favoring multipliers
 - [[parameters/lighter/lp-program-tiers]] — weekly Google-sheet-published tiers; Premium-only eligibility; 50/50 bid/ask split
 
 ### Per-market (`parameters/<entity>/markets/<symbol>.md`)

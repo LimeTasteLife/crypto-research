@@ -3,7 +3,7 @@ type: concept
 domain: risk
 name: ADL waterfall
 last_reviewed: 2026-04-28
-disputed: false
+disputed: true
 ---
 
 # ADL waterfall
@@ -37,8 +37,9 @@ Higher score → earlier in the ADL queue. The product term penalizes both deepl
 |---|---|---|---|
 | [[entities/perpdex/hyperliquid]] | `(mark/entry) × (notional/equity)`[^hl-docs-2026-04-27-trading-auto-deleveraging] | previous mark[^hl-docs-2026-04-27-trading-auto-deleveraging] | no — invariant: zero-position users untouchable[^hl-docs-2026-04-27-trading-auto-deleveraging] |
 | [[entities/perpdex/aster]] | Leverage PnL Quantile = PnL% × Margin Ratio; PnL% = max(0, Unrealized profit) / max(1, Wallet balance); reduces most profitable + most leveraged opposing first; no warning before reduction[^aster-docs-2026-04-28-trading-perpetuals-adl] | not surfaced | not surfaced |
+| [[entities/perpdex/lighter]] | opposite-side accounts ranked by ascending unrealized PnL with leverage as secondary key; bankrupt-account positions matched against this queue[^lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund] | not explicitly named in primary docs; ADL is the terminal state of the 5-state waterfall (Healthy → Pre-Liquidation → Partial → Full → ADL)[^lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund] | LLP-strategy isolated: a depleted strategy isolates ADL to that bucket (Crypto Perps / FX / Equities-RWAs); other strategies continue normally[^lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund-llp-strategies] |
 
-(Other perpdex venues to be added in subsequent ingest passes.)
+**Disputed trigger granularity (Lighter).** The ADL trigger condition is contested between LLP-wide exhaustion (per the trading-liquidations page) and per-strategy depletion (per the LLP-strategies page). The per-strategy trigger fires earlier and materially affects ADL-probability estimates — see [[entities/perpdex/lighter#disputed-claims-5]].
 
 ## Edge cases
 - Because the closure price is the **previous** mark, ADL counterparties are paid out as if they exited at the moment before the mark moved further against the underwater user — a small protective step for the involuntary exit.
@@ -53,3 +54,5 @@ None at first ingest.
 ## Sources
 [^hl-docs-2026-04-27-trading-auto-deleveraging]: [[sources/hl-docs-2026-04-27-trading-auto-deleveraging]]
 [^aster-docs-2026-04-28-trading-perpetuals-adl]: [[sources/aster-docs-2026-04-28-trading-perpetuals-adl]]
+[^lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund]: [[sources/lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund]]
+[^lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund-llp-strategies]: [[sources/lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund-llp-strategies]]
