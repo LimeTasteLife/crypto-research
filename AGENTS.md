@@ -614,6 +614,53 @@ Trigger: user provides a markdown file containing a flat list of URLs (one per l
 
 **Hard rule:** parallel agents NEVER touch wiki pages (`entities/`, `concepts/`, `parameters/`, `index.md`, `log.md`, `open-questions.md`). Phase 0.5 agents write only inside `mirror/<snap>/`. Phase 1 agents write only inside `sources/`. Wiki integration happens in a single sequential merge phase.
 
+### Subagent isolation + extended shared-file boundaries [LOAD-BEARING]
+
+This section codifies post-incident lessons from the 2026-04-28 parallel HL/Aster/Lighter/Drift session, where multiple parallel branches independently wrote to shared registry files and produced merge-conflict surfaces.
+
+**Extended forbidden-write list for parallel agents** (in addition to the Hard rule above): `mirror/_index.md`, `AGENTS.md`, `audit/<existing-files>`, `raw/queue/<existing-files>`. These are shared registries / schema documents and may only be modified by:
+
+- The Phase 2 sequential merge controller (for `mirror/_index.md`, `index.md`, `log.md`, `open-questions.md`).
+- An explicit user-acknowledged schema-patch session (for `AGENTS.md`).
+- An explicit user-acknowledged audit session (for `audit/`).
+
+Parallel platform-ingest agents that need to register a new mirror snapshot, append to `log.md`, or extend `index.md` MUST defer those writes to Phase 2 — never make the writes inside the parallel agent's branch. If a parallel branch contains writes to any extended-forbidden file at merge time, the controller MUST reject the merge and ask the user before proceeding.
+
+**Subagent isolation — controller-managed worktree pattern (REQUIRED).**
+
+Empirically, the Agent tool's `isolation: "worktree"` parameter does NOT reliably create an isolated worktree in this environment — observed failure mode (2026-04-28): subagent committed directly to the parent branch's HEAD with no separate branch created. Do not rely on the parameter alone.
+
+Standard pattern for any subagent that will write to the repository:
+
+1. Controller creates the worktree explicitly BEFORE dispatch:
+   `git worktree add .outline/agent-<task-slug> HEAD`
+2. Controller dispatches the subagent with the `cwd` (or first-step `cd`) pinned to the worktree path.
+3. Subagent commits inside the worktree on its own branch.
+4. Controller verifies the worktree branch via `git -C .outline/agent-<task-slug> log` after subagent returns.
+5. Controller merges the branch into the target with explicit `git merge --no-ff` (or rebase + push), resolving conflicts as needed.
+6. Controller removes the worktree: `git worktree remove .outline/agent-<task-slug>`.
+
+The subagent must NEVER be trusted to self-isolate; isolation is a controller responsibility.
+
+**Subagent prompt verifier clause (REQUIRED preamble).**
+
+Every dispatched subagent prompt that grants write access to the repository MUST include this verification preamble verbatim, BEFORE any task-specific instructions:
+
+```
+PRE-WORK SELF-CHECK (run first, return BLOCKED if any check fails):
+1. Print `pwd`. Confirm the path is under `.outline/agent-*` or
+   `.claude/worktrees/*`. If under the parent repo (no `.outline/` or
+   `.claude/worktrees/` segment), STOP and return BLOCKED with the
+   message "Not in isolated worktree — controller setup error".
+2. Print `git rev-parse --abbrev-ref HEAD`. Confirm the branch is NOT
+   `test`, `main`, or any branch matching `worktree-*` already in use.
+   If the branch is shared, STOP and return BLOCKED.
+3. Confirm the listed forbidden directories from the task prompt are
+   present (sanity check that the worktree is a real checkout).
+```
+
+A subagent that proceeds with writes without passing the self-check is a critical incident; the controller MUST roll back any commits made and re-dispatch with corrected isolation.
+
 ### Phase 0 — reconnaissance (controller, sequential, fast)
 
 1. Parse the queue file into a list of seed URLs with optional flags (`+allow`, `+deny`, `+max-pages`, `+nochildren`, `+refresh`, `+scope`).
