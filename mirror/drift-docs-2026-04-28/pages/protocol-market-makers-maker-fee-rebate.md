@@ -1,0 +1,23 @@
+# Maker Fee Rebate – Drift Protocol
+URL: https://docs.drift.trade/protocol/market-makers/maker-fee-rebate
+
+# Maker Fee Rebate
+
+For more information on our fee tiers, please see trading fees
+
+The below fee schedule details the rebates provided to Market Makers that have their orders filled by other users on the platform.
+
+In order to ensure an order is a maker order, it will need the 'post only' flag. Otherwise even resting orders can match as a taker.
+
+The current incentive program will be subject to change. All changes will be reflected in this schedule.
+
+For non-btc/eth perpetuals:
+
+| Taker | Maker Fee (flat Maker Fee regardless of Taker Fee) |
+| --- | --- |
+| AMM | -.25bps |
+| User | -.25bps |
+
+Note: You can earn up to 40% extra rebates on maker fees by staking DRIFT. These staking bonuses stack on top of your regular rebates. For the full breakdown, see Fee Benefits via DRIFT Staking.
+
+Last updated on February 27, 2026

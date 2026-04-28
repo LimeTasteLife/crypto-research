@@ -1,0 +1,505 @@
+snapshot_id: drift-docs-2026-04-28
+root_url: https://docs.drift.trade/
+host: docs.drift.trade
+path_prefix: /
+crawled_at: 2026-04-28T17:00:00Z
+crawler: exa
+page_count: 80
+status: active
+supersedes: null
+superseded_by: null
+allow: []
+deny:
+  - /developers/
+max_pages: 100
+pages:
+  - slug: index
+    url: https://docs.drift.trade/
+    fetched_at: 2026-04-28T17:00:05Z
+    status: ok
+    crawler: exa
+    title: Introduction – Drift Protocol
+  - slug: protocol-about-v3
+    url: https://docs.drift.trade/protocol/about-v3
+    fetched_at: 2026-04-28T17:00:30Z
+    status: ok
+    crawler: exa
+    title: Understanding Drift
+  - slug: protocol-about-v3-drift-amm
+    url: https://docs.drift.trade/protocol/about-v3/drift-amm
+    fetched_at: 2026-04-28T17:00:30Z
+    status: ok
+    crawler: exa
+    title: Drift AMM
+  - slug: protocol-about-v3-decentralized-orderbook
+    url: https://docs.drift.trade/protocol/about-v3/decentralized-orderbook
+    fetched_at: 2026-04-28T17:00:30Z
+    status: ok
+    crawler: exa
+    title: Decentralized Orderbook
+  - slug: protocol-about-v3-keepers
+    url: https://docs.drift.trade/protocol/about-v3/keepers
+    fetched_at: 2026-04-28T17:00:30Z
+    status: ok
+    crawler: exa
+    title: Keepers
+  - slug: protocol-about-v3-keepers-keepers-dlob-faq
+    url: https://docs.drift.trade/protocol/about-v3/keepers/keepers-dlob-faq
+    fetched_at: 2026-04-28T17:00:30Z
+    status: ok
+    crawler: exa
+    title: Keepers & Decentralized Orderbook (DLOB) FAQ
+  - slug: protocol-about-v3-keepers-keeper-incentives
+    url: https://docs.drift.trade/protocol/about-v3/keepers/keeper-incentives
+    fetched_at: 2026-04-28T17:00:30Z
+    status: ok
+    crawler: exa
+    title: Keeper Incentives
+  - slug: protocol-about-v3-matching-engine
+    url: https://docs.drift.trade/protocol/about-v3/matching-engine
+    fetched_at: 2026-04-28T17:00:30Z
+    status: ok
+    crawler: exa
+    title: Matching Engine
+  - slug: protocol-about-v3-jit-faq
+    url: https://docs.drift.trade/protocol/about-v3/jit-faq
+    fetched_at: 2026-04-28T17:00:30Z
+    status: ok
+    crawler: exa
+    title: Just-in-Time (JIT) FAQ
+  - slug: protocol-about-v3-revenue-pool
+    url: https://docs.drift.trade/protocol/about-v3/revenue-pool
+    fetched_at: 2026-04-28T17:00:30Z
+    status: ok
+    crawler: exa
+    title: Revenue Pool
+  - slug: protocol-about-v3-optimizations
+    url: https://docs.drift.trade/protocol/about-v3/optimizations
+    fetched_at: 2026-04-28T17:01:00Z
+    status: ok
+    crawler: exa
+    title: Optimizations
+  - slug: protocol-about-v3-program-vault-addresses
+    url: https://docs.drift.trade/protocol/about-v3/program-vault-addresses
+    fetched_at: 2026-04-28T17:01:00Z
+    status: ok
+    crawler: exa
+    title: Program & Vault Addresses
+  - slug: protocol-getting-started
+    url: https://docs.drift.trade/protocol/getting-started
+    fetched_at: 2026-04-28T17:01:00Z
+    status: ok
+    crawler: exa
+    title: Getting Started
+  - slug: protocol-getting-started-wallet-setup
+    url: https://docs.drift.trade/protocol/getting-started/wallet-setup
+    fetched_at: 2026-04-28T17:01:00Z
+    status: ok
+    crawler: exa
+    title: Wallet Setup
+  - slug: protocol-getting-started-wallet-setup-phantom-wallet
+    url: https://docs.drift.trade/protocol/getting-started/wallet-setup/phantom-wallet
+    fetched_at: 2026-04-28T17:01:00Z
+    status: ok
+    crawler: exa
+    title: Phantom Wallet Setup
+  - slug: protocol-getting-started-wallet-setup-metamask
+    url: https://docs.drift.trade/protocol/getting-started/wallet-setup/metamask
+    fetched_at: 2026-04-28T17:01:00Z
+    status: ok
+    crawler: exa
+    title: Metamask Setup
+  - slug: protocol-getting-started-wallet-setup-passwordless-login
+    url: https://docs.drift.trade/protocol/getting-started/wallet-setup/passwordless-login
+    fetched_at: 2026-04-28T17:01:00Z
+    status: ok
+    crawler: exa
+    title: Passwordless Login
+  - slug: protocol-getting-started-wallet-setup-bot-wallet
+    url: https://docs.drift.trade/protocol/getting-started/wallet-setup/bot-wallet
+    fetched_at: 2026-04-28T17:01:00Z
+    status: ok
+    crawler: exa
+    title: Bot Wallet Setup
+  - slug: protocol-getting-started-wallet-setup-wallet-faq
+    url: https://docs.drift.trade/protocol/getting-started/wallet-setup/wallet-faq
+    fetched_at: 2026-04-28T17:01:00Z
+    status: ok
+    crawler: exa
+    title: Wallet FAQ
+  - slug: protocol-getting-started-cross-collateral-deposits
+    url: https://docs.drift.trade/protocol/getting-started/cross-collateral-deposits
+    fetched_at: 2026-04-28T17:01:00Z
+    status: ok
+    crawler: exa
+    title: Cross-collateral deposits
+  - slug: protocol-getting-started-managing-subaccounts
+    url: https://docs.drift.trade/protocol/getting-started/managing-subaccounts
+    fetched_at: 2026-04-28T17:01:30Z
+    status: ok
+    crawler: exa
+    title: Creating and Managing Subaccounts
+  - slug: protocol-getting-started-delegated-accounts
+    url: https://docs.drift.trade/protocol/getting-started/delegated-accounts
+    fetched_at: 2026-04-28T17:01:30Z
+    status: ok
+    crawler: exa
+    title: Delegated Accounts
+  - slug: protocol-getting-started-withdraw-and-close-account
+    url: https://docs.drift.trade/protocol/getting-started/withdraw-and-close-account
+    fetched_at: 2026-04-28T17:01:30Z
+    status: ok
+    crawler: exa
+    title: Withdraw and Close Account
+  - slug: protocol-trading
+    url: https://docs.drift.trade/protocol/trading
+    fetched_at: 2026-04-28T17:01:30Z
+    status: ok
+    crawler: exa
+    title: Trading
+  - slug: protocol-trading-market-specs
+    url: https://docs.drift.trade/protocol/trading/market-specs
+    fetched_at: 2026-04-28T17:01:30Z
+    status: ok
+    crawler: exa
+    title: Market Specs
+  - slug: protocol-trading-prelaunch-markets
+    url: https://docs.drift.trade/protocol/trading/prelaunch-markets
+    fetched_at: 2026-04-28T17:01:30Z
+    status: ok
+    crawler: exa
+    title: Prelaunch Market
+  - slug: protocol-trading-perpetuals-trading
+    url: https://docs.drift.trade/protocol/trading/perpetuals-trading
+    fetched_at: 2026-04-28T17:01:30Z
+    status: ok
+    crawler: exa
+    title: What are Perpetual Futures
+  - slug: protocol-trading-perpetuals-trading-perpetuals-trading
+    url: https://docs.drift.trade/protocol/trading/perpetuals-trading/perpetuals-trading
+    fetched_at: 2026-04-28T17:01:30Z
+    status: ok
+    crawler: exa
+    title: Perpetuals Trading
+  - slug: protocol-trading-perpetuals-trading-auction-parameters
+    url: https://docs.drift.trade/protocol/trading/perpetuals-trading/auction-parameters
+    fetched_at: 2026-04-28T17:01:30Z
+    status: ok
+    crawler: exa
+    title: Auction Parameters
+  - slug: protocol-trading-perpetuals-trading-funding-rates
+    url: https://docs.drift.trade/protocol/trading/perpetuals-trading/funding-rates
+    fetched_at: 2026-04-28T17:01:30Z
+    status: ok
+    crawler: exa
+    title: Funding Rates
+  - slug: protocol-trading-spot-trading
+    url: https://docs.drift.trade/protocol/trading/spot-trading
+    fetched_at: 2026-04-28T17:02:00Z
+    status: ok
+    crawler: exa
+    title: Spot Trading
+  - slug: protocol-trading-margin
+    url: https://docs.drift.trade/protocol/trading/margin
+    fetched_at: 2026-04-28T17:02:00Z
+    status: ok
+    crawler: exa
+    title: Margin Requirements
+  - slug: protocol-trading-margin-per-market-leverage
+    url: https://docs.drift.trade/protocol/trading/margin/per-market-leverage
+    fetched_at: 2026-04-28T17:02:00Z
+    status: ok
+    crawler: exa
+    title: Per-Market Leverage
+  - slug: protocol-trading-margin-account-health
+    url: https://docs.drift.trade/protocol/trading/margin/account-health
+    fetched_at: 2026-04-28T17:02:00Z
+    status: ok
+    crawler: exa
+    title: Account Health Breakdown
+  - slug: protocol-trading-profit-loss
+    url: https://docs.drift.trade/protocol/trading/profit-loss
+    fetched_at: 2026-04-28T17:02:00Z
+    status: ok
+    crawler: exa
+    title: Introduction to Profit & Loss
+  - slug: protocol-trading-profit-loss-accounting-settlement
+    url: https://docs.drift.trade/protocol/trading/profit-loss/accounting-settlement
+    fetched_at: 2026-04-28T17:02:00Z
+    status: ok
+    crawler: exa
+    title: Accounting & Settlement
+  - slug: protocol-trading-profit-loss-unsettled-profit-loss
+    url: https://docs.drift.trade/protocol/trading/profit-loss/unsettled-profit-loss
+    fetched_at: 2026-04-28T17:02:00Z
+    status: ok
+    crawler: exa
+    title: What is unsettled P&L?
+  - slug: protocol-trading-profit-loss-profit-loss-pool
+    url: https://docs.drift.trade/protocol/trading/profit-loss/profit-loss-pool
+    fetched_at: 2026-04-28T17:02:00Z
+    status: ok
+    crawler: exa
+    title: P&L Pool
+  - slug: protocol-trading-order-types
+    url: https://docs.drift.trade/protocol/trading/order-types
+    fetched_at: 2026-04-28T17:02:00Z
+    status: ok
+    crawler: exa
+    title: Basic Order Types
+  - slug: protocol-trading-order-types-advanced-order-types
+    url: https://docs.drift.trade/protocol/trading/order-types/advanced-order-types
+    fetched_at: 2026-04-28T17:02:00Z
+    status: ok
+    crawler: exa
+    title: Advanced Order types
+  - slug: protocol-trading-order-types-advanced-orders-faq
+    url: https://docs.drift.trade/protocol/trading/order-types/advanced-orders-faq
+    fetched_at: 2026-04-28T17:02:30Z
+    status: ok
+    crawler: exa
+    title: Advanced Orders FAQ
+  - slug: protocol-trading-liquidations
+    url: https://docs.drift.trade/protocol/trading/liquidations
+    fetched_at: 2026-04-28T17:02:30Z
+    status: ok
+    crawler: exa
+    title: Liquidations
+  - slug: protocol-trading-liquidations-liquidation-engine
+    url: https://docs.drift.trade/protocol/trading/liquidations/liquidation-engine
+    fetched_at: 2026-04-28T17:02:30Z
+    status: ok
+    crawler: exa
+    title: Liquidation Engine
+  - slug: protocol-trading-liquidations-liquidators
+    url: https://docs.drift.trade/protocol/trading/liquidations/liquidators
+    fetched_at: 2026-04-28T17:02:30Z
+    status: ok
+    crawler: exa
+    title: Liquidators
+  - slug: protocol-trading-trading-fees
+    url: https://docs.drift.trade/protocol/trading/trading-fees
+    fetched_at: 2026-04-28T17:02:30Z
+    status: ok
+    crawler: exa
+    title: Trading Fees
+  - slug: protocol-trading-trading-fees-fee-pool
+    url: https://docs.drift.trade/protocol/trading/trading-fees/fee-pool
+    fetched_at: 2026-04-28T17:02:30Z
+    status: ok
+    crawler: exa
+    title: Fee Pool
+  - slug: protocol-trading-trading-fees-other-trading-fees
+    url: https://docs.drift.trade/protocol/trading/trading-fees/other-trading-fees
+    fetched_at: 2026-04-28T17:02:30Z
+    status: ok
+    crawler: exa
+    title: Other Trading Fees
+  - slug: protocol-trading-versioned-transactions
+    url: https://docs.drift.trade/protocol/trading/versioned-transactions
+    fetched_at: 2026-04-28T17:02:30Z
+    status: ok
+    crawler: exa
+    title: Versioned Transactions
+  - slug: protocol-trading-oracles
+    url: https://docs.drift.trade/protocol/trading/oracles
+    fetched_at: 2026-04-28T17:02:30Z
+    status: ok
+    crawler: exa
+    title: Oracles
+  - slug: protocol-trading-block-conditions
+    url: https://docs.drift.trade/protocol/trading/block-conditions
+    fetched_at: 2026-04-28T17:02:30Z
+    status: ok
+    crawler: exa
+    title: Block Conditions
+  - slug: protocol-borrow-lend
+    url: https://docs.drift.trade/protocol/borrow-lend
+    fetched_at: 2026-04-28T17:03:00Z
+    status: ok
+    crawler: exa
+    title: What is Borrow & Lend?
+  - slug: protocol-borrow-lend-borrow-interest-rate
+    url: https://docs.drift.trade/protocol/borrow-lend/borrow-interest-rate
+    fetched_at: 2026-04-28T17:03:00Z
+    status: ok
+    crawler: exa
+    title: Borrow Interest Rate
+  - slug: protocol-borrow-lend-isolated-pools
+    url: https://docs.drift.trade/protocol/borrow-lend/isolated-pools
+    fetched_at: 2026-04-28T17:03:00Z
+    status: ok
+    crawler: exa
+    title: Isolated Pools
+  - slug: protocol-borrow-lend-borrow-lend-faq
+    url: https://docs.drift.trade/protocol/borrow-lend/borrow-lend-faq
+    fetched_at: 2026-04-28T17:03:00Z
+    status: ok
+    crawler: exa
+    title: Lend Borrow FAQ
+  - slug: protocol-borrow-lend-borrow-lend-apy
+    url: https://docs.drift.trade/protocol/borrow-lend/borrow-lend-apy
+    fetched_at: 2026-04-28T17:03:00Z
+    status: ok
+    crawler: exa
+    title: Borrow & Lend APY
+  - slug: protocol-borrow-lend-amplify
+    url: https://docs.drift.trade/protocol/borrow-lend/amplify
+    fetched_at: 2026-04-28T17:03:00Z
+    status: ok
+    crawler: exa
+    title: Amplify - How it works
+  - slug: protocol-borrow-lend-amplify-opening-a-position
+    url: https://docs.drift.trade/protocol/borrow-lend/amplify/opening-a-position
+    fetched_at: 2026-04-28T17:03:00Z
+    status: ok
+    crawler: exa
+    title: Amplify Opening a Position
+  - slug: protocol-borrow-lend-amplify-monitoring-a-position
+    url: https://docs.drift.trade/protocol/borrow-lend/amplify/monitoring-a-position
+    fetched_at: 2026-04-28T17:03:00Z
+    status: ok
+    crawler: exa
+    title: Amplify Monitoring a Position
+  - slug: protocol-borrow-lend-amplify-closing-a-position
+    url: https://docs.drift.trade/protocol/borrow-lend/amplify/closing-a-position
+    fetched_at: 2026-04-28T17:03:00Z
+    status: ok
+    crawler: exa
+    title: Amplify Closing a Position
+  - slug: protocol-borrow-lend-amplify-risk
+    url: https://docs.drift.trade/protocol/borrow-lend/amplify/risk
+    fetched_at: 2026-04-28T17:03:00Z
+    status: ok
+    crawler: exa
+    title: Amplify Risk
+  - slug: protocol-market-makers
+    url: https://docs.drift.trade/protocol/market-makers
+    fetched_at: 2026-04-28T17:03:30Z
+    status: ok
+    crawler: exa
+    title: Market Makers
+  - slug: protocol-market-makers-market-maker-participation
+    url: https://docs.drift.trade/protocol/market-makers/market-maker-participation
+    fetched_at: 2026-04-28T17:03:30Z
+    status: ok
+    crawler: exa
+    title: Market Maker Participation
+  - slug: protocol-market-makers-maker-fee-rebate
+    url: https://docs.drift.trade/protocol/market-makers/maker-fee-rebate
+    fetched_at: 2026-04-28T17:03:30Z
+    status: ok
+    crawler: exa
+    title: Maker Fee Rebate
+  - slug: protocol-insurance-fund
+    url: https://docs.drift.trade/protocol/insurance-fund
+    fetched_at: 2026-04-28T17:03:30Z
+    status: ok
+    crawler: exa
+    title: What is the Insurance Fund?
+  - slug: protocol-insurance-fund-insurance-fund-staking
+    url: https://docs.drift.trade/protocol/insurance-fund/insurance-fund-staking
+    fetched_at: 2026-04-28T17:03:30Z
+    status: ok
+    crawler: exa
+    title: Insurance Fund Staking
+  - slug: protocol-rewards
+    url: https://docs.drift.trade/protocol/rewards
+    fetched_at: 2026-04-28T17:03:30Z
+    status: ok
+    crawler: exa
+    title: Rewards
+  - slug: protocol-rewards-referral-links
+    url: https://docs.drift.trade/protocol/rewards/referral-links
+    fetched_at: 2026-04-28T17:03:30Z
+    status: ok
+    crawler: exa
+    title: Referral Links
+  - slug: protocol-risk-and-safety
+    url: https://docs.drift.trade/protocol/risk-and-safety
+    fetched_at: 2026-04-28T17:03:30Z
+    status: ok
+    crawler: exa
+    title: Risk And Safety
+  - slug: protocol-risk-and-safety-risk-parameters
+    url: https://docs.drift.trade/protocol/risk-and-safety/risk-parameters
+    fetched_at: 2026-04-28T17:03:30Z
+    status: ok
+    crawler: exa
+    title: Risk Parameters
+  - slug: protocol-risk-and-safety-delisting-process
+    url: https://docs.drift.trade/protocol/risk-and-safety/delisting-process
+    fetched_at: 2026-04-28T17:03:30Z
+    status: ok
+    crawler: exa
+    title: Delisting Process
+  - slug: protocol-risk-and-safety-protocol-guard-rails
+    url: https://docs.drift.trade/protocol/risk-and-safety/protocol-guard-rails
+    fetched_at: 2026-04-28T17:04:00Z
+    status: ok
+    crawler: exa
+    title: Protocol Guard Rails
+  - slug: protocol-risk-and-safety-audits
+    url: https://docs.drift.trade/protocol/risk-and-safety/audits
+    fetched_at: 2026-04-28T17:04:00Z
+    status: ok
+    crawler: exa
+    title: Audits
+  - slug: protocol-risk-and-safety-risks
+    url: https://docs.drift.trade/protocol/risk-and-safety/risks
+    fetched_at: 2026-04-28T17:04:00Z
+    status: ok
+    crawler: exa
+    title: Risks
+  - slug: protocol-risk-and-safety-drift-safety-module
+    url: https://docs.drift.trade/protocol/risk-and-safety/drift-safety-module
+    fetched_at: 2026-04-28T17:04:00Z
+    status: ok
+    crawler: exa
+    title: Drift Safety Module
+  - slug: protocol-glossary
+    url: https://docs.drift.trade/protocol/glossary
+    fetched_at: 2026-04-28T17:04:00Z
+    status: ok
+    crawler: exa
+    title: Glossary
+  - slug: protocol-legal-and-regulations
+    url: https://docs.drift.trade/protocol/legal-and-regulations
+    fetched_at: 2026-04-28T17:04:00Z
+    status: ok
+    crawler: exa
+    title: Legal And Regulations
+  - slug: protocol-legal-and-regulations-terms-of-use
+    url: https://docs.drift.trade/protocol/legal-and-regulations/terms-of-use
+    fetched_at: 2026-04-28T17:04:00Z
+    status: ok
+    crawler: exa
+    title: Terms of Use
+  - slug: protocol-legal-and-regulations-disclaimer
+    url: https://docs.drift.trade/protocol/legal-and-regulations/disclaimer
+    fetched_at: 2026-04-28T17:04:00Z
+    status: ok
+    crawler: exa
+    title: Disclaimer
+  - slug: protocol-legal-and-regulations-privacy-policy
+    url: https://docs.drift.trade/protocol/legal-and-regulations/privacy-policy
+    fetched_at: 2026-04-28T17:04:00Z
+    status: ok
+    crawler: exa
+    title: Privacy Policy
+  - slug: protocol-legal-and-regulations-competition-terms
+    url: https://docs.drift.trade/protocol/legal-and-regulations/competition-terms
+    fetched_at: 2026-04-28T17:04:00Z
+    status: ok
+    crawler: exa
+    title: Competition Terms
+queue_remainder: []
+notes:
+  - "Client-side rendered nav (Fern/Mintlify); seed page yielded sparse outbound links so used WebFetch sidebar extraction to seed BFS queue (sparse-link fallback fired)."
+  - "URL aliasing: /protocol returns identical content to /. De-duplicated; kept first crawled URL (/) under slug 'index'. The /protocol URL was NOT saved as a separate page (would have been duplicate content)."
+  - "alias: /protocol is canonical of /"
+  - "URL aliasing: /protocol/trading/x and /trading/x both resolve to same content via Drift docs router. Crawled only the /protocol/* form per nav structure."
+  - "/llms.txt: NOT FOUND (CRAWL_NOT_FOUND on docs.drift.trade/llms.txt)."
+  - "/sitemap.xml: returned UNEXPECTED_CONTENT_TYPE (likely binary/gzip); did not parse."
+  - "Excluded /developers/* per controller queue file (root #2 captures that subtree)."
+  - "Some pages (margin, cross-collateral, market-specs, fee tables) display 'Loading...' tables — these are client-side fetched from on-chain state. Captured doc structure but live values come from chain/UI."

@@ -1,0 +1,393 @@
+snapshot_id: drift-sdk-2026-04-28
+root_url: https://mintlify.com/drift-labs/protocol-v2/
+host: mintlify.com
+path_prefix: /drift-labs/protocol-v2/
+crawled_at: 2026-04-28T18:00:00Z
+crawler: exa
+page_count: 62
+status: active
+supersedes: null
+superseded_by: null
+allow: []
+deny: []
+max_pages: 100
+pages:
+  - slug: index
+    url: https://mintlify.com/drift-labs/protocol-v2/
+    fetched_at: 2026-04-28T18:00:05Z
+    status: ok
+    crawler: exa
+    title: Drift Protocol v2 (root)
+  - slug: introduction
+    url: https://mintlify.com/drift-labs/protocol-v2/introduction
+    fetched_at: 2026-04-28T18:00:10Z
+    status: ok
+    crawler: exa
+    title: Drift Protocol v2 (introduction; alias of root)
+  - slug: installation
+    url: https://mintlify.com/drift-labs/protocol-v2/installation
+    fetched_at: 2026-04-28T18:00:15Z
+    status: ok
+    crawler: exa
+    title: Installation
+  - slug: quickstart
+    url: https://mintlify.com/drift-labs/protocol-v2/quickstart
+    fetched_at: 2026-04-28T18:00:20Z
+    status: ok
+    crawler: exa
+    title: Quick Start
+  - slug: concepts-overview
+    url: https://mintlify.com/drift-labs/protocol-v2/concepts/overview
+    fetched_at: 2026-04-28T18:00:25Z
+    status: ok
+    crawler: exa
+    title: Protocol Overview
+  - slug: concepts-markets
+    url: https://mintlify.com/drift-labs/protocol-v2/concepts/markets
+    fetched_at: 2026-04-28T18:00:30Z
+    status: ok
+    crawler: exa
+    title: Markets
+  - slug: concepts-orders
+    url: https://mintlify.com/drift-labs/protocol-v2/concepts/orders
+    fetched_at: 2026-04-28T18:00:35Z
+    status: ok
+    crawler: exa
+    title: Orders
+  - slug: concepts-positions
+    url: https://mintlify.com/drift-labs/protocol-v2/concepts/positions
+    fetched_at: 2026-04-28T18:00:40Z
+    status: ok
+    crawler: exa
+    title: Positions
+  - slug: concepts-margin
+    url: https://mintlify.com/drift-labs/protocol-v2/concepts/margin
+    fetched_at: 2026-04-28T18:00:45Z
+    status: ok
+    crawler: exa
+    title: Margin System
+  - slug: concepts-oracles
+    url: https://mintlify.com/drift-labs/protocol-v2/concepts/oracles
+    fetched_at: 2026-04-28T18:00:50Z
+    status: ok
+    crawler: exa
+    title: Oracles
+  - slug: concepts-liquidations
+    url: https://mintlify.com/drift-labs/protocol-v2/concepts/liquidations
+    fetched_at: 2026-04-28T18:00:55Z
+    status: ok
+    crawler: exa
+    title: Liquidations
+  - slug: math-amm
+    url: https://mintlify.com/drift-labs/protocol-v2/math/amm
+    fetched_at: 2026-04-28T18:01:00Z
+    status: ok
+    crawler: exa
+    title: AMM Calculations
+  - slug: math-funding-rates
+    url: https://mintlify.com/drift-labs/protocol-v2/math/funding-rates
+    fetched_at: 2026-04-28T18:01:05Z
+    status: ok
+    crawler: exa
+    title: Funding Rate Calculations
+  - slug: math-margin-calculations
+    url: https://mintlify.com/drift-labs/protocol-v2/math/margin-calculations
+    fetched_at: 2026-04-28T18:01:10Z
+    status: ok
+    crawler: exa
+    title: Margin Calculations
+  - slug: math-pnl
+    url: https://mintlify.com/drift-labs/protocol-v2/math/pnl
+    fetched_at: 2026-04-28T18:01:15Z
+    status: ok
+    crawler: exa
+    title: PnL Calculations
+  - slug: math-precision
+    url: https://mintlify.com/drift-labs/protocol-v2/math/precision
+    fetched_at: 2026-04-28T18:01:20Z
+    status: ok
+    crawler: exa
+    title: Precision & BigNum Handling
+  - slug: program-architecture
+    url: https://mintlify.com/drift-labs/protocol-v2/program/architecture
+    fetched_at: 2026-04-28T18:01:25Z
+    status: ok
+    crawler: exa
+    title: Program Architecture
+  - slug: program-instructions-admin
+    url: https://mintlify.com/drift-labs/protocol-v2/program/instructions/admin
+    fetched_at: 2026-04-28T18:01:30Z
+    status: ok
+    crawler: exa
+    title: Admin Instructions
+  - slug: program-instructions-keeper
+    url: https://mintlify.com/drift-labs/protocol-v2/program/instructions/keeper
+    fetched_at: 2026-04-28T18:01:35Z
+    status: ok
+    crawler: exa
+    title: Keeper Instructions
+  - slug: program-instructions-trading
+    url: https://mintlify.com/drift-labs/protocol-v2/program/instructions/trading
+    fetched_at: 2026-04-28T18:01:40Z
+    status: ok
+    crawler: exa
+    title: Trading Instructions
+  - slug: program-instructions-user
+    url: https://mintlify.com/drift-labs/protocol-v2/program/instructions/user
+    fetched_at: 2026-04-28T18:01:45Z
+    status: ok
+    crawler: exa
+    title: User Instructions
+  - slug: program-security
+    url: https://mintlify.com/drift-labs/protocol-v2/program/security
+    fetched_at: 2026-04-28T18:01:50Z
+    status: ok
+    crawler: exa
+    title: Security
+  - slug: program-state-state-account
+    url: https://mintlify.com/drift-labs/protocol-v2/program/state/state-account
+    fetched_at: 2026-04-28T18:01:55Z
+    status: ok
+    crawler: exa
+    title: State Account
+  - slug: program-state-market-accounts
+    url: https://mintlify.com/drift-labs/protocol-v2/program/state/market-accounts
+    fetched_at: 2026-04-28T18:02:00Z
+    status: ok
+    crawler: exa
+    title: Market Accounts
+  - slug: program-state-user-account
+    url: https://mintlify.com/drift-labs/protocol-v2/program/state/user-account
+    fetched_at: 2026-04-28T18:02:05Z
+    status: ok
+    crawler: exa
+    title: User Account
+  - slug: api-drift-client
+    url: https://mintlify.com/drift-labs/protocol-v2/api/drift-client
+    fetched_at: 2026-04-28T18:02:10Z
+    status: ok
+    crawler: exa
+    title: DriftClient
+  - slug: api-admin-client
+    url: https://mintlify.com/drift-labs/protocol-v2/api/admin-client
+    fetched_at: 2026-04-28T18:02:15Z
+    status: ok
+    crawler: exa
+    title: AdminClient
+  - slug: api-user
+    url: https://mintlify.com/drift-labs/protocol-v2/api/user
+    fetched_at: 2026-04-28T18:02:20Z
+    status: ok
+    crawler: exa
+    title: User
+  - slug: api-account-subscribers-overview
+    url: https://mintlify.com/drift-labs/protocol-v2/api/account-subscribers/overview
+    fetched_at: 2026-04-28T18:02:25Z
+    status: ok
+    crawler: exa
+    title: Account Subscribers Overview
+  - slug: api-account-subscribers-polling
+    url: https://mintlify.com/drift-labs/protocol-v2/api/account-subscribers/polling
+    fetched_at: 2026-04-28T18:02:30Z
+    status: ok
+    crawler: exa
+    title: Polling Subscribers
+  - slug: api-account-subscribers-websocket
+    url: https://mintlify.com/drift-labs/protocol-v2/api/account-subscribers/websocket
+    fetched_at: 2026-04-28T18:02:35Z
+    status: ok
+    crawler: exa
+    title: WebSocket Subscribers
+  - slug: api-account-subscribers-grpc
+    url: https://mintlify.com/drift-labs/protocol-v2/api/account-subscribers/grpc
+    fetched_at: 2026-04-28T18:02:40Z
+    status: ok
+    crawler: exa
+    title: gRPC Subscribers
+  - slug: api-markets-perp-markets
+    url: https://mintlify.com/drift-labs/protocol-v2/api/markets/perp-markets
+    fetched_at: 2026-04-28T18:02:45Z
+    status: ok
+    crawler: exa
+    title: Perpetual Markets
+  - slug: api-markets-spot-markets
+    url: https://mintlify.com/drift-labs/protocol-v2/api/markets/spot-markets
+    fetched_at: 2026-04-28T18:02:50Z
+    status: ok
+    crawler: exa
+    title: Spot Markets
+  - slug: api-markets-oracles
+    url: https://mintlify.com/drift-labs/protocol-v2/api/markets/oracles
+    fetched_at: 2026-04-28T18:02:55Z
+    status: ok
+    crawler: exa
+    title: Oracle Price Data
+  - slug: api-math-conversion
+    url: https://mintlify.com/drift-labs/protocol-v2/api/math/conversion
+    fetched_at: 2026-04-28T18:03:00Z
+    status: ok
+    crawler: exa
+    title: Conversion Utilities
+  - slug: api-math-margin
+    url: https://mintlify.com/drift-labs/protocol-v2/api/math/margin
+    fetched_at: 2026-04-28T18:03:05Z
+    status: ok
+    crawler: exa
+    title: Margin Calculations API
+  - slug: api-math-liquidation
+    url: https://mintlify.com/drift-labs/protocol-v2/api/math/liquidation
+    fetched_at: 2026-04-28T18:03:10Z
+    status: ok
+    crawler: exa
+    title: Liquidation Calculations
+  - slug: api-math-position
+    url: https://mintlify.com/drift-labs/protocol-v2/api/math/position
+    fetched_at: 2026-04-28T18:03:15Z
+    status: ok
+    crawler: exa
+    title: Position Calculations
+  - slug: api-trading-dlob
+    url: https://mintlify.com/drift-labs/protocol-v2/api/trading/dlob
+    fetched_at: 2026-04-28T18:03:20Z
+    status: ok
+    crawler: exa
+    title: DLOB
+  - slug: api-trading-order-params
+    url: https://mintlify.com/drift-labs/protocol-v2/api/trading/order-params
+    fetched_at: 2026-04-28T18:03:25Z
+    status: ok
+    crawler: exa
+    title: OrderParams
+  - slug: api-trading-position-management
+    url: https://mintlify.com/drift-labs/protocol-v2/api/trading/position-management
+    fetched_at: 2026-04-28T18:03:30Z
+    status: ok
+    crawler: exa
+    title: Position Management
+  - slug: api-types-accounts
+    url: https://mintlify.com/drift-labs/protocol-v2/api/types/accounts
+    fetched_at: 2026-04-28T18:03:35Z
+    status: ok
+    crawler: exa
+    title: Account Types
+  - slug: api-types-enums
+    url: https://mintlify.com/drift-labs/protocol-v2/api/types/enums
+    fetched_at: 2026-04-28T18:03:40Z
+    status: ok
+    crawler: exa
+    title: Enum Types
+  - slug: api-types-orders
+    url: https://mintlify.com/drift-labs/protocol-v2/api/types/orders
+    fetched_at: 2026-04-28T18:03:45Z
+    status: ok
+    crawler: exa
+    title: Order Types
+  - slug: api-types-positions
+    url: https://mintlify.com/drift-labs/protocol-v2/api/types/positions
+    fetched_at: 2026-04-28T18:03:50Z
+    status: ok
+    crawler: exa
+    title: Position Types
+  - slug: examples-connect-and-deposit
+    url: https://mintlify.com/drift-labs/protocol-v2/examples/connect-and-deposit
+    fetched_at: 2026-04-28T18:03:55Z
+    status: ok
+    crawler: exa
+    title: Connect and Deposit
+  - slug: examples-place-market-order
+    url: https://mintlify.com/drift-labs/protocol-v2/examples/place-market-order
+    fetched_at: 2026-04-28T18:04:00Z
+    status: ok
+    crawler: exa
+    title: Place Market Order
+  - slug: examples-place-limit-order
+    url: https://mintlify.com/drift-labs/protocol-v2/examples/place-limit-order
+    fetched_at: 2026-04-28T18:04:05Z
+    status: ok
+    crawler: exa
+    title: Place Limit Order
+  - slug: examples-cancel-order
+    url: https://mintlify.com/drift-labs/protocol-v2/examples/cancel-order
+    fetched_at: 2026-04-28T18:04:10Z
+    status: ok
+    crawler: exa
+    title: Cancel Order
+  - slug: examples-modify-order
+    url: https://mintlify.com/drift-labs/protocol-v2/examples/modify-order
+    fetched_at: 2026-04-28T18:04:15Z
+    status: ok
+    crawler: exa
+    title: Modify Order
+  - slug: examples-event-listening
+    url: https://mintlify.com/drift-labs/protocol-v2/examples/event-listening
+    fetched_at: 2026-04-28T18:04:20Z
+    status: ok
+    crawler: exa
+    title: Event Listening
+  - slug: examples-liquidation-bot
+    url: https://mintlify.com/drift-labs/protocol-v2/examples/liquidation-bot
+    fetched_at: 2026-04-28T18:04:25Z
+    status: ok
+    crawler: exa
+    title: Liquidation Bot
+  - slug: examples-market-making
+    url: https://mintlify.com/drift-labs/protocol-v2/examples/market-making
+    fetched_at: 2026-04-28T18:04:30Z
+    status: ok
+    crawler: exa
+    title: Market Making Bot
+  - slug: examples-arbitrage
+    url: https://mintlify.com/drift-labs/protocol-v2/examples/arbitrage
+    fetched_at: 2026-04-28T18:04:35Z
+    status: ok
+    crawler: exa
+    title: Arbitrage Strategies
+  - slug: guides-initialization
+    url: https://mintlify.com/drift-labs/protocol-v2/guides/initialization
+    fetched_at: 2026-04-28T18:04:40Z
+    status: ok
+    crawler: exa
+    title: Initialize DriftClient
+  - slug: guides-account-management
+    url: https://mintlify.com/drift-labs/protocol-v2/guides/account-management
+    fetched_at: 2026-04-28T18:04:45Z
+    status: ok
+    crawler: exa
+    title: Account Management
+  - slug: guides-account-subscriptions
+    url: https://mintlify.com/drift-labs/protocol-v2/guides/account-subscriptions
+    fetched_at: 2026-04-28T18:04:50Z
+    status: ok
+    crawler: exa
+    title: Account Subscriptions
+  - slug: guides-placing-orders
+    url: https://mintlify.com/drift-labs/protocol-v2/guides/placing-orders
+    fetched_at: 2026-04-28T18:04:55Z
+    status: ok
+    crawler: exa
+    title: Placing Orders
+  - slug: guides-managing-positions
+    url: https://mintlify.com/drift-labs/protocol-v2/guides/managing-positions
+    fetched_at: 2026-04-28T18:05:00Z
+    status: ok
+    crawler: exa
+    title: Managing Positions
+  - slug: guides-oracle-integration
+    url: https://mintlify.com/drift-labs/protocol-v2/guides/oracle-integration
+    fetched_at: 2026-04-28T18:05:05Z
+    status: ok
+    crawler: exa
+    title: Oracle Integration
+  - slug: guides-advanced-features
+    url: https://mintlify.com/drift-labs/protocol-v2/guides/advanced-features
+    fetched_at: 2026-04-28T18:05:10Z
+    status: ok
+    crawler: exa
+    title: Advanced Features
+queue_remainder: []
+notes:
+  - "/llms.txt confirmed available at https://mintlify.com/drift-labs/protocol-v2/llms.txt — used to seed BFS queue (60 documented pages enumerated)."
+  - "Auto-generated TS SDK API reference; pages organized into: api/* (DriftClient, AdminClient, User, account-subscribers, markets, math, trading, types), concepts/* (overview, markets, orders, positions, margin, oracles, liquidations), examples/* (connect-and-deposit, place-market-order, place-limit-order, cancel-order, modify-order, event-listening, liquidation-bot, market-making, arbitrage), guides/* (initialization, account-management, account-subscriptions, placing-orders, managing-positions, oracle-integration, advanced-features), math/* (amm, funding-rates, margin-calculations, pnl, precision), program/* (architecture, instructions/admin, instructions/keeper, instructions/trading, instructions/user, security, state/state-account, state/market-accounts, state/user-account)."
+  - "Source pages contain heavy auto-generated TypeScript signature dumps; captured prose, code examples, type definitions, and method signatures while stripping the boilerplate Mintlify reference noise."
+  - "Pages fetched from mintlify.wiki/<slug>.md (canonical markdown variant); URL field in manifest preserves the mintlify.com path per task spec."
+  - "introduction.md content is identical to root index.md; recorded both with alias note in Seed 3 — kept as separate pages because llms.txt enumerates them as separate URLs."
