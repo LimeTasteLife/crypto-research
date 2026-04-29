@@ -114,6 +114,15 @@ A7's high concentration on Aster (40/41 ≈ 98%) is a single-source artefact (as
 
 **Schema-patch required.** This is a `concept-domain` extension, not an inline body change — must be an explicit user-acknowledged schema patch session before any Phase 2 run rewrites filing rules.
 
+**Update (2026-04-29) — F2 minimal patch landed.** Schema split executed:
+- 2026-04-29 rebaseline (now 6 perpdex + 1 dex): A7 = **161 claims** / 6 venues; A8 = **182 claims** / 6 venues; A9 = **33 claims** / 3 venues (driven by dYdX = 28). All three thresholds now exceeded; A9 promoted alongside A7/A8.
+- `schema/schema.md` domain enum: appended `governance`, `security`, `regulatory` rows (3 new domains, with illustrative example slugs).
+- `schema/frame.md` mapping table: A7 primary domain → `governance`; A8 → `security`; A9 → `regulatory`. Adjacent/overlapping domains added per axis.
+- Filing rule updated: A7/A8/A9 claims now file to dedicated domains; `operations` no longer the catch-all. Pre-promotion claims under `operations` carry forward without bulk re-tagging — migration is opportunistic when Phase 2 touches a source page.
+- `concepts/governance/` (4 stubs) and `concepts/security/` (5 stubs) already existed prior to this patch (commit `39c034b`); empty Variants tables awaiting Phase 2 population.
+- `concepts/regulatory/` directory created with `.gitkeep` placeholder; stub pages deferred.
+- **Filed_to retagging deferred** per minimal-patch decision; predicted P2 (`filed_to: concepts/operations` count drop ≥80) cannot be measured until retagging happens.
+
 ### HIGH — F3. Frame coverage cells without rationale — **erratum: false positive on controller post-verification (2026-04-29)**
 
 **Claim:** AGENTS.md requires every NA / gap cell to carry a one-line rationale. Lint will fire `frame: unrationalized` per offending cell.
