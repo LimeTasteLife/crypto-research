@@ -10,6 +10,8 @@ Format: `- [[path]] — one-line summary (sources: N, last_reviewed: YYYY-MM-DD)
 - [[entities/perpdex/hyperliquid]] — fully on-chain CLOB perp+spot exchange on its own L1 (sources: 20, last_reviewed: 2026-04-28)
 - [[entities/perpdex/lighter]] — ZK-rollup verifiable-execution perp DEX, two-track Standard/Premium account model, LIT-staking-gated discounts, LLP-backed liquidations (sources: 31, last_reviewed: 2026-04-28)
 
+- [[entities/perpdex/orderly]] — headless omnichain CLOB perp infrastructure with multi-frontend builder model, OmniVault (Kronos Research), permissionless listing, VALOR staking (sources: 20, last_reviewed: 2026-04-28)
+
 ### dex
 _(none yet — Uniswap v4 ingest pending; queue at `raw/queue/uniswap-v4-2026-04-28.md`)_
 
@@ -101,6 +103,20 @@ Lighter:
 - [[parameters/lighter/points-rules]] — Season 2: 200k retail/wk + implied 50k MM/wk (250k total Disputed); MM volume formula `score = volume + max(0, (volume−2.5B)·0.25)`; ~6–10 bps×size liquidity metrics per market; daily 8.33% floor + 50% extreme-vol cap (sources: 4, last_reviewed: 2026-04-28)
 - [[parameters/lighter/funding-rate-rebates]] — 6% automatic Premium + up to 9% LIT-stake-scaled (linear, capped at 50k LIT); 15% combined cap; 10% annualized cap; daily 00:00 UTC L2 transfers from `0xc4535…2772`; $1 minimum (sources: 1, last_reviewed: 2026-04-28)
 
+Orderly:
+- [[parameters/orderly/fee-schedule]] — two-layer base+custom fee; Builder Staking Programme 5 tiers; 0 bps maker all tiers (sources: 2, last_reviewed: 2026-04-28)
+- [[parameters/orderly/funding-config]] — piecewise linear 3-slope funding; per-market cap/floor/interval; 15s premium sampling (sources: 1, last_reviewed: 2026-04-28)
+- [[parameters/orderly/margin-tiers]] — IMR 4/5-power formula; Cross + Isolated; 100x/20x/10x/5x per-market (sources: 2, last_reviewed: 2026-04-28)
+- [[parameters/orderly/liquidation-params]] — decentralized liquidator model; Low/High tiers; 0.60%/1.20% fee (sources: 1, last_reviewed: 2026-04-28)
+- [[parameters/orderly/insurance-fund]] — platform IF + per-Builder isolated IFs ($50k/symbol minimum) (sources: 2, last_reviewed: 2026-04-28)
+- [[parameters/orderly/listing-policy]] — standard + permissionless dual-path; Diamond Tier gate; POST_ONLY→ACTIVE launch (sources: 3, last_reviewed: 2026-04-28)
+- [[parameters/orderly/oracle-config]] — CEX feeds + Pyth + Stork; all-unavailable → reduce-only (sources: 2, last_reviewed: 2026-04-28)
+- [[parameters/orderly/omnivault]] — Kronos Research SP; 3h vault periods; up to 40% net revenue allocation (sources: 3, last_reviewed: 2026-04-28)
+- [[parameters/orderly/tokenomics]] — 1B max supply; 55/15/20/10 allocation; VALOR staking; 30% daily buyback (sources: 4, last_reviewed: 2026-04-28)
+- [[parameters/orderly/audits]] — Halborn, Zellic, Guardian Audits; 2 OmniVault audits (sources: 2, last_reviewed: 2026-04-28)
+- [[parameters/orderly/contract-addresses]] — unified Vault; Orderly L2 contracts; 17 EVM + Solana; $ORDER token addresses (sources: 3, last_reviewed: 2026-04-28)
+- [[parameters/orderly/multi-asset-collateral]] — Ethereum mainnet: USDC, USDT, YUSD, WBTC, USD1 (sources: 2, last_reviewed: 2026-04-28)
+
 Lighter (planned, future passes will populate):
 - [[parameters/lighter/funding-config]] — hourly funding period; 0.01% IRC; ±0.05% small clamp; ±4% big clamp; per-minute random sampling
 - [[parameters/lighter/oracle-config]] — Chainlink + Stork + Pyth index; mark = median(ImpactPrice, price1, price2); 8-min EMA; ±0.5% premium clamp
@@ -145,6 +161,12 @@ Lighter (planned, Phase 2.2 will populate):
 - [[sources/hl-docs-2026-04-27-trading-order-types]]
 - [[sources/hl-docs-2026-04-27-for-developers-api]]
 - [[sources/hl-docs-2026-04-27-for-developers-api-info-endpoint]]
+
+### orderly-docs-2026-04-29 snapshot (19)
+_(see sources/ — 19 orderly-docs-2026-04-29-* files)_
+
+### orderly-listing-2026-04-29 snapshot (1)
+- [[sources/orderly-listing-2026-04-29-listing]]
 
 ### lighter-docs-2026-04-28 snapshot (31)
 _(see sources/ — 31 lighter-docs-2026-04-28-* files)_

@@ -1,0 +1,153 @@
+snapshot_id: orderly-docs-2026-04-29
+root_url: https://orderly.network/docs/
+host: orderly.network
+path_prefix: /docs/
+crawled_at: 2026-04-29T10:00:00Z
+crawler: exa
+page_count: 15
+status: active
+supersedes: null
+superseded_by: null
+allow: []
+deny: []
+max_pages: 150
+pages:
+  - slug: what-is-orderly
+    url: https://orderly.network/docs/introduction/getting-started/what-is-orderly
+    fetched_at: 2026-04-29T10:01:00Z
+    status: ok
+    crawler: exa
+    bytes: 3200
+    title: What is Orderly?
+  - slug: builder-onboarding
+    url: https://orderly.network/docs/introduction/getting-started/builder-onboarding
+    fetched_at: 2026-04-29T10:02:00Z
+    status: ok
+    crawler: exa
+    bytes: 5800
+    title: Builder Onboarding
+  - slug: trading-fees
+    url: https://orderly.network/docs/introduction/trade-on-orderly/trading-basics/trading-fees
+    fetched_at: 2026-04-29T10:03:00Z
+    status: ok
+    crawler: exa
+    bytes: 8200
+    title: Trading Fees
+  - slug: margin-leverage-pnl
+    url: https://orderly.network/docs/introduction/trade-on-orderly/perpetual-futures/margin-leverage-and-pnl
+    fetched_at: 2026-04-29T10:04:00Z
+    status: ok
+    crawler: exa
+    bytes: 12500
+    title: Margin, Leverage & PnL
+  - slug: liquidations
+    url: https://orderly.network/docs/introduction/trade-on-orderly/perpetual-futures/liquidations
+    fetched_at: 2026-04-29T10:05:00Z
+    status: ok
+    crawler: exa
+    bytes: 7600
+    title: Liquidations
+  - slug: funding-rate
+    url: https://orderly.network/docs/introduction/trade-on-orderly/perpetual-futures/funding-rate
+    fetched_at: 2026-04-29T10:06:00Z
+    status: ok
+    crawler: exa
+    bytes: 11800
+    title: Funding Rate
+  - slug: insurance-fund-and-adl
+    url: https://orderly.network/docs/introduction/trade-on-orderly/perpetual-futures/insurance-fund-and-adl
+    fetched_at: 2026-04-29T10:07:00Z
+    status: ok
+    crawler: exa
+    bytes: 4800
+    title: Insurance Fund & ADL
+  - slug: isolated-margin
+    url: https://orderly.network/docs/introduction/trade-on-orderly/perpetual-futures/isolated-margin
+    fetched_at: 2026-04-29T10:08:00Z
+    status: ok
+    crawler: exa
+    bytes: 4200
+    title: Isolated Margin
+  - slug: permissionless-listing
+    url: https://orderly.network/docs/introduction/trade-on-orderly/permissionless-listing
+    fetched_at: 2026-04-29T10:09:00Z
+    status: ok
+    crawler: exa
+    bytes: 9500
+    title: Permissionless Listing
+  - slug: omnivault-overview
+    url: https://orderly.network/docs/introduction/orderly-omniVault/overview
+    fetched_at: 2026-04-29T10:10:00Z
+    status: ok
+    crawler: exa
+    bytes: 3100
+    title: OmniVault Overview
+  - slug: omnivault-mechanics
+    url: https://orderly.network/docs/introduction/orderly-omniVault/mechanics
+    fetched_at: 2026-04-29T10:11:00Z
+    status: ok
+    crawler: exa
+    bytes: 5400
+    title: OmniVault Mechanics
+  - slug: overview-of-order
+    url: https://orderly.network/docs/introduction/tokenomics/overview-of-order
+    fetched_at: 2026-04-29T10:12:00Z
+    status: ok
+    crawler: exa
+    bytes: 2800
+    title: Overview of $ORDER
+  - slug: distribution-and-emission-schedule
+    url: https://orderly.network/docs/introduction/tokenomics/distribution-and-emission-schedule
+    fetched_at: 2026-04-29T10:13:00Z
+    status: ok
+    crawler: exa
+    bytes: 4600
+    title: Distribution and Emission Schedule
+  - slug: staking-information
+    url: https://orderly.network/docs/introduction/tokenomics/order-staking/staking-information
+    fetched_at: 2026-04-29T10:14:00Z
+    status: ok
+    crawler: exa
+    bytes: 5200
+    title: Staking Information
+  - slug: security
+    url: https://orderly.network/docs/introduction/security
+    fetched_at: 2026-04-29T10:15:00Z
+    status: ok
+    crawler: exa
+    bytes: 800
+    title: Security
+  - slug: supported-chains
+    url: https://orderly.network/docs/introduction/trade-on-orderly/supported-chains
+    fetched_at: 2026-04-29T10:16:00Z
+    status: ok
+    crawler: exa
+    bytes: 1200
+    title: Supported Chains
+  - slug: custom-fees
+    url: https://orderly.network/docs/build-on-omnichain/user-flows/custom-fees
+    fetched_at: 2026-04-29T10:17:00Z
+    status: ok
+    crawler: exa
+    bytes: 3600
+    title: Custom Fee Structure
+  - slug: addresses
+    url: https://orderly.network/docs/build-on-omnichain/addresses
+    fetched_at: 2026-04-29T10:18:00Z
+    status: ok
+    crawler: exa
+    bytes: 8900
+    title: Smart Contract Addresses
+  - slug: roadmap
+    url: https://orderly.network/docs/introduction/getting-started/roadmap
+    fetched_at: 2026-04-29T10:19:00Z
+    status: ok
+    crawler: exa
+    bytes: 3400
+    title: Product Roadmap
+queue_remainder: []
+notes:
+  - "Mintlify client-side nav; seeded BFS from /llms.txt index"
+  - "llms.txt returned binary/corrupted via WebFetch; exa succeeded"
+  - "mark-price, liquidation-fee, builder-staking-programme returned CRAWL_NOT_FOUND — content covered by margin-leverage-pnl, liquidations, and trading-fees pages respectively"
+  - "about-order returned CRAWL_LIVECRAWL_TIMEOUT; overview-of-order succeeded"

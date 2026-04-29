@@ -23,6 +23,7 @@ HyperCore maintains a separate CLOB per asset, with orders matched in **price-ti
 | [[entities/perpdex/aster]] | yes — Perpetuals + Spot CLOB; Shield Mode (AMM, separate) and 1001x (on-chain liquidity, separate) coexist[^aster-docs-2026-04-28-overview-what-is-aster][^aster-docs-2026-04-28-trading-perpetuals] | not surfaced (encrypted-order pipeline, cryptographic primitive unspecified)[^aster-docs-2026-04-28-overview-what-is-aster] | on-chain (Aster Chain L1)[^aster-docs-2026-04-28-overview-what-is-aster] |
 | [[entities/perpdex/lighter]] | SNARK-proven verifiable CLOB[^lighter-docs-2026-04-28-trading-order-types-and-matching] | price-time; executes at maker's price[^lighter-docs-2026-04-28-trading-order-types-and-matching] | off-chain sequencer + on-chain SNARK proof verification (Ethereum)[^lighter-docs-2026-04-28-about-lighter-technical-architecture-lighter-core] |
 | [[entities/perpdex/dydx]] | yes — off-chain in-memory CLOB; each validator holds an in-memory order book; block proposers build blocks via price-time priority on local book[^dydx-docs-2026-04-28-concepts-trading-limit-orderbook] | price-time[^dydx-docs-2026-04-28-concepts-trading-limit-orderbook] | off-chain (in-memory per validator, synced to consensus block)[^dydx-docs-2026-04-28-concepts-trading-limit-orderbook] |
+| [[entities/perpdex/orderly]] | yes — shared CLOB orderbook across all builder frontends; headless infrastructure model[^orderly-docs-2026-04-29-what-is-orderly] | not surfaced (priority rule not documented in primary docs) | Orderly L2 (chainID 291); on-chain settlement with off-chain matching implied[^orderly-docs-2026-04-29-addresses] |
 
 (Other perpdex venues to be added in subsequent ingest passes.)
 
@@ -39,3 +40,5 @@ None.
 [^aster-docs-2026-04-28-trading-perpetuals]: [[sources/aster-docs-2026-04-28-trading-perpetuals]]
 [^lighter-docs-2026-04-28-trading-order-types-and-matching]: [[sources/lighter-docs-2026-04-28-trading-order-types-and-matching]]
 [^lighter-docs-2026-04-28-about-lighter-technical-architecture-lighter-core]: [[sources/lighter-docs-2026-04-28-about-lighter-technical-architecture-lighter-core]]
+[^orderly-docs-2026-04-29-what-is-orderly]: [[sources/orderly-docs-2026-04-29-what-is-orderly]]
+[^orderly-docs-2026-04-29-addresses]: [[sources/orderly-docs-2026-04-29-addresses]]
