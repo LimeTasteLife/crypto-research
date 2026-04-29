@@ -25,6 +25,7 @@ The emission schedule is the rule by which a venue's native token is minted (or 
 |---|---|---|---|
 | [[entities/perpdex/hyperliquid]] | sqrt(stake) inverse, ETH-style[^hl-docs-2026-04-27-hypercore-staking] | future emissions reserve[^hl-docs-2026-04-27-hypercore-staking] | ~2.37%/yr at 400M staked[^hl-docs-2026-04-27-hypercore-staking] |
 | [[entities/perpdex/aster]] | 450K $ASTER per weekly Epoch (150K Base + 300K Loyalty); replaces Ecosystem & Community linear vesting active Oct 2025–Jan 2026 (4 months)[^aster-docs-2026-04-28-aster-chain-staking-how-staking-works][^aster-docs-2026-04-28-usdaster-tokenomics] | staking emissions (post-vesting regime change)[^aster-docs-2026-04-28-aster-chain-staking-how-staking-works] | not surfaced |
+| [[entities/perpdex/orderly]] | 200 epochs (~7yr, 14d/epoch); 5M VALOR/epoch linear emission; Community 55% over full schedule, Investors 6mo lock + 3.5yr, Team 1yr cliff + 3yr[^orderly-docs-2026-04-29-distribution-and-emission-schedule] | Community allocation (55% of 1B supply)[^orderly-docs-2026-04-29-distribution-and-emission-schedule] | not surfaced |
 
 (Other perpdex venues to be added in subsequent ingest passes.)
 
@@ -35,3 +36,4 @@ The emission schedule is the rule by which a venue's native token is minted (or 
 [^hl-docs-2026-04-27-hypercore-staking]: [[sources/hl-docs-2026-04-27-hypercore-staking]]
 [^aster-docs-2026-04-28-aster-chain-staking-how-staking-works]: [[sources/aster-docs-2026-04-28-aster-chain-staking-how-staking-works]]
 [^aster-docs-2026-04-28-usdaster-tokenomics]: [[sources/aster-docs-2026-04-28-usdaster-tokenomics]]
+[^orderly-docs-2026-04-29-distribution-and-emission-schedule]: [[sources/orderly-docs-2026-04-29-distribution-and-emission-schedule]]

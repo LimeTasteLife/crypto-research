@@ -38,6 +38,7 @@ A margin tier is a per-asset rule that maps a position's notional size to an `(i
 |---|---|---|---|---|
 | [[entities/perpdex/hyperliquid]] | per-asset, position-value-keyed[^hl-docs-2026-04-27-trading-liquidations] | 3x – 40x[^hl-docs-2026-04-27-trading-liquidations] | open-only[^hl-docs-2026-04-27-trading-margining] | yes under unified/portfolio-margin abstraction; no under standard[^hl-docs-2026-04-27-trading-margining] |
 | [[entities/perpdex/aster]] | tier-based on total position size[^aster-docs-2026-04-28-trading-perpetuals-margin] | not surfaced | not surfaced | modes: Cross (default) + Isolated (opt-in, locked once position/order submitted)[^aster-docs-2026-04-28-trading-perpetuals-margin] |
+| [[entities/perpdex/orderly]] | per-asset 4/5-power IMR Factor formula; IMR = Max(1/MaxLev, BaseIMR, Factor × |Notional|^(4/5))[^orderly-docs-2026-04-29-margin-leverage-pnl] | 5x–100x (IP 5x, ARB/ORDER 10x, SUI/HYPE/RWA 20x, BTC/ETH/SOL 100x)[^orderly-docs-2026-04-29-margin-leverage-pnl] | not surfaced | Cross (default) + Isolated simultaneously; mode per order; independent leverage per symbol per mode[^orderly-docs-2026-04-29-isolated-margin] |
 
 (Other perpdex venues to be added in subsequent ingest passes.)
 
@@ -55,3 +56,5 @@ None at first ingest.
 [^hl-docs-2026-04-27-trading-margining]: [[sources/hl-docs-2026-04-27-trading-margining]]
 [^hl-docs-2026-04-27-trading-liquidations]: [[sources/hl-docs-2026-04-27-trading-liquidations]]
 [^aster-docs-2026-04-28-trading-perpetuals-margin]: [[sources/aster-docs-2026-04-28-trading-perpetuals-margin]]
+[^orderly-docs-2026-04-29-margin-leverage-pnl]: [[sources/orderly-docs-2026-04-29-margin-leverage-pnl]]
+[^orderly-docs-2026-04-29-isolated-margin]: [[sources/orderly-docs-2026-04-29-isolated-margin]]

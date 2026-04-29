@@ -29,6 +29,7 @@ Settlement is the finality stage at which a trade, transfer, or bridging event b
 |---|---|---|---|
 | [[entities/perpdex/hyperliquid]] | one-block BFT[^hl-docs-2026-04-27-hyperliquid-docs] | validator-multisig (≥2/3 stake-weighted)[^hl-docs-2026-04-27-hypercore-bridge] | yes; cold-wallet 2/3 lock[^hl-docs-2026-04-27-hypercore-bridge] |
 | [[entities/perpdex/aster]] | Aster Chain L1 with 50ms block latency target; explicit block-finality semantics not surfaced (primary docs)[^aster-docs-2026-04-28-overview-what-is-aster] | multi-chain Treasury contracts on BNB Chain / Ethereum / Solana / Arbitrum; ALP mintable on BNB Chain and Arbitrum; bridge architecture (signer set, threshold, dispute model) not surfaced (primary docs); audit page lists no L1 / matching-engine / bridge audit — only Vault/Earn/asBNB/asUSDF/USDF/asCAKE contracts dated 2024[^aster-docs-2026-04-28-overview-smart-contracts][^aster-docs-2026-04-28-overview-audit-reports] | not surfaced (primary docs) — no documented withdrawal dispute window or emergency-pause authority across the four-network Treasury surface[^aster-docs-2026-04-28-overview-smart-contracts] |
+| [[entities/perpdex/orderly]] | Orderly L2 (chainID 291) settlement chain; trade finality semantics not surfaced[^orderly-docs-2026-04-29-addresses] | unified Vault address across 17 EVM chains + Solana; deposit/withdrawal via smart contract rails; multi-collateral on Ethereum (USDC/USDT/YUSD/WBTC/USD1)[^orderly-docs-2026-04-29-addresses] | not surfaced (primary docs) — no documented dispute window or emergency-pause authority[^orderly-docs-2026-04-29-addresses] |
 
 (Other perpdex venues to be added in subsequent ingest passes.)
 
@@ -48,3 +49,4 @@ None at first ingest.
 [^aster-docs-2026-04-28-overview-what-is-aster]: [[sources/aster-docs-2026-04-28-overview-what-is-aster]]
 [^aster-docs-2026-04-28-overview-smart-contracts]: [[sources/aster-docs-2026-04-28-overview-smart-contracts]]
 [^aster-docs-2026-04-28-overview-audit-reports]: [[sources/aster-docs-2026-04-28-overview-audit-reports]]
+[^orderly-docs-2026-04-29-addresses]: [[sources/orderly-docs-2026-04-29-addresses]]

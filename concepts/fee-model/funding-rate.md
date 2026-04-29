@@ -60,6 +60,7 @@ Plus configurable funding-rate multiplier and interest-rate per HIP-3 deployer[^
 | [[entities/perpdex/hyperliquid]] (default) | 1h pay; 8h-equivalent rate[^hl-docs-2026-04-27-trading-funding] | 5s; 1h average[^hl-docs-2026-04-27-trading-funding] | 4%/h[^hl-docs-2026-04-27-trading-funding] | impact-price ratio[^hl-docs-2026-04-27-trading-funding] | spot oracle[^hl-docs-2026-04-27-trading-funding] |
 | [[entities/perpdex/hyperliquid]] (HIP-3) | configurable[^hl-docs-2026-04-27-trading-funding] | 5s; 1h average[^hl-docs-2026-04-27-trading-funding] | 4%/h[^hl-docs-2026-04-27-trading-funding] | mid-impact ratio[^hl-docs-2026-04-27-trading-funding] | spot oracle[^hl-docs-2026-04-27-trading-funding] |
 | [[entities/perpdex/aster]] | 8h pay default (ASTERUSDT 4h)[^aster-docs-2026-04-28-trading-perpetuals-funding-rate] | not surfaced[^aster-docs-2026-04-28-trading-perpetuals-funding-rate] | ±0.05% premium-vs-interest clamp; platform may adjust caps/floors[^aster-docs-2026-04-28-trading-perpetuals-funding-rate] | `F = [P + clamp(interest_rate − P, ±0.05%)] / (8/N)`; default 0.01% interest (BNBUSDT 0%)[^aster-docs-2026-04-28-trading-perpetuals-funding-rate] | peer-to-peer; no protocol charge[^aster-docs-2026-04-28-trading-perpetuals-funding-rate] |
+| [[entities/perpdex/orderly]] | per-market 1h/4h/8h[^orderly-docs-2026-04-29-funding-rate] | 15-second Impact Bid/Ask (1,000 USDC at max lev)[^orderly-docs-2026-04-29-funding-rate] | per-market Cap/Floor: BTC/ETH ±0.30%, SOL ±0.375%, most alts ±2.00%, RWA ±0.30%; Orderly may adjust in extreme conditions[^orderly-docs-2026-04-29-funding-rate] | piecewise linear 3-slope (1x / 2x / 4x) then clamp; 0.01% IR for most markets[^orderly-docs-2026-04-29-funding-rate] | peer-to-peer; no protocol charge[^orderly-docs-2026-04-29-funding-rate] |
 
 (Other perpdex venues to be added in subsequent ingest passes.)
 
@@ -72,3 +73,4 @@ None.
 ## Sources
 [^hl-docs-2026-04-27-trading-funding]: [[sources/hl-docs-2026-04-27-trading-funding]]
 [^aster-docs-2026-04-28-trading-perpetuals-funding-rate]: [[sources/aster-docs-2026-04-28-trading-perpetuals-funding-rate]]
+[^orderly-docs-2026-04-29-funding-rate]: [[sources/orderly-docs-2026-04-29-funding-rate]]

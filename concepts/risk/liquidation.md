@@ -71,6 +71,7 @@ A trade at the zero price preserves the TAV/MMR ratio (i.e. it is a health-prese
 |---|---|---|---|---|---|---|
 | [[entities/perpdex/hyperliquid]] | account_value < MM × notional[^hl-docs-2026-04-27-trading-margining] | yes (full size) | [[parameters/hyperliquid/hlp]] vault | 100k USDC (10k testnet) | none[^hl-docs-2026-04-27-trading-liquidations] | book closure: residual to trader. backstop: MM forfeited[^hl-docs-2026-04-27-trading-liquidations] |
 | [[entities/perpdex/aster]] | maintenance margin breach (tier-based)[^aster-docs-2026-04-28-trading-perpetuals-liquidations] | yes (1 large IOC partial close)[^aster-docs-2026-04-28-trading-perpetuals-liquidations] | Insurance Fund[^aster-docs-2026-04-28-trading-perpetuals-liquidations] | not surfaced | not surfaced | 5-step waterfall: cancel orders → IOC → recheck → IF transfer at bankruptcy price → ADL fall-through; negative-balance ≤5,000 USDT auto-IF-cover (USDT-perp accounts only, no open positions, no offsetting transfers)[^aster-docs-2026-04-28-trading-perpetuals-liquidations] |
+| [[entities/perpdex/orderly]] | AMR < MMR (mark price)[^orderly-docs-2026-04-29-liquidations] | no — decentralized: positions transferred to liquidators at discount[^orderly-docs-2026-04-29-liquidations] | Insurance Fund (platform IF shared, per-Builder IF for community markets)[^orderly-docs-2026-04-29-insurance-fund-and-adl] | Low-tier (BTC/ETH) 10k USDC, High-tier 5k USDC[^orderly-docs-2026-04-29-liquidations] | BTC/ETH/SOL 0.60%, others 1.20%[^orderly-docs-2026-04-29-liquidations] | Minimum liq to restore AMR to IMR; fee 50/50 IF/liquidator if margin sufficient; near-zero margin → all to IF; ADL last resort[^orderly-docs-2026-04-29-liquidations][^orderly-docs-2026-04-29-insurance-fund-and-adl] |
 
 (Other perpdex venues to be added in subsequent ingest passes.)
 
@@ -95,3 +96,5 @@ None at first ingest.
 [^lighter-docs-2026-04-28-trading-order-types-and-matching]: [[sources/lighter-docs-2026-04-28-trading-order-types-and-matching]]
 [^lighter-docs-2026-04-28-about-lighter-technical-architecture-lighter-core]: [[sources/lighter-docs-2026-04-28-about-lighter-technical-architecture-lighter-core]]
 [^lighter-docs-2026-04-28-trading-contract-specifications]: [[sources/lighter-docs-2026-04-28-trading-contract-specifications]]
+[^orderly-docs-2026-04-29-liquidations]: [[sources/orderly-docs-2026-04-29-liquidations]]
+[^orderly-docs-2026-04-29-insurance-fund-and-adl]: [[sources/orderly-docs-2026-04-29-insurance-fund-and-adl]]
