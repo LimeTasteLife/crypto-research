@@ -1,0 +1,170 @@
+snapshot_id: uniswap-v4-contracts-2026-04-29
+root_url: https://docs.uniswap.org/contracts/v4/
+host: docs.uniswap.org
+path_prefix: /contracts/v4/
+crawled_at: 2026-04-29T00:00:00Z
+crawler: exa
+page_count: 18
+status: active
+supersedes: null
+superseded_by: null
+allow: []
+deny: []
+max_pages: 150
+pages:
+  - slug: overview
+    url: https://docs.uniswap.org/contracts/v4/overview
+    fetched_at: 2026-04-29T00:01:00Z
+    status: ok
+    crawler: exa
+    bytes: 1200
+    title: Overview
+  - slug: concepts-architecture
+    url: https://developers.uniswap.org/docs/protocols/v4/concepts/architecture
+    fetched_at: 2026-04-29T00:02:00Z
+    status: ok
+    crawler: exa
+    bytes: 4500
+    title: Architecture
+  - slug: concepts-hooks
+    url: https://docs.uniswap.org/contracts/v4/concepts/hooks
+    fetched_at: 2026-04-29T00:03:00Z
+    status: ok
+    crawler: exa
+    bytes: 6200
+    title: Hooks
+  - slug: concepts-flash-accounting
+    url: https://docs.uniswap.org/contracts/v4/concepts/flash-accounting
+    fetched_at: 2026-04-29T00:04:00Z
+    status: ok
+    crawler: exa
+    bytes: 8500
+    title: Flash Accounting
+  - slug: concepts-dynamic-fees
+    url: https://docs.uniswap.org/contracts/v4/concepts/dynamic-fees
+    fetched_at: 2026-04-29T00:05:00Z
+    status: fetch_failed
+    crawler: exa
+    bytes: 0
+    title: Dynamic Fees
+  - slug: concepts-poolmanager
+    url: https://developers.uniswap.org/docs/protocols/v4/concepts/poolmanager
+    fetched_at: 2026-04-29T00:06:00Z
+    status: ok
+    crawler: exa
+    bytes: 5800
+    title: PoolManager
+  - slug: concepts-erc-6909
+    url: https://developers.uniswap.org/docs/protocols/v4/concepts/erc-6909
+    fetched_at: 2026-04-29T00:07:00Z
+    status: ok
+    crawler: exa
+    bytes: 3200
+    title: ERC-6909
+  - slug: concepts-subscribers
+    url: https://docs.uniswap.org/contracts/v4/concepts/subscribers
+    fetched_at: 2026-04-29T00:08:00Z
+    status: ok
+    crawler: exa
+    bytes: 1800
+    title: Subscribers
+  - slug: concepts-v4-vs-v3
+    url: https://docs.uniswap.org/contracts/v4/concepts/v4-vs-v3
+    fetched_at: 2026-04-29T00:09:00Z
+    status: ok
+    crawler: exa
+    bytes: 3500
+    title: v4 vs v3
+  - slug: concepts-hook-routing
+    url: https://developers.uniswap.org/docs/protocols/v4/concepts/hook-routing
+    fetched_at: 2026-04-29T00:10:00Z
+    status: ok
+    crawler: exa
+    bytes: 1500
+    title: Integrated Routing with UniswapX
+  - slug: deployments
+    url: https://docs.uniswap.org/contracts/v4/deployments
+    fetched_at: 2026-04-29T00:11:00Z
+    status: ok
+    crawler: exa
+    bytes: 5000
+    title: Deployments
+  - slug: security
+    url: https://docs.uniswap.org/contracts/v4/security
+    fetched_at: 2026-04-29T00:12:00Z
+    status: ok
+    crawler: exa
+    bytes: 32000
+    title: Security Framework
+  - slug: guides-custom-accounting
+    url: https://docs.uniswap.org/contracts/v4/guides/custom-accounting
+    fetched_at: 2026-04-29T00:13:00Z
+    status: ok
+    crawler: exa
+    bytes: 18000
+    title: Custom Accounting
+  - slug: guides-flash-accounting
+    url: https://docs.uniswap.org/contracts/v4/guides/flash-accounting
+    fetched_at: 2026-04-29T00:14:00Z
+    status: ok
+    crawler: exa
+    bytes: 15000
+    title: Flash Accounting Guide
+  - slug: guides-hooks-your-first-hook
+    url: https://docs.uniswap.org/contracts/v4/guides/hooks/your-first-hook
+    fetched_at: 2026-04-29T00:15:00Z
+    status: ok
+    crawler: exa
+    bytes: 14000
+    title: Building Your First Hook
+  - slug: guides-hooks-hook-deployment
+    url: https://docs.uniswap.org/contracts/v4/guides/hooks/hook-deployment
+    fetched_at: 2026-04-29T00:16:00Z
+    status: ok
+    crawler: exa
+    bytes: 7500
+    title: Hook Deployment
+  - slug: guides-state-view
+    url: https://docs.uniswap.org/contracts/v4/guides/state-view
+    fetched_at: 2026-04-29T00:17:00Z
+    status: ok
+    crawler: exa
+    bytes: 8000
+    title: StateView
+  - slug: guides-subscriber
+    url: https://docs.uniswap.org/contracts/v4/guides/subscriber
+    fetched_at: 2026-04-29T00:18:00Z
+    status: ok
+    crawler: exa
+    bytes: 3500
+    title: Subscriber Guide
+queue_remainder:
+  - https://docs.uniswap.org/contracts/v4/guides/create-pool
+  - https://docs.uniswap.org/contracts/v4/guides/getting-started
+  - https://docs.uniswap.org/contracts/v4/guides/erc-6909
+  - https://docs.uniswap.org/contracts/v4/guides/unlock-callback-and-deltas
+  - https://docs.uniswap.org/contracts/v4/guides/position-manager
+  - https://docs.uniswap.org/contracts/v4/guides/read-pool-state
+  - https://docs.uniswap.org/contracts/v4/guides/troubleshooting
+  - https://docs.uniswap.org/contracts/v4/guides/swapping/getting-started
+  - https://docs.uniswap.org/contracts/v4/guides/swapping/swapping
+  - https://docs.uniswap.org/contracts/v4/guides/swapping/routing
+  - https://docs.uniswap.org/contracts/v4/guides/managing-liquidity/overview
+  - https://docs.uniswap.org/contracts/v4/guides/managing-liquidity/getting-started
+  - https://docs.uniswap.org/contracts/v4/guides/managing-liquidity/mint-position
+  - https://docs.uniswap.org/contracts/v4/guides/managing-liquidity/increase-liquidity
+  - https://docs.uniswap.org/contracts/v4/guides/managing-liquidity/decrease-liquidity
+  - https://docs.uniswap.org/contracts/v4/guides/managing-liquidity/burn-liquidity
+  - https://docs.uniswap.org/contracts/v4/guides/managing-liquidity/collect-fees
+  - https://docs.uniswap.org/contracts/v4/guides/managing-liquidity/calculate-fees
+  - https://docs.uniswap.org/contracts/v4/guides/managing-liquidity/batch-liquidity
+  - https://docs.uniswap.org/contracts/v4/guides/hooks/swap-hooks
+  - https://docs.uniswap.org/contracts/v4/guides/hooks/liquidity-hooks
+  - https://docs.uniswap.org/contracts/v4/guides/hooks/async-swap
+  - https://docs.uniswap.org/contracts/v4/guides/hooks/accessing-msg.sender
+notes:
+  - "docs.uniswap.org uses Mintlify with client-side nav. BFS seeded from /llms.txt and /sitemap.xml (via developers.uniswap.org alias)."
+  - "developers.uniswap.org is a confirmed alias of docs.uniswap.org — same Mintlify deployment. Some pages only resolve under developers.uniswap.org/docs/protocols/v4/ path."
+  - "concepts/dynamic-fees returned docs homepage (redirect without content) on both paths — marked fetch_failed."
+  - "Several guide pages (create-pool, getting-started, erc-6909, etc.) returned NOT_FOUND on /contracts/v4/ and homepage redirect on /docs/protocols/v4/ — deferred to queue_remainder."
+  - "High-value concept and security pages successfully crawled. 18 pages with substantive content captured."

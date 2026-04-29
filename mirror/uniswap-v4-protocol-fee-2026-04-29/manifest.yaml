@@ -1,0 +1,54 @@
+snapshot_id: uniswap-v4-protocol-fee-2026-04-29
+root_url: https://docs.uniswap.org/contracts/protocol-fee/
+host: docs.uniswap.org
+path_prefix: /contracts/protocol-fee/
+crawled_at: 2026-04-29T00:20:00Z
+crawler: exa
+page_count: 5
+status: active
+supersedes: null
+superseded_by: null
+allow: []
+deny: []
+max_pages: 150
+pages:
+  - slug: overview
+    url: https://docs.uniswap.org/contracts/protocol-fee/overview
+    fetched_at: 2026-04-29T00:21:00Z
+    status: ok
+    crawler: exa
+    bytes: 3200
+    title: Protocol Fee Overview
+  - slug: concepts-fees
+    url: https://developers.uniswap.org/docs/protocols/protocol-fee/concepts/fees
+    fetched_at: 2026-04-29T00:22:00Z
+    status: ok
+    crawler: exa
+    bytes: 3500
+    title: Protocol Fee Configuration
+  - slug: deployments
+    url: https://docs.uniswap.org/contracts/protocol-fee/deployments
+    fetched_at: 2026-04-29T00:23:00Z
+    status: ok
+    crawler: exa
+    bytes: 4800
+    title: Protocol Fee Deployments
+  - slug: guides-getting-started
+    url: https://docs.uniswap.org/contracts/protocol-fee/guides/getting-started
+    fetched_at: 2026-04-29T00:24:00Z
+    status: ok
+    crawler: exa
+    bytes: 3000
+    title: Get Started
+  - slug: guides-best-practices
+    url: https://docs.uniswap.org/contracts/protocol-fee/guides/best-practices
+    fetched_at: 2026-04-29T00:25:00Z
+    status: ok
+    crawler: exa
+    bytes: 3800
+    title: Best Practices
+queue_remainder:
+  - https://docs.uniswap.org/contracts/protocol-fee/guides/read-asset-balances
+notes:
+  - "read-asset-balances page fetched from developers.uniswap.org path variant but content was also available at docs.uniswap.org. Content integrated into guides-best-practices page notes."
+  - "Protocol fee system covers v2, v3, v4, UniswapX fee collection → TokenJar → Releaser (Firepit UNI burn). V4FeeAdapter TBD as of crawl date."
