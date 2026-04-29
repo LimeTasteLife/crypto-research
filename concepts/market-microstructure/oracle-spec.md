@@ -46,6 +46,7 @@ The oracle spec governs source selection (which CEXs/AMMs feed the price), aggre
 |---|---|---|---|---|
 | [[entities/perpdex/hyperliquid]] | stake-weighted median across validators; weighted median across CEX sources[^hl-docs-2026-04-27-hypercore-oracle] | 7 CEX + HL spot[^hl-docs-2026-04-27-hypercore-oracle] | 3s validator cadence[^hl-docs-2026-04-27-hypercore-oracle] | yes — venue-specific (HYPE excludes external; BTC excludes HL spot)[^hl-docs-2026-04-27-hypercore-oracle] |
 | [[entities/perpdex/aster]] | VWAP across CEX spot sources; ≥5% deviation → weight 0; multi-deviation → median replaces VWAP[^aster-docs-2026-04-28-trading-perpetuals-mark-price] | Binance / HTX / Kraken / Huobi spot[^aster-docs-2026-04-28-trading-perpetuals-mark-price] | not surfaced; ≥3s lag → source excluded[^aster-docs-2026-04-28-trading-perpetuals-mark-price] | deviation/lag based exclusion + 5s/5% guard on contract-vs-mark[^aster-docs-2026-04-28-trading-perpetuals-mark-price] |
+| [[entities/perpdex/lighter]] | index = weighted blend of external oracles[^lighter-docs-2026-04-28-trading-fair-price-marking] | Chainlink, Stork, Pyth; RWAs blend external + internal (EMA-smoothed impact)[^lighter-docs-2026-04-28-trading-fair-price-marking][^lighter-docs-2026-04-28-trading-real-world-assets-rwas-rwa-pricing-mechanism] | τ = 1h index, τ = 8min mark[^lighter-docs-2026-04-28-trading-real-world-assets-rwas-rwa-pricing-mechanism] | stale-oracle weight decays exponentially per-source; clamps ±(1/L·0.75 − 0.5%) index, ±(1/L·0.75) mark[^lighter-docs-2026-04-28-trading-real-world-assets-rwas-rwa-pricing-mechanism] |
 
 (Other perpdex venues to be added in subsequent ingest passes.)
 
@@ -63,3 +64,5 @@ None at first ingest.
 [^hl-docs-2026-04-27-hypercore-oracle]: [[sources/hl-docs-2026-04-27-hypercore-oracle]]
 [^hl-docs-2026-04-27-trading-robust-price-indices]: [[sources/hl-docs-2026-04-27-trading-robust-price-indices]]
 [^aster-docs-2026-04-28-trading-perpetuals-mark-price]: [[sources/aster-docs-2026-04-28-trading-perpetuals-mark-price]]
+[^lighter-docs-2026-04-28-trading-fair-price-marking]: [[sources/lighter-docs-2026-04-28-trading-fair-price-marking]]
+[^lighter-docs-2026-04-28-trading-real-world-assets-rwas-rwa-pricing-mechanism]: [[sources/lighter-docs-2026-04-28-trading-real-world-assets-rwas-rwa-pricing-mechanism]]

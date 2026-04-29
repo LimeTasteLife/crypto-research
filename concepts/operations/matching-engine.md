@@ -31,6 +31,7 @@ Within each category, actions are sorted in proposer order[^hl-docs-2026-04-27-h
 |---|---|---|---|
 | [[entities/perpdex/hyperliquid]] | on-chain (HyperCore)[^hl-docs-2026-04-27-hypercore-order-book] | price-time[^hl-docs-2026-04-27-hypercore-order-book] | per-block: non-GTC > cancels > GTC/IOC; proposer order within[^hl-docs-2026-04-27-hypercore-order-book] |
 | [[entities/perpdex/aster]] | on-chain (Aster Chain L1) via encrypted-order pipeline; cryptographic primitive unspecified (MPC/threshold/FHE/TEE candidates); audit gap — engine NOT in published audit set[^aster-docs-2026-04-28-overview-what-is-aster][^aster-docs-2026-04-28-overview-audit-reports] | not surfaced | not surfaced |
+| [[entities/perpdex/lighter]] | off-chain sequencer; SNARK batch proofs verified on Ethereum[^lighter-docs-2026-04-28-about-lighter-technical-architecture-lighter-core] | price-time; executes at maker's price[^lighter-docs-2026-04-28-trading-order-types-and-matching] | SNARK-proven matching — mathematically prevents malicious ordering[^lighter-docs-2026-04-28-trading-order-types-and-matching] |
 
 (Other perpdex venues to be added in subsequent ingest passes.)
 
@@ -48,3 +49,5 @@ None at first ingest.
 [^hl-docs-2026-04-27-hypercore-overview]: [[sources/hl-docs-2026-04-27-hypercore-overview]]
 [^aster-docs-2026-04-28-overview-what-is-aster]: [[sources/aster-docs-2026-04-28-overview-what-is-aster]]
 [^aster-docs-2026-04-28-overview-audit-reports]: [[sources/aster-docs-2026-04-28-overview-audit-reports]]
+[^lighter-docs-2026-04-28-about-lighter-technical-architecture-lighter-core]: [[sources/lighter-docs-2026-04-28-about-lighter-technical-architecture-lighter-core]]
+[^lighter-docs-2026-04-28-trading-order-types-and-matching]: [[sources/lighter-docs-2026-04-28-trading-order-types-and-matching]]
