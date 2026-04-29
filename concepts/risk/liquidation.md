@@ -71,8 +71,7 @@ A trade at the zero price preserves the TAV/MMR ratio (i.e. it is a health-prese
 |---|---|---|---|---|---|---|
 | [[entities/perpdex/hyperliquid]] | account_value < MM × notional[^hl-docs-2026-04-27-trading-margining] | yes (full size) | [[parameters/hyperliquid/hlp]] vault | 100k USDC (10k testnet) | none[^hl-docs-2026-04-27-trading-liquidations] | book closure: residual to trader. backstop: MM forfeited[^hl-docs-2026-04-27-trading-liquidations] |
 | [[entities/perpdex/aster]] | maintenance margin breach (tier-based)[^aster-docs-2026-04-28-trading-perpetuals-liquidations] | yes (1 large IOC partial close)[^aster-docs-2026-04-28-trading-perpetuals-liquidations] | Insurance Fund[^aster-docs-2026-04-28-trading-perpetuals-liquidations] | not surfaced | not surfaced | 5-step waterfall: cancel orders → IOC → recheck → IF transfer at bankruptcy price → ADL fall-through; negative-balance ≤5,000 USDT auto-IF-cover (USDT-perp accounts only, no open positions, no offsetting transfers)[^aster-docs-2026-04-28-trading-perpetuals-liquidations] |
-
-(Other perpdex venues to be added in subsequent ingest passes.)
+| [[entities/perpdex/dydx]] | TAV < MMR[^dydx-docs-2026-04-28-concepts-trading-liquidations] | yes (fillable-price limit order matched against book)[^dydx-docs-2026-04-28-concepts-trading-liquidations] | Insurance Fund (cross-shared + per-isolated-market segregated)[^dydx-docs-2026-04-28-concepts-trading-contract-loss-mechanism] | not surfaced (per-block per-position caps governance-adjustable)[^dydx-docs-2026-04-28-concepts-trading-liquidations] | max 1.5% penalty (100% to IF)[^dydx-docs-2026-04-28-concepts-trading-liquidations] | IF widens limit price (max 1.5×MMF spread); immediate deleveraging when account value goes negative (IF bypassed)[^dydx-docs-2026-04-28-concepts-trading-contract-loss-mechanism] |
 
 ## Edge cases
 - A trader can avoid maintenance-margin forfeiture by using stop-loss orders or exiting before mark price reaches `liq_price`[^hl-docs-2026-04-27-trading-liquidations].
@@ -95,3 +94,5 @@ None at first ingest.
 [^lighter-docs-2026-04-28-trading-order-types-and-matching]: [[sources/lighter-docs-2026-04-28-trading-order-types-and-matching]]
 [^lighter-docs-2026-04-28-about-lighter-technical-architecture-lighter-core]: [[sources/lighter-docs-2026-04-28-about-lighter-technical-architecture-lighter-core]]
 [^lighter-docs-2026-04-28-trading-contract-specifications]: [[sources/lighter-docs-2026-04-28-trading-contract-specifications]]
+[^dydx-docs-2026-04-28-concepts-trading-liquidations]: [[sources/dydx-docs-2026-04-28-concepts-trading-liquidations]]
+[^dydx-docs-2026-04-28-concepts-trading-contract-loss-mechanism]: [[sources/dydx-docs-2026-04-28-concepts-trading-contract-loss-mechanism]]

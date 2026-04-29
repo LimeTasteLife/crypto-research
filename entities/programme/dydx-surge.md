@@ -17,7 +17,7 @@ disputed: false
 - Protocol-level C constant set to 0 (formula exists in code but is dormant)[^dydx-docs-2026-04-28-concepts-trading-rewards-trading-rewards]
 
 ## Related
-[[entities/perpdex/dydx]] . [[parameters/dydx-v4/trading-rewards-config]]
+[[entities/perpdex/dydx]] · [[parameters/dydx-v4/trading-rewards-config]]
 
 ## Sources
 [^dydx-community-2026-04-28-modules-trading-rewards]: [[sources/dydx-community-2026-04-28-modules-trading-rewards]]

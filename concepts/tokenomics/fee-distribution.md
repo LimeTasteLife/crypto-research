@@ -20,11 +20,11 @@ Fee distribution is the venue's published policy for where trading fees flow onc
 | venue | team take | LP take | token-holder benefit | deployer take |
 |---|---|---|---|---|
 | [[entities/perpdex/hyperliquid]] | 0%[^hl-docs-2026-04-27-trading-fees] | yes (HLP)[^hl-docs-2026-04-27-trading-fees] | indirect via burn[^hl-docs-2026-04-27-trading-fees] | up to 50% (HIP-3 / spot deployers)[^hl-docs-2026-04-27-trading-fees] |
-
-(Other perpdex venues to be added in subsequent ingest passes.)
+| [[entities/perpdex/dydx]] | 5% to Treasury SubDAO[^dydx-community-2026-04-28-modules-distribution-protocol-revenue-sharing] | 5% to MegaVault[^dydx-community-2026-04-28-modules-distribution-protocol-revenue-sharing] | 75% to Buyback Program (DYDX market acquisition)[^dydx-community-2026-04-28-modules-distribution-protocol-revenue-sharing] | 15% to Distribution module (validators/stakers/community pool)[^dydx-community-2026-04-28-modules-distribution-protocol-revenue-sharing] |
 
 ## Related
 [[concepts/tokenomics/buyback]] · [[concepts/tokenomics/rev-share]] · [[parameters/hyperliquid/revenue-distribution]]
 
 ## Sources
 [^hl-docs-2026-04-27-trading-fees]: [[sources/hl-docs-2026-04-27-trading-fees]]
+[^dydx-community-2026-04-28-modules-distribution-protocol-revenue-sharing]: [[sources/dydx-community-2026-04-28-modules-distribution-protocol-revenue-sharing]]

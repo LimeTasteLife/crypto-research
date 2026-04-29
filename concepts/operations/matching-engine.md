@@ -31,8 +31,7 @@ Within each category, actions are sorted in proposer order[^hl-docs-2026-04-27-h
 |---|---|---|---|
 | [[entities/perpdex/hyperliquid]] | on-chain (HyperCore)[^hl-docs-2026-04-27-hypercore-order-book] | price-time[^hl-docs-2026-04-27-hypercore-order-book] | per-block: non-GTC > cancels > GTC/IOC; proposer order within[^hl-docs-2026-04-27-hypercore-order-book] |
 | [[entities/perpdex/aster]] | on-chain (Aster Chain L1) via encrypted-order pipeline; cryptographic primitive unspecified (MPC/threshold/FHE/TEE candidates); audit gap — engine NOT in published audit set[^aster-docs-2026-04-28-overview-what-is-aster][^aster-docs-2026-04-28-overview-audit-reports] | not surfaced | not surfaced |
-
-(Other perpdex venues to be added in subsequent ingest passes.)
+| [[entities/perpdex/dydx]] | off-chain in-memory CLOB; validators store orders out-of-consensus and propose blocks from local books[^dydx-docs-2026-04-28-concepts-trading-limit-orderbook] | price-time priority[^dydx-docs-2026-04-28-concepts-trading-limit-orderbook] | OEGS gateway nodes for sub-hop latency to designated proposers (v9)[^dydx-docs-2026-04-28-concepts-architecture-oegs] |
 
 ## Edge cases
 - The same-block "cancel before GTC" rule materially changes maker economics: makers can cancel stale quotes when an aggressive order arrives in the same block, preventing them from being run over by latency-advantaged takers.
@@ -48,3 +47,5 @@ None at first ingest.
 [^hl-docs-2026-04-27-hypercore-overview]: [[sources/hl-docs-2026-04-27-hypercore-overview]]
 [^aster-docs-2026-04-28-overview-what-is-aster]: [[sources/aster-docs-2026-04-28-overview-what-is-aster]]
 [^aster-docs-2026-04-28-overview-audit-reports]: [[sources/aster-docs-2026-04-28-overview-audit-reports]]
+[^dydx-docs-2026-04-28-concepts-trading-limit-orderbook]: [[sources/dydx-docs-2026-04-28-concepts-trading-limit-orderbook]]
+[^dydx-docs-2026-04-28-concepts-architecture-oegs]: [[sources/dydx-docs-2026-04-28-concepts-architecture-oegs]]

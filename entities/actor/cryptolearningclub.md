@@ -17,7 +17,7 @@ disputed: false
 - Submits on-chain proposals to whitelist/remove VIP affiliates[^dydx-community-2026-04-28-dydx-features-affiliate-program]
 
 ## Related
-[[entities/perpdex/dydx]] . [[entities/actor/dydx-grants]] . [[entities/programme/dydx-affiliate-program]]
+[[entities/perpdex/dydx]] · [[entities/actor/dydx-grants]] · [[entities/programme/dydx-affiliate-program]]
 
 ## Sources
 [^dydx-community-2026-04-28-dydx-features-affiliate-program]: [[sources/dydx-community-2026-04-28-dydx-features-affiliate-program]]

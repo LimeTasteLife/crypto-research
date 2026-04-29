@@ -19,7 +19,7 @@ disputed: false
 - VIP eligibility: >=30k genuine social-media followers; professional MMs/trading firms excluded[^dydx-community-2026-04-28-dydx-features-affiliate-program]
 
 ## Related
-[[entities/perpdex/dydx]] . [[entities/actor/cryptolearningclub]] . [[parameters/dydx-v4/affiliate-program]]
+[[entities/perpdex/dydx]] · [[entities/actor/cryptolearningclub]] · [[parameters/dydx-v4/affiliate-program]]
 
 ## Sources
 [^dydx-community-2026-04-28-dydx-features-affiliate-program]: [[sources/dydx-community-2026-04-28-dydx-features-affiliate-program]]

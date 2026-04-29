@@ -1,6 +1,6 @@
 ---
 type: parameter
-entity: [[dydx-v4]]
+entity: [[dydx]]
 parameter: revenue-distribution
 unit: percent
 last_change: 2025-11-13

@@ -16,7 +16,7 @@ disputed: false
 - Onboarded [[entities/actor/cryptolearningclub]] to manage VIP affiliate whitelisting via on-chain proposals[^dydx-community-2026-04-28-dydx-features-affiliate-program]
 
 ## Related
-[[entities/perpdex/dydx]] . [[entities/actor/cryptolearningclub]] . [[entities/programme/dydx-affiliate-program]]
+[[entities/perpdex/dydx]] · [[entities/actor/cryptolearningclub]] · [[entities/programme/dydx-affiliate-program]]
 
 ## Sources
 [^dydx-community-2026-04-28-dydx-features-affiliate-program]: [[sources/dydx-community-2026-04-28-dydx-features-affiliate-program]]

@@ -17,7 +17,7 @@ disputed: false
 - Authority to tune sub-vault parameters and reallocate capital between sub-vaults[^dydx-community-2026-04-28-dydx-features-megavault]
 
 ## Related
-[[entities/perpdex/dydx]] . [[parameters/dydx-v4/megavault]]
+[[entities/perpdex/dydx]] · [[parameters/dydx-v4/megavault]]
 
 ## Sources
 [^dydx-community-2026-04-28-dydx-features-megavault]: [[sources/dydx-community-2026-04-28-dydx-features-megavault]]

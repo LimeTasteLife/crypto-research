@@ -1,6 +1,6 @@
 ---
 type: parameter
-entity: [[dydx-v4]]
+entity: [[dydx]]
 parameter: compliance
 unit: text
 last_change: 2026-04-28

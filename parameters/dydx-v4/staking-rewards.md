@@ -1,6 +1,6 @@
 ---
 type: parameter
-entity: [[dydx-v4]]
+entity: [[dydx]]
 parameter: staking-rewards
 unit: mixed
 last_change: 2026-04-28

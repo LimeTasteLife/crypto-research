@@ -46,8 +46,7 @@ sample = current observation
 |---|---|---|---|
 | [[entities/perpdex/hyperliquid]] | oracle+EMA, HL book median, external perp median[^hl-docs-2026-04-27-trading-robust-price-indices] | median (with fallback EMA when one missing)[^hl-docs-2026-04-27-trading-robust-price-indices] | margining, liquidations, TP/SL trigger, unrealized PnL[^hl-docs-2026-04-27-trading-robust-price-indices] |
 | [[entities/perpdex/aster]] | Price1 = Index×(1 + Funding × time-to-next/8); Price2 = Index + 5min MA of (Bid1+Ask1)/2 − Index; Contract price[^aster-docs-2026-04-28-trading-perpetuals-mark-price] | median(Price1, Price2, Contract)[^aster-docs-2026-04-28-trading-perpetuals-mark-price] | margining, liquidations, unrealized PnL[^aster-docs-2026-04-28-trading-perpetuals-mark-price] |
-
-(Other perpdex venues to be added in subsequent ingest passes.)
+| [[entities/perpdex/dydx]] | Oracle price (Slinky vote-extension aggregated); no multi-component mark formula documented — oracle price directly drives liquidation and stop/TP triggers[^dydx-docs-2026-04-28-concepts-trading-liquidations] | oracle price (not last-traded)[^dydx-docs-2026-04-28-concepts-trading-liquidations] | liquidation eligibility, stop/TP triggers[^dydx-docs-2026-04-28-concepts-trading-liquidations] |
 
 ## Edge cases
 - Component 1's EMA absorbs persistent on-venue divergence — slow enough (150s) that brief manipulation attempts fade, fast enough that legitimate price movement isn't lagged.
@@ -63,3 +62,4 @@ None at first ingest.
 [^hl-docs-2026-04-27-trading-robust-price-indices]: [[sources/hl-docs-2026-04-27-trading-robust-price-indices]]
 [^hl-docs-2026-04-27-trading-liquidations]: [[sources/hl-docs-2026-04-27-trading-liquidations]]
 [^aster-docs-2026-04-28-trading-perpetuals-mark-price]: [[sources/aster-docs-2026-04-28-trading-perpetuals-mark-price]]
+[^dydx-docs-2026-04-28-concepts-trading-liquidations]: [[sources/dydx-docs-2026-04-28-concepts-trading-liquidations]]

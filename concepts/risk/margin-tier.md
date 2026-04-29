@@ -38,8 +38,7 @@ A margin tier is a per-asset rule that maps a position's notional size to an `(i
 |---|---|---|---|---|
 | [[entities/perpdex/hyperliquid]] | per-asset, position-value-keyed[^hl-docs-2026-04-27-trading-liquidations] | 3x – 40x[^hl-docs-2026-04-27-trading-liquidations] | open-only[^hl-docs-2026-04-27-trading-margining] | yes under unified/portfolio-margin abstraction; no under standard[^hl-docs-2026-04-27-trading-margining] |
 | [[entities/perpdex/aster]] | tier-based on total position size[^aster-docs-2026-04-28-trading-perpetuals-margin] | not surfaced | not surfaced | modes: Cross (default) + Isolated (opt-in, locked once position/order submitted)[^aster-docs-2026-04-28-trading-perpetuals-margin] |
-
-(Other perpdex venues to be added in subsequent ingest passes.)
+| [[entities/perpdex/dydx]] | 8 Liquidity Tiers (Large-Cap 0 through IML 5x 7); OI-scaling IMF formula `effective_IMF = min(base_IMF + scaling_factor×(1−base_IMF), 1.0)`; IMF→100% at upper_cap; MMF fixed per tier[^dydx-docs-2026-04-28-concepts-trading-margin] | not surfaced (tier-specific; Large-Cap IMF=5%→20x)[^dydx-docs-2026-04-28-concepts-trading-margin] | open-only (leverage checked only at position open)[^dydx-docs-2026-04-28-concepts-trading-margin] | cross (default) + isolated (`market_type` flag, v5.0.0; segregated collateral + IF per isolated market)[^dydx-docs-2026-04-28-concepts-trading-margin] |
 
 ## Edge cases
 - A position straddling tier boundaries uses the tier matching the position value at the liquidation price[^hl-docs-2026-04-27-trading-liquidations].
@@ -55,3 +54,4 @@ None at first ingest.
 [^hl-docs-2026-04-27-trading-margining]: [[sources/hl-docs-2026-04-27-trading-margining]]
 [^hl-docs-2026-04-27-trading-liquidations]: [[sources/hl-docs-2026-04-27-trading-liquidations]]
 [^aster-docs-2026-04-28-trading-perpetuals-margin]: [[sources/aster-docs-2026-04-28-trading-perpetuals-margin]]
+[^dydx-docs-2026-04-28-concepts-trading-margin]: [[sources/dydx-docs-2026-04-28-concepts-trading-margin]]

@@ -1,6 +1,6 @@
 ---
 type: parameter
-entity: [[dydx-v4]]
+entity: [[dydx]]
 parameter: megavault
 unit: mixed
 last_change: 2024-11-21

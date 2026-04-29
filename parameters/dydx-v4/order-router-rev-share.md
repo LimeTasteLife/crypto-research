@@ -1,6 +1,6 @@
 ---
 type: parameter
-entity: [[dydx-v4]]
+entity: [[dydx]]
 parameter: order-router-rev-share
 unit: ppm
 last_change: 2026-04-28

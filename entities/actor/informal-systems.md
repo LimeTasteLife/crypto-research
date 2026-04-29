@@ -17,7 +17,7 @@ disputed: false
 - Finalized reports in v4_chain audits folder[^dydx-docs-2026-04-28-policies-security]
 
 ## Related
-[[entities/perpdex/dydx]] . [[parameters/dydx-v4/audits]]
+[[entities/perpdex/dydx]] · [[parameters/dydx-v4/audits]]
 
 ## Sources
 [^dydx-docs-2026-04-28-policies-security]: [[sources/dydx-docs-2026-04-28-policies-security]]

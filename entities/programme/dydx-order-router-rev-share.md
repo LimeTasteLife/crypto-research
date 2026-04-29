@@ -19,7 +19,7 @@ disputed: false
 - Affiliate priority rule suppresses router share until affiliate $10k/30d cap reached[^dydx-docs-2026-04-28-interaction-integration-revshare]
 
 ## Related
-[[entities/perpdex/dydx]] . [[parameters/dydx-v4/order-router-rev-share]]
+[[entities/perpdex/dydx]] · [[parameters/dydx-v4/order-router-rev-share]]
 
 ## Sources
 [^dydx-community-2026-04-28-modules-governance-order-router-rev-share]: [[sources/dydx-community-2026-04-28-modules-governance-order-router-rev-share]]

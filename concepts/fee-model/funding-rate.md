@@ -60,8 +60,7 @@ Plus configurable funding-rate multiplier and interest-rate per HIP-3 deployer[^
 | [[entities/perpdex/hyperliquid]] (default) | 1h pay; 8h-equivalent rate[^hl-docs-2026-04-27-trading-funding] | 5s; 1h average[^hl-docs-2026-04-27-trading-funding] | 4%/h[^hl-docs-2026-04-27-trading-funding] | impact-price ratio[^hl-docs-2026-04-27-trading-funding] | spot oracle[^hl-docs-2026-04-27-trading-funding] |
 | [[entities/perpdex/hyperliquid]] (HIP-3) | configurable[^hl-docs-2026-04-27-trading-funding] | 5s; 1h average[^hl-docs-2026-04-27-trading-funding] | 4%/h[^hl-docs-2026-04-27-trading-funding] | mid-impact ratio[^hl-docs-2026-04-27-trading-funding] | spot oracle[^hl-docs-2026-04-27-trading-funding] |
 | [[entities/perpdex/aster]] | 8h pay default (ASTERUSDT 4h)[^aster-docs-2026-04-28-trading-perpetuals-funding-rate] | not surfaced[^aster-docs-2026-04-28-trading-perpetuals-funding-rate] | ±0.05% premium-vs-interest clamp; platform may adjust caps/floors[^aster-docs-2026-04-28-trading-perpetuals-funding-rate] | `F = [P + clamp(interest_rate − P, ±0.05%)] / (8/N)`; default 0.01% interest (BNBUSDT 0%)[^aster-docs-2026-04-28-trading-perpetuals-funding-rate] | peer-to-peer; no protocol charge[^aster-docs-2026-04-28-trading-perpetuals-funding-rate] |
-
-(Other perpdex venues to be added in subsequent ingest passes.)
+| [[entities/perpdex/dydx]] | 60s sample / 3,600s tick[^dydx-docs-2026-04-28-concepts-trading-funding] | 60s median FundingPremiumVote (min 15 votes per sample); 60 samples averaged per tick[^dydx-docs-2026-04-28-concepts-trading-funding] | 8h cap = 600%×(IMF−MMF); funding_rate_clamp 6%, premium_vote_clamp 60%[^dydx-docs-2026-04-28-concepts-trading-funding] | Premium=(max(0,ImpactBid−Index)−max(0,Index−ImpactAsk))/Index; rate=(Premium/8)+IRC; cross IRC=0%, isolated IRC=0.125 bps/h[^dydx-docs-2026-04-28-concepts-trading-funding] | peer-to-peer[^dydx-community-2026-04-28-modules-governance-perpetual] |
 
 ## Disputed claims
 None.
@@ -72,3 +71,5 @@ None.
 ## Sources
 [^hl-docs-2026-04-27-trading-funding]: [[sources/hl-docs-2026-04-27-trading-funding]]
 [^aster-docs-2026-04-28-trading-perpetuals-funding-rate]: [[sources/aster-docs-2026-04-28-trading-perpetuals-funding-rate]]
+[^dydx-docs-2026-04-28-concepts-trading-funding]: [[sources/dydx-docs-2026-04-28-concepts-trading-funding]]
+[^dydx-community-2026-04-28-modules-governance-perpetual]: [[sources/dydx-community-2026-04-28-modules-governance-perpetual]]

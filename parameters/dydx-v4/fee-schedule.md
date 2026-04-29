@@ -1,6 +1,6 @@
 ---
 type: parameter
-entity: [[dydx-v4]]
+entity: [[dydx]]
 parameter: fee-schedule
 unit: percent
 last_change: 2026-04-28

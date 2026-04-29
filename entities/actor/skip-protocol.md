@@ -17,7 +17,7 @@ disputed: false
 - Co-built a dashboard surfacing validator MEV-extraction-related orderbook discrepancies[^dydx-community-2026-04-28-modules-slashing]
 
 ## Related
-[[entities/perpdex/dydx]] . [[parameters/dydx-v4/listing-policy]]
+[[entities/perpdex/dydx]] · [[parameters/dydx-v4/listing-policy]]
 
 ## Sources
 [^dydx-community-2026-04-28-dydx-features-instant-market-listings]: [[sources/dydx-community-2026-04-28-dydx-features-instant-market-listings]]

@@ -18,7 +18,7 @@ disputed: false
 - Investor transfer restrictions enforced via contractual agreements with dYdX Foundation and dYdX Trading Inc.[^dydx-community-2026-04-28-start-here-dydx-token-allocation]
 
 ## Related
-[[entities/perpdex/dydx]] . [[entities/actor/dydx-foundation]]
+[[entities/perpdex/dydx]] · [[entities/actor/dydx-foundation]]
 
 ## Sources
 [^dydx-docs-2026-04-28-concepts-architecture-overview]: [[sources/dydx-docs-2026-04-28-concepts-architecture-overview]]

@@ -1,6 +1,6 @@
 ---
 type: parameter
-entity: [[dydx-v4]]
+entity: [[dydx]]
 parameter: insurance-fund
 unit: USDC
 last_change: 2026-04-28

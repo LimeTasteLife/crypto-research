@@ -22,8 +22,7 @@ The L1 mempool/consensus is **semantically aware** of HyperCore order-book actio
 | venue | sequencing model | failure mode | MEV / front-run posture |
 |---|---|---|---|
 | [[entities/perpdex/hyperliquid]] | BFT consensus across validators (no single sequencer)[^hl-docs-2026-04-27-hypercore-overview] | validator jailing on inadequate latency[^hl-docs-2026-04-27-hypercore-staking] | consensus-aware in-block ordering (cancels before GTC)[^hl-docs-2026-04-27-hypercore-order-book] |
-
-(Other perpdex venues to be added in subsequent ingest passes.)
+| [[entities/perpdex/dydx]] | CometBFT proposer rotation; stake-weighted round-robin block selection[^dydx-docs-2026-04-28-concepts-architecture-overview]; OEGS designated proposers (v9)[^dydx-docs-2026-04-28-concepts-architecture-oegs] | proposer rotation failure → missed block (standard CometBFT liveness) | no protocol-level MEV mitigation; Skip-built validator MEV dashboard (social only)[^dydx-docs-2026-04-28-concepts-architecture-overview] |
 
 ## Disputed claims
 None at first ingest.
@@ -36,3 +35,5 @@ None at first ingest.
 [^hl-docs-2026-04-27-hyperliquid-docs]: [[sources/hl-docs-2026-04-27-hyperliquid-docs]]
 [^hl-docs-2026-04-27-hypercore-order-book]: [[sources/hl-docs-2026-04-27-hypercore-order-book]]
 [^hl-docs-2026-04-27-hypercore-staking]: [[sources/hl-docs-2026-04-27-hypercore-staking]]
+[^dydx-docs-2026-04-28-concepts-architecture-overview]: [[sources/dydx-docs-2026-04-28-concepts-architecture-overview]]
+[^dydx-docs-2026-04-28-concepts-architecture-oegs]: [[sources/dydx-docs-2026-04-28-concepts-architecture-oegs]]
