@@ -79,6 +79,27 @@ The wiki has reached **3-perpdex breadth** (Aster, Hyperliquid, Lighter) with ri
 
 **Remediation order:** Funding-rate and liquidation rows first (highest cross-venue read frequency), then market-structure/microstructure cluster (CLOB, mark-price, oracle), then ops/risk cluster.
 
+**Erratum (2026-04-29) — F1 closeout: Variants rows naturally backfilled by subsequent 4-perpdex merges**
+
+Direct grep against all 10 named concept pages confirms every audit-named missing row is now present:
+
+| concept page | audit-named missing venue | current state (2026-04-29) |
+|---|---|---|
+| `concepts/fee-model/funding-rate` | Lighter | filled (also drift, dydx, orderly added) |
+| `concepts/risk/liquidation` | Lighter | filled (also drift, dydx, orderly added) |
+| `concepts/market-structure/clob` | Lighter | filled (also dydx, orderly added) |
+| `concepts/market-microstructure/mark-price-formula` | Lighter | filled (also drift, dydx added) |
+| `concepts/market-microstructure/oracle-spec` | Lighter | filled (also dydx added) |
+| `concepts/operations/matching-engine` | Lighter | filled (also drift, dydx added) |
+| `concepts/risk/leverage-cap` | Aster | filled (also orderly added) |
+| `concepts/tokenomics/fee-distribution` | Aster | filled (also dydx, orderly added) |
+| `concepts/lp/vault` | Aster | filled (also orderly added) |
+| `concepts/operations/sequencer` | Aster | filled (also dydx added) |
+
+**Cause:** Phase 2.3 of drift, dydx, orderly, and uniswap-v4 ingest passes (merged 2026-04-29 in commits `0f5cb87`, `2e70f76`, `ec3a9e4`, `0b50476`) added Variants rows to the concept pages they touched, naturally completing the named gaps. P1 and P4 predictions (see §Falsifiable predictions) are validated.
+
+**Residual work (not part of F1 closeout):** drift / dydx / orderly absences in 9 of the 10 pages need missing-vs-not-applicable adjudication on a separate pass. F1 is closed for the named top-10; secondary-venue completeness becomes a follow-up audit concern.
+
 ### HIGH — F2. A7 / A8 concept-domain split threshold hit
 
 **Claim:** AGENTS.md heuristic — "≥10 claims in one of A7/A8/A9 across ≥2 perpdex entities" — is met by both A7 and A8.

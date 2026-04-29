@@ -86,6 +86,19 @@ _(none yet)_
 - [[concepts/metrics/volume]] — notional traded over a window; basis for fee tier eligibility (sources: 3, last_reviewed: 2026-04-28)
 - [[concepts/metrics/mm-uptime]] — fraction of time MM meets quote-obligation thresholds (sources: 1, last_reviewed: 2026-04-28)
 
+### governance
+- [[concepts/governance/parameter-mutation-cadence]] — frequency, lead-time, and process for changing risk parameters; live-tuning vs structural-change layering (sources: 0, last_reviewed: 2026-04-29) **[stub]**
+- [[concepts/governance/veto-holders]] — actors with authority to block or roll back governance proposals; thresholds and historical use (sources: 0, last_reviewed: 2026-04-29) **[stub]**
+- [[concepts/governance/emergency-pause-authority]] — who can halt trading without governance vote; trigger conditions and resumption SLA (sources: 0, last_reviewed: 2026-04-29) **[stub]**
+- [[concepts/governance/governance-vs-ops-separation]] — boundary between governance-controlled and ops-controlled parameters; escalation paths (sources: 0, last_reviewed: 2026-04-29) **[stub]**
+
+### security
+- [[concepts/security/audit-cadence-and-scope]] — external audit frequency, scope coverage, publication policy, remediation tracking (sources: 0, last_reviewed: 2026-04-29) **[stub]**
+- [[concepts/security/oracle-attack-history]] — documented oracle-layer manipulation incidents and remediation (sources: 0, last_reviewed: 2026-04-29) **[stub]**
+- [[concepts/security/bug-bounty-program]] — public vulnerability disclosure scope, payout tiers, eligibility, disclosed findings (sources: 0, last_reviewed: 2026-04-29) **[stub]**
+- [[concepts/security/incident-response-sla]] — MTTA, MTTR, downtime fee-credit policy, liquidation rollback window (sources: 0, last_reviewed: 2026-04-29) **[stub]**
+- [[concepts/security/validator-mev-policy]] — validator/sequencer MEV rules, monitoring, slashing conditions (sources: 0, last_reviewed: 2026-04-29) **[stub]**
+
 ## Parameters
 
 ### Venue-wide
