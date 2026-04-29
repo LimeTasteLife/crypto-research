@@ -2,7 +2,7 @@
 type: concept
 domain: tokenomics
 name: Fee distribution
-last_reviewed: 2026-04-28
+last_reviewed: 2026-04-29
 disputed: false
 ---
 
@@ -26,9 +26,12 @@ Fee distribution is the venue's published policy for where trading fees flow onc
 
 (Other perpdex venues to be added in subsequent ingest passes.)
 | [[entities/perpdex/dydx]] | 5% to Treasury SubDAO[^dydx-community-2026-04-28-modules-distribution-protocol-revenue-sharing] | 5% to MegaVault[^dydx-community-2026-04-28-modules-distribution-protocol-revenue-sharing] | 75% to Buyback Program (DYDX market acquisition)[^dydx-community-2026-04-28-modules-distribution-protocol-revenue-sharing] | 15% to Distribution module (validators/stakers/community pool)[^dydx-community-2026-04-28-modules-distribution-protocol-revenue-sharing] |
+| [[entities/dex/uniswap-v4]] | 0% (protocol is non-custodial, decentralized governance) | LPs receive swap fees minus protocol fee portion[^uniswap-v4-protocol-fee-2026-04-29-concepts-fees] | UNI burn via Firepit Releaser (protocol fees collected → TokenJar → Firepit burns UNI)[^uniswap-v4-protocol-fee-2026-04-29-overview] | no deployer take (permissionless pool creation; hook developers can charge hook fees)[^uniswap-v4-contracts-2026-04-29-guides-custom-accounting] |
+
+(Other venues to be added in subsequent ingest passes.)
 
 ## Related
-[[concepts/tokenomics/buyback]] · [[concepts/tokenomics/rev-share]] · [[parameters/hyperliquid/revenue-distribution]]
+[[concepts/tokenomics/buyback]] · [[concepts/tokenomics/rev-share]] · [[parameters/hyperliquid/revenue-distribution]] · [[parameters/uniswap-v4/protocol-fee-config]]
 
 ## Sources
 [^hl-docs-2026-04-27-trading-fees]: [[sources/hl-docs-2026-04-27-trading-fees]]
@@ -44,3 +47,6 @@ Fee distribution is the venue's published policy for where trading fees flow onc
 [^orderly-docs-2026-04-29-staking-information]: [[sources/orderly-docs-2026-04-29-staking-information]]
 [^orderly-docs-2026-04-29-overview-of-order]: [[sources/orderly-docs-2026-04-29-overview-of-order]]
 [^orderly-docs-2026-04-29-trading-fees]: [[sources/orderly-docs-2026-04-29-trading-fees]]
+[^uniswap-v4-protocol-fee-2026-04-29-overview]: [[sources/uniswap-v4-protocol-fee-2026-04-29-overview]]
+[^uniswap-v4-protocol-fee-2026-04-29-concepts-fees]: [[sources/uniswap-v4-protocol-fee-2026-04-29-concepts-fees]]
+[^uniswap-v4-contracts-2026-04-29-guides-custom-accounting]: [[sources/uniswap-v4-contracts-2026-04-29-guides-custom-accounting]]

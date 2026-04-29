@@ -13,7 +13,7 @@ Format: `- [[path]] — one-line summary (sources: N, last_reviewed: YYYY-MM-DD)
 - [[entities/perpdex/orderly]] — headless omnichain CLOB perp infrastructure with multi-frontend builder model, OmniVault (Kronos Research), permissionless listing, VALOR staking (sources: 20, last_reviewed: 2026-04-28)
 
 ### dex
-_(none yet — Uniswap v4 ingest pending; queue at `raw/queue/uniswap-v4-2026-04-28.md`)_
+- [[entities/dex/uniswap-v4]] — hooks-extensible singleton AMM protocol (concentrated liquidity from v3); deployed across 16 mainnet chains; three fee layers (LP/protocol/hook); UNI governance + Firepit burn (sources: 16, last_reviewed: 2026-04-29)
 
 ### network
 - [[entities/network/hyperliquid-l1]] — purpose-built PoS L1 with HyperBFT consensus; hosts HyperCore + HyperEVM (sources: 5, last_reviewed: 2026-04-28)
@@ -38,6 +38,7 @@ _(none yet)_
 
 ### market-structure
 - [[concepts/market-structure/clob]] — central limit order book; price-time priority on shared per-asset book (sources: 2, last_reviewed: 2026-04-28)
+- [[concepts/market-structure/amm]] — automated market maker; deterministic pricing function replaces order book (sources: 4, last_reviewed: 2026-04-29)
 
 ### market-microstructure
 - [[concepts/market-microstructure/oracle-spec]] — venue policy for external reference price feed (sources: 2, last_reviewed: 2026-04-28)
@@ -50,9 +51,9 @@ _(none yet)_
 - [[concepts/fee-model/funding-rate]] — periodic peer-to-peer payment anchoring mark to spot (sources: 1, last_reviewed: 2026-04-28)
 
 ### tokenomics
-- [[concepts/tokenomics/buyback]] — programmatic conversion of revenue into native token (sources: 1, last_reviewed: 2026-04-28)
+- [[concepts/tokenomics/buyback]] — programmatic conversion of revenue into native token; HL AF burn, Aster Foundation, Uniswap Firepit UNI burn (sources: 5, last_reviewed: 2026-04-29)
 - [[concepts/tokenomics/emission-schedule]] — rule for token mint/unlock over time (sources: 1, last_reviewed: 2026-04-28)
-- [[concepts/tokenomics/fee-distribution]] — venue policy for where trading fees flow (sources: 1, last_reviewed: 2026-04-28)
+- [[concepts/tokenomics/fee-distribution]] — venue policy for where trading fees flow; HL community-only, Aster ALP+buyback, Uniswap LP+protocol fee+hook fee (sources: 4, last_reviewed: 2026-04-29)
 - [[concepts/tokenomics/rev-share]] — recurring transfer of venue revenue to a beneficiary class (sources: 1, last_reviewed: 2026-04-28)
 
 ### operations
@@ -67,6 +68,7 @@ _(none yet)_
 - [[concepts/risk/adl-waterfall]] — final solvency safeguard via opposite-side counterparty closure (sources: 1, last_reviewed: 2026-04-28)
 
 ### lp
+- [[concepts/lp/concentrated-liquidity]] — LPs allocate capital within specific price ranges for capital efficiency; Uniswap v3 origin, v4 inherits + hooks extensibility (sources: 5, last_reviewed: 2026-04-29)
 - [[concepts/lp/venue-owned-lp]] — venue-deployed liquidity vault (sources: 1, last_reviewed: 2026-04-28)
 - [[concepts/lp/vault]] — Venue-owned/operated capital pools (protocol-MM, insurance, strategy-as-a-service); HL HLP, Lighter LLP (multi-strategy), Lighter XLP (prelaunch), Lighter Public Pools (no-lockup operator-strategy) (sources: 8, last_reviewed: 2026-04-28) — NOTE: semantic overlap with `venue-owned-lp` above; consolidate via filename rename in follow-up commit
 
@@ -116,6 +118,14 @@ Orderly:
 - [[parameters/orderly/audits]] — Halborn, Zellic, Guardian Audits; 2 OmniVault audits (sources: 2, last_reviewed: 2026-04-28)
 - [[parameters/orderly/contract-addresses]] — unified Vault; Orderly L2 contracts; 17 EVM + Solana; $ORDER token addresses (sources: 3, last_reviewed: 2026-04-28)
 - [[parameters/orderly/multi-asset-collateral]] — Ethereum mainnet: USDC, USDT, YUSD, WBTC, USD1 (sources: 2, last_reviewed: 2026-04-28)
+Uniswap v4:
+- [[parameters/uniswap-v4/fee-architecture]] — three fee layers: LP swap fees (static/dynamic), protocol fees (governance), hook fees (BeforeSwapDelta) (sources: 4, last_reviewed: 2026-04-29)
+- [[parameters/uniswap-v4/protocol-fee-config]] — UNIfication fee system: Fee Adapters → TokenJar → Firepit UNI burn; fee splits by version (sources: 5, last_reviewed: 2026-04-29)
+- [[parameters/uniswap-v4/pool-creation-params]] — permissionless pool creation: token pair, fee tier, tick spacing, optional hook (sources: 5, last_reviewed: 2026-04-29)
+- [[parameters/uniswap-v4/audits]] — 9 independent audits (Jul-Sep 2024), $15.5M Cantina bug bounty, $2.35M security competition (sources: 1, last_reviewed: 2026-04-29)
+- [[parameters/uniswap-v4/governance-params]] — UNI governance via Timelock; immutable core contracts; hook allowlisting (sources: 6, last_reviewed: 2026-04-29)
+- [[parameters/uniswap-v4/hook-security-framework]] — Uniswap Foundation public framework: 9 scoring dimensions (max 33), 3 risk tiers, 10 risk categories (sources: 1, last_reviewed: 2026-04-29)
+- [[parameters/uniswap-v4/deployments]] — 16 mainnet + 6 testnet chain deployments (sources: 1, last_reviewed: 2026-04-29)
 
 Lighter (planned, future passes will populate):
 - [[parameters/lighter/funding-config]] — hourly funding period; 0.01% IRC; ±0.05% small clamp; ±4% big clamp; per-minute random sampling
@@ -170,3 +180,22 @@ _(see sources/ — 19 orderly-docs-2026-04-29-* files)_
 
 ### lighter-docs-2026-04-28 snapshot (31)
 _(see sources/ — 31 lighter-docs-2026-04-28-* files)_
+
+### uniswap-v4-contracts-2026-04-29 snapshot (11) + uniswap-v4-protocol-fee-2026-04-29 snapshot (5)
+- [[sources/uniswap-v4-contracts-2026-04-29-overview]]
+- [[sources/uniswap-v4-contracts-2026-04-29-concepts-architecture]]
+- [[sources/uniswap-v4-contracts-2026-04-29-concepts-hooks]]
+- [[sources/uniswap-v4-contracts-2026-04-29-concepts-flash-accounting]]
+- [[sources/uniswap-v4-contracts-2026-04-29-concepts-poolmanager]]
+- [[sources/uniswap-v4-contracts-2026-04-29-concepts-erc-6909]]
+- [[sources/uniswap-v4-contracts-2026-04-29-concepts-subscribers]]
+- [[sources/uniswap-v4-contracts-2026-04-29-concepts-v4-vs-v3]]
+- [[sources/uniswap-v4-contracts-2026-04-29-concepts-hook-routing]]
+- [[sources/uniswap-v4-contracts-2026-04-29-deployments]]
+- [[sources/uniswap-v4-contracts-2026-04-29-security]]
+- [[sources/uniswap-v4-contracts-2026-04-29-guides-custom-accounting]]
+- [[sources/uniswap-v4-protocol-fee-2026-04-29-overview]]
+- [[sources/uniswap-v4-protocol-fee-2026-04-29-concepts-fees]]
+- [[sources/uniswap-v4-protocol-fee-2026-04-29-deployments]]
+- [[sources/uniswap-v4-protocol-fee-2026-04-29-guides-getting-started]]
+- [[sources/uniswap-v4-protocol-fee-2026-04-29-guides-best-practices]]
