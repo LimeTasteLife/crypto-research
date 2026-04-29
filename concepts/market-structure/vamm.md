@@ -25,7 +25,7 @@ A virtual automated market maker (vAMM) uses a bonding-curve formula (typically 
 None.
 
 ## Related
-[[concepts/market-structure/hybrid]] . [[concepts/market-structure/clob]] . [[concepts/operations/matching-engine]]
+[[concepts/market-structure/hybrid]] · [[concepts/market-structure/clob]] · [[concepts/operations/matching-engine]]
 
 ## Sources
 [^drift-docs-2026-04-28-protocol-about-v3-drift-amm]: [[sources/drift-docs-2026-04-28-protocol-about-v3-drift-amm]]

@@ -25,7 +25,7 @@ A pre-launch perpetual is a derivatives contract listed before a reliable extern
 None.
 
 ## Related
-[[concepts/listing/listing-playbook]] . [[concepts/market-microstructure/oracle-spec]] . [[concepts/risk/insurance-fund-sizing]]
+[[concepts/listing/listing-playbook]] · [[concepts/market-microstructure/oracle-spec]] · [[concepts/risk/insurance-fund-sizing]]
 
 ## Sources
 [^drift-docs-2026-04-28-protocol-trading-prelaunch-markets]: [[sources/drift-docs-2026-04-28-protocol-trading-prelaunch-markets]]

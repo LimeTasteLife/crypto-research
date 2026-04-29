@@ -44,7 +44,7 @@ Out of this snapshot's scope (deferred to future ingest): total supply, vesting 
 None.
 
 ## Related
-[[entities/perpdex/drift]] . [[parameters/drift/fee-schedule]] . [[parameters/drift/insurance-fund]]
+[[entities/perpdex/drift]] · [[parameters/drift/fee-schedule]] · [[parameters/drift/insurance-fund]]
 
 ## Sources
 [^drift-docs-2026-04-28-protocol-trading-trading-fees]: [[sources/drift-docs-2026-04-28-protocol-trading-trading-fees]]

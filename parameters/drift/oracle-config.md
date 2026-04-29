@@ -16,7 +16,7 @@ disputed: false
 
 **On-chain TWAP tracking.** Each market tracks last-seen oracle values and updates an EMA TWAP over 1hr (funding period) and 5min intervals[^drift-docs-2026-04-28-protocol-trading-oracles].
 
-**Validity guards (four rules):**
+**Validity guards (five rules):**
 
 | guard | threshold | effect |
 |---|---|---|

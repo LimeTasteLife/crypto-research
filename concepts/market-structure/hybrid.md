@@ -24,7 +24,7 @@ A hybrid market structure combines two or more matching paradigms (e.g. CLOB + A
 None.
 
 ## Related
-[[concepts/market-structure/clob]] . [[concepts/market-structure/vamm]] . [[concepts/market-microstructure/jit-auction]]
+[[concepts/market-structure/clob]] · [[concepts/market-structure/vamm]] · [[concepts/market-microstructure/jit-auction]]
 
 ## Sources
 [^drift-docs-2026-04-28-protocol-about-v3]: [[sources/drift-docs-2026-04-28-protocol-about-v3]]
