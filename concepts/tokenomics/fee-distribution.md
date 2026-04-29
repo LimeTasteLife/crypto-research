@@ -24,6 +24,7 @@ Fee distribution is the venue's published policy for where trading fees flow onc
 | [[entities/perpdex/lighter]] | not surfaced | LLP earns liquidation clearance fees (up to 1%)[^lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund] | trading revenue → daily LIT buybacks; 100% LIT Fee Credits → staker yield[^lighter-docs-2026-04-28-about-lighter-lit-utility][^lighter-docs-2026-04-28-trading-trading-fees-lit-fee-credits] | not surfaced |
 
 (Other perpdex venues to be added in subsequent ingest passes.)
+| [[entities/perpdex/dydx]] | 5% to Treasury SubDAO[^dydx-community-2026-04-28-modules-distribution-protocol-revenue-sharing] | 5% to MegaVault[^dydx-community-2026-04-28-modules-distribution-protocol-revenue-sharing] | 75% to Buyback Program (DYDX market acquisition)[^dydx-community-2026-04-28-modules-distribution-protocol-revenue-sharing] | 15% to Distribution module (validators/stakers/community pool)[^dydx-community-2026-04-28-modules-distribution-protocol-revenue-sharing] |
 
 ## Related
 [[concepts/tokenomics/buyback]] · [[concepts/tokenomics/rev-share]] · [[parameters/hyperliquid/revenue-distribution]]
@@ -36,3 +37,4 @@ Fee distribution is the venue's published policy for where trading fees flow onc
 [^lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund]: [[sources/lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund]]
 [^lighter-docs-2026-04-28-about-lighter-lit-utility]: [[sources/lighter-docs-2026-04-28-about-lighter-lit-utility]]
 [^lighter-docs-2026-04-28-trading-trading-fees-lit-fee-credits]: [[sources/lighter-docs-2026-04-28-trading-trading-fees-lit-fee-credits]]
+[^dydx-community-2026-04-28-modules-distribution-protocol-revenue-sharing]: [[sources/dydx-community-2026-04-28-modules-distribution-protocol-revenue-sharing]]

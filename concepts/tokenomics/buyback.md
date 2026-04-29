@@ -25,8 +25,7 @@ A buyback is a programmatic conversion of venue revenue (typically trading fees)
 |---|---|---|---|---|
 | [[entities/perpdex/hyperliquid]] | continuous (L1 execution)[^hl-docs-2026-04-27-trading-fees] | burn (permanent supply reduction)[^hl-docs-2026-04-27-trading-fees] | gross trading fees flowing to AF | yes (system address `0xfefe…fefe`)[^hl-docs-2026-04-27-trading-fees] |
 | [[entities/perpdex/aster]] | not specified[^aster-docs-2026-04-28-usdaster-tokenomics] | $ASTER buybacks + governance rewards (Aster Foundation discretionary)[^aster-docs-2026-04-28-usdaster-tokenomics] | not specified (gross-vs-net unstated)[^aster-docs-2026-04-28-usdaster-tokenomics] | not surfaced |
-
-(Other perpdex venues to be added in subsequent ingest passes.)
+| [[entities/perpdex/dydx]] | not specified (cadence per Buyback Program implementation)[^dydx-community-2026-04-28-modules-distribution-protocol-revenue-sharing] | market acquisition of DYDX (75% of net protocol revenue allocated Nov 13, 2025)[^dydx-community-2026-04-28-modules-distribution-protocol-revenue-sharing] | net protocol revenue (post rev-share split)[^dydx-community-2026-04-28-modules-distribution-protocol-revenue-sharing] | governance-approved allocation on-chain[^dydx-community-2026-04-28-modules-distribution-protocol-revenue-sharing] |
 
 ## Disputed claims
 None.
@@ -37,3 +36,4 @@ None.
 ## Sources
 [^hl-docs-2026-04-27-trading-fees]: [[sources/hl-docs-2026-04-27-trading-fees]]
 [^aster-docs-2026-04-28-usdaster-tokenomics]: [[sources/aster-docs-2026-04-28-usdaster-tokenomics]]
+[^dydx-community-2026-04-28-modules-distribution-protocol-revenue-sharing]: [[sources/dydx-community-2026-04-28-modules-distribution-protocol-revenue-sharing]]

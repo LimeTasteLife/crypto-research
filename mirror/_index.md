@@ -32,3 +32,6 @@ _(none yet)_
 | drift-docs-2026-04-28 | https://docs.drift.trade/ | 2026-04-28T02:30:00Z | 20 | 20 |
 | drift-developers-docs-2026-04-28 | https://docs.drift.trade/developers | 2026-04-28T02:45:00Z | 20 | 20 |
 | drift-sdk-docs-2026-04-28 | https://mintlify.com/drift-labs/protocol-v2/ | 2026-04-28T03:00:00Z | 20 | 20 |
+| dydx-docs-2026-04-28 | https://docs.dydx.xyz/ | 2026-04-28T02:30:00Z | 26 | 26 |
+| dydx-community-2026-04-28 | https://docs.dydx.community/dydx | 2026-04-28T02:50:00Z | 21 | 21 |
+| dydx-chain-tech-2026-04-28 | https://docs.dydx.community/dydx-chain-technical-docs | 2026-04-28T03:05:00Z | 20 | 20 |

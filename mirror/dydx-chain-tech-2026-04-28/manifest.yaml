@@ -1,0 +1,177 @@
+snapshot_id: dydx-chain-tech-2026-04-28
+root_url: https://docs.dydx.community/dydx-chain-technical-docs
+host: docs.dydx.community
+path_prefix: /dydx-chain-technical-docs/
+crawled_at: 2026-04-28T03:05:00Z
+crawler: exa
+page_count: 20
+status: paused
+supersedes: null
+superseded_by: null
+allow: []
+deny: []
+max_pages: 20
+pages:
+  - slug: dydx-chain-technical-documentation
+    url: https://docs.dydx.community/dydx-chain-technical-docs/dydx-chain-technical-documentation
+    fetched_at: 2026-04-28T02:55:00Z
+    status: ok
+    crawler: exa
+    bytes: 1050
+    title: dYdX Chain Technical Documentation
+  - slug: getting-started-developer-tools
+    url: https://docs.dydx.community/dydx-chain-technical-docs/getting-started/developer-tools
+    fetched_at: 2026-04-28T02:55:00Z
+    status: ok
+    crawler: exa
+    bytes: 575
+    title: Developer Tools
+  - slug: getting-started-developer-tools-dydx-chain-client-for-javascript
+    url: https://docs.dydx.community/dydx-chain-technical-docs/getting-started/developer-tools/dydx-chain-client-for-javascript
+    fetched_at: 2026-04-28T03:00:00Z
+    status: ok
+    crawler: exa
+    bytes: 1266
+    title: dYdX Chain Client for JavaScript
+  - slug: getting-started-developer-tools-dydx-chain-client-for-python
+    url: https://docs.dydx.community/dydx-chain-technical-docs/getting-started/developer-tools/dydx-chain-client-for-python
+    fetched_at: 2026-04-28T03:00:00Z
+    status: ok
+    crawler: exa
+    bytes: 1003
+    title: dYdX Chain Client for Python
+  - slug: getting-started-developer-tools-dydx-cli
+    url: https://docs.dydx.community/dydx-chain-technical-docs/getting-started/developer-tools/dydx-cli
+    fetched_at: 2026-04-28T03:00:00Z
+    status: ok
+    crawler: exa
+    bytes: 214
+    title: dYdX CLI
+  - slug: getting-started-developer-guides
+    url: https://docs.dydx.community/dydx-chain-technical-docs/getting-started/developer-guides
+    fetched_at: 2026-04-28T02:55:00Z
+    status: ok
+    crawler: exa
+    bytes: 529
+    title: Developer Guides
+  - slug: getting-started-open-source-repositories
+    url: https://docs.dydx.community/dydx-chain-technical-docs/getting-started/open-source-repositories
+    fetched_at: 2026-04-28T02:55:00Z
+    status: ok
+    crawler: exa
+    bytes: 341
+    title: Open Source Repositories
+  - slug: validators-getting-set-up
+    url: https://docs.dydx.community/dydx-chain-technical-docs/validators/getting-set-up
+    fetched_at: 2026-04-28T02:55:00Z
+    status: ok
+    crawler: exa
+    bytes: 488
+    title: Getting Set Up (Validators)
+  - slug: validators-getting-set-up-hardware-requirements
+    url: https://docs.dydx.community/dydx-chain-technical-docs/validators/getting-set-up/hardware-requirements
+    fetched_at: 2026-04-28T02:58:00Z
+    status: ok
+    crawler: exa
+    bytes: 387
+    title: Hardware Requirements
+  - slug: validators-getting-set-up-required-node-configs
+    url: https://docs.dydx.community/dydx-chain-technical-docs/validators/getting-set-up/required-node-configs
+    fetched_at: 2026-04-28T02:58:00Z
+    status: ok
+    crawler: exa
+    bytes: 2062
+    title: Required Node Configs
+  - slug: validators-getting-set-up-running-a-validator
+    url: https://docs.dydx.community/dydx-chain-technical-docs/validators/getting-set-up/running-a-validator
+    fetched_at: 2026-04-28T02:58:00Z
+    status: ok
+    crawler: exa
+    bytes: 254
+    title: Running a Validator
+  - slug: validators-getting-set-up-running-a-full-node
+    url: https://docs.dydx.community/dydx-chain-technical-docs/validators/getting-set-up/running-a-full-node
+    fetched_at: 2026-04-28T02:58:00Z
+    status: ok
+    crawler: exa
+    bytes: 254
+    title: Running a Full Node
+  - slug: validators-getting-set-up-snapshots
+    url: https://docs.dydx.community/dydx-chain-technical-docs/validators/getting-set-up/snapshots
+    fetched_at: 2026-04-28T02:58:00Z
+    status: ok
+    crawler: exa
+    bytes: 269
+    title: Snapshots
+  - slug: validators-getting-set-up-validator-upgrades
+    url: https://docs.dydx.community/dydx-chain-technical-docs/validators/getting-set-up/validator-upgrades
+    fetched_at: 2026-04-28T02:58:00Z
+    status: ok
+    crawler: exa
+    bytes: 388
+    title: Validator Upgrades
+  - slug: validators-faq-and-resources
+    url: https://docs.dydx.community/dydx-chain-technical-docs/validators/faq-and-resources
+    fetched_at: 2026-04-28T02:55:00Z
+    status: ok
+    crawler: exa
+    bytes: 2292
+    title: FAQ & Resources (Validators)
+  - slug: validators-active-validator-slack
+    url: https://docs.dydx.community/dydx-chain-technical-docs/validators/active-validator-slack
+    fetched_at: 2026-04-28T03:00:00Z
+    status: ok
+    crawler: exa
+    bytes: 307
+    title: Active Validator Slack
+  - slug: front-end-and-wallets-architecture-overview
+    url: https://docs.dydx.community/dydx-chain-technical-docs/front-end-and-wallets/architecture-overview
+    fetched_at: 2026-04-28T02:58:00Z
+    status: ok
+    crawler: exa
+    bytes: 1900
+    title: Architecture Overview (Front-end & Wallets)
+  - slug: front-end-and-wallets-web-front-end
+    url: https://docs.dydx.community/dydx-chain-technical-docs/front-end-and-wallets/web-front-end
+    fetched_at: 2026-04-28T02:58:00Z
+    status: ok
+    crawler: exa
+    bytes: 3112
+    title: Web Front End
+  - slug: front-end-and-wallets-faq-and-resources
+    url: https://docs.dydx.community/dydx-chain-technical-docs/front-end-and-wallets/faq-and-resources
+    fetched_at: 2026-04-28T03:00:00Z
+    status: ok
+    crawler: exa
+    bytes: 2477
+    title: FAQ & Resources (Front-end & Wallets)
+  - slug: data-dashboards-and-open-apis-public-dashboards
+    url: https://docs.dydx.community/dydx-chain-technical-docs/data-dashboards-and-open-apis/public-dashboards
+    fetched_at: 2026-04-28T03:02:00Z
+    status: ok
+    crawler: exa
+    bytes: 597
+    title: Public Dashboards
+notes:
+  - "GitBook host with JS-rendered nav. /llms.txt available but title-only. Used 404 'Suggested Pages' redirect hints to discover real URL nesting (e.g., architecture-overview lives under /front-end-and-wallets/, not at root; public-dashboards lives under /data-dashboards-and-open-apis/)."
+  - "All 20 pages fetched successfully via exa on first attempt; no WebFetch fallbacks fired."
+  - "Many pages on this property are stubs that embed external content from docs.dydx.trade (operations subDAO docs) — captured as stubs with embed-target URLs preserved per AGENTS.md style."
+  - "Reached 20-page max_pages soft cap (HL/Aster precedent); status=paused. Queue_remainder lists discovered-but-uncrawled pages in the dydx-cli sub-tree, additional dydx-chain-clients example sub-pages, and the data-dashboards-and-open-apis FAQ."
+queue_remainder:
+  - https://docs.dydx.community/dydx-chain-technical-docs/getting-started/developer-tools/dydx-chain-client-for-javascript/example-1-accessing-subaccount-data
+  - https://docs.dydx.community/dydx-chain-technical-docs/getting-started/developer-tools/dydx-chain-client-for-javascript/example-2-faucet-endpoints
+  - https://docs.dydx.community/dydx-chain-technical-docs/getting-started/developer-tools/dydx-chain-client-for-javascript/additional-javascript-client-examples
+  - https://docs.dydx.community/dydx-chain-technical-docs/getting-started/developer-tools/dydx-chain-client-for-python/example-1-placing-replacing-and-canceling-orders
+  - https://docs.dydx.community/dydx-chain-technical-docs/getting-started/developer-tools/dydx-chain-client-for-python/example-2-trading-with-hrn
+  - https://docs.dydx.community/dydx-chain-technical-docs/getting-started/developer-tools/dydx-chain-client-for-python/additional-python-client-examples
+  - https://docs.dydx.community/dydx-chain-technical-docs/getting-started/developer-tools/dydx-cli/setup-the-dydx-cli
+  - https://docs.dydx.community/dydx-chain-technical-docs/getting-started/developer-tools/dydx-cli/eoa-wallets
+  - https://docs.dydx.community/dydx-chain-technical-docs/getting-started/developer-tools/dydx-cli/multisig-wallet
+  - https://docs.dydx.community/dydx-chain-technical-docs/getting-started/developer-tools/dydx-cli/submit-a-governance-proposal
+  - https://docs.dydx.community/dydx-chain-technical-docs/getting-started/developer-guides/user-guides
+  - https://docs.dydx.community/dydx-chain-technical-docs/getting-started/developer-guides/user-guides/how-to-use-squid-ui
+  - https://docs.dydx.community/dydx-chain-technical-docs/getting-started/developer-guides/user-guides/how-to-use-cctp-ui
+  - https://docs.dydx.community/dydx-chain-technical-docs/getting-started/developer-guides/user-guides/how-to-withdraw-and-transfer
+  - https://docs.dydx.community/dydx-chain-technical-docs/data-dashboards-and-open-apis/faq-and-resources
+  - https://docs.dydx.community/dydx-chain-technical-docs/disclaimer
+  - https://docs.dydx.community/dydx-chain-technical-docs/privacy-policy

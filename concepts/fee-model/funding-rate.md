@@ -64,6 +64,7 @@ Plus configurable funding-rate multiplier and interest-rate per HIP-3 deployer[^
 | [[drift]] | 1h (capped symmetric)[^drift-docs-2026-04-28-protocol-trading-perpetuals-funding-rates] | EMA span 1h; 20-min update window with hour-extension fallback[^drift-docs-2026-04-28-protocol-trading-perpetuals-funding-rates] | per-tier clamp B+: 0.125% / C: 0.208% / below: 0.4167%; Rebate Pool caps at 2/3 balance[^drift-docs-2026-04-28-protocol-trading-perpetuals-funding-rates] | `1/24 × (mark_twap − oracle_twap) / oracle_twap`[^drift-docs-2026-04-28-protocol-trading-perpetuals-funding-rates] | funding not paid for infrequently-traded markets[^drift-docs-2026-04-28-protocol-trading-perpetuals-funding-rates] |
 
 (Other perpdex venues to be added in subsequent ingest passes.)
+| [[entities/perpdex/dydx]] | 60s sample / 3,600s tick[^dydx-docs-2026-04-28-concepts-trading-funding] | 60s median FundingPremiumVote (min 15 votes per sample); 60 samples averaged per tick[^dydx-docs-2026-04-28-concepts-trading-funding] | 8h cap = 600%×(IMF−MMF); funding_rate_clamp 6%, premium_vote_clamp 60%[^dydx-docs-2026-04-28-concepts-trading-funding] | Premium=(max(0,ImpactBid−Index)−max(0,Index−ImpactAsk))/Index; rate=(Premium/8)+IRC; cross IRC=0%, isolated IRC=0.125 bps/h[^dydx-docs-2026-04-28-concepts-trading-funding] | peer-to-peer[^dydx-community-2026-04-28-modules-governance-perpetual] |
 
 ## Disputed claims
 None.
@@ -77,3 +78,5 @@ None.
 [^lighter-docs-2026-04-28-trading-funding]: [[sources/lighter-docs-2026-04-28-trading-funding]]
 [^lighter-docs-2026-04-28-trading-funding-funding-rate-rebates]: [[sources/lighter-docs-2026-04-28-trading-funding-funding-rate-rebates]]
 [^drift-docs-2026-04-28-protocol-trading-perpetuals-funding-rates]: [[sources/drift-docs-2026-04-28-protocol-trading-perpetuals-funding-rates]]
+[^dydx-docs-2026-04-28-concepts-trading-funding]: [[sources/dydx-docs-2026-04-28-concepts-trading-funding]]
+[^dydx-community-2026-04-28-modules-governance-perpetual]: [[sources/dydx-community-2026-04-28-modules-governance-perpetual]]

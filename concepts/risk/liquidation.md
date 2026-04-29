@@ -75,6 +75,7 @@ A trade at the zero price preserves the TAV/MMR ratio (i.e. it is a health-prese
 | [[entities/perpdex/drift]] | totalCollateral < marginRequirement(maintenance)[^drift-docs-2026-04-28-protocol-trading-liquidations-liquidation-engine] | yes (partial, 25-slot pacing)[^drift-docs-2026-04-28-protocol-trading-liquidations-liquidation-engine] | multi-asset IF (USDC/BTC/ETH/SOL) + Drift Safety Module[^drift-docs-2026-04-28-protocol-insurance-fund] | 25-slot pacing window (accelerates if price continues against)[^drift-docs-2026-04-28-protocol-trading-liquidations-liquidation-engine] | none surfaced | oracle-anchored (not mark); >=50% deviation from 5-min TWAP blocks liquidation; perp bankruptcy waterfall: external IF -> vAMM lifetime profit -> socialized loss[^drift-docs-2026-04-28-protocol-trading-liquidations-liquidation-engine] |
 
 (Other perpdex venues to be added in subsequent ingest passes.)
+| [[entities/perpdex/dydx]] | TAV < MMR[^dydx-docs-2026-04-28-concepts-trading-liquidations] | yes (fillable-price limit order matched against book)[^dydx-docs-2026-04-28-concepts-trading-liquidations] | Insurance Fund (cross-shared + per-isolated-market segregated)[^dydx-docs-2026-04-28-concepts-trading-contract-loss-mechanism] | not surfaced (per-block per-position caps governance-adjustable)[^dydx-docs-2026-04-28-concepts-trading-liquidations] | max 1.5% penalty (100% to IF)[^dydx-docs-2026-04-28-concepts-trading-liquidations] | IF widens limit price (max 1.5×MMF spread); immediate deleveraging when account value goes negative (IF bypassed)[^dydx-docs-2026-04-28-concepts-trading-contract-loss-mechanism] |
 
 ## Edge cases
 - A trader can avoid maintenance-margin forfeiture by using stop-loss orders or exiting before mark price reaches `liq_price`[^hl-docs-2026-04-27-trading-liquidations].
@@ -99,3 +100,5 @@ None at first ingest.
 [^lighter-docs-2026-04-28-trading-contract-specifications]: [[sources/lighter-docs-2026-04-28-trading-contract-specifications]]
 [^drift-docs-2026-04-28-protocol-trading-liquidations-liquidation-engine]: [[sources/drift-docs-2026-04-28-protocol-trading-liquidations-liquidation-engine]]
 [^drift-docs-2026-04-28-protocol-insurance-fund]: [[sources/drift-docs-2026-04-28-protocol-insurance-fund]]
+[^dydx-docs-2026-04-28-concepts-trading-liquidations]: [[sources/dydx-docs-2026-04-28-concepts-trading-liquidations]]
+[^dydx-docs-2026-04-28-concepts-trading-contract-loss-mechanism]: [[sources/dydx-docs-2026-04-28-concepts-trading-contract-loss-mechanism]]

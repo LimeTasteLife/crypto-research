@@ -35,6 +35,7 @@ Within each category, actions are sorted in proposer order[^hl-docs-2026-04-27-h
 | [[drift]] | Three-layer hybrid (JIT auction → DLOB → backstop vAMM) | JIT reverse-Dutch ~10-slot auction; permissionless keeper-operated DLOB with price-time priority; constant-product vAMM backstop with dynamic spread/peg | Keeper bots match orders offchain; backstop AMM fills after 10-slot min duration; Drift runs floating maker bot on-platform for-profit[^drift-docs-2026-04-28-protocol-about-v3-matching-engine][^drift-developers-docs-2026-04-28-developers-market-makers-orderbook-and-matching] |
 
 (Other perpdex venues to be added in subsequent ingest passes.)
+| [[entities/perpdex/dydx]] | off-chain in-memory CLOB; validators store orders out-of-consensus and propose blocks from local books[^dydx-docs-2026-04-28-concepts-trading-limit-orderbook] | price-time priority[^dydx-docs-2026-04-28-concepts-trading-limit-orderbook] | OEGS gateway nodes for sub-hop latency to designated proposers (v9)[^dydx-docs-2026-04-28-concepts-architecture-oegs] |
 
 ## Edge cases
 - The same-block "cancel before GTC" rule materially changes maker economics: makers can cancel stale quotes when an aggressive order arrives in the same block, preventing them from being run over by latency-advantaged takers.
@@ -54,3 +55,5 @@ None at first ingest.
 [^lighter-docs-2026-04-28-trading-order-types-and-matching]: [[sources/lighter-docs-2026-04-28-trading-order-types-and-matching]]
 [^drift-docs-2026-04-28-protocol-about-v3-matching-engine]: [[sources/drift-docs-2026-04-28-protocol-about-v3-matching-engine]]
 [^drift-developers-docs-2026-04-28-developers-market-makers-orderbook-and-matching]: [[sources/drift-developers-docs-2026-04-28-developers-market-makers-orderbook-and-matching]]
+[^dydx-docs-2026-04-28-concepts-trading-limit-orderbook]: [[sources/dydx-docs-2026-04-28-concepts-trading-limit-orderbook]]
+[^dydx-docs-2026-04-28-concepts-architecture-oegs]: [[sources/dydx-docs-2026-04-28-concepts-architecture-oegs]]

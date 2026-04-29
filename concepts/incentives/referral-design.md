@@ -27,8 +27,7 @@ A referral design is the venue's policy for paying out rewards to referrers and 
 |---|---|---|---|---|
 | [[entities/perpdex/hyperliquid]] | $1B referred volume[^hl-docs-2026-04-27-trading-fees] | $25M referred volume[^hl-docs-2026-04-27-trading-fees] | not surfaced | not surfaced |
 | [[entities/perpdex/aster]] | 10% default; 20% (VIP1) / 10% (VIP2+) via application[^aster-docs-2026-04-28-program-referral] | configurable split with referee[^aster-docs-2026-04-28-program-referral] | 1L (no permissionless multi-level)[^aster-docs-2026-04-28-program-referral] | liquidation-fee / self-trade / zero-fee excluded; self-referral revoked[^aster-docs-2026-04-28-program-referral] |
-
-(Other perpdex venues to be added in subsequent ingest passes.)
+| [[entities/perpdex/dydx]] | VIP ≤50% taker ($10k/referral/30d cap); Standard ≤15% taker ($3k/referral/30d cap)[^dydx-community-2026-04-28-dydx-features-affiliate-program] | not surfaced (taker-fee share only)[^dydx-community-2026-04-28-dydx-features-affiliate-program] | 1L; VIP managed by CryptoLearningClub via dYdX Grants[^dydx-community-2026-04-28-dydx-features-affiliate-program] | $10k vol gate; MMs/trading firms excluded from VIP; ≥30k social followers required[^dydx-community-2026-04-28-dydx-features-affiliate-program] |
 
 ## Disputed claims
 None.
@@ -39,3 +38,4 @@ None.
 ## Sources
 [^hl-docs-2026-04-27-trading-fees]: [[sources/hl-docs-2026-04-27-trading-fees]]
 [^aster-docs-2026-04-28-program-referral]: [[sources/aster-docs-2026-04-28-program-referral]]
+[^dydx-community-2026-04-28-dydx-features-affiliate-program]: [[sources/dydx-community-2026-04-28-dydx-features-affiliate-program]]

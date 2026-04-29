@@ -49,6 +49,7 @@ The oracle spec governs source selection (which CEXs/AMMs feed the price), aggre
 | [[entities/perpdex/lighter]] | index = weighted blend of external oracles[^lighter-docs-2026-04-28-trading-fair-price-marking] | Chainlink, Stork, Pyth; RWAs blend external + internal (EMA-smoothed impact)[^lighter-docs-2026-04-28-trading-fair-price-marking][^lighter-docs-2026-04-28-trading-real-world-assets-rwas-rwa-pricing-mechanism] | τ = 1h index, τ = 8min mark[^lighter-docs-2026-04-28-trading-real-world-assets-rwas-rwa-pricing-mechanism] | stale-oracle weight decays exponentially per-source; clamps ±(1/L·0.75 − 0.5%) index, ±(1/L·0.75) mark[^lighter-docs-2026-04-28-trading-real-world-assets-rwas-rwa-pricing-mechanism] |
 
 (Other perpdex venues to be added in subsequent ingest passes.)
+| [[entities/perpdex/dydx]] | Slinky validator-sidecar vote extensions; proposer aggregates and network accepts in-consensus[^dydx-docs-2026-04-28-concepts-trading-oracle] | 7 source exchanges (Binance, Bitfinex, Bitstamp, Bybit, Coinbase, crypto.com, GateIO)[^dydx-docs-2026-04-28-concepts-trading-oracle] | rate-limited by max-markets-per-block + min_price_change_ppm per market[^dydx-docs-2026-04-28-concepts-trading-oracle] | per-market `min_exchanges` + `min_price_change_ppm`; adding/removing sources requires binary upgrade[^dydx-docs-2026-04-28-concepts-trading-oracle] |
 
 ## Edge cases
 - Manipulation cost depends on which sources are weighted; high-weight CEXs (Binance) require deeper external liquidity to manipulate than low-weight ones.
@@ -66,3 +67,4 @@ None at first ingest.
 [^aster-docs-2026-04-28-trading-perpetuals-mark-price]: [[sources/aster-docs-2026-04-28-trading-perpetuals-mark-price]]
 [^lighter-docs-2026-04-28-trading-fair-price-marking]: [[sources/lighter-docs-2026-04-28-trading-fair-price-marking]]
 [^lighter-docs-2026-04-28-trading-real-world-assets-rwas-rwa-pricing-mechanism]: [[sources/lighter-docs-2026-04-28-trading-real-world-assets-rwas-rwa-pricing-mechanism]]
+[^dydx-docs-2026-04-28-concepts-trading-oracle]: [[sources/dydx-docs-2026-04-28-concepts-trading-oracle]]

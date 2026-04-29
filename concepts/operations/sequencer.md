@@ -26,6 +26,7 @@ The L1 mempool/consensus is **semantically aware** of HyperCore order-book actio
 | [[entities/perpdex/lighter]] | ZK-rollup; custom proving engine (sequencer → witness generators → prover)[^lighter-docs-2026-04-28-about-lighter-technical-architecture-lighter-core] | Escape Hatch: permissionless withdrawal via Ethereum state root[^lighter-docs-2026-04-28-about-lighter-technical-architecture-lighter-core] | SNARK-proven matching eliminates sequencer manipulation[^lighter-docs-2026-04-28-trading-order-types-and-matching] |
 
 (Other perpdex venues to be added in subsequent ingest passes.)
+| [[entities/perpdex/dydx]] | CometBFT proposer rotation; stake-weighted round-robin block selection[^dydx-docs-2026-04-28-concepts-architecture-overview]; OEGS designated proposers (v9)[^dydx-docs-2026-04-28-concepts-architecture-oegs] | proposer rotation failure → missed block (standard CometBFT liveness) | no protocol-level MEV mitigation; Skip-built validator MEV dashboard (social only)[^dydx-docs-2026-04-28-concepts-architecture-overview] |
 
 ## Disputed claims
 None at first ingest.
@@ -41,3 +42,5 @@ None at first ingest.
 [^aster-docs-2026-04-28-overview-what-is-aster]: [[sources/aster-docs-2026-04-28-overview-what-is-aster]]
 [^lighter-docs-2026-04-28-about-lighter-technical-architecture-lighter-core]: [[sources/lighter-docs-2026-04-28-about-lighter-technical-architecture-lighter-core]]
 [^lighter-docs-2026-04-28-trading-order-types-and-matching]: [[sources/lighter-docs-2026-04-28-trading-order-types-and-matching]]
+[^dydx-docs-2026-04-28-concepts-architecture-overview]: [[sources/dydx-docs-2026-04-28-concepts-architecture-overview]]
+[^dydx-docs-2026-04-28-concepts-architecture-oegs]: [[sources/dydx-docs-2026-04-28-concepts-architecture-oegs]]

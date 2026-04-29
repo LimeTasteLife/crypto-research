@@ -1,0 +1,61 @@
+# OEGS (Order Entry Gateway Service)
+
+Source: https://docs.dydx.xyz/concepts/architecture/oegs
+
+## What is the Order Entry Gateway Service (OEGS)
+
+The Order Entry Gateway represents the next step in dYdX's multi-stage performance evolution:
+
+1. Designated proposers — A governance-selected subset of validators responsible for proposing blocks. This creates a predictable topology for faster routing (available in v9 software upgrade).
+2. Order Entry Gateway Service (OEGS) — specialized nodes for direct, one-hop delivery to proposers (available after v9 upgrade).
+
+The Order Entry Gateway Service (OEGS) is open-sourced infrastructure that provides a direct, optimized path from traders to the proposer set, reducing latency, increasing throughput, and lowering barriers for professional and retail traders alike. OEGS is now live on testnet.
+
+## 1. Previous State
+
+In dYdX previous architecture, orders from traders — whether via the web app, mobile, API, or third-party integration — are submitted to full nodes, which then gossip them across the network until they reach the current block proposer.
+
+Pros: Fully decentralized, no single point of routing.
+Cons: Multi-hop gossip introduces latency and unpredictability.
+
+To achieve competitive speeds, professional trading firms have had to typically run their own private full nodes with streaming enabled, directly injecting orders into the gossip layer.
+
+### Validator and Full Node Roles
+
+Validators drive consensus, maintain an off-chain in-memory order book, gossip transactions across the network, and propose blocks following a weighted round-robin proof of stake model.
+
+Full Nodes run the same protocol software but hold no staking power—they don't vote or propose. They gossip transactions, process committed blocks, and stream blockchain state to the Indexer.
+
+### Why Professional Traders run Full Nodes
+
+Full-node access has become a performance necessity for high-speed trading — but it also represents a high barrier to entry—technical, financial, and operational. Running a full node means orders don't need to traverse geo-distributed public RPCs — you eliminate middle-hop latency by injecting them directly into the gossip network. Full nodes also enable real-time streaming of L3 order book updates, fills, taker orders, and subaccount changes—via gRPC or WebSocket. Since April 2025, dYdX has made huge improvements (98%) to API performance and reliability.
+
+## 2. Designated Proposers
+
+Designated proposers are a governance-selected subset of validators responsible for proposing blocks. This change to the open-source software creates a predictable topology, making it possible to route transactions directly to the next proposer instead of broadcasting widely. This is a fully deterministic enhancement to CometBFT that brings increased resilience, network performance, and operational clarity — while preserving the full validator set, stake-based voting power, and decentralized governance of the network.
+
+## 3. The Order Entry Gateway Service (OEGS)
+
+The OEGS builds on the designated proposer model by creating a specialized set of gateway nodes that:
+
+- Peer directly with all designated proposers.
+- Accept orders via public, high-performance endpoints (gRPC).
+- Bypass standard gossip, broadcasting orders in a single hop to the proposer set.
+
+This infrastructure is built to:
+
+- Simplify access — traders can send orders to a public, high-performance gRPC endpoint instead of deploying their own nodes.
+- Ensure fairness — the Gateway peers directly with validator nodes, improving routing latency and propagation uniformity.
+- Scale gracefully — governance can update, expand, or delegate the Gateway set without disrupting overall network topology.
+
+## How It Works: Infrastructure Flow
+
+1. Trader submits an order via UI, API, or third-party partner integration to the OEGS.
+2. OEGS full nodes process validation checks (similar to regular full node).
+3. Gateway is persistently peered with the proposer set—gossiping the order directly, bypassing standard gossip hops due to direct peering.
+4. Designated proposers include it in the next proposed block by consensus.
+5. Order fills are committed on-chain; full nodes and Indexers update their state accordingly.
+
+### Deployment Options
+
+dYdX Labs plans to fully open-source the OEGS code and infrastructure requirements. Any community deployed infrastructure (e.g., front-end, mobile app, API) could consider sending orders to the OEGS but this remains fully opt-in. Traders may still send orders directly to a full node which maintains decentralization and censorship-resistance. Governance may consider additional incentives for an OEGS operator, given their elevated role and service expectations.

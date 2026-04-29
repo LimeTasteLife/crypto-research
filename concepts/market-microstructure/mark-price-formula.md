@@ -50,6 +50,7 @@ sample = current observation
 | [[entities/perpdex/drift]] | reservation (AMM) price = `quote_reserves / base_reserves * peg`; oracle + EMA TWAP (1hr + 5min intervals); 10% price-band guard vs 5-min oracle TWAP[^drift-docs-2026-04-28-protocol-about-v3-drift-amm][^drift-docs-2026-04-28-protocol-risk-and-safety-risk-parameters] | peg moves toward oracle each fill cycle; AMM updated same-slot with valid oracle[^drift-docs-2026-04-28-protocol-about-v3-drift-amm] | margining, liquidations (oracle-anchored, NOT mark), funding (mark TWAP vs oracle TWAP), order acceptance (10% band)[^drift-docs-2026-04-28-protocol-risk-and-safety-risk-parameters][^drift-docs-2026-04-28-protocol-trading-liquidations-liquidation-engine] |
 
 (Other perpdex venues to be added in subsequent ingest passes.)
+| [[entities/perpdex/dydx]] | Oracle price (Slinky vote-extension aggregated); no multi-component mark formula documented — oracle price directly drives liquidation and stop/TP triggers[^dydx-docs-2026-04-28-concepts-trading-liquidations] | oracle price (not last-traded)[^dydx-docs-2026-04-28-concepts-trading-liquidations] | liquidation eligibility, stop/TP triggers[^dydx-docs-2026-04-28-concepts-trading-liquidations] |
 
 ## Edge cases
 - Component 1's EMA absorbs persistent on-venue divergence — slow enough (150s) that brief manipulation attempts fade, fast enough that legitimate price movement isn't lagged.
@@ -69,3 +70,4 @@ None at first ingest.
 [^drift-docs-2026-04-28-protocol-about-v3-drift-amm]: [[sources/drift-docs-2026-04-28-protocol-about-v3-drift-amm]]
 [^drift-docs-2026-04-28-protocol-risk-and-safety-risk-parameters]: [[sources/drift-docs-2026-04-28-protocol-risk-and-safety-risk-parameters]]
 [^drift-docs-2026-04-28-protocol-trading-liquidations-liquidation-engine]: [[sources/drift-docs-2026-04-28-protocol-trading-liquidations-liquidation-engine]]
+[^dydx-docs-2026-04-28-concepts-trading-liquidations]: [[sources/dydx-docs-2026-04-28-concepts-trading-liquidations]]

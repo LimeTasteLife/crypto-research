@@ -41,6 +41,7 @@ A margin tier is a per-asset rule that maps a position's notional size to an `(i
 | [[entities/perpdex/drift]] | IMF scaling: `marginRatio = baseMarginRatio + imfFactor * sqrt(size * 10)`; 6 Contract Tiers (A/B/C/Speculative/Highly Speculative/Isolated)[^drift-docs-2026-04-28-protocol-risk-and-safety-risk-parameters][^drift-docs-2026-04-28-protocol-trading-market-specs] | disputed 20x-101x (see [[entities/perpdex/drift]]#disputed)[^drift-sdk-docs-2026-04-28-concepts-margin] | open + fill (margin checked both at submission and at match)[^drift-developers-docs-2026-04-28-developers-concepts-account-model] | modes: DEFAULT (cross), HIGH_LEVERAGE (lower IM/MM, capped maxUsers), ISOLATED (per-market only, disables cross-margin)[^drift-sdk-docs-2026-04-28-concepts-margin][^drift-docs-2026-04-28-protocol-trading-market-specs] |
 
 (Other perpdex venues to be added in subsequent ingest passes.)
+| [[entities/perpdex/dydx]] | 8 Liquidity Tiers (Large-Cap 0 through IML 5x 7); OI-scaling IMF formula `effective_IMF = min(base_IMF + scaling_factor×(1−base_IMF), 1.0)`; IMF→100% at upper_cap; MMF fixed per tier[^dydx-docs-2026-04-28-concepts-trading-margin] | not surfaced (tier-specific; Large-Cap IMF=5%→20x)[^dydx-docs-2026-04-28-concepts-trading-margin] | open-only (leverage checked only at position open)[^dydx-docs-2026-04-28-concepts-trading-margin] | cross (default) + isolated (`market_type` flag, v5.0.0; segregated collateral + IF per isolated market)[^dydx-docs-2026-04-28-concepts-trading-margin] |
 
 ## Edge cases
 - A position straddling tier boundaries uses the tier matching the position value at the liquidation price[^hl-docs-2026-04-27-trading-liquidations].
@@ -60,3 +61,4 @@ None at first ingest.
 [^drift-docs-2026-04-28-protocol-trading-market-specs]: [[sources/drift-docs-2026-04-28-protocol-trading-market-specs]]
 [^drift-sdk-docs-2026-04-28-concepts-margin]: [[sources/drift-sdk-docs-2026-04-28-concepts-margin]]
 [^drift-developers-docs-2026-04-28-developers-concepts-account-model]: [[sources/drift-developers-docs-2026-04-28-developers-concepts-account-model]]
+[^dydx-docs-2026-04-28-concepts-trading-margin]: [[sources/dydx-docs-2026-04-28-concepts-trading-margin]]
