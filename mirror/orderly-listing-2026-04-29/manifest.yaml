@@ -1,0 +1,25 @@
+snapshot_id: orderly-listing-2026-04-29
+root_url: https://orderly.network/listing/
+host: orderly.network
+path_prefix: /listing/
+crawled_at: 2026-04-29T10:20:00Z
+crawler: webfetch
+page_count: 1
+status: active
+supersedes: null
+superseded_by: null
+allow: []
+deny: []
+max_pages: 1
+pages:
+  - slug: listing
+    url: https://orderly.network/listing/
+    fetched_at: 2026-04-29T10:20:00Z
+    status: ok
+    crawler: webfetch
+    bytes: 2400
+    title: Orderly Network Listing
+queue_remainder: []
+notes:
+  - "+nochildren flag from queue; single marketing page with structured criteria data"
+  - "exa not attempted; WebFetch succeeded cleanly"
