@@ -15,6 +15,8 @@ To answer "when was X last refreshed?": find the row with `status: active` for t
 | drift-docs-2026-04-28 | https://docs.drift.trade/ | / | 2026-04-28T17:00:00Z | 80 | exa |
 | drift-developers-2026-04-28 | https://docs.drift.trade/developers | /developers/ | 2026-04-28T17:30:00Z | 45 | exa |
 | drift-sdk-2026-04-28 | https://mintlify.com/drift-labs/protocol-v2/ | /drift-labs/protocol-v2/ | 2026-04-28T18:00:00Z | 62 | exa |
+| uniswap-v4-contracts-2026-04-29 | https://docs.uniswap.org/contracts/v4/ | /contracts/v4/ | 2026-04-29T00:00:00Z | 18 | exa |
+| uniswap-v4-protocol-fee-2026-04-29 | https://docs.uniswap.org/contracts/protocol-fee/ | /contracts/protocol-fee/ | 2026-04-29T00:20:00Z | 5 | exa |
 
 ## Superseded
 
