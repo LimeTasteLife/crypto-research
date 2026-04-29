@@ -26,9 +26,6 @@ A listing playbook is the venue's documented procedure for getting a new asset l
 | [[entities/perpdex/hyperliquid]] | permissionless auction (HIP-1)[^hl-docs-2026-04-27-hyperevm] | permissionless deployer (HIP-3)[^hl-docs-2026-04-27-trading-fees] | not surfaced |
 | [[entities/perpdex/aster]] | not surfaced | pre-launch expiry futures auto-converting to perp + standard listing for crypto and equity perps (AAPL/TSLA/NVDA/AMZN/META/GOOG/MSFT)[^aster-docs-2026-04-28-trading-perpetuals-pre-launch-contracts][^aster-docs-2026-04-28-trading-perpetuals-market-maker-program] | not surfaced |
 | [[entities/perpdex/orderly]] | no spot market | dual-path: standard (Orderly-approved, $20M mcap, 3+ oracles, LP depth) + permissionless (Diamond Tier Builders, POST_ONLY→ACTIVE depth gate, per-Builder IF $50k/symbol); circuit breakers → REDUCE_ONLY / delisting[^orderly-docs-2026-04-29-permissionless-listing][^orderly-listing-2026-04-29-listing] | yes — circuit breakers (depth/IF/funding) trigger REDUCE_ONLY or delisting; per-Builder IF depletion scopes ADL to single market[^orderly-docs-2026-04-29-permissionless-listing] |
-
-(Other perpdex venues to be added in subsequent ingest passes.)
-
 ## Disputed claims
 None at first ingest.
 

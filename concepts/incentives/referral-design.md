@@ -29,9 +29,6 @@ A referral design is the venue's policy for paying out rewards to referrers and 
 | [[entities/perpdex/aster]] | 10% default; 20% (VIP1) / 10% (VIP2+) via application[^aster-docs-2026-04-28-program-referral] | configurable split with referee[^aster-docs-2026-04-28-program-referral] | 1L (no permissionless multi-level)[^aster-docs-2026-04-28-program-referral] | liquidation-fee / self-trade / zero-fee excluded; self-referral revoked[^aster-docs-2026-04-28-program-referral] |
 | [[entities/perpdex/dydx]] | VIP ≤50% taker ($10k/referral/30d cap); Standard ≤15% taker ($3k/referral/30d cap)[^dydx-community-2026-04-28-dydx-features-affiliate-program] | not surfaced (taker-fee share only)[^dydx-community-2026-04-28-dydx-features-affiliate-program] | 1L; VIP managed by CryptoLearningClub via dYdX Grants[^dydx-community-2026-04-28-dydx-features-affiliate-program] | $10k vol gate; MMs/trading firms excluded from VIP; ≥30k social followers required[^dydx-community-2026-04-28-dydx-features-affiliate-program] |
 | [[entities/perpdex/orderly]] | listing referral only: $2,000 fixed + 30% of project marketing budget (capped $10,000)[^orderly-listing-2026-04-29-listing]; no documented trader referral program | not applicable (listing referral, not trader referral) | 1L; planned Multi-Level Referral (roadmap 2026 H1)[^orderly-docs-2026-04-29-roadmap] | not surfaced |
-
-(Other perpdex venues to be added in subsequent ingest passes.)
-
 ## Disputed claims
 None.
 

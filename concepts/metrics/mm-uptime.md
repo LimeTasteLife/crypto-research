@@ -23,9 +23,6 @@ MM uptime is the fraction of a measurement window during which a market maker me
 |---|---|---|
 | [[entities/perpdex/hyperliquid]] | 0.2s / 0.9s (co-located)[^hl-docs-2026-04-27-hypercore-overview] | not in primary docs |
 | [[entities/perpdex/aster]] | not surfaced | yes — 70% of UTC-day with bid/offer ≥ minimum size, spread ≤ pair cap (0.10% BTC/ETH/SOL, 0.25% other crypto, 1.00% equity), orders live ≥0.5s[^aster-docs-2026-04-28-trading-perpetuals-market-maker-program] |
-
-(Other perpdex venues to be added in subsequent ingest passes.)
-
 ## Disputed claims
 None.
 

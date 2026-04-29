@@ -22,8 +22,8 @@ To answer "when was X last refreshed?": find the row with `status: active` for t
 
 | snapshot_id | superseded_by | crawled_at | pages |
 |---|---|---|---|
-
-_(none yet)_
+| drift-developers-docs-2026-04-28 | drift-developers-2026-04-28 | 2026-04-28T02:45:00Z | 20 |
+| drift-sdk-docs-2026-04-28 | drift-sdk-2026-04-28 | 2026-04-28T03:00:00Z | 20 |
 
 ## Paused (hit max_pages)
 
@@ -32,8 +32,6 @@ _(none yet)_
 | aster-docs-2026-04-28 | https://docs.asterdex.com/ | 2026-04-28T01:05:00Z | 20 | 20 |
 | hl-docs-2026-04-27 | https://hyperliquid.gitbook.io/hyperliquid-docs | 2026-04-27 | 20 | 20 |
 | drift-docs-2026-04-28 | https://docs.drift.trade/ | 2026-04-28T02:30:00Z | 20 | 20 |
-| drift-developers-docs-2026-04-28 | https://docs.drift.trade/developers | 2026-04-28T02:45:00Z | 20 | 20 |
-| drift-sdk-docs-2026-04-28 | https://mintlify.com/drift-labs/protocol-v2/ | 2026-04-28T03:00:00Z | 20 | 20 |
 | dydx-docs-2026-04-28 | https://docs.dydx.xyz/ | 2026-04-28T02:30:00Z | 26 | 26 |
 | dydx-community-2026-04-28 | https://docs.dydx.community/dydx | 2026-04-28T02:50:00Z | 21 | 21 |
 | dydx-chain-tech-2026-04-28 | https://docs.dydx.community/dydx-chain-technical-docs | 2026-04-28T03:05:00Z | 20 | 20 |

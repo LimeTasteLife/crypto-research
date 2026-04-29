@@ -21,9 +21,6 @@ Each contract represents 1 unit of the underlying spot asset[^hl-docs-2026-04-27
 |---|---|---|---|
 | [[entities/perpdex/hyperliquid]] | 1 unit underlying[^hl-docs-2026-04-27-trading-contract-specifications] | linear (USDC-collateralized; technically quanto for USDT-denominated)[^hl-docs-2026-04-27-trading-contract-specifications] | none (perpetual)[^hl-docs-2026-04-27-trading-contract-specifications] |
 | [[entities/perpdex/aster]] | not surfaced (primary docs) — per-pair minimums for the Perpetuals MM program documented separately at [[parameters/aster/listed-markets-roster]] | linear: nominal value = contracts × transaction price, computed against quote (USDT or USD1)[^aster-docs-2026-04-28-trading-perpetuals-fees] | none for standard perps; pre-launch contracts are expiry futures that auto-convert to standard perps on token launch[^aster-docs-2026-04-28-trading-perpetuals-pre-launch-contracts] |
-
-(Other perpdex venues to be added in subsequent ingest passes.)
-
 ## Related
 [[concepts/fee-model/funding-rate]] · [[parameters/hyperliquid/listed-markets-roster]] · [[concepts/risk/leverage-cap]]
 

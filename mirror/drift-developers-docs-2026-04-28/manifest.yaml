@@ -5,9 +5,9 @@ path_prefix: /developers/
 crawled_at: 2026-04-28T02:45:00Z
 crawler: exa
 page_count: 20
-status: paused
+status: superseded
 supersedes: null
-superseded_by: null
+superseded_by: drift-developers-2026-04-28
 allow: []
 deny: []
 max_pages: 20
