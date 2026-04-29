@@ -1,7 +1,6 @@
-# Drift AMM – Drift Protocol
-URL: https://docs.drift.trade/protocol/about-v3/drift-amm
-
 # Drift AMM
+
+Source: https://docs.drift.trade/protocol/about-v3/drift-amm
 
 The Automated Market Maker (AMM) is Drift's source of guaranteed constant liquidity for the exchange.
 
@@ -53,11 +52,11 @@ The long and short spread can be asymmetric due to changes in the underlying inv
 
 The bid/ask points on the curve are calculated as follows (exact efficient integer math method calculated on contract):
 
-`bid_quote_reserve = quote_reserve - (quote_reserve / (100%/short_spread))`
+` bid_quote_reserve = quote_reserve - (quote_reserve / (100%/short_spread))`
 
 `ask_quote_reserve = quote_reserve + (quote_reserve / (100%/long_spread))`
 
-The `quote_reserve` is defined as the total AMM reserves of the quote asset. Then using the same k to back out the base_reserve for the bid/ask curves as well.
+The`quote_reserve` is defined as the total AMM reserves of the quote asset. Then using the same k to back out the base_reserve for the bid/ask curves as well.
 
 ### Oracle Live Pricing
 

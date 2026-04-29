@@ -1,0 +1,246 @@
+# Indicative Quotes – Drift Protocol
+
+Source: https://docs.drift.trade/developers/market-makers/indicative-quotes
+
+Indicative Quotes – Drift Protocol
+
+Skip to Content
+
+Developers Market Makers Indicative Quotes
+
+Copy page
+
+# Indicative Quotes
+
+Indicative quotes let market makers signal liquidity offchain without committing onchain orders. You publish bid/ask prices and sizes to Drift’s WebSocket endpoint, where they’re used for:
+
+- UI display: takers see available liquidity before placing orders
+- Aggregator routing: Jupiter and other aggregators factor indicative liquidity into routing decisions
+- Price discovery: helps establish fair prices in thin markets
+
+When to use indicative quotes:
+
+- You want to show liquidity without paying transaction fees for onchain orders
+- You’re market making in lower-volume markets where onchain orders may sit unfilled
+- You want to attract taker flow by signaling competitive prices
+- You’re using a JIT-only strategy but still want to be visible in the orderbook
+
+Important: Indicative quotes are not firm commitments. They signal intent, but you’re not obligated to fill at these prices. When a taker actually places an order, you’d fill through the normal JIT auction or DLOB flow.
+
+## Setup
+
+Initialize the`IndicativeQuotesSender` with your DriftClient and connect to the WebSocket endpoint:
+
+TypeScript
+
+```
+import { IndicativeQuotesSender } from "@drift-labs/sdk";
+```
+
+`Class IndicativeQuotesSender` Reference ↗
+
+`any`
+
+`any`
+
+`any`
+
+`any`
+
+`any`
+
+`any`
+
+`any`
+
+`any`
+
+`any`
+
+`(nonce: string) => string`
+
+`(message: any) => void`
+
+`() => Promise `
+
+`any`
+
+`(newQuotes: Quote | Quote[]) => void`
+
+`any`
+
+| Property | Type | Required |
+| --- | --- | --- |
+| `endpoint` | Yes |
+| `keypair` | Yes |
+| `heartbeatTimeout` | Yes |
+| `sendQuotesInterval` | Yes |
+| `heartbeatIntervalMs` | Yes |
+| `reconnectDelay` | Yes |
+| `ws` | Yes |
+| `connected` | Yes |
+| `quotes` | Yes |
+| `generateChallengeResponse` | Yes |
+| `handleAuthMessage` | Yes |
+| `connect` | Yes |
+| `startHeartbeatTimer` | Yes |
+| `setQuote` | Yes |
+| `reconnect` | Yes |
+
+```
+import {
+  IndicativeQuotesSender,
+  PRICE_PRECISION,
+  BASE_PRECISION,
+  BN,
+  convertToNumber,
+  loadKeypair,
+} from "@drift-labs/sdk";
+ 
+// Constructor takes the WebSocket endpoint and your keypair (for auth)
+const keypair = loadKeypair("<KEYPAIR_PATH>");
+const quoter = new IndicativeQuotesSender(
+  "wss://dlob.drift.trade/quotes/ws",
+  keypair
+);
+```
+
+TypeScript
+
+```
+// Connects to WebSocket, authenticates via challenge-response with your keypair
+await quoter.connect();
+```
+
+`Method IndicativeQuotesSender.connect` Reference ↗
+
+| Returns |
+| --- |
+| `Promise ` |
+
+## Publishing quotes
+
+Call`setQuote` to publish or update your indicative quote for a market. The WebSocket server broadcasts your quote to all subscribers (UI, aggregators, etc.).
+
+TypeScript
+
+```
+quoter.setQuote({
+  bidPrice: new BN(bid * PRICE_PRECISION.toNumber()),
+  askPrice: new BN(ask * PRICE_PRECISION.toNumber()),
+  bidBaseAssetAmount: new BN(bidSize * BASE_PRECISION.toNumber()),
+  askBaseAssetAmount: new BN(askSize * BASE_PRECISION.toNumber()),
+  marketIndex,
+  isOracleOffset: false,
+});
+```
+
+`Method IndicativeQuotesSender.setQuote` Reference ↗
+
+`Quote | Quote[]`
+
+| Parameter | Type | Required |
+| --- | --- | --- |
+| `newQuotes` | Yes |
+
+| Returns |
+| --- |
+| `void` |
+
+### Complete example: publish quotes that track oracle
+
+This example publishes indicative quotes at a fixed spread around the oracle price, updating every second:
+
+```
+import {
+  IndicativeQuotesSender,
+  PRICE_PRECISION,
+  BASE_PRECISION,
+  BN,
+  convertToNumber,
+  loadKeypair,
+} from "@drift-labs/sdk";
+ 
+const marketIndex = 0; // SOL-PERP
+const spread = 0.25;   // $0.25 on each side
+const quoteSize = 10;  // 10 SOL per side
+ 
+const keypair = loadKeypair("<KEYPAIR_PATH>");
+const quoter = new IndicativeQuotesSender("wss://dlob.drift.trade/quotes/ws", keypair);
+await quoter.connect();
+ 
+// Update quotes periodically
+setInterval(() => {
+  const oracle = driftClient.getOracleDataForPerpMarket(marketIndex);
+  const oraclePrice = convertToNumber(oracle.price, PRICE_PRECISION);
+ 
+  const bidPrice = oraclePrice - spread;
+  const askPrice = oraclePrice + spread;
+ 
+  quoter.setQuote({
+    bidPrice: new BN(Math.round(bidPrice * PRICE_PRECISION.toNumber())),
+    askPrice: new BN(Math.round(askPrice * PRICE_PRECISION.toNumber())),
+    bidBaseAssetAmount: new BN(Math.round(quoteSize * BASE_PRECISION.toNumber())),
+    askBaseAssetAmount: new BN(Math.round(quoteSize * BASE_PRECISION.toNumber())),
+    marketIndex,
+    isOracleOffset: false,
+  });
+ 
+  console.log(`Published indicative: bid $${bidPrice.toFixed(2)} / ask $${askPrice.toFixed(2)} (${quoteSize} SOL each side)`);
+}, 1_000);
+```
+
+### Using oracle offsets
+
+If you set`isOracleOffset: true`, the`bidPrice` and`askPrice` are interpreted as offsets from the oracle price rather than absolute prices. This is analogous to oracle offset orders, and the quote floats with the oracle automatically.
+
+```
+const spreadOffset = 0.25; // $0.25 from oracle
+ 
+quoter.setQuote({
+  bidPrice: new BN(Math.round(-spreadOffset * PRICE_PRECISION.toNumber())), // oracle - $0.25
+  askPrice: new BN(Math.round(spreadOffset * PRICE_PRECISION.toNumber())),  // oracle + $0.25
+  bidBaseAssetAmount: new BN(Math.round(10 * BASE_PRECISION.toNumber())),
+  askBaseAssetAmount: new BN(Math.round(10 * BASE_PRECISION.toNumber())),
+  marketIndex: 0,
+  isOracleOffset: true,
+});
+```
+
+## Stopping quotes
+
+To stop publishing quotes for a specific market, send a quote with any field set to`null`. The sender detects incomplete quotes and deletes the stored quote for that market:
+
+```
+// Stop quoting market 0; setting any required field to null triggers deletion
+quoter.setQuote({
+  bidPrice: null,
+  askPrice: null,
+  bidBaseAssetAmount: null,
+  askBaseAssetAmount: null,
+  marketIndex: 0,
+});
+```
+
+## How indicative quotes appear in the orderbook
+
+Indicative quotes show up in the L2 orderbook when you request`includeIndicative=true`. They’re merged with DLOB and vAMM liquidity at each price level, giving takers a fuller picture of available depth.
+
+## Gotchas
+
+- Indicative ≠ committed: aggregators and UIs display indicative quotes as available liquidity, but there’s no onchain enforcement. If you publish quotes you can’t honor, takers will experience slippage and your reputation with routing algorithms may suffer.
+- WebSocket reconnection: if your WebSocket connection drops, your indicative quotes disappear from the orderbook. Implement auto-reconnect and re-publish quotes on reconnection.
+- Oracle offset mode simplifies maintenance: using`isOracleOffset: true` means you don’t need to update quotes when the oracle moves. Only update when changing spread or size. This mirrors oracle offset orders for onchain quoting.
+- Rate limiting: the DLOB WebSocket server may throttle rapid`setQuote` updates. Publishing every second is sufficient for most use cases.
+- Null fields to clear: sending`null` for price/size fields removes your quote. This is important for graceful shutdown; clear your indicative quotes before stopping your bot to avoid showing phantom liquidity.
+
+## Related
+
+- DLOB MM- Resting onchain orders (committed liquidity)
+- Orderbook & Matching- How indicative vs committed liquidity works in the L2 API
+- JIT-only MM- Pair indicative quotes with JIT fills
+- Bot Architecture- Graceful shutdown and reconnection patterns
+
+Last updated on March 20, 2026
+
+SWIFT API Vault Managers

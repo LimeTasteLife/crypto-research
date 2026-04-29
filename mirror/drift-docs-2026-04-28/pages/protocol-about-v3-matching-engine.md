@@ -1,7 +1,6 @@
-# Matching Engine – Drift Protocol
-URL: https://docs.drift.trade/protocol/about-v3/matching-engine
-
 # Matching Engine
+
+Source: https://docs.drift.trade/protocol/about-v3/matching-engine
 
 Drift is a decentralized auction-based trading protocol. Every taker order has the following auction parameters:
 

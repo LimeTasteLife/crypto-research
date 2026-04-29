@@ -1,7 +1,6 @@
-# Audits – Drift Protocol
-URL: https://docs.drift.trade/protocol/risk-and-safety/audits
-
 # Audits
+
+Source: https://docs.drift.trade/protocol/risk-and-safety/audits
 
 ### Trail of Bits
 
@@ -19,6 +18,8 @@ A summary of outstanding findings is shown below.
 
 A full listing of unresolved or partially resolved findings can be found on page 73 of the TOB Audit Report (Report). The undetermined finding relates to Testing code used in production and is described in further detail on page 77 of the Report.
 
+View the full report here.
+
 ### Neodyme
 
 Scope: protocol-v2
@@ -27,8 +28,14 @@ Authored: May 10th 2024
 
 Last Updated: June 27th 2024
 
+View the full report here.
+
 ### Ottersec
 
 Scope: Metamask Snap "Connect" by Drift
 
+View the full report here
+
 Last updated on February 27, 2026
+
+NOTE: The queue file's recon flagged a "ClawSecure Feb 2026" audit citation appearing in a secondary post-mortem (Credshields 2026-04-06). That citation is NOT present on this first-party audits page as of this crawl. Per AGENTS.md hallucination guards, ClawSecure URLs are NOT fetched into this snapshot.

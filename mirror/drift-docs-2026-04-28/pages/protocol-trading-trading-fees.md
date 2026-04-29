@@ -1,7 +1,6 @@
-# Trading Fees – Drift Protocol
-URL: https://docs.drift.trade/protocol/trading/trading-fees
-
 # Trading Fees
+
+Source: https://docs.drift.trade/protocol/trading/trading-fees
 
 Drift offers a highly competitive fee structure with low taker fees and attractive maker rebates across all tiers, with the potential for even lower fees as trading volume increases. Fees are calculated per trade based on the filled notional position size and are charged in the market's quote asset (USDC), affecting the position's cost basis.
 
@@ -13,7 +12,7 @@ Drift's tiered fees for futures markets are based on an on-chain calculation of 
 
 | Tier | 30D Volume | Rookie Taker | Rookie Maker | Champion Taker | Champion Maker | Kickstarter Taker | Kickstarter Maker | Racer Taker | Racer Maker | Elite Taker | Elite Maker | Master Taker | Master Maker |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | <= $2M | 0.0350% | -0.0025% | 0.0210% | -0.0035% | 0.0333% | -0.0026% | 0.0315% | -0.0028% | 0.0280% | -0.0030% | 0.0245% | -0.0033% |
+| 1 | ≤ $2M | 0.0350% | -0.0025% | 0.0210% | -0.0035% | 0.0333% | -0.0026% | 0.0315% | -0.0028% | 0.0280% | -0.0030% | 0.0245% | -0.0033% |
 | 2 | > $2M | 0.0300% | -0.0025% | 0.0180% | -0.0035% | 0.0285% | -0.0026% | 0.0270% | -0.0028% | 0.0240% | -0.0030% | 0.0210% | -0.0033% |
 | 3 | > $10M | 0.0275% | -0.0025% | 0.0165% | -0.0035% | 0.0261% | -0.0026% | 0.0248% | -0.0028% | 0.0220% | -0.0030% | 0.0193% | -0.0033% |
 | 4 | > $20M | 0.0250% | -0.0025% | 0.0150% | -0.0035% | 0.0238% | -0.0026% | 0.0225% | -0.0028% | 0.0200% | -0.0030% | 0.0175% | -0.0033% |
@@ -40,7 +39,13 @@ Examples:
 
 ## Spot Market Fees
 
-(Loaded dynamically from on-chain state.)
+| Tier | Maker Fee | Taker Fee | Referree Taker Discount | Referrer Reward | Filler Reward |
+| --- | --- | --- | --- | --- | --- |
+| Loading... |
+
+(Spot fee table renders client-side via JS; placeholder visible to crawler. Re-fetch via headless browser if exact spot values needed.)
+
+---
 
 ### Drift staking benefits
 
@@ -60,12 +65,12 @@ Filler rewards are variable but up to 10% of the effective taker fee paid by the
 
 ### Fee Adjustments
 
-Longer tail assets can have increased fees to stay in line with external markets fee schedules. Some markets will periodically have flat discounts applied to all fee tiers. See Fee-Adjusted Markets.
+Longer tail assets can have increased fees to stay in line with external markets fee schedules. Some markets will periodically have flat discounts applied to all fee tiers. See Fee-Adjusted Markets
 
 ### Disclaimers
 
 Drift Protocol reserves the right to end the promotional period and the Taker Incentive Program at any time. If the Drift Protocol chooses to do so, it will provide notice to participating users, but such notice is not required in order to conclude the program early or extend the program. Please note that the terms and conditions of this program are subject to change without notice.
 
-There are risks associated with Insurance Fund Staking. Read more about the Insurance Fund Staking and Risks.
+There are risks associated with Insurance Fund Staking. Read more about the Insurance Fund Staking and Risks).**
 
 Last updated on February 27, 2026

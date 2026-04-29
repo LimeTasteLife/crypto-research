@@ -1,7 +1,6 @@
-# Market Specs – Drift Protocol
-URL: https://docs.drift.trade/protocol/trading/market-specs
-
 # Market Specs
+
+Source: https://docs.drift.trade/protocol/trading/market-specs
 
 ## Perpetual Markets Specs
 

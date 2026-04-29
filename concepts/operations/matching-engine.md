@@ -32,6 +32,7 @@ Within each category, actions are sorted in proposer order[^hl-docs-2026-04-27-h
 | [[entities/perpdex/hyperliquid]] | on-chain (HyperCore)[^hl-docs-2026-04-27-hypercore-order-book] | price-time[^hl-docs-2026-04-27-hypercore-order-book] | per-block: non-GTC > cancels > GTC/IOC; proposer order within[^hl-docs-2026-04-27-hypercore-order-book] |
 | [[entities/perpdex/aster]] | on-chain (Aster Chain L1) via encrypted-order pipeline; cryptographic primitive unspecified (MPC/threshold/FHE/TEE candidates); audit gap — engine NOT in published audit set[^aster-docs-2026-04-28-overview-what-is-aster][^aster-docs-2026-04-28-overview-audit-reports] | not surfaced | not surfaced |
 | [[entities/perpdex/lighter]] | off-chain sequencer; SNARK batch proofs verified on Ethereum[^lighter-docs-2026-04-28-about-lighter-technical-architecture-lighter-core] | price-time; executes at maker's price[^lighter-docs-2026-04-28-trading-order-types-and-matching] | SNARK-proven matching — mathematically prevents malicious ordering[^lighter-docs-2026-04-28-trading-order-types-and-matching] |
+| [[drift]] | Three-layer hybrid (JIT auction → DLOB → backstop vAMM) | JIT reverse-Dutch ~10-slot auction; permissionless keeper-operated DLOB with price-time priority; constant-product vAMM backstop with dynamic spread/peg | Keeper bots match orders offchain; backstop AMM fills after 10-slot min duration; Drift runs floating maker bot on-platform for-profit[^drift-docs-2026-04-28-protocol-about-v3-matching-engine][^drift-developers-docs-2026-04-28-developers-market-makers-orderbook-and-matching] |
 
 (Other perpdex venues to be added in subsequent ingest passes.)
 
@@ -51,3 +52,5 @@ None at first ingest.
 [^aster-docs-2026-04-28-overview-audit-reports]: [[sources/aster-docs-2026-04-28-overview-audit-reports]]
 [^lighter-docs-2026-04-28-about-lighter-technical-architecture-lighter-core]: [[sources/lighter-docs-2026-04-28-about-lighter-technical-architecture-lighter-core]]
 [^lighter-docs-2026-04-28-trading-order-types-and-matching]: [[sources/lighter-docs-2026-04-28-trading-order-types-and-matching]]
+[^drift-docs-2026-04-28-protocol-about-v3-matching-engine]: [[sources/drift-docs-2026-04-28-protocol-about-v3-matching-engine]]
+[^drift-developers-docs-2026-04-28-developers-market-makers-orderbook-and-matching]: [[sources/drift-developers-docs-2026-04-28-developers-market-makers-orderbook-and-matching]]

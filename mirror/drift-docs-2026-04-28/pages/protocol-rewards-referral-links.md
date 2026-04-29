@@ -1,7 +1,6 @@
-# Referral Links – Drift Protocol
-URL: https://docs.drift.trade/protocol/rewards/referral-links
-
 # Referral Links
+
+Source: https://docs.drift.trade/protocol/rewards/referral-links
 
 Create your own referral link today, and boost your earnings when you refer new users to trade on Drift! For every new user, you will earn a portion of their trading fees!
 
@@ -30,7 +29,7 @@ Once there, click on "Create my referral link".
 
 ### Customize
 
-Customize your referral link in under 32 characters and click "Create". You won't be able to change your referral link after setting it up the first time.
+Customize your referral link in under 32 characters and click "Create".  You won't be able to change your referral link after setting it up the first time.
 
 ### Approve
 
@@ -39,5 +38,7 @@ Once you've approved the transaction, you will find your rewards under "Total Re
 ### Share
 
 Share your referral link with your friends and community and you'll start earning fees from their trading activity!
+
+It's that easy! Share your link and start earning today!
 
 Last updated on February 27, 2026

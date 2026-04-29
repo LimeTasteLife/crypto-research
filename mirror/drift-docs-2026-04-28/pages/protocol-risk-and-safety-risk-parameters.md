@@ -1,7 +1,6 @@
-# Risk Parameters – Drift Protocol
-URL: https://docs.drift.trade/protocol/risk-and-safety/risk-parameters
-
 # Risk Parameters
+
+Source: https://docs.drift.trade/protocol/risk-and-safety/risk-parameters
 
 These risk parameters are relevant to perpetual futures. Further risk parameters are also set out in Risks.
 

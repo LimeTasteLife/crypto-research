@@ -1,7 +1,6 @@
-# What is the Insurance Fund? – Drift Protocol
-URL: https://docs.drift.trade/protocol/insurance-fund
-
 # What is the Insurance Fund?
+
+Source: https://docs.drift.trade/protocol/insurance-fund
 
 Drift's Insurance Fund is the first backstop to maintaining the solvency of the exchange in the event of any bankruptcies. Any user can stake into Drift's USDC Insurance Fund to accrue fees from Revenue Pool at the risk of resolving user bankruptcies / AMM deficits.
 

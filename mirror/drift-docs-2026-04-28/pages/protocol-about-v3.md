@@ -1,7 +1,6 @@
-# Understanding Drift – Drift Protocol
-URL: https://docs.drift.trade/protocol/about-v3
-
 # Understanding Drift
+
+Source: https://docs.drift.trade/protocol/about-v3
 
 At the application level, Drift Protocol is a decentralized exchange that supports low slippage, low fees, and minimal price impact on all trades. Drift offers four primary products:
 

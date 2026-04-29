@@ -1,7 +1,6 @@
-# Delisting Process – Drift Protocol
-URL: https://docs.drift.trade/protocol/risk-and-safety/delisting-process
-
 # Delisting Process
+
+Source: https://docs.drift.trade/protocol/risk-and-safety/delisting-process
 
 Delisting a perpetuals market can occur in a tail risk event, but the protocol has an on-chain procedure in place similar to the expiry of any derivatives contract (futures, options).
 

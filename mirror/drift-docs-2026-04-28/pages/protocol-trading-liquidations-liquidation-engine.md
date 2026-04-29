@@ -1,5 +1,6 @@
-# Liquidation Engine – Drift Protocol
-URL: https://docs.drift.trade/protocol/trading/liquidations/liquidation-engine
+# Liquidation Engine
+
+Source: https://docs.drift.trade/protocol/trading/liquidations/liquidation-engine
 
 ## Liquidation engine
 

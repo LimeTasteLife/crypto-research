@@ -47,6 +47,7 @@ sample = current observation
 | [[entities/perpdex/hyperliquid]] | oracle+EMA, HL book median, external perp median[^hl-docs-2026-04-27-trading-robust-price-indices] | median (with fallback EMA when one missing)[^hl-docs-2026-04-27-trading-robust-price-indices] | margining, liquidations, TP/SL trigger, unrealized PnL[^hl-docs-2026-04-27-trading-robust-price-indices] |
 | [[entities/perpdex/aster]] | Price1 = Index×(1 + Funding × time-to-next/8); Price2 = Index + 5min MA of (Bid1+Ask1)/2 − Index; Contract price[^aster-docs-2026-04-28-trading-perpetuals-mark-price] | median(Price1, Price2, Contract)[^aster-docs-2026-04-28-trading-perpetuals-mark-price] | margining, liquidations, unrealized PnL[^aster-docs-2026-04-28-trading-perpetuals-mark-price] |
 | [[entities/perpdex/lighter]] | (1) impact price, (2) index + EMA₈ₘᵢₙ(clamp(impact − index, ±index/200)), (3) median of CEX marks[^lighter-docs-2026-04-28-trading-fair-price-marking] | median of three; impact notional = 500 USDC / IMF[^lighter-docs-2026-04-28-trading-fair-price-marking] | margin, liquidation, funding[^lighter-docs-2026-04-28-trading-fair-price-marking] |
+| [[entities/perpdex/drift]] | reservation (AMM) price = `quote_reserves / base_reserves * peg`; oracle + EMA TWAP (1hr + 5min intervals); 10% price-band guard vs 5-min oracle TWAP[^drift-docs-2026-04-28-protocol-about-v3-drift-amm][^drift-docs-2026-04-28-protocol-risk-and-safety-risk-parameters] | peg moves toward oracle each fill cycle; AMM updated same-slot with valid oracle[^drift-docs-2026-04-28-protocol-about-v3-drift-amm] | margining, liquidations (oracle-anchored, NOT mark), funding (mark TWAP vs oracle TWAP), order acceptance (10% band)[^drift-docs-2026-04-28-protocol-risk-and-safety-risk-parameters][^drift-docs-2026-04-28-protocol-trading-liquidations-liquidation-engine] |
 
 (Other perpdex venues to be added in subsequent ingest passes.)
 
@@ -58,10 +59,13 @@ sample = current observation
 None at first ingest.
 
 ## Related
-[[concepts/market-microstructure/oracle-spec]] · [[concepts/risk/liquidation]] · [[concepts/fee-model/funding-rate]] · [[parameters/hyperliquid/oracle-config]]
+[[concepts/market-microstructure/oracle-spec]] · [[concepts/risk/liquidation]] · [[concepts/fee-model/funding-rate]] · [[parameters/hyperliquid/oracle-config]] · [[entities/perpdex/drift]] · [[parameters/drift/oracle-config]]
 
 ## Sources
 [^hl-docs-2026-04-27-trading-robust-price-indices]: [[sources/hl-docs-2026-04-27-trading-robust-price-indices]]
 [^hl-docs-2026-04-27-trading-liquidations]: [[sources/hl-docs-2026-04-27-trading-liquidations]]
 [^aster-docs-2026-04-28-trading-perpetuals-mark-price]: [[sources/aster-docs-2026-04-28-trading-perpetuals-mark-price]]
 [^lighter-docs-2026-04-28-trading-fair-price-marking]: [[sources/lighter-docs-2026-04-28-trading-fair-price-marking]]
+[^drift-docs-2026-04-28-protocol-about-v3-drift-amm]: [[sources/drift-docs-2026-04-28-protocol-about-v3-drift-amm]]
+[^drift-docs-2026-04-28-protocol-risk-and-safety-risk-parameters]: [[sources/drift-docs-2026-04-28-protocol-risk-and-safety-risk-parameters]]
+[^drift-docs-2026-04-28-protocol-trading-liquidations-liquidation-engine]: [[sources/drift-docs-2026-04-28-protocol-trading-liquidations-liquidation-engine]]

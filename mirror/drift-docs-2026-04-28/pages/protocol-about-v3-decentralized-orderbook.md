@@ -1,7 +1,6 @@
-# Decentralized Orderbook – Drift Protocol
-URL: https://docs.drift.trade/protocol/about-v3/decentralized-orderbook
-
 # Decentralized Orderbook
+
+Source: https://docs.drift.trade/protocol/about-v3/decentralized-orderbook
 
 ## Overview
 

@@ -38,6 +38,7 @@ A margin tier is a per-asset rule that maps a position's notional size to an `(i
 |---|---|---|---|---|
 | [[entities/perpdex/hyperliquid]] | per-asset, position-value-keyed[^hl-docs-2026-04-27-trading-liquidations] | 3x – 40x[^hl-docs-2026-04-27-trading-liquidations] | open-only[^hl-docs-2026-04-27-trading-margining] | yes under unified/portfolio-margin abstraction; no under standard[^hl-docs-2026-04-27-trading-margining] |
 | [[entities/perpdex/aster]] | tier-based on total position size[^aster-docs-2026-04-28-trading-perpetuals-margin] | not surfaced | not surfaced | modes: Cross (default) + Isolated (opt-in, locked once position/order submitted)[^aster-docs-2026-04-28-trading-perpetuals-margin] |
+| [[entities/perpdex/drift]] | IMF scaling: `marginRatio = baseMarginRatio + imfFactor * sqrt(size * 10)`; 6 Contract Tiers (A/B/C/Speculative/Highly Speculative/Isolated)[^drift-docs-2026-04-28-protocol-risk-and-safety-risk-parameters][^drift-docs-2026-04-28-protocol-trading-market-specs] | disputed 20x-101x (see [[entities/perpdex/drift]]#disputed)[^drift-sdk-docs-2026-04-28-concepts-margin] | open + fill (margin checked both at submission and at match)[^drift-developers-docs-2026-04-28-developers-concepts-account-model] | modes: DEFAULT (cross), HIGH_LEVERAGE (lower IM/MM, capped maxUsers), ISOLATED (per-market only, disables cross-margin)[^drift-sdk-docs-2026-04-28-concepts-margin][^drift-docs-2026-04-28-protocol-trading-market-specs] |
 
 (Other perpdex venues to be added in subsequent ingest passes.)
 
@@ -49,9 +50,13 @@ A margin tier is a per-asset rule that maps a position's notional size to an `(i
 None at first ingest.
 
 ## Related
-[[concepts/risk/liquidation]] · [[concepts/risk/leverage-cap]] · [[parameters/hyperliquid/listed-markets-roster]] · [[entities/perpdex/hyperliquid]]
+[[concepts/risk/liquidation]] · [[concepts/risk/leverage-cap]] · [[parameters/hyperliquid/listed-markets-roster]] · [[entities/perpdex/hyperliquid]] · [[entities/perpdex/drift]] · [[parameters/drift/risk-parameters]]
 
 ## Sources
 [^hl-docs-2026-04-27-trading-margining]: [[sources/hl-docs-2026-04-27-trading-margining]]
 [^hl-docs-2026-04-27-trading-liquidations]: [[sources/hl-docs-2026-04-27-trading-liquidations]]
 [^aster-docs-2026-04-28-trading-perpetuals-margin]: [[sources/aster-docs-2026-04-28-trading-perpetuals-margin]]
+[^drift-docs-2026-04-28-protocol-risk-and-safety-risk-parameters]: [[sources/drift-docs-2026-04-28-protocol-risk-and-safety-risk-parameters]]
+[^drift-docs-2026-04-28-protocol-trading-market-specs]: [[sources/drift-docs-2026-04-28-protocol-trading-market-specs]]
+[^drift-sdk-docs-2026-04-28-concepts-margin]: [[sources/drift-sdk-docs-2026-04-28-concepts-margin]]
+[^drift-developers-docs-2026-04-28-developers-concepts-account-model]: [[sources/drift-developers-docs-2026-04-28-developers-concepts-account-model]]

@@ -29,3 +29,6 @@ _(none yet)_
 |---|---|---|---|---|
 | aster-docs-2026-04-28 | https://docs.asterdex.com/ | 2026-04-28T01:05:00Z | 20 | 20 |
 | hl-docs-2026-04-27 | https://hyperliquid.gitbook.io/hyperliquid-docs | 2026-04-27 | 20 | 20 |
+| drift-docs-2026-04-28 | https://docs.drift.trade/ | 2026-04-28T02:30:00Z | 20 | 20 |
+| drift-developers-docs-2026-04-28 | https://docs.drift.trade/developers | 2026-04-28T02:45:00Z | 20 | 20 |
+| drift-sdk-docs-2026-04-28 | https://mintlify.com/drift-labs/protocol-v2/ | 2026-04-28T03:00:00Z | 20 | 20 |

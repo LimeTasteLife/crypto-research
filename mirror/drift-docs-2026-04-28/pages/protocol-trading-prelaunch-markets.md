@@ -1,7 +1,6 @@
-# Prelaunch Market – Drift Protocol
-URL: https://docs.drift.trade/protocol/trading/prelaunch-markets
-
 # Prelaunch Market
+
+Source: https://docs.drift.trade/protocol/trading/prelaunch-markets
 
 Prelaunch Markets are custom markets that allow users to book trade before reliable external oracle is available.
 

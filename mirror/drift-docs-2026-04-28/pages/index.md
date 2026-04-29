@@ -1,8 +1,6 @@
-# Introduction – Drift Protocol
-
-URL: https://docs.drift.trade/
-
 # Introduction
+
+Source: https://docs.drift.trade/
 
 Drift Protocol is a decentralised exchange, open-sourced and built on the Solana blockchain.
 

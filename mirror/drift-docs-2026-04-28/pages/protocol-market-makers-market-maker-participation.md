@@ -1,7 +1,6 @@
-# Market Maker Participation – Drift Protocol
-URL: https://docs.drift.trade/protocol/market-makers/market-maker-participation
-
 # Market Maker Participation
+
+Source: https://docs.drift.trade/protocol/market-makers/market-maker-participation
 
 For more information on incentive programs for Market Makers, see Maker Rebate Fees
 

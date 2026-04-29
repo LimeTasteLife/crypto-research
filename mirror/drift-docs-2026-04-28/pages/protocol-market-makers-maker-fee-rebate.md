@@ -1,7 +1,6 @@
-# Maker Fee Rebate – Drift Protocol
-URL: https://docs.drift.trade/protocol/market-makers/maker-fee-rebate
-
 # Maker Fee Rebate
+
+Source: https://docs.drift.trade/protocol/market-makers/maker-fee-rebate
 
 For more information on our fee tiers, please see trading fees
 

@@ -1,17 +1,16 @@
-# Oracles – Drift Protocol
-URL: https://docs.drift.trade/protocol/trading/oracles
-
 # Oracles
+
+Source: https://docs.drift.trade/protocol/trading/oracles
 
 Drift Protocol has a number of resiliency checks around new oracle data as well as updates an oracle twap for its margin risk engine. Each market tracks the last seen oracle values and updates an EMA of TWAP for over both 1hr (funding period) and 5min intervals.
 
-Drift utilises Pyth as an oracle source. The protocol has the flexibility to update and customize as necessary on a per-market basis.
+Drift utilises as an oracle source. The protocol has the flexibility to update and customize as necessary on a per-market basis.
 
 ### Validity Checks
 
 For robustness, Drift's program checks oracle validity. The validity is evaluated on a per-check and action basis to determine whether to block actions. See Protocol Guard Rails for more details.
 
-### Stale (ForAmm/ForMargin)
+### Stale(ForAmm/ForMargin)
 
 Last slot update too far behind the current slot — 10/120 slots
 

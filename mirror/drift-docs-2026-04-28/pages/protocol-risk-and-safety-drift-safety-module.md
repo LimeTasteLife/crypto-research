@@ -1,7 +1,6 @@
-# Drift Safety Module – Drift Protocol
-URL: https://docs.drift.trade/protocol/risk-and-safety/drift-safety-module
-
 # Drift Safety Module
+
+Source: https://docs.drift.trade/protocol/risk-and-safety/drift-safety-module
 
 Drift Safety Module ("DSM") is a fully on-chain system for automatically covering bad debt and managing protocol risk. DSM introduces a more capital-efficient and automated way to protect the protocol without requiring governance intervention.
 
@@ -15,7 +14,7 @@ DSM can be interacted with using the app.drift.trade interface.
 
 ## Safety Incentives
 
-The potential incentives for the safety module can include what is outlined in a successfully passed governance proposal by the DAO.
+The potential incentives for the safety module can include what is outlined in a successfully passed governance proposal by the DAO (here).
 
 Overtime, further utility functions can be added to DRIFT across validator and other network functions through DAO proposals.
 
