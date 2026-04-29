@@ -58,13 +58,13 @@ Each angle composes with one or more existing `concepts/<domain>/` locations (de
 | A4 Market Making | `mm-agreement` | `market-microstructure` (latency, quote-obligation), `metrics` (mm-uptime, depth, concentration) |
 | A5 Spot LP | `lp` | `metrics` (LP-specific KPIs) |
 | A6 Risk forecasting | `risk`, `metrics` | `market-microstructure` (oracle integrity at risk-param time) |
-| A7 Governance / Parameter Authority | `operations` (partial — sequencer-failover, settlement-finality cover infra; param-mutation cadence is the gap) | propose new domain `governance` on first-need |
-| A8 Security / Incident Response | `operations` (partial — oracle, settlement-finality) | propose new domain `security` on first-need |
-| A9 Regulatory / Market-Type Classification | none direct | propose new domain `regulatory` on first-need |
+| A7 Governance / Parameter Authority | `governance` | `operations` (partial — sequencer-failover, settlement-finality remain ops-mechanism); `mm-agreement` (when MM authority overlaps) |
+| A8 Security / Incident Response | `security` | `operations` (partial — oracle, settlement-finality remain ops-mechanism); `risk` (when incident triggers liq cascade) |
+| A9 Regulatory / Market-Type Classification | `regulatory` | `listing` (per-product legal opinion at listing time); `incentives` (affiliate eligibility per jurisdiction) |
 
 **Filing rule:** when a claim's `filed_to` page resolves to a domain in the angle's row, the placement is canonical. If `frame_tag` and resolved `filed_to` domain disagree, the **domain wins** — correct the `frame_tag`, never the page location. The angle ↔ domain mapping is one-to-many; the page tier (entity / concept / parameter) is unchanged by the frame.
 
-For A7/A8/A9, until a dedicated concept domain is created, file claims under `operations` with the appropriate `frame_tag`. Lint will surface accumulated A7/A8/A9 claims under `operations` to signal when a domain split is justified (heuristic: ≥10 claims in one of A7/A8/A9 across ≥2 perpdex entities).
+The A7/A8/A9 dedicated domains were promoted on 2026-04-29 after thresholds were crossed wiki-wide (A7: 161 claims / 6 venues; A8: 182 claims / 6 venues; A9: 33 claims / 3 venues — see `audit/2026-04-28-ontology-state-audit.md` F2 finding and 2026-04-29 rebaseline). Going forward, file A7 claims under `concepts/governance/`, A8 under `concepts/security/`, and A9 under `concepts/regulatory/`. Pre-promotion claims filed under `operations` may carry forward without re-tagging unless a Phase 2 pass touches their source page; the migration is opportunistic, not bulk.
 
 ## Coverage matrix
 

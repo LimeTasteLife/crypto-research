@@ -46,6 +46,9 @@ Domain abstractions. The definition does not change; only its variants in the wi
 | `incentives` | referral-design, points-program, trading-competition, affiliate-structure, anti-abuse, sybil-resistance, campaign-roi |
 | `mm-agreement` | quote-obligation, mm-tier, rebate-ladder, uptime-sla, exclusivity, spread-requirement, depth-commitment |
 | `metrics` | depth-1bp, depth-10bp, depth-100bp, volume, oi, fill-rate, slippage, mm-uptime, concentration-ratio, taker-flow, fdv |
+| `governance` | parameter-mutation-cadence, emergency-pause-authority, veto-holders, governance-vs-ops-separation, validator-commission-rules |
+| `security` | audit-cadence-and-scope, incident-response-sla, oracle-attack-history, bug-bounty-program, validator-mev-policy, downtime-credit-policy |
+| `regulatory` | blocked-jurisdictions, kyc-tier, product-classification, affiliate-eligibility, frontend-sovereignty |
 
 _Slugs in the `examples` column are illustrative; create concept pages as ingest demands — not every listed slug has a page on disk yet._
 
