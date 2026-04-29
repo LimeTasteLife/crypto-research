@@ -71,6 +71,7 @@ A trade at the zero price preserves the TAV/MMR ratio (i.e. it is a health-prese
 |---|---|---|---|---|---|---|
 | [[entities/perpdex/hyperliquid]] | account_value < MM × notional[^hl-docs-2026-04-27-trading-margining] | yes (full size) | [[parameters/hyperliquid/hlp]] vault | 100k USDC (10k testnet) | none[^hl-docs-2026-04-27-trading-liquidations] | book closure: residual to trader. backstop: MM forfeited[^hl-docs-2026-04-27-trading-liquidations] |
 | [[entities/perpdex/aster]] | maintenance margin breach (tier-based)[^aster-docs-2026-04-28-trading-perpetuals-liquidations] | yes (1 large IOC partial close)[^aster-docs-2026-04-28-trading-perpetuals-liquidations] | Insurance Fund[^aster-docs-2026-04-28-trading-perpetuals-liquidations] | not surfaced | not surfaced | 5-step waterfall: cancel orders → IOC → recheck → IF transfer at bankruptcy price → ADL fall-through; negative-balance ≤5,000 USDT auto-IF-cover (USDT-perp accounts only, no open positions, no offsetting transfers)[^aster-docs-2026-04-28-trading-perpetuals-liquidations] |
+| [[entities/perpdex/drift]] | totalCollateral < marginRequirement(maintenance)[^drift-docs-2026-04-28-protocol-trading-liquidations-liquidation-engine] | yes (partial, 25-slot pacing)[^drift-docs-2026-04-28-protocol-trading-liquidations-liquidation-engine] | multi-asset IF (USDC/BTC/ETH/SOL) + Drift Safety Module[^drift-docs-2026-04-28-protocol-insurance-fund] | 25-slot pacing window (accelerates if price continues against)[^drift-docs-2026-04-28-protocol-trading-liquidations-liquidation-engine] | none surfaced | oracle-anchored (not mark); >=50% deviation from 5-min TWAP blocks liquidation; perp bankruptcy waterfall: external IF -> vAMM lifetime profit -> socialized loss[^drift-docs-2026-04-28-protocol-trading-liquidations-liquidation-engine] |
 
 (Other perpdex venues to be added in subsequent ingest passes.)
 
@@ -83,7 +84,7 @@ A trade at the zero price preserves the TAV/MMR ratio (i.e. it is a health-prese
 None at first ingest.
 
 ## Related
-[[concepts/risk/margin-tier]] · [[concepts/risk/adl-waterfall]] · [[concepts/market-microstructure/mark-price-formula]] · [[parameters/hyperliquid/hlp]] · [[entities/perpdex/hyperliquid]]
+[[concepts/risk/margin-tier]] · [[concepts/risk/adl-waterfall]] · [[concepts/market-microstructure/mark-price-formula]] · [[parameters/hyperliquid/hlp]] · [[entities/perpdex/hyperliquid]] · [[entities/perpdex/drift]] · [[parameters/drift/liquidation-params]]
 
 ## Sources
 [^hl-docs-2026-04-27-trading-liquidations]: [[sources/hl-docs-2026-04-27-trading-liquidations]]
@@ -95,3 +96,5 @@ None at first ingest.
 [^lighter-docs-2026-04-28-trading-order-types-and-matching]: [[sources/lighter-docs-2026-04-28-trading-order-types-and-matching]]
 [^lighter-docs-2026-04-28-about-lighter-technical-architecture-lighter-core]: [[sources/lighter-docs-2026-04-28-about-lighter-technical-architecture-lighter-core]]
 [^lighter-docs-2026-04-28-trading-contract-specifications]: [[sources/lighter-docs-2026-04-28-trading-contract-specifications]]
+[^drift-docs-2026-04-28-protocol-trading-liquidations-liquidation-engine]: [[sources/drift-docs-2026-04-28-protocol-trading-liquidations-liquidation-engine]]
+[^drift-docs-2026-04-28-protocol-insurance-fund]: [[sources/drift-docs-2026-04-28-protocol-insurance-fund]]
