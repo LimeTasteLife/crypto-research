@@ -23,7 +23,7 @@ The wiki has reached **3-perpdex breadth** (Aster, Hyperliquid, Lighter) with ri
 
 1. **Phase 2 deferred debt — Lighter and Aster Variants rows.** Both perpdex entities exist with full mechanism prose on entity pages, but **14 of 25 concept pages have partial-coverage Variants tables**. `concepts/fee-model/funding-rate.md` has Hyperliquid only; `concepts/risk/liquidation.md` has Hyperliquid only (Aster narrative in body, Lighter has narrative section but no table row). Cross-venue comparison — the wiki's reason to exist — is currently single-venue.
 2. **Concept-domain split: `concepts/security/` and `concepts/governance/`.** Threshold (≥10 claims / ≥2 perpdex) hit hard in both: A8 = 59 claims, A7 = 41 claims. Continuing to file under `operations` dilutes the lint signal.
-3. **Frame coverage rationale-completeness gap.** All three perpdex pages have cells in `gap` or `not-applicable` state without the schema-required one-line rationale (Aster 13, Hyperliquid 13, Lighter 10). Lint will flag every one as `frame: unrationalized`.
+3. ~~**Frame coverage rationale-completeness gap.** All three perpdex pages have cells in `gap` or `not-applicable` state without the schema-required one-line rationale (Aster 13, Hyperliquid 13, Lighter 10). Lint will flag every one as `frame: unrationalized`.~~ **Withdrawn per F3 erratum (2026-04-29) — direct grep finds 0 unrationalized cells; agent failed to handle the `A5/PI through A5/PV` shorthand and over-counted.**
 4. **Hyperliquid is the least-rationalised perpdex (38% filled).** Aster 60%, Lighter 47%, HL 38%. HL has 17 gaps, suggesting the 2026-04-27 baseline ingest was breadth-light despite being the schema's reference implementation.
 5. **Parameter slot drift (7 undocumented keys in active use).** `audit-registry`, `contract-registry`, `funding-rate-rebates`, `llp`, `peg-config`, `points-rules`, `pool-spec` all in use; none in the AGENTS.md exemplar list. Schema-patch needed to legalize or rename.
 
@@ -93,7 +93,7 @@ A7's high concentration on Aster (40/41 ≈ 98%) is a single-source artefact (as
 
 **Schema-patch required.** This is a `concept-domain` extension, not an inline body change — must be an explicit user-acknowledged schema patch session before any Phase 2 run rewrites filing rules.
 
-### HIGH — F3. Frame coverage cells without rationale
+### HIGH — F3. Frame coverage cells without rationale — **erratum: false positive on controller post-verification (2026-04-29)**
 
 **Claim:** AGENTS.md requires every NA / gap cell to carry a one-line rationale. Lint will fire `frame: unrationalized` per offending cell.
 
@@ -106,6 +106,22 @@ A7's high concentration on Aster (40/41 ≈ 98%) is a single-source artefact (as
 **Cross-venue systemic gap:** A6/PIII (Insurance-Fund coverage ratio) is `gap` on all three venues. This is a wiki-wide blindspot — no perpdex publishes IF / (max-OI × stress-slippage × gap%) ≥ 1.0 @ p99. Worth an open-question entry.
 
 **Note on agent-reported cell lists:** Controller did not independently re-grep every cell. Treat agent counts as upper bounds; remediation pass should re-verify.
+
+**Erratum (2026-04-29) — controller post-verification:** Direct grep against entity pages confirms **zero unrationalized cells** across Aster / HL / Lighter. Verification commands and findings:
+
+| entity | NA/gap cells with em-dash rationale (`^- A[1-9]/P[IV]+: (gap\|not-applicable) — `) | A5 shorthand | total NA/gap |
+|---|---:|---:|---:|
+| Aster | 18 | 0 | 18 (all rationalized) |
+| Hyperliquid | 23 | 5 (`A5/PI through A5/PV: not-applicable — no documented spot DEX LP layer in primary docs (spot trades are CLOB, not AMM-LP)`) | 28 (all rationalized) |
+| Lighter | 19 | 5 (`A5/PI through A5/PV: not-applicable — Lighter is perp-first; spot exists but the docs surface no AMM-LP / pair-fee-tier / IL / JIT-defense layer; Public Pools and LLP are vault/insurance constructs filed under A4`) | 24 (all rationalized) |
+
+Direct grep `^- A[1-9]/P[IV]+: (gap|not-applicable)(?:$| [^—])` returns **zero matches** in all three files — every NA/gap cell has the em-dash rationale.
+
+**Why agent over-counted:** the per-axis frame-coverage agent did not handle the `A5/PI through A5/PV: <state> — <rationale>` shorthand (one bullet covering five cells). It also flagged formally-correct but unfamiliar phrasing as "missing." Per-cell lists in the original table above are inflated and inconsistent with the per-entity totals stated in the snapshot table (`Aster: 27 / 5 / 13`, etc.) — the snapshot totals were correct; the per-cell expansion was not.
+
+**Lighter "duplicate" cells:** 9 cells appear twice on `entities/perpdex/lighter.md` — once in `## Frame coverage` (state + rationale) and once in `## Open questions` (research-question form). This is intentional structure, not a defect. Aster and HL do not currently mirror this convention.
+
+**No remediation required.** P3 prediction ("frame: unrationalized count drops from 36 to 0") is moot — the count was already 0 at audit time. Frame-rationale backfill cancelled.
 
 ### HIGH — F4. Hyperliquid is the least-filled perpdex
 
@@ -170,7 +186,7 @@ Schema-evolution-pressure agent claimed two invented verbs. Controller verified 
 Highest-leverage wins first. Each item is sized for one Phase 2 pass.
 
 1. **Variants-row backfill (F1).** One controlled Phase 2 pass that adds the top-10 missing rows. Touches ≤10 concept pages. No new entity creation. Fastest win on the wiki's primary affordance.
-2. **Frame rationale completeness (F3).** One pass per perpdex, append one-line rationales to all NA/gap cells. Pure documentation — no new claims. Lint will go from many `frame: unrationalized` flags to clean.
+2. ~~**Frame rationale completeness (F3).** One pass per perpdex, append one-line rationales to all NA/gap cells. Pure documentation — no new claims. Lint will go from many `frame: unrationalized` flags to clean.~~ **Cancelled per F3 erratum (2026-04-29) — already 0 unrationalized cells.**
 3. **Schema patch session (F2 + F5 + F7).** Single user-acknowledged AGENTS.md edit covering: `concepts/security/` and `concepts/governance/` domain creation, parameter slot legalisation/rename, and `bridges_to` / `backstops` verb-set decisions. After patch, re-file affected source-claim `frame_tag` values.
 4. **Hyperliquid breadth pass (F4).** Either refresh `hl-docs-2026-04-27` (raise max_pages and re-crawl) or work the existing snapshot's `queue_remainder` if non-empty. Prerequisite to closing HL's 17 gaps.
 5. **Disputed-claim resolution path (F6).** One open-question entry per dispute with explicit verification suggestion. Currently disputes are recorded but no resolution attempt is scheduled.
@@ -187,7 +203,7 @@ For the next ingest pass to validate against (per audit-layer convention):
 |---|---|---|
 | P1 | After the Variants-row backfill, lint will report `phase2: deferred` count drop from ≥14 to ≤4. | Run lint pre/post. |
 | P2 | After A7/A8 domain split, re-tagging `frame_tag` will cause `concepts/operations/`'s claim-count to drop by ≥80 across the 3 perpdex source sets. | Grep `filed_to: concepts/operations` in `sources/*.md` pre/post. |
-| P3 | After frame-rationale backfill, `frame: unrationalized` count drops from 36 (13 + 13 + 10) to 0. Any residual unrationalized cell indicates a schema-comprehension bug worth investigating. | Lint pre/post. |
+| P3 | ~~After frame-rationale backfill, `frame: unrationalized` count drops from 36 (13 + 13 + 10) to 0.~~ **Moot per F3 erratum (2026-04-29) — count was already 0 at audit time; agent over-counted.** | n/a |
 | P4 | The next perpdex ingest (drift or dydx, per queue) will hit `funding-rate.md` and `liquidation.md` Variants tables with new rows; if the wiki is healthy, this will reveal whether the backfill format generalises or requires column-set refinement. | Diff `concepts/fee-model/funding-rate.md` and `concepts/risk/liquidation.md` after next perpdex ingest. |
 | P5 | Aster's A7-PI claim count (25, dominant) will partially shift to Lighter / HL after dedicated Aster-isolation review and re-tagging — A7 is over-represented on Aster only because the docs are dense, not because Aster has more governance surface. | Re-tag pass; recount. |
 
@@ -198,7 +214,7 @@ For the next ingest pass to validate against (per audit-layer convention):
 Compressed summaries; full agent reports in conversation history.
 
 ### Axis 1 — Frame coverage 9×5
-Aster 27/5/13, HL 17/11/17, Lighter 21/8/16 (filled/NA/gap, sum 45). 36 total cells lack rationale. No malformed frame_tag patterns. A6/PIII (IF coverage ratio) is gap on all three venues — wiki-wide blindspot. A9 cluster (regulatory) gap-heavy across all three.
+Aster 27/5/13, HL 17/11/17, Lighter 21/8/16 (filled/NA/gap, sum 45). ~~36 total cells lack rationale.~~ **Per F3 erratum (2026-04-29): 0 cells lack rationale; agent over-counted by failing to handle the `A5/PI through A5/PV` shorthand.** No malformed frame_tag patterns. A6/PIII (IF coverage ratio) is gap on all three venues — wiki-wide blindspot. A9 cluster (regulatory) gap-heavy across all three.
 
 ### Axis 2 — Schema compliance lint
 1 invented verb in HL (`backstops`, schema-pending). Sample of 10 wikilinks all resolve. No unfootnoted claims in sample. 2 disputed-true pages — both within SLA. Confirmed via direct grep that `concepts/fee-model/funding-rate.md` and `concepts/risk/liquidation.md` Variants tables omit Lighter despite Lighter entity body claiming the relations.
