@@ -23,13 +23,13 @@ FE/wallet integrator Q&A. Officially recognized wallets: Keplr, Leap. Multi-sig/
 
 | id | claim | filed_to | frame_tag |
 |----|-------|----------|-----------|
-| #c1 | Officially recognized dYdX wallets are Keplr and Leap (both popular Cosmos wallets). | [[entities/perpdex/dydx-v4]] | - |
-| #c2 | Multi-sig and MPCs supporting dYdX include Keplr Multisig and Fordefi. | [[entities/perpdex/dydx-v4]] | - |
-| #c3 | BuyingPower cannot be retrieved directly from the API because each market has a different maximum leverage; equity and freeCollateral are available via `/v4/addresses/<address>`. | [[entities/perpdex/dydx-v4]] | A1-PI |
-| #c4 | Market orders on dYdX must be short-term orders (with GoodTilBlock set); otherwise they fail with "FillOrKill order could not be fully filled". | [[entities/perpdex/dydx-v4]] | A1-PI |
-| #c5 | The dYdX address derivation pattern from MetaMask is: MetaMask address → sign a message → dYdX address (the user must own the metamask private key). | [[entities/perpdex/dydx-v4]] | A1-PI |
-| #c6 | Custom UI integrations can connect MetaMask wallet, then prompt the user to sign the derivation message; the front-end code is open-source at https://github.com/dydxprotocol/v4-web. | [[entities/perpdex/dydx-v4]] | A9-PV |
-| #c7 | A WebSocket heartbeat stream is not needed for dYdX. | [[entities/perpdex/dydx-v4]] | - |
-| #c8 | A new-block subscription is not available on WebSocket; use the REST `/getheight` endpoint or run a local full node to track block height (recommended for avoiding REST rate limits). | [[entities/perpdex/dydx-v4]] | A1-PI |
-| #c9 | One orderbook update per block per pair cannot be assumed because the order book is off-chain. | [[entities/perpdex/dydx-v4]] | A1-PI |
-| #c10 | Trade-confirmation events are received via the WebSocket v4_subaccount channel (delivers fills). | [[entities/perpdex/dydx-v4]] | A1-PI |
+| #c1 | Officially recognized dYdX wallets are Keplr and Leap (both popular Cosmos wallets). | [[entities/perpdex/dydx]] | - |
+| #c2 | Multi-sig and MPCs supporting dYdX include Keplr Multisig and Fordefi. | [[entities/perpdex/dydx]] | - |
+| #c3 | BuyingPower cannot be retrieved directly from the API because each market has a different maximum leverage; equity and freeCollateral are available via `/v4/addresses/<address>`. | [[entities/perpdex/dydx]] | A1-PI |
+| #c4 | Market orders on dYdX must be short-term orders (with GoodTilBlock set); otherwise they fail with "FillOrKill order could not be fully filled". | [[entities/perpdex/dydx]] | A1-PI |
+| #c5 | The dYdX address derivation pattern from MetaMask is: MetaMask address → sign a message → dYdX address (the user must own the metamask private key). | [[entities/perpdex/dydx]] | A1-PI |
+| #c6 | Custom UI integrations can connect MetaMask wallet, then prompt the user to sign the derivation message; the front-end code is open-source at https://github.com/dydxprotocol/v4-web. | [[entities/perpdex/dydx]] | A9-PV |
+| #c7 | A WebSocket heartbeat stream is not needed for dYdX. | [[entities/perpdex/dydx]] | - |
+| #c8 | A new-block subscription is not available on WebSocket; use the REST `/getheight` endpoint or run a local full node to track block height (recommended for avoiding REST rate limits). | [[entities/perpdex/dydx]] | A1-PI |
+| #c9 | One orderbook update per block per pair cannot be assumed because the order book is off-chain. | [[entities/perpdex/dydx]] | A1-PI |
+| #c10 | Trade-confirmation events are received via the WebSocket v4_subaccount channel (delivers fills). | [[entities/perpdex/dydx]] | A1-PI |

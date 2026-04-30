@@ -23,5 +23,5 @@ The v4-Client TypeScript client is for placing transactions and querying dYdX Ch
 
 | id | claim | filed_to | frame_tag |
 |----|-------|----------|-----------|
-| #c1 | The v4-Client TypeScript client is the official client used for placing transactions and querying dYdX Chain. | [[entities/perpdex/dydx-v4]] | - |
-| #c2 | The v4-client-js repository is the official JavaScript/TypeScript client; uses Node 18 for development. | [[entities/perpdex/dydx-v4]] | - |
+| #c1 | The v4-Client TypeScript client is the official client used for placing transactions and querying dYdX Chain. | [[entities/perpdex/dydx]] | - |
+| #c2 | The v4-client-js repository is the official JavaScript/TypeScript client; uses Node 18 for development. | [[entities/perpdex/dydx]] | - |

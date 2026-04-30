@@ -23,4 +23,4 @@ Index stub. The dYdX CLI page lists four sub-topics (setup, EOA wallets, multisi
 
 | id | claim | filed_to | frame_tag |
 |----|-------|----------|-----------|
-| #c1 | The dYdX CLI documentation covers four topics: setup, EOA wallets, multisig wallet, and submitting a governance proposal. | [[entities/perpdex/dydx-v4]] | - |
+| #c1 | The dYdX CLI documentation covers four topics: setup, EOA wallets, multisig wallet, and submitting a governance proposal. | [[entities/perpdex/dydx]] | - |

@@ -24,4 +24,4 @@ Pure index page enumerating dYdX developer tools (JS client, Python client, CLI)
 | id | claim | filed_to | frame_tag |
 |----|-------|----------|-----------|
 | #c1 | The dYdX snapshot service is managed by the dYdX Operations subDAO. | [[entities/actor/dydx-operations-subdao]] | A8-PII, A7-PI |
-| #c2 | dYdX provides three first-party developer tools: dydx-chain-client-for-javascript, dydx-chain-client-for-python, and dydx-cli. | [[entities/perpdex/dydx-v4]] | - |
+| #c2 | dYdX provides three first-party developer tools: dydx-chain-client-for-javascript, dydx-chain-client-for-python, and dydx-cli. | [[entities/perpdex/dydx]] | - |

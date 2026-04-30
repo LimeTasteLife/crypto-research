@@ -48,6 +48,6 @@ Comprehensive enumeration of every protocol parameter that x/gov can update dire
 | #c23 | At Open Notional ≥ Upper Cap, the effective IMF is 1.0 (1:1 collateral required). | [[parameters/dydx-v4/margin-tiers]] | A6-PI |
 | #c24 | Adding a new market requires 4 messages in order: MsgCreateOracle, MsgCreatePerpetual, MsgCreatePerpetualClobPair, MsgDelayMessage (to schedule MsgSetClobPairStatus to enable trading). | [[parameters/dydx-v4/listing-policy]] | A1-PI, A7-PV |
 | #c25 | Governance can adjust how many open orders a subaccount can have based on its equity tier and order placement rate limits. | [[parameters/dydx-v4/rate-limits]] | A7-PI |
-| #c26 | The Bridge Module receives bridged tokens from Ethereum; governance can update Event Parameters, Proposal Parameters, and Safety Parameters (including bridging enable/disable). | [[entities/perpdex/dydx-v4]] | A8-PI, A7-PI |
+| #c26 | The Bridge Module receives bridged tokens from Ethereum; governance can update Event Parameters, Proposal Parameters, and Safety Parameters (including bridging enable/disable). | [[entities/perpdex/dydx]] | A8-PI, A7-PI |
 | #c27 | The Community Pool receives any Community Tax via the Distribution Module and is governance-controlled. | [[parameters/dydx-v4/tokenomics]] | A7-PI |
 | #c28 | The Community Treasury is a governance-controlled account funded by any account/module sending tokens to it. | [[parameters/dydx-v4/tokenomics]] | A7-PI |

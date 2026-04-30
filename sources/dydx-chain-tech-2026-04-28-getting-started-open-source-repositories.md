@@ -23,4 +23,4 @@ Stub page; content delegated to dYdX Operations subDAO. The dYdX GitHub organiza
 
 | id | claim | filed_to | frame_tag |
 |----|-------|----------|-----------|
-| #c1 | The dYdX open-source repositories are hosted at the GitHub organization https://github.com/dydxprotocol and include v4-chain, v4-clients, v4-web, v4-localnet, and v4-proto. | [[entities/perpdex/dydx-v4]] | A9-PV |
+| #c1 | The dYdX open-source repositories are hosted at the GitHub organization https://github.com/dydxprotocol and include v4-chain, v4-clients, v4-web, v4-localnet, and v4-proto. | [[entities/perpdex/dydx]] | A9-PV |

@@ -23,6 +23,6 @@ Index page for the chain technical docs. Re-asserts dYdX Chain genesis (Oct 26, 
 
 | id | claim | filed_to | frame_tag |
 |----|-------|----------|-----------|
-| #c1 | The dYdX Chain open-source software was deployed and the first block was created by validators on October 26, 2023 at 17:00 UTC. | [[entities/perpdex/dydx-v4]] | A1-PI |
-| #c2 | dYdX Chain is a proof-of-stake blockchain network built using the Cosmos SDK and leveraging CometBFT for consensus. | [[entities/perpdex/dydx-v4]], [[entities/network/dydx-chain]] | A1-PI |
-| #c3 | The official dYdX developer chat is at https://discord.gg/dydx, the bug/feature feedback portal is https://dydx-foundation.upvoty.com/, and the governance forum is https://dydx.forum/. | [[entities/perpdex/dydx-v4]] | - |
+| #c1 | The dYdX Chain open-source software was deployed and the first block was created by validators on October 26, 2023 at 17:00 UTC. | [[entities/perpdex/dydx]] | A1-PI |
+| #c2 | dYdX Chain is a proof-of-stake blockchain network built using the Cosmos SDK and leveraging CometBFT for consensus. | [[entities/perpdex/dydx]], [[entities/network/dydx-chain]] | A1-PI |
+| #c3 | The official dYdX developer chat is at https://discord.gg/dydx, the bug/feature feedback portal is https://dydx-foundation.upvoty.com/, and the governance forum is https://dydx.forum/. | [[entities/perpdex/dydx]] | - |

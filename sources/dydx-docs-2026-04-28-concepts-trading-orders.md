@@ -23,19 +23,19 @@ Orders split by lifetime: short-term orders (in-memory, ≤20-block GTB, ~30s; i
 
 | id | claim | filed_to | frame_tag |
 |----|-------|----------|-----------|
-| #c1 | Short-term orders are short-lived orders that are not stored on-chain unless filled; they stay in-memory of validators for up to 20 blocks. | [[entities/perpdex/dydx-v4]] | A1-PI |
-| #c2 | Short-term orders are mainly intended for market makers with high throughput or market orders. | [[entities/perpdex/dydx-v4]] | A4-PI |
-| #c3 | Long-term orders are stateful orders committed to the blockchain, surviving longer than the short block window. | [[entities/perpdex/dydx-v4]] | A1-PI |
-| #c4 | The default short block window is 20 blocks (~30 seconds). | [[entities/perpdex/dydx-v4]] | A1-PI |
-| #c5 | Short-term order expirations use Good-Till-Block (GTB), maximum of current block height + ShortBlockWindow. | [[entities/perpdex/dydx-v4]] | A1-PI |
-| #c6 | IoC and FoK orders are short-term orders and do not survive a network restart. | [[entities/perpdex/dydx-v4]] | A1-PI |
-| #c7 | Short-term order cancellation is best-effort: only gossiped, not in MsgProposedOperations. | [[entities/perpdex/dydx-v4]] | A4-PI |
-| #c8 | Long-Term orders are placed in the block after they are written to state (e.g. MsgPlaceOrder in block N → matching in block N+1). | [[entities/perpdex/dydx-v4]] | A1-PI |
-| #c9 | Long-term orders disallow IoC/FoK time-in-force values (since they require immediate execution). | [[entities/perpdex/dydx-v4]] | A1-PI |
-| #c10 | Conditional orders execute when the oracle price becomes either LTE (stop-loss sell) or GTE (take-profit buy) the trigger price. | [[entities/perpdex/dydx-v4]] | A1-PI |
-| #c11 | Stateful order expirations use Good-Till-Block-Time (GTBT), maximum of current block time + StatefulOrderTimeWindow (currently 95 days). | [[entities/perpdex/dydx-v4]] | A1-PI |
-| #c12 | Valid OrderFlags for stateful orders: 32 (conditional), 64 (long-term), 128 (TWAP). | [[entities/perpdex/dydx-v4]] | A1-PI |
-| #c13 | dYdX supports six order types: Market, Limit, Stop Market, Stop Limit, Take Profit Market, Take Profit Limit. | [[entities/perpdex/dydx-v4]] | A1-PI |
-| #c14 | Stop Market orders trigger when either the Oracle Price or the last traded price crosses the trigger price. | [[entities/perpdex/dydx-v4]] | A1-PI |
-| #c15 | TWAP (Time-Weighted Average Price) orders were released in v9.0; OrderFlags must be set to 128. | [[entities/perpdex/dydx-v4]], [[parameters/dydx-v4/upgrade-history]] | A1-PI |
-| #c16 | Front-end submits market orders as Immediate-or-Cancel by default (any unfilled portion is cancelled). | [[entities/perpdex/dydx-v4]] | A1-PI |
+| #c1 | Short-term orders are short-lived orders that are not stored on-chain unless filled; they stay in-memory of validators for up to 20 blocks. | [[entities/perpdex/dydx]] | A1-PI |
+| #c2 | Short-term orders are mainly intended for market makers with high throughput or market orders. | [[entities/perpdex/dydx]] | A4-PI |
+| #c3 | Long-term orders are stateful orders committed to the blockchain, surviving longer than the short block window. | [[entities/perpdex/dydx]] | A1-PI |
+| #c4 | The default short block window is 20 blocks (~30 seconds). | [[entities/perpdex/dydx]] | A1-PI |
+| #c5 | Short-term order expirations use Good-Till-Block (GTB), maximum of current block height + ShortBlockWindow. | [[entities/perpdex/dydx]] | A1-PI |
+| #c6 | IoC and FoK orders are short-term orders and do not survive a network restart. | [[entities/perpdex/dydx]] | A1-PI |
+| #c7 | Short-term order cancellation is best-effort: only gossiped, not in MsgProposedOperations. | [[entities/perpdex/dydx]] | A4-PI |
+| #c8 | Long-Term orders are placed in the block after they are written to state (e.g. MsgPlaceOrder in block N → matching in block N+1). | [[entities/perpdex/dydx]] | A1-PI |
+| #c9 | Long-term orders disallow IoC/FoK time-in-force values (since they require immediate execution). | [[entities/perpdex/dydx]] | A1-PI |
+| #c10 | Conditional orders execute when the oracle price becomes either LTE (stop-loss sell) or GTE (take-profit buy) the trigger price. | [[entities/perpdex/dydx]] | A1-PI |
+| #c11 | Stateful order expirations use Good-Till-Block-Time (GTBT), maximum of current block time + StatefulOrderTimeWindow (currently 95 days). | [[entities/perpdex/dydx]] | A1-PI |
+| #c12 | Valid OrderFlags for stateful orders: 32 (conditional), 64 (long-term), 128 (TWAP). | [[entities/perpdex/dydx]] | A1-PI |
+| #c13 | dYdX supports six order types: Market, Limit, Stop Market, Stop Limit, Take Profit Market, Take Profit Limit. | [[entities/perpdex/dydx]] | A1-PI |
+| #c14 | Stop Market orders trigger when either the Oracle Price or the last traded price crosses the trigger price. | [[entities/perpdex/dydx]] | A1-PI |
+| #c15 | TWAP (Time-Weighted Average Price) orders were released in v9.0; OrderFlags must be set to 128. | [[entities/perpdex/dydx]], [[parameters/dydx-v4/upgrade-history]] | A1-PI |
+| #c16 | Front-end submits market orders as Immediate-or-Cancel by default (any unfilled portion is cancelled). | [[entities/perpdex/dydx]] | A1-PI |

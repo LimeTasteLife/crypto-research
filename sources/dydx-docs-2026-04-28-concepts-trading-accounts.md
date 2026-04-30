@@ -23,12 +23,12 @@ dYdX separates identity from trading via the main-account / subaccount model. Ma
 
 | id | claim | filed_to | frame_tag |
 |----|-------|----------|-----------|
-| #c1 | A main account is associated with a public-private keypair and the trader's on-chain identity; it holds tokens used for gas and collateral. | [[entities/perpdex/dydx-v4]] | - |
-| #c2 | Gas for transactions is paid from the main account. | [[entities/perpdex/dydx-v4]] | - |
-| #c3 | Main accounts cannot trade. | [[entities/perpdex/dydx-v4]] | - |
-| #c4 | Each main account can have 128,001 subaccounts. | [[entities/perpdex/dydx-v4]], [[parameters/dydx-v4/account-limits]] | A1-PI |
-| #c5 | Each subaccount is uniquely identified by `(main account address, integer)`. | [[entities/perpdex/dydx-v4]] | - |
-| #c6 | A subaccount is automatically created when funds are deposited to a valid subaccount ID. | [[entities/perpdex/dydx-v4]] | - |
-| #c7 | Only the main account can send transactions on behalf of a subaccount. | [[entities/perpdex/dydx-v4]] | - |
-| #c8 | Subaccounts do not require gas (no gas is used for trading). | [[entities/perpdex/dydx-v4]] | A2-PI |
-| #c9 | Subaccounts require collateral token (currently USDC) in order to trade. | [[entities/perpdex/dydx-v4]], [[entities/token/usdc]] | A2-PI |
+| #c1 | A main account is associated with a public-private keypair and the trader's on-chain identity; it holds tokens used for gas and collateral. | [[entities/perpdex/dydx]] | - |
+| #c2 | Gas for transactions is paid from the main account. | [[entities/perpdex/dydx]] | - |
+| #c3 | Main accounts cannot trade. | [[entities/perpdex/dydx]] | - |
+| #c4 | Each main account can have 128,001 subaccounts. | [[entities/perpdex/dydx]], [[parameters/dydx-v4/account-limits]] | A1-PI |
+| #c5 | Each subaccount is uniquely identified by `(main account address, integer)`. | [[entities/perpdex/dydx]] | - |
+| #c6 | A subaccount is automatically created when funds are deposited to a valid subaccount ID. | [[entities/perpdex/dydx]] | - |
+| #c7 | Only the main account can send transactions on behalf of a subaccount. | [[entities/perpdex/dydx]] | - |
+| #c8 | Subaccounts do not require gas (no gas is used for trading). | [[entities/perpdex/dydx]] | A2-PI |
+| #c9 | Subaccounts require collateral token (currently USDC) in order to trade. | [[entities/perpdex/dydx]], [[entities/token/usdc]] | A2-PI |

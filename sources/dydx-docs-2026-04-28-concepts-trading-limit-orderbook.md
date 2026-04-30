@@ -23,15 +23,15 @@ Each full node maintains an in-memory order book, mutated in real time by trader
 
 | id | claim | filed_to | frame_tag |
 |----|-------|----------|-----------|
-| #c1 | Each full node maintains an in-memory order book that mutates in real time as traders submit instructions. | [[entities/perpdex/dydx-v4]] | A1-PI |
-| #c2 | Block proposers build blocks from their local order book using price-time priority. | [[concepts/operations/matching-engine]], [[entities/perpdex/dydx-v4]] | A1-PI |
-| #c3 | The local order book may differ across nodes at any given point in time; nodes sync local books with block contents upon a consensus-committed block. | [[entities/perpdex/dydx-v4]] | A1-PI |
-| #c4 | Clients can subscribe to a node's book state via the Full Node Streaming API. | [[entities/perpdex/dydx-v4]] | - |
-| #c5 | On a cancel: the node cancels the order unless it's already matched locally; the cancel instruction is stored until it expires per the GTB field. | [[entities/perpdex/dydx-v4]] | A1-PI |
-| #c6 | On an order: the order fails to place if already cancelled; otherwise it is matched and/or placed with optimistic matches stored locally. | [[entities/perpdex/dydx-v4]] | A1-PI |
-| #c7 | Each limit order placement or cancellation includes a Good-Til-Block (GTB) field specifying the block height after which the instruction expires. | [[entities/perpdex/dydx-v4]] | A1-PI |
-| #c8 | A cancel may be seen by the current proposer but not by subsequent proposers (if not gossiped in time); the order could still match after the sender expects cancellation. | [[entities/perpdex/dydx-v4]] | A1-PI, A8-PI |
-| #c9 | API traders should set tight GTB values (e.g. current chain height + 3) because expiry due to GTB is the only guaranteed way for an order to become unfillable. | [[entities/perpdex/dydx-v4]] | A4-PI |
-| #c10 | Consensus does not permit any order to fill at a height greater than its GTB. | [[entities/perpdex/dydx-v4]] | A1-PI |
-| #c11 | Replacing an order (same OrderId with a larger GTB) is recommended over cancelling-then-placing to avoid double-fill races. | [[entities/perpdex/dydx-v4]] | A4-PI |
-| #c12 | Two orders share the same OrderId if they match on Subaccount ID, Client ID, Order Flags, and CLOB pair ID. | [[entities/perpdex/dydx-v4]] | - |
+| #c1 | Each full node maintains an in-memory order book that mutates in real time as traders submit instructions. | [[entities/perpdex/dydx]] | A1-PI |
+| #c2 | Block proposers build blocks from their local order book using price-time priority. | [[concepts/operations/matching-engine]], [[entities/perpdex/dydx]] | A1-PI |
+| #c3 | The local order book may differ across nodes at any given point in time; nodes sync local books with block contents upon a consensus-committed block. | [[entities/perpdex/dydx]] | A1-PI |
+| #c4 | Clients can subscribe to a node's book state via the Full Node Streaming API. | [[entities/perpdex/dydx]] | - |
+| #c5 | On a cancel: the node cancels the order unless it's already matched locally; the cancel instruction is stored until it expires per the GTB field. | [[entities/perpdex/dydx]] | A1-PI |
+| #c6 | On an order: the order fails to place if already cancelled; otherwise it is matched and/or placed with optimistic matches stored locally. | [[entities/perpdex/dydx]] | A1-PI |
+| #c7 | Each limit order placement or cancellation includes a Good-Til-Block (GTB) field specifying the block height after which the instruction expires. | [[entities/perpdex/dydx]] | A1-PI |
+| #c8 | A cancel may be seen by the current proposer but not by subsequent proposers (if not gossiped in time); the order could still match after the sender expects cancellation. | [[entities/perpdex/dydx]] | A1-PI, A8-PI |
+| #c9 | API traders should set tight GTB values (e.g. current chain height + 3) because expiry due to GTB is the only guaranteed way for an order to become unfillable. | [[entities/perpdex/dydx]] | A4-PI |
+| #c10 | Consensus does not permit any order to fill at a height greater than its GTB. | [[entities/perpdex/dydx]] | A1-PI |
+| #c11 | Replacing an order (same OrderId with a larger GTB) is recommended over cancelling-then-placing to avoid double-fill races. | [[entities/perpdex/dydx]] | A4-PI |
+| #c12 | Two orders share the same OrderId if they match on Subaccount ID, Client ID, Order Flags, and CLOB pair ID. | [[entities/perpdex/dydx]] | - |

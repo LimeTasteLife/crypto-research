@@ -23,5 +23,5 @@ v4-client-py is the Python client for the v4 API, available on PyPI. Setup uses 
 
 | id | claim | filed_to | frame_tag |
 |----|-------|----------|-----------|
-| #c1 | v4-client-py is the official Python client for the dYdX v4 API. | [[entities/perpdex/dydx-v4]] | - |
-| #c2 | v4-client-py is available on PyPI and is installed via `pip install v4-client-py`. | [[entities/perpdex/dydx-v4]] | - |
+| #c1 | v4-client-py is the official Python client for the dYdX v4 API. | [[entities/perpdex/dydx]] | - |
+| #c2 | v4-client-py is available on PyPI and is installed via `pip install v4-client-py`. | [[entities/perpdex/dydx]] | - |

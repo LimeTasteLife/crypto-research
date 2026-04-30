@@ -23,7 +23,7 @@ User-facing MegaVault page: deposits = USDC providing liquidity across markets i
 
 | id | claim | filed_to | frame_tag |
 |----|-------|----------|-----------|
-| #c1 | MegaVault enables dYdX users to add USDC to provide liquidity to various markets and earn yield. | [[parameters/dydx-v4/megavault]], [[entities/perpdex/dydx-v4]] | A4-PI |
+| #c1 | MegaVault enables dYdX users to add USDC to provide liquidity to various markets and earn yield. | [[parameters/dydx-v4/megavault]], [[entities/perpdex/dydx]] | A4-PI |
 | #c2 | MegaVault operates multiple sub-vaults; each sub-vault uses users' USDC to run an automated market-making strategy for a given market. | [[parameters/dydx-v4/megavault]] | A4-PI |
 | #c3 | Users can add funds to MegaVault at any time and start earning yield immediately. | [[parameters/dydx-v4/megavault]] | A4-PII |
 | #c4 | Users can think of adding funds as owning a percentage of the vault's net equity (vault USDC + position values). | [[parameters/dydx-v4/megavault]] | A4-PI |

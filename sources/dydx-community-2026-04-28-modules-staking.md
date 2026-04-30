@@ -23,7 +23,7 @@ dYdX Chain leverages CosmosSDK's x/staking module. Validators set their own comm
 
 | id | claim | filed_to | frame_tag |
 |----|-------|----------|-----------|
-| #c1 | dYdX Chain leverages the Cosmos SDK Staking module to enable DYDX holders to become validators or delegate validation rights to validators. | [[entities/perpdex/dydx-v4]] | A8-PI |
+| #c1 | dYdX Chain leverages the Cosmos SDK Staking module to enable DYDX holders to become validators or delegate validation rights to validators. | [[entities/perpdex/dydx]] | A8-PI |
 | #c2 | Validators set their own commission rate but must follow the `min_commission_rate` parameter. | [[parameters/dydx-v4/validator-requirements]] | A8-PI |
 | #c3 | The Active Set includes the top validators by total stake (delegated + self-delegated), determined by the `max_validators` parameter. | [[parameters/dydx-v4/validator-requirements]] | A8-PI |
 | #c4 | The Active Set is updated during EndBlock by retrieving `validatorsbypower` and `max_validators`. | [[parameters/dydx-v4/validator-requirements]] | A8-PI |

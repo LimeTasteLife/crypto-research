@@ -24,5 +24,5 @@ Definition page for perpetuals (no expiry, funding-rate-anchored to spot) and dY
 | id | claim | filed_to | frame_tag |
 |----|-------|----------|-----------|
 | #c1 | Perpetual contracts (perps) are derivative futures with no expiration date, allowing indefinite holding. | [[concepts/market-microstructure/settlement-type]] | - |
-| #c2 | dYdX requires collateral to be used for opening/maintaining positions, managing margin, fee payments, and rewards. | [[entities/perpdex/dydx-v4]] | - |
-| #c3 | Principal assets in dYdX are USDC and the dYdX token. | [[entities/perpdex/dydx-v4]], [[entities/token/usdc]], [[entities/token/dydx]] | A2-PI |
+| #c2 | dYdX requires collateral to be used for opening/maintaining positions, managing margin, fee payments, and rewards. | [[entities/perpdex/dydx]] | - |
+| #c3 | Principal assets in dYdX are USDC and the dYdX token. | [[entities/perpdex/dydx]], [[entities/token/usdc]], [[entities/token/dydx]] | A2-PI |

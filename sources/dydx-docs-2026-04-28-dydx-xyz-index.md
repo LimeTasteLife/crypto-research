@@ -23,5 +23,5 @@ Top-level index page for dYdX integration documentation. Defines the docs as dev
 
 | id | claim | filed_to | frame_tag |
 |----|-------|----------|-----------|
-| #c1 | dYdX integration documentation is targeted at developers building trading applications, bots, analytics tools, or platform integrations. | [[entities/perpdex/dydx-v4]] | - |
-| #c2 | dYdX exposes both REST and WebSocket APIs for integration. | [[entities/perpdex/dydx-v4]] | - |
+| #c1 | dYdX integration documentation is targeted at developers building trading applications, bots, analytics tools, or platform integrations. | [[entities/perpdex/dydx]] | - |
+| #c2 | dYdX exposes both REST and WebSocket APIs for integration. | [[entities/perpdex/dydx]] | - |

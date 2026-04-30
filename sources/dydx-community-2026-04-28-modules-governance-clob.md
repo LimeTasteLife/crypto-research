@@ -23,4 +23,4 @@ Stub page for the CLOB module governance-adjustable parameters. The page only co
 
 | id | claim | filed_to | frame_tag |
 |----|-------|----------|-----------|
-| #c1 | A Clob Pair represents a Perpetual, Spot, or other given product in the dYdX Chain state. | [[entities/perpdex/dydx-v4]] | A1-PI |
+| #c1 | A Clob Pair represents a Perpetual, Spot, or other given product in the dYdX Chain state. | [[entities/perpdex/dydx]] | A1-PI |

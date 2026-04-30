@@ -23,7 +23,7 @@ Critical tokenomics page. dYdX Unlimited (Aug 12, 2024 announcement) introduced 
 
 | id | claim | filed_to | frame_tag |
 |----|-------|----------|-----------|
-| #c1 | dYdX Trading Inc. announced dYdX Unlimited on August 12, 2024, featuring potential revenue sharing among other improvements. | [[entities/perpdex/dydx-v4]] | A2-PI |
+| #c1 | dYdX Trading Inc. announced dYdX Unlimited on August 12, 2024, featuring potential revenue sharing among other improvements. | [[entities/perpdex/dydx]] | A2-PI |
 | #c2 | Protocol Revenue Sharing enables the dYdX community to use `MsgUpdateUnconditionalRevShareConfig` to adjust the allocation of net revenue received by the protocol with addresses other than the Distribution module account. | [[parameters/dydx-v4/revenue-distribution]] | A2-PI, A7-PI |
 | #c3 | On November 13, 2025, the dYdX community approved 75% revenue sharing to the Buyback Program. | [[parameters/dydx-v4/revenue-distribution]] | A2-PI, A7-PII |
 | #c4 | On November 13, 2025, the dYdX community approved 5% revenue sharing to Treasury SubDAO. | [[parameters/dydx-v4/revenue-distribution]] | A2-PI |

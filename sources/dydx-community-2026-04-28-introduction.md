@@ -23,7 +23,7 @@ Index page for the dYdX Community docs. Establishes dYdX Chain as a Cosmos-SDK +
 
 | id | claim | filed_to | frame_tag |
 |----|-------|----------|-----------|
-| #c1 | dYdX Chain is a proof-of-stake blockchain network built using the Cosmos SDK and leveraging CometBFT for consensus. | [[entities/perpdex/dydx-v4]], [[entities/network/dydx-chain]] | A1-PI |
+| #c1 | dYdX Chain is a proof-of-stake blockchain network built using the Cosmos SDK and leveraging CometBFT for consensus. | [[entities/perpdex/dydx]], [[entities/network/dydx-chain]] | A1-PI |
 | #c2 | The dYdX Chain software was fully audited by Informal Systems. | [[parameters/dydx-v4/audits]] | A8-PI |
-| #c3 | The dYdX Chain software was open-sourced by dYdX Trading Inc. | [[entities/perpdex/dydx-v4]], [[entities/actor/dydx-trading-inc]] | A9-PV |
-| #c4 | The first block of the dYdX Chain was created by dYdX Chain validators on October 26, 2023 at 17:00 UTC. | [[entities/perpdex/dydx-v4]] | A1-PI |
+| #c3 | The dYdX Chain software was open-sourced by dYdX Trading Inc. | [[entities/perpdex/dydx]], [[entities/actor/dydx-trading-inc]] | A9-PV |
+| #c4 | The first block of the dYdX Chain was created by dYdX Chain validators on October 26, 2023 at 17:00 UTC. | [[entities/perpdex/dydx]] | A1-PI |

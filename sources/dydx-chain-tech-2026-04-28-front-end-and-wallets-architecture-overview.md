@@ -23,7 +23,7 @@ High-level v4 architecture from the front-end perspective. Web app: JS/React, ta
 
 | id | claim | filed_to | frame_tag |
 |----|-------|----------|-----------|
-| #c1 | The dYdX web application uses JavaScript and React, interacts with the Indexer via API for off-chain orderbook data, and submits trade transactions directly to the blockchain. | [[entities/perpdex/dydx-v4]] | A1-PI |
-| #c2 | The dYdX front-end codebase and deployment scripts are open-source, allowing anyone to deploy via IPFS/Cloudflare gateway. | [[entities/perpdex/dydx-v4]] | A9-PV |
-| #c3 | The dYdX mobile applications are built natively in Swift (iOS) and Kotlin (Android), and will also be open-sourced. | [[entities/perpdex/dydx-v4]] | A9-PV |
-| #c4 | The order lifecycle is: user submits via FE/API → routed to validator → validator gossips to others → proposer matches and adds to next proposed block → 2/3 of validators vote to commit → block committed and on-chain/off-chain data streamed from full nodes to Indexers → Indexer serves data via API and WebSockets back to front-end. | [[entities/perpdex/dydx-v4]] | A1-PI |
+| #c1 | The dYdX web application uses JavaScript and React, interacts with the Indexer via API for off-chain orderbook data, and submits trade transactions directly to the blockchain. | [[entities/perpdex/dydx]] | A1-PI |
+| #c2 | The dYdX front-end codebase and deployment scripts are open-source, allowing anyone to deploy via IPFS/Cloudflare gateway. | [[entities/perpdex/dydx]] | A9-PV |
+| #c3 | The dYdX mobile applications are built natively in Swift (iOS) and Kotlin (Android), and will also be open-sourced. | [[entities/perpdex/dydx]] | A9-PV |
+| #c4 | The order lifecycle is: user submits via FE/API → routed to validator → validator gossips to others → proposer matches and adds to next proposed block → 2/3 of validators vote to commit → block committed and on-chain/off-chain data streamed from full nodes to Indexers → Indexer serves data via API and WebSockets back to front-end. | [[entities/perpdex/dydx]] | A1-PI |

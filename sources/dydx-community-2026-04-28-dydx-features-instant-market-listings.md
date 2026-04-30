@@ -23,7 +23,7 @@ Permissionless listing flow: users add 10,000 USDC to a new asset's MegaVault su
 
 | id | claim | filed_to | frame_tag |
 |----|-------|----------|-----------|
-| #c1 | Instant Market Listings enable users to list and trade perpetuals on virtually any eligible asset on dYdX without governance approvals or third-party permissions. | [[entities/perpdex/dydx-v4]], [[parameters/dydx-v4/listing-policy]] | A1-PI |
+| #c1 | Instant Market Listings enable users to list and trade perpetuals on virtually any eligible asset on dYdX without governance approvals or third-party permissions. | [[entities/perpdex/dydx]], [[parameters/dydx-v4/listing-policy]] | A1-PI |
 | #c2 | A user lists a market by adding 10,000 USDC to the new asset's sub-vault. | [[parameters/dydx-v4/listing-policy]] | A1-PI |
 | #c3 | The 10,000 USDC ensures the new market launches with sufficient liquidity for efficient trading. | [[parameters/dydx-v4/listing-policy]], [[parameters/dydx-v4/megavault]] | A4-PI |
 | #c4 | Skip, a third-party entity elected by the dYdX community as the Market Map Updater, manages the "launchable" markets on-chain. | [[parameters/dydx-v4/listing-policy]], [[entities/actor/skip-protocol]] | A1-PI, A7-PI |

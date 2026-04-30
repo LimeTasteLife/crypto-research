@@ -26,4 +26,4 @@ Index page enumerating the categories of dYdX governance-adjustable parameters: 
 | #c1 | dYdX governance can adjust eight parameter categories: Trading Stats, Fee Tiers, Trading Core (insurance fund + liquidations config), Markets, Perpetual, CLOB, Updating Live Market, and Safety. | [[parameters/dydx-v4/governance-params]] | A7-PI |
 | #c2 | The Insurance Fund acts as the first backstop to maintain systemic solvency when an account has a negative balance. | [[parameters/dydx-v4/insurance-fund]] | A6-PI |
 | #c3 | The Liquidations Config defines the mechanism to close an account's position when it falls below margin requirements. | [[parameters/dydx-v4/liquidation-params]] | A6-PI |
-| #c4 | The CLOB module configures order creation, placement, and cancellations on dYdX Chain. | [[entities/perpdex/dydx-v4]] | A1-PI |
+| #c4 | The CLOB module configures order creation, placement, and cancellations on dYdX Chain. | [[entities/perpdex/dydx]] | A1-PI |

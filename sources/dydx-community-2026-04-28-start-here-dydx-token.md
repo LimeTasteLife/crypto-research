@@ -23,7 +23,7 @@ The DYDX token is dYdX Chain's L1 token serving three purposes: Governance (prop
 
 | id | claim | filed_to | frame_tag |
 |----|-------|----------|-----------|
-| #c1 | DYDX is the dYdX Chain's Layer 1 token, adopted by the dYdX community through dYdX governance (Snapshot and on-chain). | [[entities/token/dydx]], [[entities/perpdex/dydx-v4]] | A2-PI |
+| #c1 | DYDX is the dYdX Chain's Layer 1 token, adopted by the dYdX community through dYdX governance (Snapshot and on-chain). | [[entities/token/dydx]], [[entities/perpdex/dydx]] | A2-PI |
 | #c2 | DYDX serves three key purposes: Staking, Security, and Governance. | [[entities/token/dydx]] | A2-PI, A7-PI |
 | #c3 | DYDX governance allows holders to propose and vote on changes to governable parameters, spend community funds, and update the software dYdX Chain nodes are running, among other things. | [[entities/token/dydx]] | A7-PI |
 | #c4 | Staking DYDX directly contributes to dYdX Chain security; as more DYDX is staked across diverse validators, attack cost grows. | [[entities/token/dydx]] | A8-PI |

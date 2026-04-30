@@ -23,7 +23,7 @@ Catalog of 3rd-party dYdX dashboards: Numia (volume on Lenses + Looker Studio wi
 
 | id | claim | filed_to | frame_tag |
 |----|-------|----------|-----------|
-| #c1 | dYdX trading volume is publicly tracked on Lenses (powered by Numia) at https://www.datalenses.zone/chain/dydx/trading_volume. | [[entities/perpdex/dydx-v4]] | A8-PI |
-| #c2 | dYdX analytics are publicly available on Mintscan at https://www.mintscan.io/dydx/dydx-analytics/perpetuals. | [[entities/perpdex/dydx-v4]] | A8-PI |
-| #c3 | dYdX orderbook discrepancy data (used for MEV detection) is publicly tracked by Skip at https://dydx.skip.money/. | [[entities/perpdex/dydx-v4]] | A8-PI |
-| #c4 | dYdX trading fees, volume, and rewards data is publicly tracked by Numia in a Looker Studio report at https://lookerstudio.google.com/u/0/reporting/9b5bb482-8ba2-4ed5-b8e1-1bb254a7ffe3/page/iVxiD. | [[entities/perpdex/dydx-v4]] | A2-PI, A3-PI |
+| #c1 | dYdX trading volume is publicly tracked on Lenses (powered by Numia) at https://www.datalenses.zone/chain/dydx/trading_volume. | [[entities/perpdex/dydx]] | A8-PI |
+| #c2 | dYdX analytics are publicly available on Mintscan at https://www.mintscan.io/dydx/dydx-analytics/perpetuals. | [[entities/perpdex/dydx]] | A8-PI |
+| #c3 | dYdX orderbook discrepancy data (used for MEV detection) is publicly tracked by Skip at https://dydx.skip.money/. | [[entities/perpdex/dydx]] | A8-PI |
+| #c4 | dYdX trading fees, volume, and rewards data is publicly tracked by Numia in a Looker Studio report at https://lookerstudio.google.com/u/0/reporting/9b5bb482-8ba2-4ed5-b8e1-1bb254a7ffe3/page/iVxiD. | [[entities/perpdex/dydx]] | A2-PI, A3-PI |

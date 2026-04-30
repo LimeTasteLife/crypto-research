@@ -32,7 +32,7 @@ Two per-market risk parameters: IMF (initial margin fraction, can scale with OI)
 | #c7 | MMF (Maintenance Margin Fraction) does not change with OI scaling — only IMF does. | [[parameters/dydx-v4/margin-tiers]] | A6-PI |
 | #c8 | Per-position Initial Margin Requirement = abs(S × P × I); per-position Maintenance Margin Requirement = abs(S × P × M). | [[concepts/risk/margin-tier]] | - |
 | #c9 | Total Account Value (equity) = Q + Σ(Si × Pi), where Q is USDC quoteBalance. | [[concepts/risk/liquidation]] | - |
-| #c10 | quoteBalance changes on every transfer/deposit/withdrawal, position modification, funding payment, and liquidation. | [[entities/perpdex/dydx-v4]] | - |
+| #c10 | quoteBalance changes on every transfer/deposit/withdrawal, position modification, funding payment, and liquidation. | [[entities/perpdex/dydx]] | - |
 | #c11 | An account cannot open new positions or increase existing position sizes if doing so would push total account value below the total initial margin requirement. | [[concepts/risk/margin-tier]] | A6-PI |
 | #c12 | If total account value falls below the total maintenance margin requirement, the account may be liquidated. | [[concepts/risk/liquidation]] | A6-PI |
 | #c13 | Free collateral = Total Account Value − Total Initial Margin Requirement. | [[concepts/risk/margin-tier]] | - |
