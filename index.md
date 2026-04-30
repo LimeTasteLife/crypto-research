@@ -70,6 +70,7 @@ _(none yet)_
 - [[concepts/market-microstructure/tick-size]] — minimum price increment per market (sources: 1, last_reviewed: 2026-04-28)
 - [[concepts/market-microstructure/lot-size]] — minimum size increment per market (sources: 1, last_reviewed: 2026-04-28)
 - [[concepts/market-microstructure/contract-size]] — units of underlying per perpetual contract (sources: 1, last_reviewed: 2026-04-28)
+- [[concepts/market-microstructure/jit-auction]] — Just-In-Time reverse Dutch auction triggered by an incoming taker order; gives MMs a brief window to compete on price before the order reaches the resting book (sources: 2, last_reviewed: 2026-04-28)
 
 ### fee-model
 - [[concepts/fee-model/funding-rate]] — periodic peer-to-peer payment anchoring mark to spot (sources: 1, last_reviewed: 2026-04-28)
@@ -81,7 +82,9 @@ _(none yet)_
 - [[concepts/tokenomics/rev-share]] — recurring transfer of venue revenue to a beneficiary class (sources: 1, last_reviewed: 2026-04-28)
 
 ### operations
+- [[concepts/operations/insurance-fund]] — venue's capital reserve that absorbs losses when a liquidated position cannot be closed at or above the bankruptcy price; sits between book liquidation and ADL in the contract-loss waterfall (sources: 4, last_reviewed: 2026-04-29)
 - [[concepts/operations/matching-engine]] — deterministic order-pairing process (sources: 2, last_reviewed: 2026-04-28)
+- [[concepts/operations/oracle]] — component that brings off-chain reference prices into the on-chain trading engine; feeds mark-price, funding-rate, and liquidation triggers (sources: 3, last_reviewed: 2026-04-29)
 - [[concepts/operations/sequencer]] — block transaction ordering component (sources: 4, last_reviewed: 2026-04-28)
 - [[concepts/operations/settlement]] — finality stage for trades, transfers, bridging (sources: 3, last_reviewed: 2026-04-28)
 
@@ -99,6 +102,7 @@ _(none yet)_
 
 ### listing
 - [[concepts/listing/listing-playbook]] — venue procedure for getting a new asset live (sources: 3, last_reviewed: 2026-04-28)
+- [[concepts/listing/listing-criteria]] — venue's published prerequisites for adding a new perpetual market: oracle-source availability, liquidity depth, data history, and governance-approval requirements (sources: 4, last_reviewed: 2026-04-29)
 - [[concepts/listing/delisting-policy]] — criteria, procedure, and settlement mechanics for removing a perp/spot market from a venue's active roster (sources: 1, last_reviewed: 2026-04-28)
 - [[concepts/listing/pre-launch-perp]] — derivative on a token before official listing; mark price derived from pre-launch book or experimental pricing rather than spot oracle; elevated info-asymmetry + oracle-manipulation risk (sources: 2, last_reviewed: 2026-04-28)
 
