@@ -2,7 +2,7 @@
 type: concept
 domain: lp
 name: Vault
-last_reviewed: 2026-04-28
+last_reviewed: 2026-04-30
 disputed: false
 ---
 
@@ -10,6 +10,17 @@ disputed: false
 
 ## Definition
 A **vault** in the perp-DEX context is a venue-owned or venue-operated pool of capital — depositor funds aggregated into a single account that the venue (or a designated operator) trades or backstops with on the depositors' behalf, with profit/loss accruing pro-rata to depositors[^lighter-docs-2026-04-28-trading-public-pools][^lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund-llp-strategies]. Vaults serve three functional roles depending on the venue: **market-making** (the vault quotes both sides of the book to bootstrap liquidity), **insurance / backstop** (the vault is the residual counterparty when ordinary liquidation fails — absorbing positions before [[concepts/risk/adl-waterfall|ADL]] is invoked), and **strategy-as-a-service** (a whitelisted operator runs a strategy on pooled depositor capital). The same vault may combine roles — Lighter's LLP is simultaneously protocol-MM and insurance fund[^lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund-llp-strategies][^lighter-docs-2026-04-28-trading-liquidations-and-llp-insurance-fund]; HL's HLP is protocol-MM plus liquidator backstop.
+
+## Lens
+
+This page covers **vault-as-aggregation**: the capital-pooling mechanism by which depositor funds are aggregated into a single account, the multi-role functional taxonomy (MM / IF-backstop / strategy-as-a-service), and the structural design dimensions (eligibility, lockup, strategy isolation, loss-socialization). It answers *"what is a vault?"* — not who deploys it and not what counterparty role it plays at the matching engine.
+
+The same vault construct is covered by two sibling pages under different lenses:
+
+- **Ownership lens** — who deploys and operates the vault (venue-deployed vs external-firm-deployed; sole-operator vs multi-operator): see [[concepts/lp/venue-owned-lp]].
+- **Counterparty-role lens** — what role the vault plays in the matching engine (counterparty for trades, IF backstop, both): see [[concepts/lp/protocol-owned-liquidity]].
+
+A single vault appears on all three pages under different lenses — this is by design, not duplication.
 
 ## Variants in the wild
 

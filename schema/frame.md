@@ -20,7 +20,21 @@ The angles and patterns are an investigation **lens**, not a parallel page taxon
 
 **A3. Referral / Incentive.** Termination conditions (volume cap / tier cutoff / time decay). Multi-level depth (1L / 2L / 15L / permissionless integrator). Attribution window (last- vs first-touch). Cohort LTV/CAC and retention curves. Sybil / wash detection threshold + clawback. Incentive-cliff sunset plan. KYC / sanctions / tax reporting. Cross-program stack double-counting.
 
-**A4. Market Making.** Protocol-as-MM model (HLP / MegaVault / BAL etc.). Latency tier. Toxic-flow / markout-adjusted rebate. MM concentration HHI + single-exit simulation. Counterparty / inventory limits. Quote-obligation measurement methodology (notional ladder × polling cadence). Hedge venue dependency. Protocol-MM conflict of interest. Orderly offboarding.
+**A4. Market Making.** Two interpretations share angle A4 via the `{ext, pov}` sub-tag (see §"A4 sub-tag rule" below). The default reading of bare `A4-P<X>` is `A4-ext-P<X>` for backward compatibility.
+
+**A4-ext (external MM relationships).** Latency tier. Toxic-flow / markout-adjusted rebate. MM concentration HHI + single-exit simulation. Counterparty / inventory limits. Quote-obligation measurement methodology (notional ladder × polling cadence). Hedge venue dependency. Protocol-MM conflict of interest. Orderly offboarding.
+
+**A4-pov (protocol-owned vault as MM).** Vault-shaped objects that quote, capture toxic flow, and earn rebate without an external MM agreement (HLP, ALP, OmniVault, LLP, MegaVault, DSM/BAL). Pattern probes are reinterpreted because no external counterparty, MM HHI, hedge-venue dependency, or offboarding playbook applies in the standard sense; depositor onboarding, vault NAV mechanics, and operator-discretion clauses take their place.
+
+**Pattern reinterpretation under A4-ext vs A4-pov:**
+
+| pattern | A4-ext interpretation | A4-pov interpretation |
+|---|---|---|
+| **PI Quality** | latency p99, depth-time, cancel-ack, MM uptime SLA | NAV smoothness (drawdown frequency / depth), depositor-batch-period cadence, vault-NAV transparency interval, withdrawal-queue length |
+| **PII Onboard/Offboard** | MM application, SLA, orderly wind-down with announce-window | depositor onboarding UX, deposit eligibility gating (e.g. LIT-staked LLP cap), withdrawal queue / batch-period, vault sunset playbook |
+| **PIII Toxic flow** | markout-adjusted maker rebate per MM cohort, latency-arb-vs-retail routing | toxic-flow-vs-NAV-erosion accounting, per-strategy NAV markout (e.g. LLP per-strategy bucket), backstop-PnL vs ordinary-PnL split |
+| **PIV Stack** | MM rebate × incentive × LP program stack | vault PnL × IF role × buyback / rev-share × deposit-token incentive stack (HLP × HYPE buyback; ALP × 5-source yield; OmniVault × 40%-rev-share × IF-fee-portion) |
+| **PV SLA / contracting** | MM agreement template (uptime / depth / downtime comp / offboarding) | depositor-facing terms (smart-contract risk disclosure, withdrawal-queue rules, operator-discretion clauses, e.g. Greave's MegaVault sub-vault tuning authority) |
 
 **A5. Spot DEX LP.** Fee-tier matrix per pair. LVR / IL visibility. Concentrated vs full-range default guidance. JIT / sandwich defense. Emissions sunset plan. Pair retirement playbook. Onboarding / exit UX + stressed-state slippage. AMM-LP × orderbook-MM economic overlap. TVL sticky-vs-mercenary cohort.
 
@@ -82,7 +96,8 @@ The 9 × 5 matrix has 45 cells per perpdex entity. Each cell carries one of thre
 ## Frame coverage
 - A1/PI: filled
 - A1/PII: filled
-- A4/PIII: gap — requires on-chain markout-PnL analysis per MM cohort
+- A4-ext/PIII: gap — requires on-chain markout-PnL analysis per MM cohort
+- A4-pov/PIII: filled — vault NAV-erosion accounting documented for HLP
 - A5/PII: not-applicable — perp-only venue, no spot LP lifecycle
 ...
 ```
@@ -101,9 +116,23 @@ Lint treats `filled` / `not-applicable` / `gap` differently: NA cells are stable
 
 5. **Lint enforcement** (executed on `lint` command):
    - Source claim with non-empty `filed_to` reaching a perpdex within 1 hop AND empty `frame_tag` → `frame: untagged`. **Exception:** claims with type `definition` whose `filed_to` resolves to a generic `concepts/<domain>/<slug>` page (definition is venue-agnostic — e.g. "what is a maker fee", "what is a clob") may have empty `frame_tag` without lint complaint. Mark such rows with `frame_tag: -` (single hyphen) to distinguish from genuinely-untagged claims. Lint counts `-` as legitimate-empty, blank as untagged. Threshold heuristic: if untagged rate exceeds 10% of in-scope claims, the Phase 1 agent prompt needs tightening; if `-`-marked rate exceeds 30%, the source set is definition-heavy (expected for primary docs) and not a defect.
-   - `frame_tag` not matching `^(A[1-9]-P(I|II|III|IV|V)(, A[1-9]-P(I|II|III|IV|V))*|-)$` → `frame: malformed`.
+   - `frame_tag` not matching `^(A[1-9](-(ext|pov))?-P(I|II|III|IV|V)(, A[1-9](-(ext|pov))?-P(I|II|III|IV|V))*|-)$` → `frame: malformed`.
    - Coverage state with no rationale or rationale absent → `frame: unrationalized`.
    - Per-entity coverage report `<filled>/<NA>/<gap>` summed against 45.
+
+## A4 sub-tag rule
+
+A4 (Market Making) admits two interpretations via the optional `{ext, pov}` sub-tag inserted between the angle number and the pattern code:
+
+- **Default (backward-compatible):** `A4-P<X>` parses as `A4-ext-P<X>`. All existing pre-2026-04-30 claims interpret as ext without retroactive edits.
+- **Opt-in:** `A4-pov-P<X>` for claims about protocol-owned vaults that perform the MM role (HLP, ALP, OmniVault, LLP, MegaVault, DSM/BAL). Pattern definitions are reinterpreted per the table in §"A4. Market Making" above.
+- **Migration:** opportunistic — a Phase-2 pass touching a source page or entity Frame coverage block may retag existing `A4-P<X>` claims as `A4-ext-P<X>` or `A4-pov-P<X>` as appropriate. No bulk retag.
+- **Examples:**
+  - `A4-ext-PIII` — external MM markout-adjusted rebate per cohort.
+  - `A4-pov-PIII` — vault NAV-erosion accounting (e.g. LLP per-strategy NAV markout).
+  - `A4-ext-PV` — MM agreement template (uptime / depth / downtime comp).
+  - `A4-pov-PV` — depositor-facing terms (operator-discretion clauses, withdrawal-queue rules).
+- The angle ↔ domain mapping row for A4 is unchanged: `mm-agreement` for ext, `lp` + `mm-agreement` for pov-hybrid, `lp` + `risk` for pov with IF overlap.
 
 ## Out of frame scope
 

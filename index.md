@@ -94,13 +94,13 @@ _(none yet)_
 - [[concepts/risk/margin-tier]] — per-asset rule mapping notional to (IM, MM) (sources: 2, last_reviewed: 2026-04-28)
 - [[concepts/risk/leverage-cap]] — per-asset upper bound on user-set leverage (sources: 2, last_reviewed: 2026-04-28)
 - [[concepts/risk/adl-waterfall]] — final solvency safeguard via opposite-side counterparty closure (sources: 1, last_reviewed: 2026-04-28)
-- [[concepts/risk/insurance-fund-sizing]] — mechanism by which a venue determines backstop-pool capital stock; topology, inflow source, outflow trigger, and sizing constraint dimensions (sources: 5, last_reviewed: 2026-04-29)
+- [[concepts/risk/insurance-fund-sizing]] — mechanism by which a venue determines backstop-pool capital stock; topology, inflow source, outflow trigger, and sizing constraint dimensions; IF coverage ratio formula (sources: 10, last_reviewed: 2026-04-30)
 - [[concepts/risk/collateral]] — assets posted to secure positions; single vs multi-asset margin, haircut (LTV/LT/LF or assetWeight or flat ratio), isolated/cross/strict-isolated, per-asset capacity caps, LP-token-as-collateral, rehypothecation (sources: 17, last_reviewed: 2026-04-30)
 
 ### lp
 - [[concepts/lp/concentrated-liquidity]] — LPs allocate capital within specific price ranges for capital efficiency; Uniswap v3 origin, v4 inherits + hooks extensibility (sources: 5, last_reviewed: 2026-04-29)
-- [[concepts/lp/venue-owned-lp]] — venue-deployed liquidity vault (sources: 1, last_reviewed: 2026-04-28)
-- [[concepts/lp/vault]] — Venue-owned/operated capital pools (protocol-MM, insurance, strategy-as-a-service); HL HLP, Lighter LLP (multi-strategy), Lighter XLP (prelaunch), Lighter Public Pools (no-lockup operator-strategy) (sources: 8, last_reviewed: 2026-04-28)
+- [[concepts/lp/venue-owned-lp]] — ownership lens: who deploys/operates the vault (venue-direct vs governance-elected vs strategist-marketplace); deployment authority, operator pattern, venue capture (sources: 8, last_reviewed: 2026-04-30)
+- [[concepts/lp/vault]] — aggregation lens: vault-as-capital-pool mechanism; multi-role taxonomy (MM / IF / strategy-as-a-service); HLP, LLP (multi-strategy), XLP (prelaunch), Public Pools, ALP, OmniVault (sources: 13, last_reviewed: 2026-04-30)
 - [[concepts/lp/protocol-owned-liquidity]] — counterparty-role lens on protocol-owned vaults (vs external MM, vs open AMM LP); HLP, ALP, OmniVault, Drift IF/DSM/BAL, LLP, MegaVault — three role variants (protocol-MM, IF, hybrid), funding sources, eligibility, lockup, strategy isolation (sources: 17, last_reviewed: 2026-04-30)
 
 ### listing
