@@ -75,11 +75,13 @@ Hyperliquid is a layer-one blockchain optimized from first principles for an on-
 - A3/PIII: gap — toxic-flow markout segregation in referral attribution not documented
 - A3/PIV: gap — multi-program stack accounting (referral × maker rebate × staking) not made explicit
 - A3/PV: filled — staking-trading-link permanence + KYC ramp via spot deposit[^hl-docs-2026-04-27-trading-fees][^hl-docs-2026-04-27-for-developers-api-info-endpoint]
-- A4/PI: filled — protocol-as-MM via HLP; mainnet ~200k orders/sec; co-located p99 0.9s[^hl-docs-2026-04-27-hypercore-overview][^hl-docs-2026-04-27-trading-liquidations]
-- A4/PII: gap — MM orderly offboarding not documented at protocol level
-- A4/PIII: filled — maker rebate ladder is markout-style penalty (negative fee scales with volume share)[^hl-docs-2026-04-27-trading-fees]
-- A4/PIV: gap — protocol-MM (HLP) vs external-MM cannibalization not analyzed
-- A4/PV: not-applicable — no external MM agreements documented (HLP is internal)
+- A4-pov/PI: filled — protocol-as-MM via HLP; mainnet ~200k orders/sec; co-located p99 0.9s[^hl-docs-2026-04-27-hypercore-overview][^hl-docs-2026-04-27-trading-liquidations]
+- A4-ext/PII: gap — no external-MM offboarding playbook (HL has no formal MM agreement)
+- A4-pov/PII: gap — HLP depositor-side offboarding (withdrawal queue, stressed-exit policy) not documented at protocol level
+- A4-ext/PIII: filled — maker rebate ladder is markout-style penalty (negative fee scales with volume share)[^hl-docs-2026-04-27-trading-fees]
+- A4-pov/PIV: gap — protocol-MM (HLP) vs external-MM cannibalization not analyzed
+- A4-ext/PV: not-applicable — no external MM agreements documented
+- A4-pov/PV: gap — HLP depositor-facing terms (smart-contract risk disclosure, withdrawal-queue rules) not consolidated in primary docs
 - A5/PI through A5/PV: not-applicable — no documented spot DEX LP layer in primary docs (spot trades are CLOB, not AMM-LP)
 - A6/PI: filled — mark-price formula; margin tiers; ADL waterfall; funding clamp; insurance handled via HLP backstop[^hl-docs-2026-04-27-trading-liquidations][^hl-docs-2026-04-27-trading-margining][^hl-docs-2026-04-27-trading-funding]
 - A6/PII: gap — pre-launch FDV bound check / delisting symmetry policy not surfaced

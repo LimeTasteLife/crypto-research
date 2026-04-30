@@ -92,11 +92,15 @@ disputed: false
 - A3/PIII: gap — no anti-abuse / sybil / wash-trade detection documented for referral or incentive programs
 - A3/PIV: gap — interaction between listing referral bonus and builder fee revenue share not analyzed; planned Multi-Level Referral stacking not documented
 - A3/PV: gap — no referral agreement terms, clawback, or dispute escalation documented
-- A4/PI: filled — OmniVault as protocol-as-MM (Kronos Research SP); market-making + liquidator role; non-tokenized shares; 3h vault periods; Arbitrum/Base/Optimism/Sei deposit chains
-- A4/PII: filled — planned Permissionless Vault (open to any strategist); roadmap also includes Non-USDC Vault (ETH/BTC/LST)
-- A4/PIII: gap — no markout-adjusted rebate or toxic-flow accounting for OmniVault LP returns; no disclosure of MM concentration or strategy-level PnL attribution
-- A4/PIV: filled — OmniVault receives up to 40% of net protocol revenue + portion of IF liquidation fees; does NOT replace IF; per-Builder MM accounts for community markets
-- A4/PV: gap — no formal MM agreement or quote-obligation SLA; OmniVault terms are protocol parameters not counterparty contracts; per-Builder MM accounts have no documented SLA
+- A4-pov/PI: filled — OmniVault as protocol-as-MM (Kronos Research SP); market-making + liquidator role; non-tokenized shares; 3h vault periods; Arbitrum/Base/Optimism/Sei deposit chains
+- A4-pov/PII: filled — planned Permissionless Vault (open to any strategist); roadmap also includes Non-USDC Vault (ETH/BTC/LST) — depositor onboarding evolution
+- A4-ext/PII: not-applicable — Orderly has no first-party external-MM onboarding (rebate decision delegated to Builder layer; per-Builder MM accounts onboard at the Builder, not at Orderly)
+- A4-pov/PIII: gap — no markout-adjusted rebate or toxic-flow accounting for OmniVault LP returns; no disclosure of MM concentration or strategy-level PnL attribution
+- A4-ext/PIII: not-applicable — base maker fee is 0 bps at venue layer; per-Builder rebate is set by the Builder, not Orderly
+- A4-pov/PIV: filled — OmniVault receives up to 40% of net protocol revenue + portion of IF liquidation fees; does NOT replace IF
+- A4-ext/PIV: filled — per-Builder MM accounts for community markets create per-Builder × Orderly stack; Builder retains 50% of trading fees + 100% of liquidation fees from own permissionless markets
+- A4-pov/PV: gap — OmniVault terms are protocol parameters not counterparty contracts (Strategy Provider relationship has agreement-like elements but no published template)
+- A4-ext/PV: gap — per-Builder MM accounts have no documented SLA at Orderly layer (each Builder may publish its own)
 - A5/PI: not-applicable — Orderly is perp-only at the protocol level; OmniVault is a strategy vault LP filed under A4, not a spot-AMM LP
 - A5/PII: not-applicable — no spot DEX LP lifecycle; OmniVault deposit/withdrawal lifecycle covered under A4
 - A5/PIII: not-applicable — no AMM LP; no IL/LVR surface; OmniVault adverse selection is strategy-vault risk filed under A4
