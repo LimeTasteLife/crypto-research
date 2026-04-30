@@ -15,12 +15,7 @@ Actors with authority to block or roll back a governance proposal before executi
 
 | venue | veto authority | threshold | history |
 |---|---|---|---|
-| [[entities/perpdex/hyperliquid]] | | | |
-| [[entities/perpdex/aster]] | | | |
-| [[entities/perpdex/lighter]] | | | |
-| [[entities/perpdex/dydx]] | | | |
-| [[entities/perpdex/orderly]] | | | |
-| [[entities/perpdex/drift]] | | | |
+| [[entities/perpdex/dydx]] | bonded-DYDX stakers (validators inherit-by-default for unvoted delegations); proposals failing veto are burned (`burn_vote_veto=True`)[^dydx-community-2026-04-28-modules-governance][^dydx-community-2026-04-28-modules-governance-proposal-lifecycle] | veto_threshold = 33.4% of votes cast (with quorum 33.4%, threshold 50%)[^dydx-community-2026-04-28-modules-governance] | not surfaced |
 
 ## Edge cases
 _(populated as claims are backfilled in Phase 2.)_
@@ -32,4 +27,5 @@ None.
 [[concepts/governance/parameter-mutation-cadence]] . [[concepts/governance/emergency-pause-authority]] . [[concepts/governance/governance-vs-ops-separation]]
 
 ## Sources
-_(populated as claims are backfilled in Phase 2.)_
+[^dydx-community-2026-04-28-modules-governance]: [[sources/dydx-community-2026-04-28-modules-governance]]
+[^dydx-community-2026-04-28-modules-governance-proposal-lifecycle]: [[sources/dydx-community-2026-04-28-modules-governance-proposal-lifecycle]]
