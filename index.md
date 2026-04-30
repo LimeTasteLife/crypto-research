@@ -98,7 +98,7 @@ _(none yet)_
 ### lp
 - [[concepts/lp/concentrated-liquidity]] — LPs allocate capital within specific price ranges for capital efficiency; Uniswap v3 origin, v4 inherits + hooks extensibility (sources: 5, last_reviewed: 2026-04-29)
 - [[concepts/lp/venue-owned-lp]] — venue-deployed liquidity vault (sources: 1, last_reviewed: 2026-04-28)
-- [[concepts/lp/vault]] — Venue-owned/operated capital pools (protocol-MM, insurance, strategy-as-a-service); HL HLP, Lighter LLP (multi-strategy), Lighter XLP (prelaunch), Lighter Public Pools (no-lockup operator-strategy) (sources: 8, last_reviewed: 2026-04-28) — NOTE: semantic overlap with `venue-owned-lp` above; consolidate via filename rename in follow-up commit
+- [[concepts/lp/vault]] — Venue-owned/operated capital pools (protocol-MM, insurance, strategy-as-a-service); HL HLP, Lighter LLP (multi-strategy), Lighter XLP (prelaunch), Lighter Public Pools (no-lockup operator-strategy) (sources: 8, last_reviewed: 2026-04-28)
 
 ### listing
 - [[concepts/listing/listing-playbook]] — venue procedure for getting a new asset live (sources: 3, last_reviewed: 2026-04-28)

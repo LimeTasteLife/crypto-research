@@ -64,6 +64,10 @@ When resolved, move to `## Resolved` with `→ resolved YYYY-MM-DD by [[source-i
 - [[entities/dex/uniswap-v4]] (A7/PII) Emergency-pause SLA — core contracts immutable (no pause); governance parameter change lead-time not specified beyond Timelock. Suggested verification: on-chain Timelock delay query; governance forum. Raised: 2026-04-29.
 - [[entities/dex/uniswap-v4]] (A9/PI-PV) Regulatory classification — no first-party legal opinion, blocked-jurisdiction list, or OFAC screen coverage documented. Suggested verification: Uniswap Labs ToS; Wyoming DUNA legal opinion. Raised: 2026-04-29.
 
+### Schema / structural
+
+- [[concepts/lp/vault]] / [[concepts/lp/venue-owned-lp]] (Schema) Semantic overlap between `concepts/lp/vault` and `concepts/lp/venue-owned-lp` — both describe venue-owned/operated capital pools. Consolidate via filename rename in follow-up commit. Suggested verification: review both concept pages for distinct vs overlapping scope; if fully redundant, rename `venue-owned-lp` → redirect to `vault` (or vice versa) and update wikilinks repo-wide. Raised: 2026-04-28.
+
 ## Resolved
 
 - [AGENTS.md §"Relations"] Should `backstops` be added to the canonical verb set? In use on entities/perpdex/{hyperliquid,lighter} for the LP-vault → liquidation-flow relation. Suggested verification: schema patch on next user-initiated refresh. Raised: 2026-04-28.
