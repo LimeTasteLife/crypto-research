@@ -74,6 +74,7 @@ _(none yet)_
 
 ### fee-model
 - [[concepts/fee-model/funding-rate]] — periodic peer-to-peer payment anchoring mark to spot (sources: 1, last_reviewed: 2026-04-28)
+- [[concepts/fee-model/maker-rebate]] — negative maker fee paid by venue to passive liquidity (vs maker-fee, MM-agreement-rebate, volume-tier-discount); funding source, tier mechanics, markout-PIII gap, anti-abuse (sources: 17, last_reviewed: 2026-04-30)
 
 ### tokenomics
 - [[concepts/tokenomics/buyback]] — programmatic conversion of revenue into native token; HL AF burn, Aster Foundation, Uniswap Firepit UNI burn (sources: 5, last_reviewed: 2026-04-29)
@@ -94,11 +95,13 @@ _(none yet)_
 - [[concepts/risk/leverage-cap]] — per-asset upper bound on user-set leverage (sources: 2, last_reviewed: 2026-04-28)
 - [[concepts/risk/adl-waterfall]] — final solvency safeguard via opposite-side counterparty closure (sources: 1, last_reviewed: 2026-04-28)
 - [[concepts/risk/insurance-fund-sizing]] — mechanism by which a venue determines backstop-pool capital stock; topology, inflow source, outflow trigger, and sizing constraint dimensions (sources: 5, last_reviewed: 2026-04-29)
+- [[concepts/risk/collateral]] — assets posted to secure positions; single vs multi-asset margin, haircut (LTV/LT/LF or assetWeight or flat ratio), isolated/cross/strict-isolated, per-asset capacity caps, LP-token-as-collateral, rehypothecation (sources: 17, last_reviewed: 2026-04-30)
 
 ### lp
 - [[concepts/lp/concentrated-liquidity]] — LPs allocate capital within specific price ranges for capital efficiency; Uniswap v3 origin, v4 inherits + hooks extensibility (sources: 5, last_reviewed: 2026-04-29)
 - [[concepts/lp/venue-owned-lp]] — venue-deployed liquidity vault (sources: 1, last_reviewed: 2026-04-28)
 - [[concepts/lp/vault]] — Venue-owned/operated capital pools (protocol-MM, insurance, strategy-as-a-service); HL HLP, Lighter LLP (multi-strategy), Lighter XLP (prelaunch), Lighter Public Pools (no-lockup operator-strategy) (sources: 8, last_reviewed: 2026-04-28)
+- [[concepts/lp/protocol-owned-liquidity]] — counterparty-role lens on protocol-owned vaults (vs external MM, vs open AMM LP); HLP, ALP, OmniVault, Drift IF/DSM/BAL, LLP, MegaVault — three role variants (protocol-MM, IF, hybrid), funding sources, eligibility, lockup, strategy isolation (sources: 17, last_reviewed: 2026-04-30)
 
 ### listing
 - [[concepts/listing/listing-playbook]] — venue procedure for getting a new asset live (sources: 3, last_reviewed: 2026-04-28)
