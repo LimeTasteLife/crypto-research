@@ -133,8 +133,8 @@ _(none yet)_
 - [[concepts/security/validator-mev-policy]] — validator/sequencer MEV rules, monitoring, slashing conditions (sources: 0, last_reviewed: 2026-04-29) **[stub]**
 
 ### regulatory
-- [[concepts/regulatory/blocked-jurisdictions]] — jurisdictional bar list, sanctions/OFAC posture, and enforcement mechanism (protocol vs indexer vs integrator-frontend); 1/6 surveyed perpdex entities filled (dYdX), 5/6 gap (sources: 1, last_reviewed: 2026-04-30) **[stub]**
-- [[concepts/regulatory/frontend-sovereignty]] — frontend-plurality topology and regulatory-liability allocation across canonical UI vs builder/partner UIs; three patterns observed (operator-disclaimed plurality, canonical-plus-builder envelope, undocumented delegation) (sources: 7, last_reviewed: 2026-04-30) **[stub]**
+- [[concepts/regulatory/blocked-jurisdictions]] — jurisdictional bar list, sanctions/OFAC posture, and enforcement mechanism (protocol vs indexer vs integrator-frontend) (sources: 1, last_reviewed: 2026-04-30) **[stub]**
+- [[concepts/regulatory/frontend-sovereignty]] — frontend-plurality topology and regulatory-liability allocation across canonical UI vs builder/partner UIs (sources: 7, last_reviewed: 2026-04-30) **[stub]**
 
 ## Parameters
 
